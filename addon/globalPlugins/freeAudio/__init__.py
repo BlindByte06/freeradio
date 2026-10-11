@@ -560,6 +560,9 @@ class GlobalPlugin(ObligatoMixin, MiscTogglesMixin, TrackInfoMixin, RecordingMix
 		# audio and no explanation - see radioPlayer.py's on_play_failed
 		# docstring for the full "why this exists" rationale.
 		self._player.on_play_failed = self._on_play_failed
+		# Tell the user when a station is played through a compatibility mode
+		# (currently: ABC HLS stations, which BASS can't play directly).
+		self._player.on_notice = self._on_player_notice
 		# Refresh the podcast episode list's row when a position is saved
 		# due to a pause or the episode finishing (not the periodic autosave).
 		self._player.on_podcast_progress_saved = self._on_podcast_progress_saved
@@ -1151,6 +1154,16 @@ class GlobalPlugin(ObligatoMixin, MiscTogglesMixin, TrackInfoMixin, RecordingMix
 				self._advance_jukebox_folder_headless(station)
 			except Exception:
 				pass
+
+	def _on_player_notice(self, code):
+		"""Called (possibly from a background thread) with a notice code from
+		the playback engine - see radioPlayer.RadioPlayer.on_notice."""
+		wx.CallAfter(self._on_player_notice_ui, code)
+
+	def _on_player_notice_ui(self, code):
+		if code == "abc_hls_repack":
+			# Translators: Spoken once when a radio station (currently ABC Australia stations) is played through a special playback mode, because it would otherwise stutter.
+			_notify(_("This station uses a special playback mode to prevent stuttering."))
 
 	def _on_play_failed(self, station, url, reason):
 		"""Called (possibly from a background thread - the launch thread

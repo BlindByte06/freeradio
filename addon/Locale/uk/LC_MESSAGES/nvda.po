@@ -3,16 +3,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Freeradio2026.20.2\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@groups.io'\n"
-"POT-Creation-Date: 2026-10-06 10:12+0300\n"
+"POT-Creation-Date: 2026-10-11 16:32+0300\n"
 "PO-Revision-Date: 2026-10-06 13:18+0300\n"
 "Last-Translator: Volodymyr Pyrih <vp88.mobile@gmail.com>\n"
 "Language-Team: \n"
-"Language: uk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && "
-"(n%100<12 || n%100>14) ? 1 : 2);\n"
+"Language: uk\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
+"10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
 "X-Generator: Poedit 3.9\n"
 "X-Poedit-Basepath: ../../../..\n"
 "X-Poedit-SearchPath-0: .\n"
@@ -46,8 +46,8 @@ msgstr "Виберіть основний пристрій виводу freeAudi
 #: addon\globalPlugins\freeAudio\playbackCoreMixin.py:280
 #: addon\globalPlugins\freeAudio\playbackCoreMixin.py:982
 #: addon\globalPlugins\freeAudio\playbackCoreMixin.py:1001
-#: addon\globalPlugins\freeAudio\recordingMixin.py:75
-#: addon\globalPlugins\freeAudio\recordingMixin.py:257
+#: addon\globalPlugins\freeAudio\recordingMixin.py:239
+#: addon\globalPlugins\freeAudio\recordingMixin.py:355
 #: addon\globalPlugins\freeAudio\settingsPanel.py:51
 #: addon\globalPlugins\freeAudio\timeshiftMixin.py:312
 #: addon\globalPlugins\freeAudio\timeshiftMixin.py:352
@@ -56,12 +56,12 @@ msgstr "Виберіть основний пристрій виводу freeAudi
 #: addon\globalPlugins\freeAudio\trackInfoMixin.py:325
 #: addon\globalPlugins\freeAudio\trackInfoMixin.py:344
 #: addon\globalPlugins\freeAudio\trackInfoMixin.py:393
-#: addon\globalPlugins\freeAudio\__init__.py:976
-#: addon\globalPlugins\freeAudio\__init__.py:986
-#: addon\globalPlugins\freeAudio\__init__.py:996
-#: addon\globalPlugins\freeAudio\__init__.py:1006
-#: addon\globalPlugins\freeAudio\__init__.py:1016 addon\appModules\explorer.py:228
-#: addon\appModules\explorer.py:261
+#: addon\globalPlugins\freeAudio\__init__.py:982
+#: addon\globalPlugins\freeAudio\__init__.py:992
+#: addon\globalPlugins\freeAudio\__init__.py:1002
+#: addon\globalPlugins\freeAudio\__init__.py:1012
+#: addon\globalPlugins\freeAudio\__init__.py:1022
+#: addon\appModules\explorer.py:228 addon\appModules\explorer.py:261
 msgid "freeAudio"
 msgstr "freeAudio"
 
@@ -75,11 +75,11 @@ msgstr "Пристроїв аудіовиведення не знайдено"
 #. Translators: Spoken instead of showing a picker, when only one physical audio output device exists.
 #: addon\globalPlugins\freeAudio\audioDeviceMixin.py:63
 msgid ""
-"Only one physical audio output device is available. freeAudio uses the system default "
-"output."
+"Only one physical audio output device is available. freeAudio uses the "
+"system default output."
 msgstr ""
-"Доступний лише один фізичний пристрій аудіовиводу. freeAudio використовує системний "
-"пристрій виводу за замовчуванням."
+"Доступний лише один фізичний пристрій аудіовиводу. freeAudio використовує "
+"системний пристрій виводу за замовчуванням."
 
 #. Translators: First entry in the output-device list; means 'use whatever Windows currently has as its default output'.
 #. Translators: Same meaning as 'System default' above; label shown when announcing the currently active output device.
@@ -130,9 +130,9 @@ msgstr "Відзеркалювання аудіо зупинено"
 #. Translators: Spoken when the double-press (song-capture) gesture is used while nothing is playing.
 #. Translators: Spoken when this shortcut is pressed while nothing is playing.
 #: addon\globalPlugins\freeAudio\audioDeviceMixin.py:179
-#: addon\globalPlugins\freeAudio\recordingMixin.py:116
-#: addon\globalPlugins\freeAudio\recordingMixin.py:238
-#: addon\globalPlugins\freeAudio\__init__.py:1023
+#: addon\globalPlugins\freeAudio\recordingMixin.py:136
+#: addon\globalPlugins\freeAudio\recordingMixin.py:336
+#: addon\globalPlugins\freeAudio\__init__.py:1029
 msgid "No station is playing"
 msgstr "Жодна станція не відтворюється"
 
@@ -161,7 +161,8 @@ msgstr "Не вдалося віддзеркалити на: %s"
 #. Translators: Spoken automatically when the user's selected output device is unplugged; freeAudio has fallen back to the system default.
 #: addon\globalPlugins\freeAudio\audioDeviceMixin.py:273
 msgid "Audio device disconnected. Switched to system default."
-msgstr "Аудіопристрій відключено. Переключено на системний пристрій за замовчуванням."
+msgstr ""
+"Аудіопристрій відключено. Переключено на системний пристрій за замовчуванням."
 
 #. Translators: Name of an NVDA command; raises freeAudio's playback volume by 5 (of 200 max, capped at 100 when saved).
 #: addon\globalPlugins\freeAudio\audioFxMixin.py:33
@@ -212,10 +213,12 @@ msgstr "Швидкість %.1f"
 
 #. Translators: Spoken when playback-rate change fails because the optional bass_fx library used for time-stretching isn't installed.
 #: addon\globalPlugins\freeAudio\audioFxMixin.py:88
-msgid "Playback speed control needs the bass_fx add-on library — see the freeAudio docs."
+msgid ""
+"Playback speed control needs the bass_fx add-on library — see the freeAudio "
+"docs."
 msgstr ""
-"Для керування швидкістю відтворення потрібна додаткова бібліотека bass_fx — див. "
-"документацію freeAudio."
+"Для керування швидкістю відтворення потрібна додаткова бібліотека bass_fx — "
+"див. документацію freeAudio."
 
 #. Translators: Spoken when the user tries to change playback rate while playing a live radio station rather than a podcast/audiobook.
 #: addon\globalPlugins\freeAudio\audioFxMixin.py:91
@@ -350,7 +353,8 @@ msgstr "Звук налаштування станції"
 #. Translators: Fallback LibrivoxBook.title when no title was supplied at construction.
 #. Translators: Fallback station name (used only for the confirmation message below) if the station has no name field at all.
 #. Translators: Fallback station name when a station dict has none.
-#: addon\globalPlugins\freeAudio\getem.py:430 addon\globalPlugins\freeAudio\getem.py:460
+#: addon\globalPlugins\freeAudio\getem.py:430
+#: addon\globalPlugins\freeAudio\getem.py:460
 #: addon\globalPlugins\freeAudio\getem.py:1133
 #: addon\globalPlugins\freeAudio\gutenberg_audiobooks.py:190
 #: addon\globalPlugins\freeAudio\gutenberg_audiobooks.py:286
@@ -379,19 +383,23 @@ msgstr "GETEM"
 #: addon\globalPlugins\freeAudio\getem.py:652
 msgid "Please enter your GETEM username and password in freeAudio's settings."
 msgstr ""
-"Будь ласка, введіть своє ім'я користувача та пароль GETEM у налаштуваннях freeAudio."
+"Будь ласка, введіть своє ім'я користувача та пароль GETEM у налаштуваннях "
+"freeAudio."
 
 #. Translators: Error returned by GetemSession.login() when the GETEM server rejects the saved username/password.
 #: addon\globalPlugins\freeAudio\getem.py:686
 msgid "GETEM login failed. Please check your username and password."
 msgstr ""
-"Не вдалося ввійти в GETEM. Будь ласка, перевірте своє ім'я користувача та пароль."
+"Не вдалося ввійти в GETEM. Будь ласка, перевірте своє ім'я користувача та "
+"пароль."
 
 #. Translators: Error returned before attempting login when the settings dialog's GETEM username/password fields are empty.
 #: addon\globalPlugins\freeAudio\getem.py:720
-msgid "Please enter your GETEM username and password in freeAudio's settings first."
+msgid ""
+"Please enter your GETEM username and password in freeAudio's settings first."
 msgstr ""
-"Спочатку введіть своє ім'я користувача та пароль GETEM у налаштуваннях freeAudio."
+"Спочатку введіть своє ім'я користувача та пароль GETEM у налаштуваннях "
+"freeAudio."
 
 #. Translators: Error returned by search_getem() when the user submits an empty search box.
 #. Translators: Error returned by search_gutenberg_audiobooks() when the user submits an empty search box.
@@ -416,13 +424,14 @@ msgstr "Не вдалося знайти каталог GETEM. Перевірт�
 msgid "{0} - Part {1}"
 msgstr "{0} – Частина {1}"
 
-#: addon\globalPlugins\freeAudio\getem.py:924 addon\globalPlugins\freeAudio\getem.py:1151
+#: addon\globalPlugins\freeAudio\getem.py:924
+#: addon\globalPlugins\freeAudio\getem.py:1151
 msgid ""
-"No playable audio file was found on this work's GETEM page. It may require manual "
-"download from the site."
+"No playable audio file was found on this work's GETEM page. It may require "
+"manual download from the site."
 msgstr ""
-"На сторінці GETEM цієї роботи не знайдено аудіофайлів, які можна відтворити. Можливо, "
-"його потрібно буде завантажити вручну з сайту."
+"На сторінці GETEM цієї роботи не знайдено аудіофайлів, які можна відтворити. "
+"Можливо, його потрібно буде завантажити вручну з сайту."
 
 #. Translators: Error returned by get_book_by_url() when the pasted URL doesn't look like a GETEM work page link.
 #: addon\globalPlugins\freeAudio\getem.py:1115
@@ -432,7 +441,9 @@ msgstr "Це не схоже на робоче посилання GETEM."
 #. Translators: Raised when a chapter download completes but produced a zero-byte file, usually because the GETEM session was not actually logged in.
 #: addon\globalPlugins\freeAudio\getem.py:1249
 msgid "The downloaded file was empty. Please check your GETEM login."
-msgstr "Завантажений файл був порожнім. Будь ласка, перевірте свої облікові дані GETEM."
+msgstr ""
+"Завантажений файл був порожнім. Будь ласка, перевірте свої облікові дані "
+"GETEM."
 
 #. Translators: Raised when the URL fetched for a chapter returns a response that is not audio at all (e.g. an HTML error/login page).
 #: addon\globalPlugins\freeAudio\getem.py:1267
@@ -469,7 +480,8 @@ msgstr "Без назви"
 #: addon\globalPlugins\freeAudio\gutenberg_audiobooks.py:137
 msgid "AI-generated narration (Microsoft neural text-to-speech)"
 msgstr ""
-"Озвучування, згенероване ШІ (нейронне перетворення тексту в мовлення від Microsoft)"
+"Озвучування, згенероване ШІ (нейронне перетворення тексту в мовлення від "
+"Microsoft)"
 
 #: addon\globalPlugins\freeAudio\gutenberg_audiobooks.py:215
 #, python-format
@@ -485,8 +497,8 @@ msgstr "Озвучування за допомогою ШІ"
 #, python-format
 msgid "AI-generated narration (Microsoft neural text-to-speech, %s voice)"
 msgstr ""
-"Озвучування, згенероване ШІ (нейронне перетворення тексту в мовлення від Microsoft, "
-"голос %s)"
+"Озвучування, згенероване ШІ (нейронне перетворення тексту в мовлення від "
+"Microsoft, голос %s)"
 
 #. Translators: shown as this book's source in the station-details
 #. dialog and the Audio Books tab - kept distinct from bare
@@ -517,8 +529,10 @@ msgstr "Не вдалося знайти книгу за цією адресою
 #. Translators: Error returned when the resolved archive.org item exists but isn't tagged as part of this specific audiobook collection.
 #: addon\globalPlugins\freeAudio\gutenberg_audiobooks.py:451
 msgid ""
-"This archive.org item isn't part of the Project Gutenberg Open Audiobook Collection."
-msgstr "Цей елемент archive.org не є частиною колекції аудіокниг проекту Гутенберг."
+"This archive.org item isn't part of the Project Gutenberg Open Audiobook "
+"Collection."
+msgstr ""
+"Цей елемент archive.org не є частиною колекції аудіокниг проекту Гутенберг."
 
 #. Translators: Error returned by the chapter-listing step when archive.org has no playable audio file for the resolved book.
 #. Translators: Error returned by the archive.org metadata path when no playable audio file was found for the resolved book.
@@ -526,8 +540,8 @@ msgstr "Цей елемент archive.org не є частиною колекц�
 #: addon\globalPlugins\freeAudio\librivox.py:498
 msgid "No playable audio file was found for this book on archive.org."
 msgstr ""
-"На сайті archive.org не знайдено жодного аудіофайлу для цієї книги, який можна "
-"відтворити."
+"На сайті archive.org не знайдено жодного аудіофайлу для цієї книги, який "
+"можна відтворити."
 
 #. Translators: Raised internally when a chapter/book download completes but produced a zero-byte file; caught and shown to the user as a download failure.
 #: addon\globalPlugins\freeAudio\gutenberg_audiobooks.py:579
@@ -582,15 +596,16 @@ msgstr "Не є дійсним файлом плейлиста M3U."
 #: addon\globalPlugins\freeAudio\legacyMigration.py:179
 msgid ""
 "The previous version of this add-on, FreeRadio, is still installed alongside "
-"freeAudio. Running both at the same time makes them compete for the same shortcuts and "
-"audio device. Your settings and data have been copied to freeAudio. Please uninstall "
-"FreeRadio (NVDA menu, Tools, Add-on Store or Manage add-ons) and restart NVDA."
+"freeAudio. Running both at the same time makes them compete for the same "
+"shortcuts and audio device. Your settings and data have been copied to "
+"freeAudio. Please uninstall FreeRadio (NVDA menu, Tools, Add-on Store or "
+"Manage add-ons) and restart NVDA."
 msgstr ""
-"Попередня версія цього додатка, FreeRadio, все ще встановлена разом із freeAudio. "
-"Одночасний запуск обох змушує їх конкурувати за ті самі комбінації клавіш і "
-"аудіопристрій. Ваші налаштування та дані скопійовано до freeAudio. Будь ласка, "
-"видаліть FreeRadio (меню NVDA, Інструменти, Магазин додатків або Керування додатками) "
-"та перезапустіть NVDA."
+"Попередня версія цього додатка, FreeRadio, все ще встановлена разом із "
+"freeAudio. Одночасний запуск обох змушує їх конкурувати за ті самі "
+"комбінації клавіш і аудіопристрій. Ваші налаштування та дані скопійовано до "
+"freeAudio. Будь ласка, видаліть FreeRadio (меню NVDA, Інструменти, Магазин "
+"додатків або Керування додатками) та перезапустіть NVDA."
 
 #. Translators: Fixed source label for LibriVox audiobooks, shown in the station-details dialog and the Audio Books tab (same role as getem.py's/gutenberg_audiobooks.py's 'audiobook_source').
 #. Translators: Source-name label for a book from the LibriVox catalog, shown alongside the audio-book details.
@@ -619,13 +634,17 @@ msgstr "Не вдалося прочитати список розділів ц�
 #: addon\globalPlugins\freeAudio\librivox.py:569
 msgid "No playable audio file was found in this book's LibriVox feed."
 msgstr ""
-"У стрічці LibriVox цієї книги не знайдено жодного аудіофайлу, який можна відтворити."
+"У стрічці LibriVox цієї книги не знайдено жодного аудіофайлу, який можна "
+"відтворити."
 
 #. Translators: Name of an NVDA command; mutes/unmutes all of freeAudio's spoken notifications (station changes, playback state, recording, volume level) at once.
 #: addon\globalPlugins\freeAudio\miscTogglesMixin.py:34
-msgid "Toggle mute notifications (station changes, playback, recording, volume level)"
+msgid ""
+"Toggle mute notifications (station changes, playback, recording, volume "
+"level)"
 msgstr ""
-"Перемкнути звукові сповіщення (про зміну станції, відтворення, запис, рівень гучності)"
+"Перемкнути звукові сповіщення (про зміну станції, відтворення, запис, рівень "
+"гучності)"
 
 #. Notifications are now muted — speak this final confirmation before silencing.
 #. Translators: Spoken once, right before notifications go silent, to confirm the toggle happened (further notifications are suppressed after this).
@@ -641,7 +660,8 @@ msgstr "Сповіщення увімкнено"
 #. Translators: Name of an NVDA command; toggles whether freeAudio announces a station's track/song changes from ICY stream metadata.
 #: addon\globalPlugins\freeAudio\miscTogglesMixin.py:53
 msgid "Enable or disable auto-announce track changes (ICY metadata)"
-msgstr "Увімкнути або вимкнути автоматичне оголошення змін треку (ICY метадані)"
+msgstr ""
+"Увімкнути або вимкнути автоматичне оголошення змін треку (ICY метадані)"
 
 #. Translators: Feature name reused as both the settings-panel checkbox label (with '&' marking its access key) and, with the '&' stripped, as %(effect)s in the toggle announcement above.
 #. Translators: Checkbox label for the track-change announcement setting (same feature as the toggleAnnounceTrackChanges command).
@@ -668,23 +688,24 @@ msgid "&Save liked songs to a text file"
 msgstr "&Зберегти вподобані треки у текстовий файл"
 
 #. Translators: Raised internally when the captured audio snippet has no detectable frequency content to fingerprint (e.g. silence or dead air); surfaces as a recognition failure.
-#: addon\globalPlugins\freeAudio\musicRecognizer.py:616
+#: addon\globalPlugins\freeAudio\musicRecognizer.py:765
 msgid "No frequency peaks found — audio may be silence"
 msgstr "Піків частот не виявлено — аудіозапис може бути порожнім"
 
 #. Translators: Raised when Shazam's API responds but has no match for the submitted audio fingerprint.
-#: addon\globalPlugins\freeAudio\musicRecognizer.py:666
+#: addon\globalPlugins\freeAudio\musicRecognizer.py:815
 msgid "Song not recognized"
 msgstr "Трек не розпізнано"
 
-#: addon\globalPlugins\freeAudio\musicRecognizer.py:732
+#: addon\globalPlugins\freeAudio\musicRecognizer.py:881
 msgid ""
-"ffmpeg.exe not found. Download ffmpeg from https://ffmpeg.org/download.html and place "
-"ffmpeg.exe in the freeAudio addon folder, or set the path in settings."
+"ffmpeg.exe not found. Download ffmpeg from https://ffmpeg.org/download.html "
+"and place ffmpeg.exe in the freeAudio addon folder, or set the path in "
+"settings."
 msgstr ""
 "Файл ffmpeg.exe не знайдено. Завантажте ffmpeg з сайту https://ffmpeg.org/"
-"download.html і помістіть файл ffmpeg.exe у папку з додатком freeAudio або вкажіть "
-"шлях до нього в налаштуваннях."
+"download.html і помістіть файл ffmpeg.exe у папку з додатком freeAudio або "
+"вкажіть шлях до нього в налаштуваннях."
 
 #. Translators: Title of the Obligato mode setup dialog.
 #: addon\globalPlugins\freeAudio\obligatoMixin.py:55
@@ -747,10 +768,12 @@ msgstr "Перемкнути режим фонової музики Obligato"
 
 #. Translators: Spoken when the toggle command is pressed but the favourites list is empty, since Obligato can only play a saved favourite station.
 #: addon\globalPlugins\freeAudio\obligatoMixin.py:221
-msgid "No favourite stations. Add a station to favourites first to use Obligato mode."
+msgid ""
+"No favourite stations. Add a station to favourites first to use Obligato "
+"mode."
 msgstr ""
-"Немає улюблених станцій. Спочатку додайте станцію до улюблених, щоб скористатися "
-"обов'язковим режимом."
+"Немає улюблених станцій. Спочатку додайте станцію до улюблених, щоб "
+"скористатися обов'язковим режимом."
 
 #. Translators: Spoken when the chosen background station has no resolvable stream URL to play.
 #. Translators: Spoken when trying to play a station that has no resolvable stream URL at all.
@@ -764,7 +787,8 @@ msgstr "URL потоку для цієї станції недоступний"
 #: addon\globalPlugins\freeAudio\obligatoMixin.py:299
 #: addon\globalPlugins\freeAudio\playbackCoreMixin.py:779
 msgid "No internet connection. Please check your connection and try again."
-msgstr "Немає підключення до Інтернету. Перевірте підключення та повторіть спробу."
+msgstr ""
+"Немає підключення до Інтернету. Перевірте підключення та повторіть спробу."
 
 #. Translators: Generic fallback spoken when starting Obligato mode fails for an unspecified reason.
 #: addon\globalPlugins\freeAudio\obligatoMixin.py:308
@@ -895,10 +919,11 @@ msgstr "Відтворити попередню станцію"
 
 #: addon\globalPlugins\freeAudio\playbackCoreMixin.py:723
 msgid ""
-"Could not resume the last audio book - it may have been removed from your library."
+"Could not resume the last audio book - it may have been removed from your "
+"library."
 msgstr ""
-"Не вдалося відновити відтворення останньої аудіокниги – можливо, її видалено з вашої "
-"бібліотеки."
+"Не вдалося відновити відтворення останньої аудіокниги – можливо, її видалено "
+"з вашої бібліотеки."
 
 #. Translators: Fallback station name used in log/error contexts if the station dict has no name field.
 #: addon\globalPlugins\freeAudio\playbackCoreMixin.py:761
@@ -919,7 +944,8 @@ msgstr "%+.2f півтонів"
 #. Translators: Name of an NVDA command; raises the pitch of podcasts/audio books/jukebox tracks without changing playback speed.
 #: addon\globalPlugins\freeAudio\playbackCoreMixin.py:981
 msgid "Raise pitch transpose (podcasts, audio books and jukebox tracks)"
-msgstr "Підвищити тон (для подкастів, аудіокниг і треків черги прослуховування)"
+msgstr ""
+"Підвищити тон (для подкастів, аудіокниг і треків черги прослуховування)"
 
 #. Translators: Spoken when the pitch-transpose commands are used while playing a live radio station rather than a podcast/audiobook/jukebox track.
 #. Translators: Same as the transposeUp case above: spoken when transpose is used on a live radio station.
@@ -940,7 +966,9 @@ msgstr "Для підвищення тону потрібен аудіокомп
 #. Translators: Name of an NVDA command; lowers the pitch of podcasts/audio books/jukebox tracks without changing playback speed.
 #: addon\globalPlugins\freeAudio\playbackCoreMixin.py:1000
 msgid "Lower pitch transpose (podcasts, audio books and jukebox tracks)"
-msgstr "Зменшити висоту тону (для подкастів, аудіокниг і треків черги прослуховування)"
+msgstr ""
+"Зменшити висоту тону (для подкастів, аудіокниг і треків черги "
+"прослуховування)"
 
 #. Only caller now is _play_station()'s _apply_profile_and_play()
 #. background thread (see its comment on why it calls this
@@ -1326,8 +1354,8 @@ msgstr "&Оновити список станцій"
 #. Translators: Tooltip for the Update Station List button.
 #: addon\globalPlugins\freeAudio\radioDialog.py:837
 msgid ""
-"Re-downloads the full station list from the server, so search and browsing use the "
-"latest data."
+"Re-downloads the full station list from the server, so search and browsing "
+"use the latest data."
 msgstr ""
 "Повторно завантажує повний список станцій із сервера, щоб пошук і перегляд "
 "використовували актуальні дані."
@@ -1342,13 +1370,17 @@ msgstr "&Закрити"
 #. Translators: Spoken when the Podcasts shortcut is pressed but the Podcasts module is disabled in settings.
 #: addon\globalPlugins\freeAudio\radioDialog.py:975
 msgid "Podcasts are disabled - enable them in freeAudio settings to use this"
-msgstr "Подкасти вимкнено — увімкніть їх у налаштуваннях freeAudio, щоб скористатися цим"
+msgstr ""
+"Подкасти вимкнено — увімкніть їх у налаштуваннях freeAudio, щоб скористатися "
+"цим"
 
 #. Translators: Spoken when the Audio Books shortcut is pressed but the Audio Books module is disabled in settings.
 #: addon\globalPlugins\freeAudio\radioDialog.py:1007
-msgid "Audio Books are disabled - enable them in freeAudio settings to use this"
+msgid ""
+"Audio Books are disabled - enable them in freeAudio settings to use this"
 msgstr ""
-"Аудіокниги вимкнено — увімкніть їх у налаштуваннях freeAudio, щоб скористатися цим"
+"Аудіокниги вимкнено — увімкніть їх у налаштуваннях freeAudio, щоб "
+"скористатися цим"
 
 #. Translators: Spoken when the Jukebox shortcut is pressed but the Jukebox module is disabled in settings.
 #: addon\globalPlugins\freeAudio\radioDialog.py:1041
@@ -1709,11 +1741,11 @@ msgstr "&Видалити вибраний таймер"
 #. Translators: Spoken when the favourites list gains focus, reminding the user how the comma-to-reorder command works (see _handle_fav_move_x).
 #: addon\globalPlugins\freeAudio\radioDialog.py:1902
 msgid ""
-"Press comma to pick a station, navigate to the target position, then press comma again "
-"to drop."
+"Press comma to pick a station, navigate to the target position, then press "
+"comma again to drop."
 msgstr ""
-"Натисніть клавішу «кома» для вибору станції, перейдіть до потрібної позиції, а потім "
-"знову натисніть клавішу «кома», щоб відпустити."
+"Натисніть клавішу «кома» для вибору станції, перейдіть до потрібної позиції, "
+"а потім знову натисніть клавішу «кома», щоб відпустити."
 
 #. Translators: Spoken when the favourites filter matches nothing.
 #: addon\globalPlugins\freeAudio\radioDialog.py:1918
@@ -1736,14 +1768,14 @@ msgstr[2] "%d улюблених"
 #: addon\globalPlugins\freeAudio\radioDialog.py:1993
 #: addon\globalPlugins\freeAudio\radioDialog.py:2135
 #: addon\globalPlugins\freeAudio\radioDialog.py:2185
-#: addon\globalPlugins\freeAudio\recorder.py:1536
+#: addon\globalPlugins\freeAudio\recorder.py:1856
 msgid "Record only"
 msgstr "Тільки запис"
 
 #: addon\globalPlugins\freeAudio\radioDialog.py:1993
 #: addon\globalPlugins\freeAudio\radioDialog.py:2135
 #: addon\globalPlugins\freeAudio\radioDialog.py:2185
-#: addon\globalPlugins\freeAudio\recorder.py:1536
+#: addon\globalPlugins\freeAudio\recorder.py:1856
 msgid "Listen and record"
 msgstr "Слухати та записувати"
 
@@ -1918,8 +1950,8 @@ msgstr "%(count)d станцій"
 #, python-format
 msgid "(%(shown)d of %(total)d shown — increase result limit to see more)"
 msgstr ""
-"(%(shown)d з %(total)d показано — збільшіть кількість результатів, щоб переглянути "
-"більше)"
+"(%(shown)d з %(total)d показано — збільшіть кількість результатів, щоб "
+"переглянути більше)"
 
 #. Translators: Appended to the status line when the result-limit cap was hit and the true total isn't known.
 #: addon\globalPlugins\freeAudio\radioDialog.py:2508
@@ -1930,7 +1962,8 @@ msgstr "(Досягнуто ліміт — збільште ліміт резу�
 #: addon\globalPlugins\freeAudio\radioDialog.py:2596
 msgid "Could not connect to radio directory. Check your internet connection."
 msgstr ""
-"Не вдалося підключитися до каталогу радіостанцій. Перевірте підключення до Інтернету."
+"Не вдалося підключитися до каталогу радіостанцій. Перевірте підключення до "
+"Інтернету."
 
 #. Translators: Option in audio profile save dialog: save volume level only
 #: addon\globalPlugins\freeAudio\radioDialog.py:3127
@@ -2078,11 +2111,11 @@ msgstr "Експорт завершено"
 
 #: addon\globalPlugins\freeAudio\radioDialog.py:3308
 msgid ""
-"Supported files (*.json;*.m3u)|*.json;*.m3u|JSON favourites (*.json)|*.json|M3U "
-"playlist (*.m3u)|*.m3u"
+"Supported files (*.json;*.m3u)|*.json;*.m3u|JSON favourites (*.json)|*.json|"
+"M3U playlist (*.m3u)|*.m3u"
 msgstr ""
-"Підтримувані файли (*.json;*.m3u)|*.json;*.m3u|Улюблені JSON (*.json)|*.json|Плейлист "
-"M3U (*.m3u)|*.m3u"
+"Підтримувані файли (*.json;*.m3u)|*.json;*.m3u|Улюблені JSON (*.json)|*.json|"
+"Плейлист M3U (*.m3u)|*.m3u"
 
 #. Translators: Title of the file-picker dialog for importing favourites.
 #. Translators: Title of the merge-vs-replace confirmation dialog (same title as the file-picker above).
@@ -2380,10 +2413,11 @@ msgstr "Файл довідки не знайдено."
 #: addon\globalPlugins\freeAudio\radioDialog.py:4544
 #: addon\globalPlugins\freeAudio\radioDialog.py:4603
 #, python-format
-msgid "%s selected. Navigate to the target position and press comma again to drop."
+msgid ""
+"%s selected. Navigate to the target position and press comma again to drop."
 msgstr ""
-"Вибрано %s. Перейдіть до потрібної позиції та натисніть ще раз клавішу «кома», щоб "
-"відпустити."
+"Вибрано %s. Перейдіть до потрібної позиції та натисніть ще раз клавішу "
+"«кома», щоб відпустити."
 
 #. Low tone: cancelled
 #. Translators: Spoken if the move-in-progress is cancelled (e.g. Escape) before a drop position is chosen.
@@ -2584,7 +2618,9 @@ msgstr[2] "Вилучено %(count)d записів з їхніх груп"
 
 #: addon\globalPlugins\freeAudio\radioDialog.py:5124
 msgid "JSON jukebox library (*.json)|*.json|M3U playlist (*.m3u)|*.m3u"
-msgstr "Бібліотека черги прослуховування JSON (*.json)|*.json|Плейлист M3U (*.m3u)|*.m3u"
+msgstr ""
+"Бібліотека черги прослуховування JSON (*.json)|*.json|Плейлист M3U (*.m3u)|*."
+"m3u"
 
 #. Translators: Title of the file-save dialog for exporting the jukebox library.
 #: addon\globalPlugins\freeAudio\radioDialog.py:5130
@@ -2611,11 +2647,11 @@ msgstr[2] ""
 
 #: addon\globalPlugins\freeAudio\radioDialog.py:5183
 msgid ""
-"Supported files (*.json;*.m3u)|*.json;*.m3u|JSON jukebox library (*.json)|*.json|M3U "
-"playlist (*.m3u)|*.m3u"
+"Supported files (*.json;*.m3u)|*.json;*.m3u|JSON jukebox library (*.json)|*."
+"json|M3U playlist (*.m3u)|*.m3u"
 msgstr ""
-"Підтримувані файли (*.json;*.m3u)|*.json;*.m3u|Бібліотека черги прослуховування JSON "
-"(*.json)|*.json|Плейлист M3U (*.m3u)|*.m3u"
+"Підтримувані файли (*.json;*.m3u)|*.json;*.m3u|Бібліотека черги "
+"прослуховування JSON (*.json)|*.json|Плейлист M3U (*.m3u)|*.m3u"
 
 #. Translators: Title of the file-picker dialog for importing a jukebox library.
 #. Translators: Title of the merge-vs-replace confirmation dialog (same title as the file-picker above).
@@ -2861,10 +2897,11 @@ msgstr "Текст не знайдено для: %s"
 
 #. Translators: Accessible name/hint for the podcast search field: it accepts either a search phrase or a direct feed URL, and searches or subscribes on Enter.
 #: addon\globalPlugins\freeAudio\radioDialog.py:5989
-msgid "Search podcasts, or enter a podcast feed URL. Press enter to search or add"
+msgid ""
+"Search podcasts, or enter a podcast feed URL. Press enter to search or add"
 msgstr ""
-"Шукайте подкасти або введіть URL стрічки подкастів. Натисніть Enter, щоб шукати або "
-"додавати"
+"Шукайте подкасти або введіть URL стрічки подкастів. Натисніть Enter, щоб "
+"шукати або додавати"
 
 #. --- Search results list ---
 #. Hidden until a search is actually performed - see
@@ -3081,7 +3118,7 @@ msgstr "Завантаження завершено: %s"
 #: addon\globalPlugins\freeAudio\radioDialog.py:6634
 #: addon\globalPlugins\freeAudio\radioDialog.py:8355
 #: addon\globalPlugins\freeAudio\recordingMixin.py:68
-#: addon\globalPlugins\freeAudio\__init__.py:1480
+#: addon\globalPlugins\freeAudio\__init__.py:1496
 #, python-format
 msgid "Download failed: %s"
 msgstr "Помилка завантаження: %s"
@@ -3234,11 +3271,11 @@ msgstr "Проєкт Гутенберг"
 #. Translators: Accessible name of the audio book search field - searches both GETEM and LibriVox at once
 #: addon\globalPlugins\freeAudio\radioDialog.py:7187
 msgid ""
-"Search audio books by title, author, narrator, subject, or publisher. Press enter to "
-"search"
+"Search audio books by title, author, narrator, subject, or publisher. Press "
+"enter to search"
 msgstr ""
-"Шукайте аудіокниги за назвою, автором, оповідачем, темою або видавцем. Натисніть Enter "
-"для пошуку"
+"Шукайте аудіокниги за назвою, автором, оповідачем, темою або видавцем. "
+"Натисніть Enter для пошуку"
 
 #. Translators: Accessible name for the audio-book search-results list.
 #: addon\globalPlugins\freeAudio\radioDialog.py:7223
@@ -3264,10 +3301,11 @@ msgid "Audio book details"
 msgstr "Деталі аудіокниги"
 
 #: addon\globalPlugins\freeAudio\radioDialog.py:7418
-msgid "No audio book sources are enabled. Enable at least one in freeAudio settings."
+msgid ""
+"No audio book sources are enabled. Enable at least one in freeAudio settings."
 msgstr ""
-"Жодних джерел аудіокниг не ввімкнено. Увімкніть принаймні одне в налаштуваннях "
-"freeAudio."
+"Жодних джерел аудіокниг не ввімкнено. Увімкніть принаймні одне в "
+"налаштуваннях freeAudio."
 
 #. Translators: Spoken while a keyword search across the enabled audio-book sources is in progress.
 #. Translators: Placeholder row shown in the results list while a device search is in progress.
@@ -3443,8 +3481,11 @@ msgstr "Завантаження книги: %s"
 #. Translators: Spoken when a book download partially fails; %(saved)d is the number of parts saved, %(total)d the total number of parts, %(title)s the book title, %(error)s the error from the last failed part.
 #: addon\globalPlugins\freeAudio\radioDialog.py:8347
 #, python-format
-msgid "Downloaded %(saved)d of %(total)d parts of %(title)s. Last error: %(error)s"
-msgstr "Завантажено %(saved)d з %(total)d частин %(title)s. Остання помилка: %(error)s"
+msgid ""
+"Downloaded %(saved)d of %(total)d parts of %(title)s. Last error: %(error)s"
+msgstr ""
+"Завантажено %(saved)d з %(total)d частин %(title)s. Остання помилка: %(error)"
+"s"
 
 #. Translators: Label for the jukebox device-search field.
 #: addon\globalPlugins\freeAudio\radioDialog.py:8374
@@ -3455,7 +3496,8 @@ msgstr "Пошук на пристроях:"
 #: addon\globalPlugins\freeAudio\radioDialog.py:8377
 msgid "Search audio files on your computer by filename. Press enter to search"
 msgstr ""
-"Шукайте аудіофайли на вашому комп'ютері за назвою файлу. Натисніть Enter для пошуку"
+"Шукайте аудіофайли на вашому комп'ютері за назвою файлу. Натисніть Enter для "
+"пошуку"
 
 #. Translators: Accessible name for the device-search results list.
 #: addon\globalPlugins\freeAudio\radioDialog.py:8390
@@ -3538,7 +3580,8 @@ msgstr[2] "Знайдено %d файлів."
 #. Translators: Same confirmation as adding a single file; spoken here after adding a single folder to the jukebox.
 #. Translators: Spoken after successfully adding an Explorer file or folder to the jukebox; %s is its display title.
 #: addon\globalPlugins\freeAudio\radioDialog.py:8616
-#: addon\globalPlugins\freeAudio\radioDialog.py:9123 addon\appModules\explorer.py:213
+#: addon\globalPlugins\freeAudio\radioDialog.py:9123
+#: addon\appModules\explorer.py:213
 #, python-format
 msgid "Added to jukebox: %s"
 msgstr "Додано до черги прослуховування: %s"
@@ -3551,7 +3594,7 @@ msgstr "&Додати до черги прослуховування"
 #. Translators: Spoken when trying to play a jukebox library entry that has no usable audio files.
 #. Translators: Spoken when a jukebox entry's Input Gestures shortcut is triggered but the entry has no usable audio files.
 #: addon\globalPlugins\freeAudio\radioDialog.py:8867
-#: addon\globalPlugins\freeAudio\__init__.py:851
+#: addon\globalPlugins\freeAudio\__init__.py:857
 msgid "No playable audio in this item."
 msgstr "У цьому елементі немає відтворюваного аудіо."
 
@@ -3778,89 +3821,112 @@ msgstr "Епізод"
 msgid "This episode has no downloadable URL."
 msgstr "Цей епізод не має URL для завантаження."
 
-#. Translators: Name of an NVDA command (Ctrl+Win+E); single-press toggles a plain instant recording, double-press toggles song-capture recording instead - see this method's logic below.
-#: addon\globalPlugins\freeAudio\recordingMixin.py:74
-msgid "Start or stop instant recording"
-msgstr "Почати або зупинити миттєвий запис"
-
 #. Translators: Spoken when the user manually ends an in-progress song-capture recording (double-press Ctrl+Win+E while capturing); %s is the saved filename.
-#: addon\globalPlugins\freeAudio\recordingMixin.py:102
+#: addon\globalPlugins\freeAudio\recordingMixin.py:112
 #, python-format
 msgid "Song recording stopped: %s"
 msgstr "Запис трека зупинено: %s"
 
 #. Translators: Fallback spoken when song-capture is stopped but no output path was returned (e.g. nothing was actually captured).
 #. Translators: Fallback spoken when auto-stop finds nothing to save (e.g. capture just started).
-#: addon\globalPlugins\freeAudio\recordingMixin.py:106
-#: addon\globalPlugins\freeAudio\trackInfoMixin.py:1224
+#: addon\globalPlugins\freeAudio\recordingMixin.py:116
+#: addon\globalPlugins\freeAudio\trackInfoMixin.py:1192
 msgid "Song recording stopped"
 msgstr "Запис трека зупинено"
 
+#. Translators: Spoken when a recording of every song (triple-press Ctrl+Win+E) is stopped; %d is how many songs were saved.
+#: addon\globalPlugins\freeAudio\recordingMixin.py:125
+#, fuzzy, python-format
+msgid "Song recording stopped. Songs saved: %d"
+msgstr "Запис трека зупинено: %s"
+
 #. Translators: Spoken when double-pressing Ctrl+Win+E (song-capture) on a podcast/audiobook episode, which can't be recorded this way; points to the Ctrl+Win+V download command instead.
 #. Translators: Same message as the song-capture path above, spoken here when single-pressing Ctrl+Win+E on a podcast/audiobook episode.
-#: addon\globalPlugins\freeAudio\recordingMixin.py:140
-#: addon\globalPlugins\freeAudio\recordingMixin.py:225
+#: addon\globalPlugins\freeAudio\recordingMixin.py:156
+#: addon\globalPlugins\freeAudio\recordingMixin.py:323
 msgid ""
-"Podcast or audiobook cannot be recorded. To download the episode or book, press "
-"Ctrl+Win+V."
+"Podcast or audiobook cannot be recorded. To download the episode or book, "
+"press Ctrl+Win+V."
 msgstr ""
-"Подкаст або аудіокнигу неможливо записати. Щоб завантажити епізод або книгу, натисніть "
-"Ctrl+Win+V."
+"Подкаст або аудіокнигу неможливо записати. Щоб завантажити епізод або книгу, "
+"натисніть Ctrl+Win+V."
 
 #. Translators: Spoken when double-pressing Ctrl+Win+E (song-capture) on a jukebox track, which is already a local file.
 #. Translators: Same message as the song-capture path above, spoken here when single-pressing Ctrl+Win+E on a jukebox track.
-#: addon\globalPlugins\freeAudio\recordingMixin.py:149
-#: addon\globalPlugins\freeAudio\recordingMixin.py:233
+#: addon\globalPlugins\freeAudio\recordingMixin.py:165
+#: addon\globalPlugins\freeAudio\recordingMixin.py:331
 msgid "Jukebox tracks are already local files and cannot be recorded."
-msgstr "Треки черги прослуховування вже є локальними файлами і не можуть бути записані."
+msgstr ""
+"Треки черги прослуховування вже є локальними файлами і не можуть бути "
+"записані."
 
 #. Translators: Spoken when trying to start song-capture recording on a station with no ICY track-title metadata, so there's no song boundary to record against.
-#: addon\globalPlugins\freeAudio\recordingMixin.py:167
-msgid "This station does not broadcast track metadata. Song recording is not available."
+#: addon\globalPlugins\freeAudio\recordingMixin.py:183
+msgid ""
+"This station does not broadcast track metadata. Song recording is not "
+"available."
 msgstr "Ця станція не транслює метадані треків. Запис трека недоступний."
 
+#. Translators: Spoken when recording every song (triple-press Ctrl+Win+E) is not possible on this station because its stream carries no track-change markers.
+#: addon\globalPlugins\freeAudio\recordingMixin.py:192
+msgid ""
+"This station does not support recording every song. Double-press to record "
+"the current song."
+msgstr ""
+
+#. Translators: Generic fallback spoken if starting song-capture recording raises an unexpected exception.
+#: addon\globalPlugins\freeAudio\recordingMixin.py:213
+msgid "Could not start song recording"
+msgstr "Не вдалося почати запис трека"
+
 #. Translators: Spoken when song-capture recording starts; %s is the current ICY track title (artist/song) being captured.
-#: addon\globalPlugins\freeAudio\recordingMixin.py:180
+#: addon\globalPlugins\freeAudio\recordingMixin.py:220
 #, python-format
 msgid "Song recording started: %s"
 msgstr "Запис трека розпочато: %s"
 
-#. Translators: Generic fallback spoken if starting song-capture recording raises an unexpected exception.
-#: addon\globalPlugins\freeAudio\recordingMixin.py:185
-msgid "Could not start song recording"
-msgstr "Не вдалося почати запис трека"
+#. Translators: Spoken when recording every song starts (triple-press Ctrl+Win+E); %s is the current song's title.
+#: addon\globalPlugins\freeAudio\recordingMixin.py:233
+#, python-format
+msgid "Recording every song until stopped. Current song: %s"
+msgstr ""
+
+#. Translators: Name of an NVDA command (Ctrl+Win+E); single-press toggles a plain instant recording, double-press records the current song, triple-press records every song until stopped - see this method's logic below.
+#: addon\globalPlugins\freeAudio\recordingMixin.py:238
+msgid "Start or stop instant recording"
+msgstr "Почати або зупинити миттєвий запис"
 
 #. Translators: Spoken when the single-press gesture stops an in-progress plain instant recording; %s is the saved filename.
-#: addon\globalPlugins\freeAudio\recordingMixin.py:215
+#: addon\globalPlugins\freeAudio\recordingMixin.py:313
 #, python-format
 msgid "Recording stopped: %s"
 msgstr "Запис зупинено: %s"
 
 #. Translators: Fallback spoken when a recording is stopped but no output path was returned.
-#: addon\globalPlugins\freeAudio\recordingMixin.py:218
+#: addon\globalPlugins\freeAudio\recordingMixin.py:316
 msgid "Recording stopped"
 msgstr "Запис зупинено"
 
 #. Translators: Spoken when a plain instant recording starts (single-press Ctrl+Win+E); %s is the station name.
 #. Translators: Spoken when a scheduled or manual recording begins; %s is the station name.
-#: addon\globalPlugins\freeAudio\recordingMixin.py:245
-#: addon\globalPlugins\freeAudio\__init__.py:584
+#: addon\globalPlugins\freeAudio\recordingMixin.py:343
+#: addon\globalPlugins\freeAudio\__init__.py:587
 #, python-format
 msgid "Recording started: %s"
 msgstr "Запис розпочато: %s"
 
 #. Translators: Generic fallback spoken if starting an instant recording raises an unexpected exception.
-#: addon\globalPlugins\freeAudio\recordingMixin.py:249
+#: addon\globalPlugins\freeAudio\recordingMixin.py:347
 msgid "Could not start recording"
 msgstr "Не вдалося почати запис"
 
 #. Translators: Name of an NVDA command (Ctrl+Win+W); opens the configured recordings folder in File Explorer.
-#: addon\globalPlugins\freeAudio\recordingMixin.py:256
+#: addon\globalPlugins\freeAudio\recordingMixin.py:354
 msgid "Open freeAudio recordings folder"
 msgstr "Відкрити папку із записами freeAudio"
 
 #. Translators: Spoken when the Ctrl+Win+W shortcut can't open the recordings folder in Explorer; %s is the underlying error.
-#: addon\globalPlugins\freeAudio\recordingMixin.py:271
+#: addon\globalPlugins\freeAudio\recordingMixin.py:369
 #, python-format
 msgid "Could not open recordings folder: %s"
 msgstr "Не вдалося відкрити папку записів: %s"
@@ -3868,10 +3934,11 @@ msgstr "Не вдалося відкрити папку записів: %s"
 #. Translators: Checkbox label for the time-shift/rewind feature setting.
 #: addon\globalPlugins\freeAudio\settingsPanel.py:89
 msgid ""
-"&Enable time-shift buffer (rewind live radio, no effect on podcasts and audio books)"
+"&Enable time-shift buffer (rewind live radio, no effect on podcasts and "
+"audio books)"
 msgstr ""
-"&Увімкнути буфер відкладеного часу (перемотування радіо в прямому ефірі, без впливу на "
-"подкасти та аудіокниги)"
+"&Увімкнути буфер відкладеного часу (перемотування радіо в прямому ефірі, без "
+"впливу на подкасти та аудіокниги)"
 
 #. Translators: Label for the time-shift buffer-length choice control.
 #: addon\globalPlugins\freeAudio\settingsPanel.py:97
@@ -3902,11 +3969,12 @@ msgstr "5 годин"
 #. Translators: Grey explanatory hint shown under the buffer-duration choice, warning about disk usage for long buffers.
 #: addon\globalPlugins\freeAudio\settingsPanel.py:117
 msgid ""
-"Longer buffers use more temporary disk space, especially for high-bitrate stations — a "
-"5-hour buffer can use several gigabytes."
+"Longer buffers use more temporary disk space, especially for high-bitrate "
+"stations — a 5-hour buffer can use several gigabytes."
 msgstr ""
-"Довші буфери використовують більше тимчасового дискового простору, особливо для "
-"станцій з високим бітрейтом — 5-годинний буфер може використовувати кілька гігабайт."
+"Довші буфери використовують більше тимчасового дискового простору, особливо "
+"для станцій з високим бітрейтом — 5-годинний буфер може використовувати "
+"кілька гігабайт."
 
 #. --- Audio output device (BASS only) ---
 #. (index, name) list — populated from BASS
@@ -4088,8 +4156,8 @@ msgstr "Розпізнавання треків через Shazam (Ctrl+Win+I ×
 #: addon\globalPlugins\freeAudio\settingsPanel.py:418
 msgid "ffmpeg.exe path (optional; auto-used from addon folder if empty):"
 msgstr ""
-"Шлях до файлу ffmpeg.exe (не обов'язково; якщо поле порожнє, використовується "
-"автоматично шлях із папки додатка):"
+"Шлях до файлу ffmpeg.exe (не обов'язково; якщо поле порожнє, "
+"використовується автоматично шлях із папки додатка):"
 
 #. Translators: Button label; opens a file-picker to choose ffmpeg.exe.
 #: addon\globalPlugins\freeAudio\settingsPanel.py:427
@@ -4149,11 +4217,12 @@ msgstr "Пароль GETEM:"
 #. Translators: Grey hint under the GETEM credential fields explaining how they are stored (see the comment above).
 #: addon\globalPlugins\freeAudio\settingsPanel.py:564
 msgid ""
-"Stored encrypted on this computer, for this Windows user only. Leave both fields empty "
-"and save to remove them."
+"Stored encrypted on this computer, for this Windows user only. Leave both "
+"fields empty and save to remove them."
 msgstr ""
-"Зберігається в зашифрованому вигляді на цьому комп'ютері, лише для цього користувача "
-"Windows. Залиште обидва поля порожніми та збережіть зміни, щоб видалити їх."
+"Зберігається в зашифрованому вигляді на цьому комп'ютері, лише для цього "
+"користувача Windows. Залиште обидва поля порожніми та збережіть зміни, щоб "
+"видалити їх."
 
 #. --- Recording output format ---
 #. Translators: Label for the recording-output-format choice control.
@@ -4182,7 +4251,8 @@ msgstr "Бітрейт запису MP3:"
 #. Translators: Checkbox label for skipping the pre-playback internet reachability check.
 #: addon\globalPlugins\freeAudio\settingsPanel.py:607
 msgid ""
-"&Disable internet connectivity check before playing (recommended if DNS is blocked)"
+"&Disable internet connectivity check before playing (recommended if DNS is "
+"blocked)"
 msgstr ""
 "&Вимкнути перевірку підключення до Інтернету перед початком відтворення "
 "(рекомендується, якщо DNS заблоковано)"
@@ -4277,10 +4347,11 @@ msgstr "Перемотано назад на %d секунд"
 
 #. Translators: Name of an NVDA command (Ctrl+Win+J); rewinds the live time-shift buffer, or seeks backward within a podcast/audiobook file if one is playing.
 #: addon\globalPlugins\freeAudio\timeshiftMixin.py:311
-msgid "Time-shift: rewind 15 seconds (enters time-shift mode if not already active)"
+msgid ""
+"Time-shift: rewind 15 seconds (enters time-shift mode if not already active)"
 msgstr ""
-"Тайм-шифт: перемотати назад на 15 секунд (активує режим тайм-шифту, якщо він ще не "
-"активний)"
+"Тайм-шифт: перемотати назад на 15 секунд (активує режим тайм-шифту, якщо він "
+"ще не активний)"
 
 #. Translators: Spoken when Ctrl+Win+J (rewind) is pressed while the time-shift feature itself is turned off in settings.
 #. Translators: Same message as the rewind command, spoken here when Ctrl+Win+K (forward) is pressed with time-shift turned off.
@@ -4292,7 +4363,8 @@ msgstr "Буфер тайм-шифту вимкнено. Увімкніть йо
 
 #. Translators: One of the reasons a rewind/forward can fail, mapped from rewind_timeshift()'s return reason to a spoken message (continues for the next six lines: feature disabled, wrong backend, HLS unsupported, not enough buffer yet, buffer file not ready, engine error).
 #: addon\globalPlugins\freeAudio\timeshiftMixin.py:335
-msgid "Time-shift requires the BASS audio backend, which is currently disabled."
+msgid ""
+"Time-shift requires the BASS audio backend, which is currently disabled."
 msgstr "Тайм-шифт потребує аудіодрайвер BASS, який наразі вимкнено."
 
 #: addon\globalPlugins\freeAudio\timeshiftMixin.py:337
@@ -4301,19 +4373,19 @@ msgstr "Тайм-шифт недоступний для поточного др�
 
 #: addon\globalPlugins\freeAudio\timeshiftMixin.py:338
 msgid ""
-"Time-shift is not supported for this station's stream (no seekable audio could be "
-"extracted)."
+"Time-shift is not supported for this station's stream (no seekable audio "
+"could be extracted)."
 msgstr ""
-"Відкладення часу не підтримується для потокового передавання цієї станції (не вдалося "
-"вилучити аудіо з можливістю пошуку)."
+"Відкладення часу не підтримується для потокового передавання цієї станції "
+"(не вдалося вилучити аудіо з можливістю пошуку)."
 
 #: addon\globalPlugins\freeAudio\timeshiftMixin.py:339
 msgid ""
-"Not enough buffered audio to rewind yet. Wait a few seconds after the station starts "
-"playing and try again."
+"Not enough buffered audio to rewind yet. Wait a few seconds after the "
+"station starts playing and try again."
 msgstr ""
-"У буфері недостатньо аудіо для перемотування. Зачекайте кілька секунд після початку "
-"відтворення станції та повторіть спробу."
+"У буфері недостатньо аудіо для перемотування. Зачекайте кілька секунд після "
+"початку відтворення станції та повторіть спробу."
 
 #: addon\globalPlugins\freeAudio\timeshiftMixin.py:340
 msgid "Time-shift buffer file is not ready yet."
@@ -4336,10 +4408,11 @@ msgstr "Перемотано на %.0f секунд позаду прямого 
 
 #. Translators: Name of an NVDA command (Ctrl+Win+K); fast-forwards the live time-shift buffer (snapping to live once caught up), or seeks forward within a podcast/audiobook file if one is playing.
 #: addon\globalPlugins\freeAudio\timeshiftMixin.py:351
-msgid "Time-shift: fast-forward 15 seconds, or return to live if already caught up"
+msgid ""
+"Time-shift: fast-forward 15 seconds, or return to live if already caught up"
 msgstr ""
-"Тайм-шифт: перемотати вперед на 15 секунд або повернутися до прямого ефіру, якщо вже "
-"досягнуто"
+"Тайм-шифт: перемотати вперед на 15 секунд або повернутися до прямого ефіру, "
+"якщо вже досягнуто"
 
 #. Translators: Spoken when fast-forward is pressed but playback is already at the live edge (not time-shifted).
 #: addon\globalPlugins\freeAudio\timeshiftMixin.py:369
@@ -4381,11 +4454,12 @@ msgstr "Помилка розпізнавання: %s"
 #. Translators: Name of an NVDA command (Ctrl+Win+I); its behaviour escalates with repeated presses as the description itself explains.
 #: addon\globalPlugins\freeAudio\trackInfoMixin.py:120
 msgid ""
-"Announce currently playing station. Press twice for full details, three times to copy "
-"track info, four times to force music recognition."
+"Announce currently playing station. Press twice for full details, three "
+"times to copy track info, four times to force music recognition."
 msgstr ""
-"Оголосити поточну станцію. Натисніть двічі для повної інформації, тричі — щоб "
-"скопіювати інформацію про трек, чотири рази — щоб примусово розпізнати трек."
+"Оголосити поточну станцію. Натисніть двічі для повної інформації, тричі — "
+"щоб скопіювати інформацію про трек, чотири рази — щоб примусово розпізнати "
+"трек."
 
 #. Translators: First line of the What's Playing announcement when nothing is playing but one or more scheduled recordings are still running silently in the background; station names are appended after it, joined with two spaces.
 #. Translators: Same as the Ctrl+Win+I version, spoken here by the F2 dialog equivalent.
@@ -4502,10 +4576,12 @@ msgstr "Показати інформацію про станцію, яка за
 #. rapid key presses can assign a single keystroke to this action.
 #. Translators: Name of an NVDA command; unbound-gesture equivalent of pressing Ctrl+Win+I (or F2 in the dialog) three times.
 #: addon\globalPlugins\freeAudio\trackInfoMixin.py:343
-msgid "Copy current track info to clipboard, or start music recognition if unavailable"
+msgid ""
+"Copy current track info to clipboard, or start music recognition if "
+"unavailable"
 msgstr ""
-"Скопіювати інформацію про поточний трек у буфер обміну або запустити розпізнавання "
-"музики, якщо ця функція недоступна"
+"Скопіювати інформацію про поточний трек у буфер обміну або запустити "
+"розпізнавання музики, якщо ця функція недоступна"
 
 #. Equivalent to pressing Control+Windows+I (or F2 in the dialog) four times.
 #. Forces Shazam music recognition regardless of whether ICY metadata is present.
@@ -4626,8 +4702,8 @@ msgstr "Не вдалося отримати доступ до буфера об
 msgid "Already in liked songs: %s"
 msgstr "Вже в списку вподобаних треків: %s"
 
-#: addon\globalPlugins\freeAudio\trackInfoMixin.py:1193
-#: addon\globalPlugins\freeAudio\trackInfoMixin.py:1220
+#: addon\globalPlugins\freeAudio\trackInfoMixin.py:1188
+#: addon\globalPlugins\freeAudio\trackInfoMixin.py:1228
 #, python-format
 msgid "Song recording saved: %s"
 msgstr "Запис трека збережено: %s"
@@ -4635,48 +4711,48 @@ msgstr "Запис трека збережено: %s"
 #. Translators: Spoken automatically while a live recording is in progress if the time-shift disk-space limit is reached and old buffered audio is being discarded faster than usual.
 #: addon\globalPlugins\freeAudio\__init__.py:498
 msgid ""
-"Time-shift buffer: running low on disk space, the oldest audio is being dropped more "
-"aggressively."
+"Time-shift buffer: running low on disk space, the oldest audio is being "
+"dropped more aggressively."
 msgstr ""
-"Буфер відкладеного часу: через брак місця на диску найстаріші аудіозаписи видаляються "
-"більш інтенсивно."
+"Буфер відкладеного часу: через брак місця на диску найстаріші аудіозаписи "
+"видаляються більш інтенсивно."
 
 #. Translators: Spoken when a recording finishes normally; %s is the saved output filename.
-#: addon\globalPlugins\freeAudio\__init__.py:588
+#: addon\globalPlugins\freeAudio\__init__.py:591
 #, python-format
 msgid "Recording finished: %s"
 msgstr "Запис завершено: %s"
 
 #. Translators: Spoken when a recording never actually started because the stream connection failed for its whole scheduled window; %s is the station name.
-#: addon\globalPlugins\freeAudio\__init__.py:593
+#: addon\globalPlugins\freeAudio\__init__.py:596
 #, python-format
 msgid "Recording failed: could not connect to %s"
 msgstr "Запис не вдався: не вдалося підключитися до %s"
 
 #. Translators: Spoken when converting a finished recording to the configured format (e.g. MP3) fails; the original, unconverted file is kept. %s is its filename.
-#: addon\globalPlugins\freeAudio\__init__.py:598
+#: addon\globalPlugins\freeAudio\__init__.py:601
 #, python-format
 msgid "Recording conversion failed. The original file was kept: %s"
 msgstr "Не вдалося конвертувати запис. Оригінальний файл збережено: %s"
 
 #. Translators: Spoken when the folder configured for recordings can't be used (e.g. missing/no permission) and freeAudio saved to its default folder instead; %(station)s is the station name, %(reason)s is why the folder failed.
-#: addon\globalPlugins\freeAudio\__init__.py:604
+#: addon\globalPlugins\freeAudio\__init__.py:607
 #, python-format
 msgid ""
-"Could not use the selected folder for '%(station)s' (%(reason)s). Saved to the default "
-"recordings folder instead."
+"Could not use the selected folder for '%(station)s' (%(reason)s). Saved to "
+"the default recordings folder instead."
 msgstr ""
-"Не вдалося використати вибрану папку для '%(station)s' (%(reason)s). Збережено в "
-"початкову папку записів."
+"Не вдалося використати вибрану папку для '%(station)s' (%(reason)s). "
+"Збережено в початкову папку записів."
 
 #. ── 2. Create / refresh a script for every favourite ─────────────────
 #. Translators: Script category shown in NVDA's Input Gestures dialog, grouping the auto-generated 'play this favourite station' shortcuts separately from freeAudio's main commands.
-#: addon\globalPlugins\freeAudio\__init__.py:696
+#: addon\globalPlugins\freeAudio\__init__.py:702
 msgid "freeAudio Stations"
 msgstr "Станції freeAudio"
 
 #. Translators: Spoken if a per-favourite-station shortcut is triggered after that station was removed from favourites since the shortcut was created; %s is the station name.
-#: addon\globalPlugins\freeAudio\__init__.py:717
+#: addon\globalPlugins\freeAudio\__init__.py:723
 #, python-format
 msgid "Station no longer in favourites: %s"
 msgstr "Станція більше не у улюбленому: %s"
@@ -4687,130 +4763,137 @@ msgstr "Станція більше не у улюбленому: %s"
 #. NVDA reads __doc__ as the script description and
 #. __name__ as the script identifier.
 #. Translators: Auto-generated description of a per-jukebox-entry shortcut, shown in NVDA's Input Gestures dialog; %s is the entry's display title.
-#: addon\globalPlugins\freeAudio\__init__.py:727
-#: addon\globalPlugins\freeAudio\__init__.py:807
+#: addon\globalPlugins\freeAudio\__init__.py:733
+#: addon\globalPlugins\freeAudio\__init__.py:813
 #, python-format
 msgid "%s playback shortcut"
 msgstr "%s комбінація клавіш для відтворення"
 
 #. ── 2. Create / refresh a script for every entry ─────────────────────
 #. Translators: Script category shown in NVDA's Input Gestures dialog, grouping the auto-generated 'play this jukebox entry' shortcuts separately from freeAudio's main commands.
-#: addon\globalPlugins\freeAudio\__init__.py:779
+#: addon\globalPlugins\freeAudio\__init__.py:785
 msgid "freeAudio Jukebox"
 msgstr "Черга прослуховування freeAudio"
 
 #. Translators: Spoken if a per-jukebox-entry shortcut is triggered after that entry was removed from the jukebox since the shortcut was created; %s is the entry's display title.
-#: addon\globalPlugins\freeAudio\__init__.py:800
+#: addon\globalPlugins\freeAudio\__init__.py:806
 #, python-format
 msgid "Entry no longer in the jukebox: %s"
 msgstr "Запис більше не в черзі прослуховування: %s"
 
 #. Translators: Menu item that opens the freeAudio station browser dialog
-#: addon\globalPlugins\freeAudio\__init__.py:883
+#: addon\globalPlugins\freeAudio\__init__.py:889
 msgid "Station &Browser...\tCtrl+Win+R"
 msgstr "Браузер &радіостанцій...\tCtrl+Win+R"
 
 #. Translators: Menu item that opens freeAudio settings in NVDA preferences
-#: addon\globalPlugins\freeAudio\__init__.py:892
+#: addon\globalPlugins\freeAudio\__init__.py:898
 msgid "freeAudio &Settings..."
 msgstr "&Налаштування freeAudio..."
 
 #. Translators: Menu item that manually triggers the update check
-#: addon\globalPlugins\freeAudio\__init__.py:901
+#: addon\globalPlugins\freeAudio\__init__.py:907
 msgid "Check for &Updates..."
 msgstr "Перевірити &оновлення..."
 
 #. Translators: Label of the freeAudio submenu in NVDA Tools menu
-#: addon\globalPlugins\freeAudio\__init__.py:914
+#: addon\globalPlugins\freeAudio\__init__.py:920
 msgid "&freeAudio"
 msgstr "&freeAudio"
 
 #. Translators: Name of an NVDA command; opens the freeAudio station browser dialog on its main Stations tab.
-#: addon\globalPlugins\freeAudio\__init__.py:975
+#: addon\globalPlugins\freeAudio\__init__.py:981
 msgid "Open freeAudio station browser"
 msgstr "Відкрити браузер радіостанцій freeAudio"
 
 #. Translators: Name of an NVDA command; opens the station browser dialog on the Audio Books tab.
-#: addon\globalPlugins\freeAudio\__init__.py:985
+#: addon\globalPlugins\freeAudio\__init__.py:991
 msgid "Open freeAudio audio book library"
 msgstr "Відкрити бібліотеку аудіокниг freeAudio"
 
 #. Translators: Name of an NVDA command; opens the station browser dialog on the Podcasts tab.
-#: addon\globalPlugins\freeAudio\__init__.py:995
+#: addon\globalPlugins\freeAudio\__init__.py:1001
 msgid "Open freeAudio podcast subscriptions"
 msgstr "Відкрити підписки на подкасти freeAudio"
 
 #. Translators: Name of an NVDA command; opens the station browser dialog on the local Jukebox tab.
-#: addon\globalPlugins\freeAudio\__init__.py:1005
+#: addon\globalPlugins\freeAudio\__init__.py:1011
 msgid "Open freeAudio local jukebox"
 msgstr "Відкрити локальну чергу прослуховування freeAudio"
 
 #. Translators: Name of an NVDA command whose behaviour depends on what is currently playing: adds a live station to favourites, or downloads the current audio book/podcast episode.
-#: addon\globalPlugins\freeAudio\__init__.py:1015
+#: addon\globalPlugins\freeAudio\__init__.py:1021
 msgid ""
-"Add currently playing station to favourites, download the whole audio book if one is "
-"playing, or download the episode if a podcast is playing"
+"Add currently playing station to favourites, download the whole audio book "
+"if one is playing, or download the episode if a podcast is playing"
 msgstr ""
-"Додати станцію, яка зараз відтворюється, до улюбленого, завантажити всю аудіокнигу, "
-"якщо вона відтворюється, або завантажити епізод, якщо відтворюється подкаст"
+"Додати станцію, яка зараз відтворюється, до улюбленого, завантажити всю "
+"аудіокнигу, якщо вона відтворюється, або завантажити епізод, якщо "
+"відтворюється подкаст"
 
 #. Translators: Spoken when this shortcut is pressed while something is playing that is neither a station, podcast episode, nor audio book (e.g. a local jukebox track).
-#: addon\globalPlugins\freeAudio\__init__.py:1035
+#: addon\globalPlugins\freeAudio\__init__.py:1041
 msgid "The shortcut is only for stations, podcasts or audio books"
 msgstr ""
-"Ця комбінація клавіш призначена виключно для радіостанцій, подкастів або аудіокниг"
+"Ця комбінація клавіш призначена виключно для радіостанцій, подкастів або "
+"аудіокниг"
 
 #. Translators: Spoken when the currently playing station is already saved in favourites; %s is the station name.
-#: addon\globalPlugins\freeAudio\__init__.py:1057
+#: addon\globalPlugins\freeAudio\__init__.py:1063
 #, python-format
 msgid "Already in favourites: %s"
 msgstr "Вже в улюбленому: %s"
 
 #. Translators: Spoken after successfully adding the currently playing station to favourites; %s is the station name.
-#: addon\globalPlugins\freeAudio\__init__.py:1061
+#: addon\globalPlugins\freeAudio\__init__.py:1067
 #, python-format
 msgid "Added to favourites: %s"
 msgstr "Додано до улюбленого: %s"
 
 #. Translators: Spoken when this shortcut is pressed to download an audio book but no audio book (GETEM/Gutenberg/LibriVox) is currently playing.
-#: addon\globalPlugins\freeAudio\__init__.py:1076
+#: addon\globalPlugins\freeAudio\__init__.py:1082
 msgid "No audio book is playing"
 msgstr "Аудіокнига не відтворюється"
 
 #. Translators: Spoken when downloading the currently playing audio book fails.
-#: addon\globalPlugins\freeAudio\__init__.py:1083
+#: addon\globalPlugins\freeAudio\__init__.py:1089
 msgid "Could not download this audio book."
 msgstr "Не вдалося завантажити цю аудіокнигу."
 
-#. Translators: Spoken when a station's connection attempt fails outright, so the user isn't left thinking it's silently playing; %(name)s is the station name, %(reason)s is a short failure description.
+#. Translators: Spoken once when a radio station (currently ABC Australia stations) is played through a special playback mode, because it would otherwise stutter.
 #: addon\globalPlugins\freeAudio\__init__.py:1166
+msgid "This station uses a special playback mode to prevent stuttering."
+msgstr ""
+
+#. Translators: Spoken when a station's connection attempt fails outright, so the user isn't left thinking it's silently playing; %(name)s is the station name, %(reason)s is a short failure description.
+#: addon\globalPlugins\freeAudio\__init__.py:1182
 #, python-format
 msgid "Could not play %(name)s: %(reason)s"
 msgstr "Не вдалося відтворити %(name)s: %(reason)s"
 
 #. Translators: Spoken during a manual update check when the GitHub repository has no published releases yet.
-#: addon\globalPlugins\freeAudio\__init__.py:1375
+#: addon\globalPlugins\freeAudio\__init__.py:1391
 msgid "No releases found on GitHub yet."
 msgstr "На GitHub поки що не знайдено жодних випусків."
 
 #. Translators: Spoken during a manual update check when the GitHub API request itself returns an HTTP error; %d is the HTTP status code.
-#: addon\globalPlugins\freeAudio\__init__.py:1380
+#: addon\globalPlugins\freeAudio\__init__.py:1396
 #, python-format
 msgid "Update check failed (HTTP %d)."
 msgstr "Не вдалося перевірити оновлення (HTTP %d)."
 
 #. Translators: Spoken during a manual update check when the request to GitHub fails outright (e.g. no internet connection).
-#: addon\globalPlugins\freeAudio\__init__.py:1386
+#: addon\globalPlugins\freeAudio\__init__.py:1402
 msgid "Update check failed. Please check your internet connection."
 msgstr "Не вдалося перевірити оновлення. Перевірте підключення до Інтернету."
 
 #. Translators: Spoken during a manual update check when GitHub's release data doesn't include a usable version tag.
-#: addon\globalPlugins\freeAudio\__init__.py:1402
+#: addon\globalPlugins\freeAudio\__init__.py:1418
 msgid "Could not determine latest version."
 msgstr "Не вдалося визначити останню версію."
 
 #. Translators: Update dialog message when direct install is available. %(new)s=new version, %(current)s=current version
-#: addon\globalPlugins\freeAudio\__init__.py:1421
+#: addon\globalPlugins\freeAudio\__init__.py:1437
 #, python-format
 msgid ""
 "A new version of freeAudio is available: %(new)s.\n"
@@ -4823,19 +4906,19 @@ msgstr ""
 "\n"
 "Бажаєте завантажити та встановити зараз?"
 
-#: addon\globalPlugins\freeAudio\__init__.py:1424
-#: addon\globalPlugins\freeAudio\__init__.py:1433
-#: addon\globalPlugins\freeAudio\__init__.py:1501
+#: addon\globalPlugins\freeAudio\__init__.py:1440
+#: addon\globalPlugins\freeAudio\__init__.py:1449
+#: addon\globalPlugins\freeAudio\__init__.py:1517
 msgid "unknown"
 msgstr "невідомо"
 
 #. Translators: Button label on the update-available dialog when a direct .nvda-addon download is available, offering to install it right away.
-#: addon\globalPlugins\freeAudio\__init__.py:1426
+#: addon\globalPlugins\freeAudio\__init__.py:1442
 msgid "&Install"
 msgstr "&Встановити"
 
 #. Translators: Update dialog message when only a download page is available. %(new)s=new version, %(current)s=current version
-#: addon\globalPlugins\freeAudio\__init__.py:1430
+#: addon\globalPlugins\freeAudio\__init__.py:1446
 #, python-format
 msgid ""
 "A new version of freeAudio is available: %(new)s.\n"
@@ -4849,39 +4932,39 @@ msgstr ""
 "Бажаєте відкрити сторінку завантаження?"
 
 #. Translators: Button label on the update-available dialog when only a release web page (no direct download) is available, offering to open it in a browser.
-#: addon\globalPlugins\freeAudio\__init__.py:1435
+#: addon\globalPlugins\freeAudio\__init__.py:1451
 msgid "&Open Page"
 msgstr "&Відкрити сторінку"
 
 #. Translators: Title of the dialog shown when a newer freeAudio version is available.
-#: addon\globalPlugins\freeAudio\__init__.py:1441
+#: addon\globalPlugins\freeAudio\__init__.py:1457
 msgid "freeAudio Update Available"
 msgstr "Доступне оновлення freeAudio"
 
 #. Translators: 'Cancel' button label on the update-available dialog, paired with whichever install/open-page label is used as the other button.
-#: addon\globalPlugins\freeAudio\__init__.py:1445
+#: addon\globalPlugins\freeAudio\__init__.py:1461
 msgid "&Cancel"
 msgstr "&Скасувати"
 
 #. Translators: Spoken while the new version is being downloaded for direct install; %s is the version number being downloaded.
-#: addon\globalPlugins\freeAudio\__init__.py:1461
+#: addon\globalPlugins\freeAudio\__init__.py:1477
 #, python-format
 msgid "Downloading freeAudio %s…"
 msgstr "Завантаження freeAudio %s…"
 
 #. Translators: Spoken when the downloaded .nvda-addon file can't be handed to NVDA's installer automatically; %s is the path where the file was saved so the user can open it manually.
-#: addon\globalPlugins\freeAudio\__init__.py:1491
+#: addon\globalPlugins\freeAudio\__init__.py:1507
 #, python-format
 msgid "Could not launch installer. File saved to: %s"
 msgstr "Не вдалося запустити встановлювач. Файл збережено за адресою: %s"
 
 #. Translators: Message and title of the dialog shown after a manual update check finds no newer version; %s is the currently installed version, or the fallback 'unknown' label just below if it could not be determined.
-#: addon\globalPlugins\freeAudio\__init__.py:1501
+#: addon\globalPlugins\freeAudio\__init__.py:1517
 #, python-format
 msgid "freeAudio is up to date. Installed: %s"
 msgstr "freeAudio оновлено. Встановлено: %s"
 
-#: addon\globalPlugins\freeAudio\__init__.py:1502
+#: addon\globalPlugins\freeAudio\__init__.py:1518
 msgid "freeAudio Update Check"
 msgstr "Перевірка оновлень freeAudio"
 
@@ -4896,11 +4979,11 @@ msgstr "Відтворити файл, на якому стоїть фокус, 
 #. Translators: Spoken when the "play focused item" Explorer shortcut is used on a folder rather than a file.
 #: addon\appModules\explorer.py:242
 msgid ""
-"This is a folder. Playing only works for files - add it to the jukebox to play the "
-"whole folder."
+"This is a folder. Playing only works for files - add it to the jukebox to "
+"play the whole folder."
 msgstr ""
-"Це папка. Відтворення працює лише для файлів — додайте її до черги прослуховування, "
-"щоб відтворити всю папку."
+"Це папка. Відтворення працює лише для файлів — додайте її до черги "
+"прослуховування, щоб відтворити всю папку."
 
 #. Translators: Spoken when the "play focused item" Explorer shortcut is used on a file that isn't a recognized audio format.
 #: addon\appModules\explorer.py:246
@@ -4910,7 +4993,8 @@ msgstr "Не розпізнано аудіофайл."
 #. Translators: Name of an NVDA command; adds the file or folder focused in Windows Explorer to the freeAudio jukebox.
 #: addon\appModules\explorer.py:260
 msgid "Add the focused item to the freeAudio jukebox"
-msgstr "Додати елемент, на якому стоїть фокус, до черги прослуховування freeAudio"
+msgstr ""
+"Додати елемент, на якому стоїть фокус, до черги прослуховування freeAudio"
 
 #. Add-on summary/title, usually the user visible name of the add-on
 #. Translators: Summary/title for this add-on
@@ -4922,41 +5006,46 @@ msgstr "freeAudio: Радіо та багато іншого"
 #. Translators: Long description to be shown for this add-on
 #: buildVars.py:19
 msgid ""
-"freeAudio is an internet radio, podcast, audio-book, and local music add-on for NVDA "
-"that provides seamless access to thousands of internet radio stations via the Radio "
-"Browser open directory, RSS/Atom podcast feeds, the libriVox + GETEM digital library "
-"for the visually impaired, and your own local audio files and folders through its "
-"built-in jukebox. It features a fully accessible station browser with search, country "
-"filter, favourites management, and per-station, per-podcast, per-audio-book, and per-"
-"jukebox-track audio profiles. Podcast episodes, audio book chapters, and jukebox "
-"tracks resume automatically from where you left off - jukebox folders even pick up on "
-"the last track you were playing - with adjustable pitch-preserving playback speed and "
-"independent pitch-shift (semitone transpose). Playback is handled by BASS, with "
-"support for volume control, audio effects, output device selection, and simultaneous "
-"audio mirroring to a second device. Additional features include instant and scheduled "
-"recording, time-shift rewind of live radio, sleep and alarm timers, automatic ICY "
-"metadata announcements, Shazam-based music recognition, and a liked-songs log with "
-"lyrics lookup. All controls and shortcuts are designed for NVDA accessibility."
+"freeAudio is an internet radio, podcast, audio-book, and local music add-on "
+"for NVDA that provides seamless access to thousands of internet radio "
+"stations via the Radio Browser open directory, RSS/Atom podcast feeds, the "
+"libriVox + GETEM digital library for the visually impaired, and your own "
+"local audio files and folders through its built-in jukebox. It features a "
+"fully accessible station browser with search, country filter, favourites "
+"management, and per-station, per-podcast, per-audio-book, and per-jukebox-"
+"track audio profiles. Podcast episodes, audio book chapters, and jukebox "
+"tracks resume automatically from where you left off - jukebox folders even "
+"pick up on the last track you were playing - with adjustable pitch-"
+"preserving playback speed and independent pitch-shift (semitone transpose). "
+"Playback is handled by BASS, with support for volume control, audio effects, "
+"output device selection, and simultaneous audio mirroring to a second "
+"device. Additional features include instant and scheduled recording, time-"
+"shift rewind of live radio, sleep and alarm timers, automatic ICY metadata "
+"announcements, Shazam-based music recognition, and a liked-songs log with "
+"lyrics lookup. All controls and shortcuts are designed for NVDA "
+"accessibility."
 msgstr ""
-"freeAudio — це додаток для NVDA, що підтримує інтернет-радіо, подкасти, аудіокниги та "
-"локальну музику. Він забезпечує безперешкодний доступ до тисяч інтернет-радіостанцій "
-"через відкритий каталог Radio Browser, RSS/Atom-канали подкастів, цифрову бібліотеку "
-"libriVox + GETEM для людей з порушеннями зору, а також до ваших власних локальних "
-"аудіофайлів і папок за допомогою вбудованої черги прослуховування. Додаток має "
-"повністю доступний браузер станцій із функціями пошуку, фільтрації за країною, "
-"управління улюбленими, а також аудіопрофілями для кожної станції, кожного подкасту, "
-"кожної аудіокниги та кожного треку. Епізоди подкастів, розділи аудіокниг та треки з "
-"черги прослуховування автоматично відтворюються з того місця, де ви зупинилися — папки "
-"з черги прослуховування навіть продовжують відтворення з останнього треку, який ви "
-"слухали, — з можливістю регулювання швидкості відтворення із збереженням висоти звуку "
-"та незалежним зміщенням висоти звуку (підвищення на півтону). Відтворення здійснюється "
-"за допомогою BASS із підтримкою регулювання гучності, аудіоефектів, вибору пристрою "
-"виводу та одночасного дзеркального відтворення аудіо на інший пристрій. Додаткові "
-"функції включають миттєвий та запланований запис, перемотування прямого ефіру радіо з "
-"часовим відкладенням, таймери сну та будильника, автоматичні оголошення метаданих ICY, "
-"розпізнавання музики на основі Shazam та журнал улюблених пісень із можливістю пошуку "
-"текстів пісень. Усі елементи керування та комбінації клавіш розроблені з урахуванням "
-"доступності для NVDA."
+"freeAudio — це додаток для NVDA, що підтримує інтернет-радіо, подкасти, "
+"аудіокниги та локальну музику. Він забезпечує безперешкодний доступ до тисяч "
+"інтернет-радіостанцій через відкритий каталог Radio Browser, RSS/Atom-канали "
+"подкастів, цифрову бібліотеку libriVox + GETEM для людей з порушеннями зору, "
+"а також до ваших власних локальних аудіофайлів і папок за допомогою "
+"вбудованої черги прослуховування. Додаток має повністю доступний браузер "
+"станцій із функціями пошуку, фільтрації за країною, управління улюбленими, а "
+"також аудіопрофілями для кожної станції, кожного подкасту, кожної аудіокниги "
+"та кожного треку. Епізоди подкастів, розділи аудіокниг та треки з черги "
+"прослуховування автоматично відтворюються з того місця, де ви зупинилися — "
+"папки з черги прослуховування навіть продовжують відтворення з останнього "
+"треку, який ви слухали, — з можливістю регулювання швидкості відтворення із "
+"збереженням висоти звуку та незалежним зміщенням висоти звуку (підвищення на "
+"півтону). Відтворення здійснюється за допомогою BASS із підтримкою "
+"регулювання гучності, аудіоефектів, вибору пристрою виводу та одночасного "
+"дзеркального відтворення аудіо на інший пристрій. Додаткові функції "
+"включають миттєвий та запланований запис, перемотування прямого ефіру радіо "
+"з часовим відкладенням, таймери сну та будильника, автоматичні оголошення "
+"метаданих ICY, розпізнавання музики на основі Shazam та журнал улюблених "
+"пісень із можливістю пошуку текстів пісень. Усі елементи керування та "
+"комбінації клавіш розроблені з урахуванням доступності для NVDA."
 
 #. Brief changelog for this version
 #. Translators: what's new content for the add-on version
@@ -4965,84 +5054,91 @@ msgid ""
 "\n"
 "## New Features\n"
 "\n"
-"- **Jukebox now has the same feature set as Favourites:** Jukebox entries can now be "
-"reordered in-place (comma-key pick/drop), renamed (custom display name, doesn't touch "
-"the file/folder on disk), assigned to groups, and exported/imported as JSON (full "
-"fidelity: groups + per-file audio profiles) or M3U (path + custom name only). An auto-"
-"generated NVDA Input Gestures shortcut is also created per entry under a new "
-"\"freeAudio Jukebox\" category — works even when the dialog is closed.\n"
+"- **Jukebox now has the same feature set as Favourites:** Jukebox entries "
+"can now be reordered in-place (comma-key pick/drop), renamed (custom display "
+"name, doesn't touch the file/folder on disk), assigned to groups, and "
+"exported/imported as JSON (full fidelity: groups + per-file audio profiles) "
+"or M3U (path + custom name only). An auto-generated NVDA Input Gestures "
+"shortcut is also created per entry under a new \"freeAudio Jukebox\" "
+"category — works even when the dialog is closed.\n"
 "\n"
-"- **Per-module enable/disable:** A new \"Modules\" checklist in settings lets users "
-"turn the Podcasts, Audio Books, and/or Jukebox tabs off entirely. All three remain "
-"enabled by default, so existing users see no change. Disabling a module hides its tab "
-"and related gestures but never touches its saved data (subscriptions, library, jukebox "
-"entries) — re-enabling restores everything as it was.\n"
+"- **Per-module enable/disable:** A new \"Modules\" checklist in settings "
+"lets users turn the Podcasts, Audio Books, and/or Jukebox tabs off entirely. "
+"All three remain enabled by default, so existing users see no change. "
+"Disabling a module hides its tab and related gestures but never touches its "
+"saved data (subscriptions, library, jukebox entries) — re-enabling restores "
+"everything as it was.\n"
 "\n"
-"- **Plain Left/Right for seeking in Jukebox/Audio Books/Podcasts lists:** Left/Right "
-"in these tabs' item lists now seeks within the currently playing item, calling the "
-"same methods as the global Ctrl+Win+J/K commands. Episode/chapter/track switching "
-"still works via Ctrl+Left/Right and F3/F4; the old plain Left/Right episode-switch "
-"behavior only remains as a fallback when nothing is playing yet.\n"
+"- **Plain Left/Right for seeking in Jukebox/Audio Books/Podcasts lists:** "
+"Left/Right in these tabs' item lists now seeks within the currently playing "
+"item, calling the same methods as the global Ctrl+Win+J/K commands. Episode/"
+"chapter/track switching still works via Ctrl+Left/Right and F3/F4; the old "
+"plain Left/Right episode-switch behavior only remains as a fallback when "
+"nothing is playing yet.\n"
 "\n"
 "## Improvements\n"
 "\n"
-"- **Timer tab focus behaviour fixed:** Switching to the Timer tab now forces focus to "
-"the Start/Stop action radio buttons only on first open. On every later switch, focus "
-"stays where you left it — matching every other tab.\n"
+"- **Timer tab focus behaviour fixed:** Switching to the Timer tab now forces "
+"focus to the Start/Stop action radio buttons only on first open. On every "
+"later switch, focus stays where you left it — matching every other tab.\n"
 "\n"
-"- **HLS short-segment merger removed:** The ffmpeg-based `_HlsStreamMerger` and its "
-"detection helpers have been dropped. HLS streams now always play directly through "
-"BASS, and stall reconnects use the original URL.\n"
+"- **HLS short-segment merger removed:** The ffmpeg-based `_HlsStreamMerger` "
+"and its detection helpers have been dropped. HLS streams now always play "
+"directly through BASS, and stall reconnects use the original URL.\n"
 "\n"
 "## Bug Fixes\n"
 "\n"
-"- **Wrong duration in fMP4 (HLS) recordings fixed:** Fragmented MP4 recordings had no "
-"header duration and carried the stream's absolute clock, so players showed absurd "
-"lengths. After recording, files are remuxed to a standard MP4 with ffmpeg (stream "
-"copy); when ffmpeg is unavailable, fragment timestamps are rebased to zero as a "
-"fallback.\n"
+"- **Wrong duration in fMP4 (HLS) recordings fixed:** Fragmented MP4 "
+"recordings had no header duration and carried the stream's absolute clock, "
+"so players showed absurd lengths. After recording, files are remuxed to a "
+"standard MP4 with ffmpeg (stream copy); when ffmpeg is unavailable, fragment "
+"timestamps are rebased to zero as a fallback.\n"
 msgstr ""
 "\n"
 "## Нові функції\n"
 "\n"
-"- **Черга прослуховування тепер має той самий набір функцій, що й Улюблене:** Записи "
-"черги прослуховування тепер можна змінювати місцями на льоту (вибір/скидання клавішею "
-"«кома»), перейменовувати (власна відображувана назва, не змінює файл/папку на диску), "
-"призначати групам і експортувати/імпортувати як JSON (повна достовірність: групи + "
-"аудіопрофілі для кожного файлу) або M3U (лише шлях + власна назва). Для кожного запису "
-"також створюється автоматично згенерована комбінація клавіш NVDA у новій категорії "
+"- **Черга прослуховування тепер має той самий набір функцій, що й Улюблене:"
+"** Записи черги прослуховування тепер можна змінювати місцями на льоту "
+"(вибір/скидання клавішею «кома»), перейменовувати (власна відображувана "
+"назва, не змінює файл/папку на диску), призначати групам і експортувати/"
+"імпортувати як JSON (повна достовірність: групи + аудіопрофілі для кожного "
+"файлу) або M3U (лише шлях + власна назва). Для кожного запису також "
+"створюється автоматично згенерована комбінація клавіш NVDA у новій категорії "
 "«Черга прослуховування freeAudio» — працює навіть коли діалог закрито.\n"
 "\n"
-"- **Увімкнення/вимкнення окремих модулів:** Новий список «Модулі» в налаштуваннях "
-"дозволяє користувачам повністю вимикати вкладки «Подкасти», «Аудіокниги» та/або «Черга "
-"прослуховування». Усі три залишаються увімкненими за замовчуванням, тож наявні "
-"користувачі не помітять жодних змін. Вимкнення модуля приховує його вкладку та "
-"пов'язані жести, але ніколи не торкається збережених даних (підписок, бібліотеки, "
-"записів черги прослуховування) — повторне увімкнення відновлює все як було.\n"
+"- **Увімкнення/вимкнення окремих модулів:** Новий список «Модулі» в "
+"налаштуваннях дозволяє користувачам повністю вимикати вкладки «Подкасти», "
+"«Аудіокниги» та/або «Черга прослуховування». Усі три залишаються увімкненими "
+"за замовчуванням, тож наявні користувачі не помітять жодних змін. Вимкнення "
+"модуля приховує його вкладку та пов'язані жести, але ніколи не торкається "
+"збережених даних (підписок, бібліотеки, записів черги прослуховування) — "
+"повторне увімкнення відновлює все як було.\n"
 "\n"
-"- **Звичайні клавіші Left/Right для пошуку позиції у списках черги прослуховування/"
-"аудіокниг/подкастів:** Left/Right у списках цих вкладок тепер виконують пошук позиції "
-"в межах поточного елемента, викликаючи ті самі методи, що й глобальні команди "
-"Ctrl+Win+J/K. Перемикання епізодів/розділів/треків усе ще працює через Ctrl+Left/Right "
-"та F3/F4; стара поведінка звичайних Left/Right для перемикання епізодів залишається "
-"лише як резервний варіант, коли ще нічого не відтворюється.\n"
+"- **Звичайні клавіші Left/Right для пошуку позиції у списках черги "
+"прослуховування/аудіокниг/подкастів:** Left/Right у списках цих вкладок "
+"тепер виконують пошук позиції в межах поточного елемента, викликаючи ті самі "
+"методи, що й глобальні команди Ctrl+Win+J/K. Перемикання епізодів/розділів/"
+"треків усе ще працює через Ctrl+Left/Right та F3/F4; стара поведінка "
+"звичайних Left/Right для перемикання епізодів залишається лише як резервний "
+"варіант, коли ще нічого не відтворюється.\n"
 "\n"
 "## Покращення\n"
 "\n"
-"- **Виправлено поведінку фокуса на вкладці таймера:** Перехід на вкладку таймера тепер "
-"примусово встановлює фокус на радіокнопки дії «Пуск/Стоп» лише під час першого "
-"відкриття. Під час кожного наступного перемикання фокус залишається там, де ви його "
-"залишили — як і на всіх інших вкладках.\n"
+"- **Виправлено поведінку фокуса на вкладці таймера:** Перехід на вкладку "
+"таймера тепер примусово встановлює фокус на радіокнопки дії «Пуск/Стоп» лише "
+"під час першого відкриття. Під час кожного наступного перемикання фокус "
+"залишається там, де ви його залишили — як і на всіх інших вкладках.\n"
 "\n"
 "- **Видалено об'єднувач коротких сегментів HLS:** Заснований на ffmpeg "
-"`_HlsStreamMerger` та його допоміжні засоби виявлення було видалено. HLS-потоки тепер "
-"завжди відтворюються безпосередньо через BASS, а для повторних підключень після "
-"зупинки використовується вихідна URL-адреса.\n"
+"`_HlsStreamMerger` та його допоміжні засоби виявлення було видалено. HLS-"
+"потоки тепер завжди відтворюються безпосередньо через BASS, а для повторних "
+"підключень після зупинки використовується вихідна URL-адреса.\n"
 "\n"
 "## Виправлення помилок\n"
 "\n"
-"- **Виправлено неправильну тривалість у записах fMP4 (HLS):** Фрагментовані записи MP4 "
-"не мали тривалості в заголовку та несли абсолютний годинник потоку, тому плеєри "
-"показували абсурдну тривалість. Після запису файли перепаковуються у стандартний MP4 "
-"за допомогою ffmpeg (копіювання потоку); коли ffmpeg недоступний, як резервний варіант "
-"часові мітки фрагментів перебазовуються на нуль.\n"
+"- **Виправлено неправильну тривалість у записах fMP4 (HLS):** Фрагментовані "
+"записи MP4 не мали тривалості в заголовку та несли абсолютний годинник "
+"потоку, тому плеєри показували абсурдну тривалість. Після запису файли "
+"перепаковуються у стандартний MP4 за допомогою ffmpeg (копіювання потоку); "
+"коли ffmpeg недоступний, як резервний варіант часові мітки фрагментів "
+"перебазовуються на нуль.\n"

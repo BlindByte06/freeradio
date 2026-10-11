@@ -309,6 +309,9 @@ class _BassSubprocessEngine:
 		self.on_connecting = None
 		# Called when bass_host sends a stall event.
 		self.on_stall	  = None
+		# Called with a short code when bass_host sends a notice event (e.g. a
+		# station is being played through a compatibility mode).
+		self.on_notice = None
 		self._reader_thread = None
 		self._stop_reader   = threading.Event()
 		self._play_seq	 = 0
@@ -824,6 +827,16 @@ class _BassSubprocessEngine:
 								pass
 					continue
 
+				# Notice event - informational, for the user (see on_notice)
+				if msg.get("event") and msg.get("type") == "notice":
+					cb = getattr(self, "on_notice", None)
+					if cb:
+						try:
+							cb(msg.get("code", ""))
+						except Exception:
+							pass
+					continue
+
 				# Stall event — BASS stream interrupted, reconnect
 				if msg.get("event") and msg.get("type") == "stall":
 					cb = getattr(self, "on_stall", None)
@@ -964,6 +977,7 @@ class RadioPlayer:
 			self._bass_engine.on_meta = self._on_bass_meta
 			self._bass_engine.on_connecting = self._on_bass_connecting
 			self._bass_engine.on_stall = self._on_bass_stall
+			self._bass_engine.on_notice = self._on_bass_notice
 
 		self._icy_title = None
 		self._icy_stop = threading.Event()
@@ -1009,6 +1023,12 @@ class RadioPlayer:
 		# started. May run on a background thread - the handler is
 		# responsible for marshalling onto the UI thread.
 		self.on_play_failed = None
+		# Callback: called with (code) when the playback engine has something
+		# to tell the user about how a station is being played - currently only
+		# "abc_hls_repack" (ABC HLS compatibility mode, see bass_host.py's
+		# _AbcHlsRepackServer). May run on a background thread - the handler is
+		# responsible for marshalling onto the UI thread.
+		self.on_notice = None
 
 		# Crossfade
 		self._crossfade_duration = 0.0   # seconds; 0.0 = disabled
@@ -1134,6 +1154,15 @@ class RadioPlayer:
 		if self.on_slow_connect:
 			try:
 				self.on_slow_connect(url)
+			except Exception:
+				pass
+
+	def _on_bass_notice(self, code):
+		"""Called when bass_host.py sends a notice event."""
+		cb = self.on_notice
+		if cb:
+			try:
+				cb(code)
 			except Exception:
 				pass
 
@@ -1811,6 +1840,7 @@ class RadioPlayer:
 					self._bass_engine.on_meta	   = self._on_bass_meta
 					self._bass_engine.on_connecting  = self._on_bass_connecting
 					self._bass_engine.on_stall	   = self._on_bass_stall
+					self._bass_engine.on_notice = self._on_bass_notice
 
 				if self._play_gen != gen:
 					if xfade:
@@ -3442,6 +3472,7 @@ class RadioPlayer:
 				self._bass_engine.on_meta		= self._on_bass_meta
 				self._bass_engine.on_connecting  = self._on_bass_connecting
 				self._bass_engine.on_stall	   = self._on_bass_stall
+				self._bass_engine.on_notice = self._on_bass_notice
 
 			self._output_device_index = device_index
 			self._backend			 = self.BACKEND_NONE

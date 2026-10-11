@@ -273,6 +273,547 @@ def _resolve_playlist_url(url, timeout=8):
 	return url
 
 
+# ---------------------------------------------------------------------------
+# ABC (Australia) HLS compatibility mode
+#
+# ABC's live radio HLS segments carry their MPEG-TS clock (PCR) on a separate
+# PID that is not listed as an elementary stream in the PMT (about 264 PCR-only
+# packets per 10 s segment), plus a few other unusual PMT/PES details. BASS
+# (basshls + bass_aac) mis-parses that layout: it hands out ~20-40 KB of a
+# segment, decides the stream has ended and re-opens it, which is heard as
+# constant stuttering. The very same audio, re-wrapped in a conventional TS
+# layout (PCR on the audio PID, one PES per ADTS frame, PAT/PMT repeated), plays
+# perfectly - verified against the real segments with a local test server.
+#
+# Only streams from the hosts in _ABC_HLS_HOSTS use this path. A small loopback
+# HTTP server (127.0.0.1, random port) polls the station's media playlist,
+# re-wraps every new segment and serves a normal live playlist to BASS. If
+# anything about it fails, the caller falls back to opening the original URL.
+# ---------------------------------------------------------------------------
+
+_ABC_HLS_HOSTS = ("mediaserviceslive.akamaized.net", "abc-cdn.net.au")
+
+
+def _is_abc_hls_url(url):
+	try:
+		import urllib.parse as _up
+		host = (_up.urlsplit(url).hostname or "").lower()
+	except Exception:
+		return False
+	return any(host == h or host.endswith("." + h) for h in _ABC_HLS_HOSTS)
+
+
+_ADTS_SAMPLE_RATES = (96000, 88200, 64000, 48000, 44100, 32000, 24000,
+					  22050, 16000, 12000, 11025, 8000, 7350)
+
+_MPEG_CRC_TABLE = None
+
+
+def _mpeg_crc32(data):
+	"""CRC-32/MPEG-2 (poly 0x04C11DB7, init 0xFFFFFFFF, no reflection)."""
+	global _MPEG_CRC_TABLE
+	if _MPEG_CRC_TABLE is None:
+		tbl = []
+		for i in range(256):
+			c = i << 24
+			for _ in range(8):
+				c = ((c << 1) ^ 0x04C11DB7) if (c & 0x80000000) else (c << 1)
+				c &= 0xFFFFFFFF
+			tbl.append(c)
+		_MPEG_CRC_TABLE = tbl
+	crc = 0xFFFFFFFF
+	for b in data:
+		crc = ((crc << 8) & 0xFFFFFFFF) ^ _MPEG_CRC_TABLE[((crc >> 24) ^ b) & 0xFF]
+	return crc
+
+
+_TS_PMT_PID = 0x1000
+_TS_AUDIO_PID = 0x100
+_TS_SDT_PID = 0x11
+# Static SDT section ("Service01" / "FFmpeg") - same bytes ffmpeg writes.
+_TS_SDT_SECTION = bytes.fromhex(
+	"42f0250001c10000ff01ff0001fc80144812010646466d70656709536572766963653031"
+	"777c43ca")
+
+
+def _ts_pat_section():
+	body = bytes([0x00, 0x01, 0xC1, 0x00, 0x00,
+				  0x00, 0x01, 0xE0 | (_TS_PMT_PID >> 8), _TS_PMT_PID & 0xFF])
+	# section_length counts everything after the length field, CRC included
+	sec = bytes([0x00, 0xB0, len(body) + 4]) + body
+	return sec + _mpeg_crc32(sec).to_bytes(4, "big")
+
+
+def _ts_pmt_section():
+	es = bytes([0x0F, 0xE0 | (_TS_AUDIO_PID >> 8), _TS_AUDIO_PID & 0xFF,
+				0xF0, 0x06, 0x0A, 0x04, 0x65, 0x6E, 0x67, 0x00])
+	body = bytes([0x00, 0x01, 0xC1, 0x00, 0x00,
+				  0xE0 | (_TS_AUDIO_PID >> 8), _TS_AUDIO_PID & 0xFF,
+				  0xF0, 0x00]) + es
+	sec = bytes([0x02, 0xB0, len(body) + 4]) + body
+	return sec + _mpeg_crc32(sec).to_bytes(4, "big")
+
+
+def _ts_encode_pts(pts):
+	pts &= (1 << 33) - 1
+	return bytes([
+		0x21 | (((pts >> 30) & 7) << 1),
+		(pts >> 22) & 0xFF,
+		(((pts >> 15) & 0x7F) << 1) | 1,
+		(pts >> 7) & 0xFF,
+		((pts & 0x7F) << 1) | 1,
+	])
+
+
+def _ts_encode_pcr(base):
+	base &= (1 << 33) - 1
+	return bytes([
+		(base >> 25) & 0xFF,
+		(base >> 17) & 0xFF,
+		(base >> 9) & 0xFF,
+		(base >> 1) & 0xFF,
+		((base & 1) << 7) | 0x7E,
+		0x00,
+	])
+
+
+class _TsWriter:
+	def __init__(self):
+		self._cc = {}
+		self.out = bytearray()
+		self._pkts_since_psi = 0
+		self._psi_rounds = 0
+		self._pat = _ts_pat_section()
+		self._pmt = _ts_pmt_section()
+
+	def _next_cc(self, pid):
+		c = self._cc.get(pid, 0)
+		self._cc[pid] = (c + 1) & 0x0F
+		return c
+
+	def _psi(self, pid, section):
+		payload = b"\x00" + section
+		payload += b"\xFF" * (184 - len(payload))
+		self.out += bytes([0x47, 0x40 | (pid >> 8), pid & 0xFF,
+						   0x10 | self._next_cc(pid)]) + payload
+		self._pkts_since_psi += 1
+
+	def write_psi(self, with_sdt=False):
+		if with_sdt:
+			self._psi(_TS_SDT_PID, _TS_SDT_SECTION)
+		self._psi(0, self._pat)
+		self._psi(_TS_PMT_PID, self._pmt)
+		self._pkts_since_psi = 0
+		self._psi_rounds += 1
+
+	def write_pes(self, pes, pcr_base):
+		total = len(pes)
+		off = 0
+		first = True
+		pid = _TS_AUDIO_PID
+		while off < total:
+			rem = total - off
+			cap = 176 if first else 184      # first packet carries the PCR
+			take = cap if rem >= cap else rem
+			header = bytes([0x47, (0x40 if first else 0x00) | (pid >> 8),
+							pid & 0xFF, 0])
+			alen_total = (184 - take)
+			if first and alen_total < 8:
+				alen_total = 8
+			if alen_total > 0:
+				if alen_total == 1:
+					af = b"\x00"
+				else:
+					af = bytes([alen_total - 1, 0x50 if first else 0x00])
+					if first:
+						af += _ts_encode_pcr(pcr_base)
+					af += b"\xFF" * (alen_total - len(af))
+				afc = 0x30
+			else:
+				af = b""
+				afc = 0x10
+			cc = self._next_cc(pid)
+			header = bytes([header[0], header[1], header[2], afc | cc])
+			self.out += header + af + pes[off:off + take]
+			off += take
+			first = False
+			self._pkts_since_psi += 1
+		if self._pkts_since_psi >= 22:
+			self.write_psi(with_sdt=(self._psi_rounds % 5 == 4))
+
+
+def _repack_ts(data):
+	"""Re-wrap an AAC-in-MPEG-TS segment into a conventional TS layout.
+
+	Returns the new segment bytes, or None when the input isn't what this
+	expects (the caller then keeps serving the original bytes).
+	"""
+	try:
+		return _repack_ts_impl(data)
+	except Exception:
+		return None
+
+
+def _repack_ts_impl(data):
+	n = len(data) // 188
+	if n < 4 or data[0] != 0x47:
+		return None
+	pk = [data[i * 188:(i + 1) * 188] for i in range(n)]
+
+	def pid_of(p):
+		return ((p[1] & 0x1F) << 8) | p[2]
+
+	def payload_of(p):
+		afc = (p[3] >> 4) & 3
+		o = 4
+		if afc & 2:
+			o += 1 + p[4]
+		return p[o:] if (afc & 1) and o < 188 else b""
+
+	for p in pk:
+		if p[0] != 0x47:
+			return None
+
+	# PAT -> PMT pid
+	pmt_pid = None
+	for p in pk:
+		if pid_of(p) == 0 and (p[1] & 0x40):
+			pl = payload_of(p)
+			pl = pl[1 + pl[0]:]
+			sl = ((pl[1] & 0x0F) << 8) | pl[2]
+			prog = pl[8:3 + sl - 4]
+			for i in range(0, len(prog) - 3, 4):
+				if ((prog[i] << 8) | prog[i + 1]) != 0:
+					pmt_pid = ((prog[i + 2] & 0x1F) << 8) | prog[i + 3]
+					break
+			break
+	if pmt_pid is None:
+		return None
+
+	# PMT -> first AAC (ADTS, stream type 0x0F) elementary stream
+	audio_pid = None
+	for p in pk:
+		if pid_of(p) == pmt_pid and (p[1] & 0x40):
+			q = payload_of(p)
+			q = q[1 + q[0]:]
+			sl = ((q[1] & 0x0F) << 8) | q[2]
+			pil = ((q[10] & 0x0F) << 8) | q[11]
+			o = 12 + pil
+			end = 3 + sl - 4
+			while o + 5 <= end:
+				st = q[o]
+				ep = ((q[o + 1] & 0x1F) << 8) | q[o + 2]
+				il = ((q[o + 3] & 0x0F) << 8) | q[o + 4]
+				if st == 0x0F:
+					audio_pid = ep
+					break
+				o += 5 + il
+			break
+	if audio_pid is None:
+		return None
+
+	# Reassemble the audio elementary stream, remembering PES boundaries.
+	es = bytearray()
+	pes_starts = []          # (offset in es, pts or None)
+	for p in pk:
+		if pid_of(p) != audio_pid:
+			continue
+		pl = payload_of(p)
+		if p[1] & 0x40:
+			if pl[:3] != b"\x00\x00\x01":
+				return None
+			flags = pl[7]
+			hl = pl[8]
+			pts = None
+			if flags & 0x80:
+				b = pl[9:14]
+				pts = (((b[0] >> 1) & 7) << 30) | (b[1] << 22) | \
+					((b[2] >> 1) << 15) | (b[3] << 7) | (b[4] >> 1)
+			pes_starts.append((len(es), pts))
+			es += pl[9 + hl:]
+		elif pes_starts:
+			es += pl
+	if not pes_starts or pes_starts[0][1] is None:
+		return None
+
+	# Walk the ADTS frames.
+	frames = []
+	o = 0
+	total = len(es)
+	while o + 7 <= total:
+		if es[o] != 0xFF or (es[o + 1] & 0xF0) != 0xF0:
+			return None
+		fl = ((es[o + 3] & 3) << 11) | (es[o + 4] << 3) | (es[o + 5] >> 5)
+		sfi = (es[o + 2] >> 2) & 15
+		if fl < 7 or sfi >= len(_ADTS_SAMPLE_RATES):
+			return None
+		if o + fl > total:
+			break                      # truncated tail frame: drop it
+		frames.append((o, fl, _ADTS_SAMPLE_RATES[sfi]))
+		o += fl
+	if not frames:
+		return None
+
+	w = _TsWriter()
+	w.write_psi(with_sdt=True)
+	pi = 0
+	base_pts = None
+	k = 0
+	for (fo, fl, sr) in frames:
+		moved = False
+		while pi + 1 < len(pes_starts) and pes_starts[pi + 1][0] <= fo:
+			pi += 1
+			moved = True
+		if (pi == 0 and base_pts is None) or \
+				(moved and pes_starts[pi][0] == fo and pes_starts[pi][1] is not None):
+			base_pts = pes_starts[pi][1]
+			k = 0
+		pts = base_pts + int(round(k * 1024 * 90000.0 / sr))
+		k += 1
+		frame = bytes(es[fo:fo + fl])
+		pes = b"\x00\x00\x01\xC0" + (3 + 5 + fl).to_bytes(2, "big") + \
+			b"\x80\x80\x05" + _ts_encode_pts(pts) + frame
+		w.write_pes(pes, pts)
+	return bytes(w.out)
+
+
+class _AbcHlsRepackServer:
+	"""Loopback HLS server that serves re-wrapped copies of a station's segments."""
+
+	KEEP = 6          # segments exposed in the local playlist
+	INITIAL = 5       # segments pre-fetched at start
+	MIN_READY = 3
+	# BASS re-reads the playlist about every segment duration while the stream
+	# is open. If nothing has asked for it for this long, the stream was closed
+	# (or the player moved on), so stop polling the station and shut down.
+	IDLE_TIMEOUT = 90.0
+
+	def __init__(self, source_url, user_agent="VLC/3.0.20 LibVLC/3.0.20"):
+		self._source_url = source_url
+		self._ua = user_agent
+		self._media_url = None
+		self._stop = threading.Event()
+		self._ready = threading.Event()
+		self._lock = threading.Lock()
+		self._segs = {}                 # seq -> (duration, bytes)
+		self._target = 11
+		self._httpd = None
+		self._threads = []
+		self.repacked = 0
+		self.passthrough = 0
+		self.port = 0
+		self._last_request = time.time()
+
+	# -- network helpers -------------------------------------------------
+	def _get(self, url, timeout=12):
+		req = urllib.request.Request(url, headers={"User-Agent": self._ua})
+		with urllib.request.urlopen(req, timeout=timeout) as resp:
+			return resp.read(), resp.geturl()
+
+	def _resolve_media_url(self):
+		from urllib.parse import urljoin
+		data, final = self._get(self._source_url)
+		text = data.decode("utf-8", "ignore")
+		if "#EXT-X-STREAM-INF" not in text:
+			return final
+		lines = text.splitlines()
+		for i, line in enumerate(lines):
+			if line.startswith("#EXT-X-STREAM-INF"):
+				for nxt in lines[i + 1:]:
+					nxt = nxt.strip()
+					if nxt and not nxt.startswith("#"):
+						return urljoin(final, nxt)
+				break
+		return None
+
+	@staticmethod
+	def _parse_media_playlist(text):
+		target = 10
+		seq0 = 0
+		segs = []
+		dur = None
+		for line in text.splitlines():
+			line = line.strip()
+			if line.startswith("#EXT-X-TARGETDURATION:"):
+				try:
+					target = int(float(line.split(":", 1)[1]))
+				except Exception:
+					pass
+			elif line.startswith("#EXT-X-MEDIA-SEQUENCE:"):
+				try:
+					seq0 = int(line.split(":", 1)[1])
+				except Exception:
+					pass
+			elif line.startswith("#EXTINF:"):
+				try:
+					dur = float(line.split(":", 1)[1].split(",")[0])
+				except Exception:
+					dur = None
+			elif line and not line.startswith("#"):
+				segs.append((dur if dur else float(target), line))
+				dur = None
+		return target, seq0, segs
+
+	# -- polling thread --------------------------------------------------
+	def _poll_loop(self):
+		from urllib.parse import urljoin
+		last_seq = None
+		first = True
+		fails = 0
+		while not self._stop.is_set():
+			if time.time() - self._last_request > self.IDLE_TIMEOUT:
+				self.stop()
+				return
+			wait = 2.5
+			try:
+				data, final = self._get(self._media_url)
+				target, seq0, segs = self._parse_media_playlist(
+					data.decode("utf-8", "ignore"))
+				self._target = max(target, 1)
+				entries = [(seq0 + i, d, u) for i, (d, u) in enumerate(segs)]
+				if first:
+					entries = entries[-self.INITIAL:]
+				for seq, dur, uri in entries:
+					if self._stop.is_set():
+						return
+					if last_seq is not None and seq <= last_seq:
+						continue
+					seg, _ = self._get(urljoin(final, uri), timeout=15)
+					rp = _repack_ts(seg)
+					if rp is None:
+						rp = seg
+						self.passthrough += 1
+					else:
+						self.repacked += 1
+					with self._lock:
+						self._segs[seq] = (dur, rp)
+						for old in [s for s in self._segs if s < seq - 8]:
+							del self._segs[old]
+					last_seq = seq
+					if len(self._segs) >= self.MIN_READY:
+						self._ready.set()
+				first = False
+				fails = 0
+			except Exception as e:
+				fails += 1
+				_debug_log("abc repack poll failed (%d): %s" % (fails, e))
+				wait = min(2.5 * fails, 8.0)
+			self._stop.wait(wait)
+
+	# -- local playlist --------------------------------------------------
+	def _playlist_bytes(self):
+		with self._lock:
+			items = sorted(self._segs.items())
+		suffix = []
+		for seq, val in reversed(items):
+			if suffix and suffix[-1][0] != seq + 1:
+				break
+			suffix.append((seq, val))
+		suffix.reverse()
+		suffix = suffix[-self.KEEP:]
+		if not suffix:
+			return None
+		lines = ["#EXTM3U", "#EXT-X-VERSION:3",
+				 "#EXT-X-TARGETDURATION:%d" % max(self._target, 1),
+				 "#EXT-X-MEDIA-SEQUENCE:%d" % suffix[0][0]]
+		for seq, (dur, _) in suffix:
+			lines.append("#EXTINF:%.4f," % dur)
+			lines.append("seg_%d.ts" % seq)
+		return ("\r\n".join(lines) + "\r\n").encode("ascii")
+
+	def _segment_bytes(self, seq):
+		with self._lock:
+			v = self._segs.get(seq)
+		return v[1] if v else None
+
+	# -- lifecycle -------------------------------------------------------
+	def start(self, timeout=15.0):
+		"""Start serving. Returns the local playlist URL, or None on failure."""
+		import http.server
+		import socketserver
+
+		try:
+			self._media_url = self._resolve_media_url()
+		except Exception as e:
+			_debug_log("abc repack: playlist fetch failed: %s" % e)
+			return None
+		if not self._media_url:
+			return None
+
+		owner = self
+
+		class _Handler(http.server.BaseHTTPRequestHandler):
+			def log_message(self, *args):
+				pass
+
+			def _reply(self, code, ctype, body):
+				self.send_response(code)
+				self.send_header("Content-Type", ctype)
+				self.send_header("Content-Length", str(len(body)))
+				self.send_header("Cache-Control", "no-cache")
+				self.send_header("Connection", "close")
+				self.end_headers()
+				try:
+					self.wfile.write(body)
+				except Exception:
+					pass
+
+			def do_GET(self):
+				owner._last_request = time.time()
+				path = self.path.split("?", 1)[0]
+				if path == "/live.m3u8":
+					body = owner._playlist_bytes()
+					if body is None:
+						self._reply(404, "text/plain", b"not ready")
+					else:
+						self._reply(200, "application/vnd.apple.mpegurl", body)
+					return
+				m = re.match(r"^/seg_(\d+)\.ts$", path)
+				if m:
+					body = owner._segment_bytes(int(m.group(1)))
+					if body is not None:
+						self._reply(200, "video/mp2t", body)
+						return
+				self._reply(404, "text/plain", b"not found")
+
+		class _Server(socketserver.ThreadingMixIn, http.server.HTTPServer):
+			daemon_threads = True
+			allow_reuse_address = True
+
+		try:
+			self._httpd = _Server(("127.0.0.1", 0), _Handler)
+		except Exception as e:
+			_debug_log("abc repack: bind failed: %s" % e)
+			return None
+		self.port = self._httpd.server_address[1]
+
+		t_srv = threading.Thread(target=self._httpd.serve_forever,
+								 name="freeAudio-AbcRepackHTTP", daemon=True)
+		t_poll = threading.Thread(target=self._poll_loop,
+								  name="freeAudio-AbcRepackPoll", daemon=True)
+		self._threads = [t_srv, t_poll]
+		t_srv.start()
+		t_poll.start()
+		if not self._ready.wait(timeout):
+			self.stop()
+			return None
+		return "http://127.0.0.1:%d/live.m3u8" % self.port
+
+	def stop(self):
+		self._stop.set()
+		httpd = self._httpd
+		self._httpd = None
+		if httpd is not None:
+			try:
+				httpd.shutdown()
+			except Exception:
+				pass
+			try:
+				httpd.server_close()
+			except Exception:
+				pass
+
+
 # BASS engine
 class BassHost:
 	def __init__(self, dll_dir, device_index=-1):
@@ -280,6 +821,10 @@ class BassHost:
 		self._device_index = device_index  # -1 = system default
 		self._dll	  = None
 		self._dll_hls  = None
+		# ABC HLS compatibility mode (see _AbcHlsRepackServer): loopback servers
+		# currently feeding BASS, and the source URLs the user was already told about.
+		self._abc_servers = []
+		self._abc_noticed = set()
 		self._bass_fx_dll = None  # bass_fx.dll - optional, only used for
 								  # pitch-preserving podcast playback speed
 		self._tempo_active = False  # True while self._handle is a BASS_FX
@@ -792,6 +1337,66 @@ class BassHost:
 				pass
 		return stream
 
+	def _abc_register_server(self, srv):
+		stale = []
+		with self._lock:
+			self._abc_servers.append(srv)
+			# Keep the one feeding the current stream plus the previous one
+			# (a crossfade may still be fading it out); stop anything older.
+			while len(self._abc_servers) > 2:
+				stale.append(self._abc_servers.pop(0))
+		for old in stale:
+			try:
+				old.stop()
+			except Exception:
+				pass
+
+	def _abc_stop_servers(self):
+		with self._lock:
+			servers, self._abc_servers = self._abc_servers, []
+		for srv in servers:
+			try:
+				srv.stop()
+			except Exception:
+				pass
+
+	def _try_abc_repacked_hls(self, url):
+		"""Open an ABC HLS station through the loopback re-wrapping server.
+
+		Returns the BASS stream handle, or 0 when it can't be done - the
+		caller then falls back to opening the original URL as before.
+		"""
+		srv = None
+		try:
+			srv = _AbcHlsRepackServer(url)
+			local_url = srv.start()
+			if not local_url:
+				srv.stop()
+				return 0
+			stream = self._dll_hls.BASS_HLS_StreamCreateURL(
+				local_url.encode("utf-8"),
+				ctypes.c_uint32(_BASS_STREAM_BLOCK),
+				ctypes.c_void_p(0),
+				ctypes.c_void_p(0),
+			)
+			if not stream:
+				srv.stop()
+				return 0
+			self._abc_register_server(srv)
+			if url not in self._abc_noticed:
+				self._abc_noticed.add(url)
+				_event(type="notice", code="abc_hls_repack")
+			_debug_log("abc hls repack: serving %s via %s" % (url, local_url))
+			return stream
+		except Exception as e:
+			_debug_log("abc hls repack failed: %s" % e)
+			if srv is not None:
+				try:
+					srv.stop()
+				except Exception:
+					pass
+			return 0
+
 	def _try_create_url(self, url, seekable=False):
 		# Reset up front — only the seekable/tempo-wrap path below sets this
 		# back to True, so a stale value from a previous podcast session
@@ -818,6 +1423,14 @@ class BassHost:
 			ssl_host = _urllib_parse.urlsplit(url).hostname
 		except Exception:
 			ssl_host = None
+
+		# ABC (Australia) HLS: BASS mis-parses the way these segments are
+		# packaged, so re-wrap them locally first (see _AbcHlsRepackServer).
+		# Falls through to the normal path below if that isn't possible.
+		if is_hls and self._dll_hls and _is_abc_hls_url(url):
+			stream = self._try_abc_repacked_hls(url)
+			if stream:
+				return stream
 
 		# HLS
 		if is_hls and self._dll_hls:
@@ -1558,6 +2171,7 @@ class BassHost:
 				except OSError:
 					pass
 				self._downloaded_file_path = None
+		self._abc_stop_servers()
 
 	def pause(self):
 		with self._lock:
