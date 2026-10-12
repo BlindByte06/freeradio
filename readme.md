@@ -6,9 +6,9 @@ freeAudio is a full-featured internet radio, podcast, audio-book, and local-juke
 
 - **Internet radio** — Browse and search over 50,000 stations from the [Radio Browser](https://www.radio-browser.info/) directory, with results supplemented by TuneIn and iHeartRadio. Save favourites, reorder them, and jump straight to any of them with a global keyboard shortcut from anywhere in Windows — see [Radio Browser Directory](#radio-browser-directory) and [Favourites](#favourites).
 - **Podcasts** — Subscribe to any RSS/Atom feed, or search Apple's podcast directory and preview episodes before subscribing. Playback position is saved automatically and resumes where you left off — see [Podcasts](#podcasts).
-- **Audio books** — Search and stream or download books from three sources: [GETEM](https://getem.boun.edu.tr/), Boğaziçi University's digital library for the visually impaired, [LibriVox](https://librivox.org/), the volunteer-read public-domain audiobook project, and the Project Gutenberg Open Audiobook Collection — the latter two need no account — with automatic resume across multi-part works — see [Audio Books (GETEM, LibriVox and Project Gutenberg)](#audio-books-getem-librivox-and-project-gutenberg).
+- **Audio books** — Search, stream and download books from three sources: [GETEM](https://getem.boun.edu.tr/), Boğaziçi University's digital library for the visually impaired; [LibriVox](https://librivox.org/), the volunteer-read public-domain audiobook project; and the Project Gutenberg Open Audiobook Collection. LibriVox and Project Gutenberg need no account. Multi-part works resume automatically where you left off — see [Audio Books (GETEM, LibriVox and Project Gutenberg)](#audio-books-getem-librivox-and-project-gutenberg).
 - **Local Jukebox** — Search audio files stored on any attached drive by filename, or build a personal library of files and folders, and play them back with the same resume, seek, speed and pitch tools podcasts and audio books use — see [Local Jukebox](#local-jukebox).
-- **Recording** — Record what's playing instantly, capture a single song automatically when it starts and stops, or schedule one-off and recurring recordings — all without interrupting playback — see [Recording](#recording).
+- **Recording** — Record what's playing instantly, record a single song from its start to its end, record every song on a station to its own file until you stop, or schedule one-off and recurring recordings — all without interrupting playback — see [Recording](#recording).
 - **Time-shift (rewind live radio)** — Pause and rewind a live station like a DVR, then catch back up to live whenever you want — see [Time-Shift (Rewind Live Radio)](#time-shift-rewind-live-radio).
 - **Music recognition and liked songs** — Identify tracks with no metadata using Shazam-based recognition, save liked songs to a text file, and look up their lyrics — see [Music Recognition](#music-recognition) and [Liked Songs](#liked-songs).
 - **Audio profiles and effects** — Save separate volume, effects, EQ, and playback-speed settings per station, per podcast, per audio book, or per jukebox track, and apply real-time effects (Chorus, Reverb, EQ boosts, and more) through the BASS backend — see [Station Audio Profile](#station-audio-profile).
@@ -41,7 +41,7 @@ After submitting, the station is reviewed and added to the public directory. Onc
 
 ## Requirements
 
-- NVDA 2025.1	 or later
+- NVDA 2025.1 or later
 - Windows 10 or later
 - Internet connection
 
@@ -72,10 +72,10 @@ Some of these shortcuts overlap with ones Windows itself uses. If you'd rather k
 | `Ctrl+Win+Shift+J` | Decrease playback speed | Decreases the playback speed of a podcast episode, audio book, or jukebox track by 0.1x. |
 | `Shift+Win+K` | Transpose up | Raises the pitch of a podcast episode, audio book, or jukebox track in 1/8 whole-tone (0.25 semitone) steps, without changing its speed. Range: −12.00 to +12.00 semitones. See [Transpose (Pitch Shift)](#transpose-pitch-shift). |
 | `Shift+Win+J` | Transpose down | Lowers the pitch by 1/8 whole-tone steps, without changing speed. |
-| `Ctrl+Win+I` | Station info | Announces the currently playing station name, podcast episode, audio book or jukebox track. Press twice to show details such as country, genre and bitrate in a dialog. Press three times to copy the current track info (ICY metadata) to the clipboard if available; if no metadata is present, starts Shazam music recognition instead. Press four times to force music recognition in case of wrong ICY metadata. |
+| `Ctrl+Win+I` | Station info | Announces the currently playing station name, podcast episode, audio book or jukebox track. Press twice to show details such as country, genre and bitrate in a dialog. Press three times to copy the current track info (ICY metadata) to the clipboard if available; if no metadata is present, starts Shazam music recognition instead. Press four times to force music recognition in case of wrong ICY metadata. While a recording is running, its name is announced as well; during an every-song recording this is the song being recorded right now. |
 | `Ctrl+Win+M` | Audio mirror | Mirrors the current stream or media to an additional audio output device simultaneously. Press again to stop mirroring. |
 | `Ctrl+Win+Shift+M` | Obligato mode (background music) | Loops a chosen favourite station quietly in the background, on its own output device and volume, no matter what plays as the main media. First press opens a dialog to pick the station, output device, and relative volume. Press again to stop it. |
-| `Ctrl+Win+E` | Instant recording | Press once to start recording the current station; press again to stop. Press **twice** to start a **song recording** — the file is named after the current track and the recording stops automatically when the track changes. Press twice again while a song recording is active to stop it early. Playback continues uninterrupted in all recording modes. Only available for stations that broadcast ICY metadata. |
+| `Ctrl+Win+E` | Recording (instant / song / every song) | Press once to start recording the current station; press again to stop. Press **twice** to record the **current song**: the file is named after the track and the recording stops by itself when the track changes. Press **three times** to record **every song** until you stop it: each song is saved to its own file. Press twice while a song or every-song recording is running to stop it. Playback continues uninterrupted in all recording modes. Song and every-song recording work only on stations that send track titles (ICY metadata) inside the stream, and every-song recording does not work on HLS (`.m3u8`) stations. See [Recording](#recording). |
 | `Ctrl+Win+W` | Open recordings folder | Opens the folder containing recorded files in File Explorer. |
 | `Ctrl+Win+J` | Time-shift rewind / podcast, audio book & jukebox seek back | For live radio: rewinds 15 seconds. The first press enters time-shift mode; each further press moves 15 seconds further back, up to the buffer limit set in the freeAudio settings. Requires the time-shift buffer to be enabled in Settings. For a podcast, audio book, or jukebox track, this key seeks within the file instead, and scales with how you press it: **holding it down** keeps stepping back 5 seconds per repeat, exactly as before; a **single deliberate tap** seeks back 12 seconds; **two taps** in quick succession seek back 1 minute; **three or more taps** seek back 5 minutes. Only one seek happens per tap sequence, sized for however many taps were made — taps don't add up. Works regardless of the time-shift setting. |
 | `Ctrl+Win+K` | Time-shift fast-forward / podcast, audio book & jukebox seek forward | For live radio: moves forward 15 seconds while time-shifted. Once the live edge is reached, playback automatically returns to live and this becomes a no-op until you rewind again. For a podcast, audio book, or jukebox track, this key seeks forward within the file using the same tap/hold scaling as `Ctrl+Win+J` above (hold = 5 seconds per repeat; 1 tap = 12 seconds; 2 taps = 1 minute; 3+ taps = 5 minutes). Works regardless of the time-shift setting. |
@@ -129,7 +129,7 @@ The following keys work only while the Station Browser window is active.
 | Shortcut | Function | Description |
 |---|---|---|
 | `F1` | Help guide | Opens the add-on's help file in the default browser. The guide for the active NVDA language is searched first; if not found, the default guide is opened. |
-| `F2` | What's playing | Announces the currently playing station and track name. Press twice to show details such as country, genre and bitrate in a dialog. Press three times to copy the current track info (ICY metadata) to the clipboard if available; if no metadata is present, starts Shazam music recognition instead. Press four times to force music recognition in case of wrong ICY metadata. |
+| `F2` | What's playing | Announces the currently playing station and track name. Press twice to show details such as country, genre and bitrate in a dialog. Press three times to copy the current track info (ICY metadata) to the clipboard if available; if no metadata is present, starts Shazam music recognition instead. Press four times to force music recognition in case of wrong ICY metadata. While a recording is running, its name is announced as well. |
 | `F3` | Previous item | On All Stations or Favourites tabs: moves to the previous station and starts playing immediately. On Podcasts tab: moves to the previous episode in the episode list and plays it. On Audio Books tab: moves to the previous book and starts playing it. On Jukebox tab: moves to the previous track in the selected jukebox item and plays it. |
 | `F4` | Next item | On All Stations or Favourites tabs: moves to the next station and starts playing immediately. On Podcasts tab: moves to the next episode and plays it. On Audio Books tab: moves to the next book and starts playing it. On Jukebox tab: moves to the next track in the selected jukebox item and plays it. |
 | `Shift+F3` | Previous feed / part / item | On Podcasts tab: moves up one feed in the subscriptions list. On Audio Books tab: moves to the previous part of the currently playing book. On Jukebox tab: moves up one jukebox entry (file or folder) in the main list. |
@@ -145,10 +145,10 @@ The following keys work only while the Station Browser window is active.
 
 | Shortcut | Function | Description |
 |---|---|---|
-| `→` | Next item / Seek forward | On a station list (All Stations / Favourites), moves to the next station and plays it immediately, wrapping to the beginning at the end of the list. On the Podcasts, Audio Books or Jukebox item lists, while something is loaded and playing, seeks forward instead — the same as the global `Ctrl+Win+K` command (see Tiered Seeking above). On the Podcasts episode list specifically, if nothing is loaded yet, it falls back to moving to the next episode and playing it. |
+| `→` | Next item / Seek forward | On a station list (All Stations / Favourites), moves to the next station and plays it immediately, wrapping to the beginning at the end of the list. On the Podcasts, Audio Books or Jukebox item lists, while something is loaded and playing, seeks forward instead — the same as the global `Ctrl+Win+K` command (see [Podcast Playback Details](#podcast-playback-details) for how tapping and holding change the step). On the Podcasts episode list specifically, if nothing is loaded yet, it falls back to moving to the next episode and playing it. |
 | `←` | Previous item / Seek backward | On a station list, moves to the previous station and plays it, jumping to the end when at the beginning. On the Podcasts, Audio Books or Jukebox item lists, while something is loaded and playing, seeks backward instead — the same as the global `Ctrl+Win+J` command. On the Podcasts episode list, if nothing is loaded yet, it falls back to moving to the previous episode and playing it. |
-| `Shift+→` | Transpose up | On the Podcasts, Audio Books or Jukebox item lists: raises the pitch of the current playback by a semitone, the same as the global `Shift+Win+K` command. |
-| `Shift+←` | Transpose down | On the Podcasts, Audio Books or Jukebox item lists: lowers the pitch of the current playback by a semitone, the same as the global `Shift+Win+J` command. |
+| `Shift+→` | Transpose up | On the Podcasts, Audio Books or Jukebox item lists: raises the pitch of the current playback by one step (0.25 semitone), the same as the global `Shift+Win+K` command. |
+| `Shift+←` | Transpose down | On the Podcasts, Audio Books or Jukebox item lists: lowers the pitch of the current playback by one step (0.25 semitone), the same as the global `Shift+Win+J` command. |
 | `Page Up` | Playback speed up | On the Podcasts, Audio Books or Jukebox item lists: increases playback speed, the same as the global `Ctrl+Win+Shift+K` command. |
 | `Page Down` | Playback speed down | On the Podcasts, Audio Books or Jukebox item lists: decreases playback speed, the same as the global `Ctrl+Win+Shift+J` command. |
 | `Ctrl+→` | Next episode / book / track | On Podcasts tab: moves to the next episode and plays it. On Audio Books tab (library list focused): moves to the next book. On Jukebox tab (either the entries list or the tracks list focused): moves to the next track in the selected jukebox item and plays it. |
@@ -214,7 +214,7 @@ Favourites, Liked Songs, the Audio Books library, and the Jukebox list all suppo
 - Press **`.`** (period) on a highlighted item to mark or unmark it. NVDA announces the change, and a marked item's row is labelled "(marked)" so its status stays clear while you keep arrowing through the list.
 - Press **`Shift+Home`** to mark or unmark every item from the current one up to the first item in the list, or **`Shift+End`** to do the same down to the last item. Whether the range is marked or unmarked is decided by the current item's own state, so the whole range always moves the same way in one action. Focus moves to the far end of the range afterwards, and NVDA announces how many items changed.
 - Press **`Delete`** to remove every marked item at once. If nothing is marked, `Delete` still removes just the currently selected item, as before.
-- The right‑click context menu (Applications key / `Shift+F10`) of each list includes a **Remove Selected** command, enabled only when at least one item is marked, that does the same thing.
+- The right-click context menu (Applications key / `Shift+F10`) of each list includes a **Remove Selected** command, enabled only when at least one item is marked, that does the same thing.
 - Before anything is deleted, a single confirmation dialog summarizes how many items are about to be removed.
 
 Marks are per-list and are cleared once you remove the items (or unmark them individually); they are not saved between sessions.
@@ -280,9 +280,11 @@ Both buttons are located below the favourites list and are only enabled when a s
 
 ## Music Recognition
 
-Pressing `Ctrl+Win+I` three times triggers Shazam-based music recognition for the currently playing stream. Recognition only starts when no ICY metadata (track info broadcast by the station) is available; if metadata is present, it is copied to the clipboard instead.
+Pressing `Ctrl+Win+I` three times triggers Shazam-based music recognition for the currently playing stream. Recognition only starts when no ICY metadata (track info broadcast by the station) is available; if metadata is present, it is copied to the clipboard instead. Pressing `Ctrl+Win+I` four times forces recognition even when the station sends metadata, which helps when that metadata is wrong.
 
-Recognition works as follows: a short audio sample is captured from the stream using ffmpeg, the Shazam fingerprinting algorithm is applied, and the result is sent to Shazam's servers. If recognition succeeds, the track title, artist, album and release year are announced by NVDA and automatically copied to the clipboard. If the **Save liked songs to a text file** option is enabled, the recognition result is also appended to `likedSongs.txt`.
+Recognition works as follows: a short audio sample is captured from the stream using ffmpeg (which identifies itself the way a media player does, so stations that refuse unknown programs still answer), the Shazam fingerprinting algorithm is applied, and the result is sent to Shazam's servers. If recognition succeeds, the track title, artist, album and release year are announced by NVDA and automatically copied to the clipboard. If the **Save liked songs to a text file** option is enabled, the recognition result is also appended to `likedSongs.txt`.
+
+If ffmpeg cannot read the stream directly — for example because the station refuses its connection, or because the stream address ends in `.nsv` (typical of SHOUTcast servers), which makes ffmpeg misdetect the audio format — freeAudio records a short sample from the stream itself and has ffmpeg decode that file instead. This happens automatically; there is no setting for it.
 
 **Audio feedback:** Two rising beeps sound when recognition starts, and two falling beeps when it ends. A short beep plays every 2 seconds while the process is running.
 
@@ -321,7 +323,7 @@ Press `Ctrl+Win+Shift+M` again at any time to stop Obligato mode.
 
 ## Recording
 
-Recordings are saved to `Documents\freeAudio Recordings\` by default. The filename includes the station name (or song title, in song recording mode) and the recording start time. The recordings folder can be changed at any time from NVDA Menu → Preferences → Settings → freeAudio → **Recordings folder**.
+Recordings are saved to `Documents\freeAudio Recordings\` by default. The filename includes the station name (or the song title, in the song recording modes) and the time the recording started. The recordings folder can be changed at any time from NVDA Menu → Preferences → Settings → freeAudio → **Recordings folder**.
 
 The **Recording output format** setting controls how completed recordings are saved:
 - **Original stream format** writes the stream exactly as received. An HLS broadcast may therefore produce a `.ts` file.
@@ -330,7 +332,16 @@ The **Recording output format** setting controls how completed recordings are sa
 
 **Instant recording:** While a station is playing, press `Ctrl+Win+E` once. Press again to stop. Playback continues uninterrupted throughout.
 
-**Song recording:** Press `Ctrl+Win+E` **twice** in quick succession while a station that broadcasts ICY metadata is playing. The recording starts immediately and is named after the current track title. When the track changes, the recording stops automatically and NVDA announces the saved filename. If you want to end the recording early before the track finishes, press `Ctrl+Win+E` twice again. If the current station does not broadcast ICY metadata, song recording is not available and NVDA will inform you.
+**Song recording (current song):** Press `Ctrl+Win+E` **twice** in quick succession while a station that broadcasts ICY metadata is playing. The recording starts a moment after the second press — freeAudio waits briefly in case you press a third time — and is named after the current track title. When the station announces the next track, the recording stops at that point and NVDA announces the saved filename. To end it early, press `Ctrl+Win+E` twice again. If the current station does not broadcast ICY metadata, song recording is not available and NVDA will inform you.
+
+**Every-song recording:** Press `Ctrl+Win+E` **three times** in quick succession to record every song the station plays until you stop it. freeAudio keeps one connection open and starts a new file at each track change, so nothing is lost between songs. Each song is saved as its own file, named after the track and the time it started. When recording starts, NVDA announces that every song is being recorded and gives the current title. To stop, press `Ctrl+Win+E` twice; NVDA announces how many songs were saved.
+
+A few details about every-song recording:
+
+- The first song (recorded from the moment you pressed the keys) and the last song (cut off when you stop) are incomplete, so their filenames contain **(partial)** — for example `Artist - Title (partial) - 2026-10-09 10-15.mp3`.
+- Pieces shorter than 15 seconds — jingles, ad stingers, or a title that flickers between two values — are discarded instead of being saved.
+- It needs the station to send its track titles inside the audio stream itself (ICY metadata). HLS (`.m3u8`) stations, and servers that do not send titles that way, cannot be split into songs; NVDA tells you so and nothing is recorded.
+- While it runs, `Ctrl+Win+I` announces the song being recorded right now, not the one it started with.
 
 **Scheduled recording:** Open the Recording tab in the browser. Select a station from your favourites, enter the start time in HH:MM format and the duration in minutes, select one or more active days, then choose a recurrence mode and a recording mode:
 
@@ -352,20 +363,19 @@ Once a schedule is added, it appears in the list below. Use the **Remove Selecte
 
 NVDA announces when a recording starts and when it finishes. If NVDA is restarted while a scheduled recording is active, the recording resumes automatically on startup.
 
-Like music recognition, instant and song recording reuse freeAudio's existing background stream connection when it's available, rather than opening a new one, so a recording captures what's actually airing even on stations that would otherwise serve a fresh ad to a brand-new connection. This does not apply to scheduled **Record only** recordings, since no station is already playing at the time they start.
+**How recordings connect:** Instant, song and every-song recordings open their own connection to the station instead of copying what you are hearing, so an instant or every-song recording keeps going when you pause playback or switch to another station — it carries on with the station it started on. Stopping playback with `Ctrl+Win+S` while a recording is running asks you to confirm first, because it also ends the recording. The trade-off of a separate connection is that a station which serves a short advertisement to every brand-new connection may put that advertisement at the start of the file.
 
 ## Time-Shift (Rewind Live Radio)
 
 Time-shift lets you rewind the station you're currently listening to, like a DVR or a cassette tape — pause the moment, go back a few minutes, and catch up to live again whenever you want. Playback never has to stop for this: rewinding and fast-forwarding both happen instantly on the same audio stream.
 
-This feature is **disabled by default**. Enable it from NVDA Menu → Preferences → Settings → freeAudio → **Enable time-shift buffer (rewind live radio**, or toggle it instantly at any time with `Ctrl+Win+T`.
+This feature is **disabled by default**. Enable it from NVDA Menu → Preferences → Settings → freeAudio → **Enable time-shift buffer (rewind live radio)**, or toggle it instantly at any time with `Ctrl+Win+T`.
 
-> **Note:** freeAudio now keeps a small background capture of the currently playing station running at all times — not just when this setting is enabled — because [Music Recognition](#music-recognition) and [Recording](#recording) both rely on it for the ad-avoidance behaviour described in those sections. When this setting is **off**, that background capture is kept to about the last 45 seconds and `Ctrl+Win+J`/`Ctrl+Win+K` remain unavailable — only the buffer size changes, not whether it runs. Enabling the setting grows the same capture to the full rewind buffer described below.
+> **Note:** freeAudio keeps a small background capture of the currently playing station running at all times — not just when this setting is enabled — because [Music Recognition](#music-recognition) relies on it for the ad-avoidance behaviour described in that section. When this setting is **off**, that background capture is kept to about the last 45 seconds and `Ctrl+Win+J`/`Ctrl+Win+K` remain unavailable — only the buffer size changes, not whether it runs. Enabling the setting grows the same capture to the full rewind buffer described below.
 
 ### How It Works
 
-Once enabled, freeAudio continuously captures the currently playing station into a rolling local buffer in the background, independently of normal playback. The buffer holds roughly the **last minutes** of audio; older audio is automatically discarded from the front as new audio arrives, so the buffer always represents "the recent past" relative to the live edge.
-Buffer time is determined in the settings.
+Once enabled, freeAudio continuously captures the currently playing station into a rolling local buffer in the background, independently of normal playback. The buffer holds the most recent audio, up to the length set by the **Time-shift buffer duration** setting; older audio is automatically discarded from the front as new audio arrives, so the buffer always represents "the recent past" relative to the live edge.
 
 - **`Ctrl+Win+J`** — Rewind 15 seconds. The first press switches you from live playback into time-shifted playback, starting 15 seconds behind the live edge. Each further press moves another 15 seconds further back, up to the buffer limit.
 - **`Ctrl+Win+K`** — Fast-forward 15 seconds while time-shifted. Once you reach the live edge, playback automatically switches back to the live stream and NVDA announces "Back to live" — you don't need to do anything extra to resume normal listening.
@@ -391,7 +401,7 @@ In the rare case that a station's playlist cannot be read at all (for example, a
 ### Requirements and Limitations
 
 - **Requires the BASS backend**, which freeAudio always uses for playback (see [Playback](#playback)).
-- The Buffer time is determined in the settings.
+- The length of the buffer is set by the **Time-shift buffer duration** setting — see [Settings](#settings).
 - The buffer is per-station: switching stations, stopping playback, or restarting NVDA clears it and starts fresh.
 - Time-shifted playback uses its own local buffer file and does not produce a saved recording — if you want to keep the audio permanently, use Instant Recording (`Ctrl+Win+E`) as well.
 
@@ -434,17 +444,17 @@ You can add a podcast feed in two ways:
 - In the **Search** field, type a keyword (podcast title, topic, or host name) and press Enter.
 - freeAudio searches the iTunes podcast directory and displays matching podcasts in the **Search results** list.
 - Selecting a result fetches that feed in the background and lists its episodes in the **Episodes in selected result** list right below, so you can preview what the show actually contains before deciding to subscribe — see [Previewing Episodes Before Subscribing](#previewing-episodes-before-subscribing) below.
-- Once you're happy with what you see, select the result and either press `Enter`, or open its context menu (Applications key / `Shift+F10`, or right‑click) and choose **Subscribe**, to add it to your subscriptions. The feed is added immediately and appears in your subscriptions list. There is no separate "Add Selected from Search" button — `Enter` or the context menu is the only way to subscribe from search results, keeping the interface clean and accessible.
+- Once you're happy with what you see, select the result and either press `Enter`, or open its context menu (Applications key / `Shift+F10`, or right-click) and choose **Subscribe**, to add it to your subscriptions. The feed is added immediately and appears in your subscriptions list. There is no separate "Add Selected from Search" button — `Enter` or the context menu is the only way to subscribe from search results, keeping the interface clean and accessible.
 
-> **Tip:** You can also type a feed URL directly into the search field — if it looks like a valid URL, the add‑on will attempt to add it as a feed without searching.
+> **Tip:** You can also type a feed URL directly into the search field — if it looks like a valid URL, the add-on will attempt to add it as a feed without searching.
 
-**Context menu for search results:** Right‑click a search result, or select it and press the Applications key / `Shift+F10`, to open a menu with a single **Subscribe** action, identical to pressing `Enter` on the result.
+**Context menu for search results:** Right-click a search result, or select it and press the Applications key / `Shift+F10`, to open a menu with a single **Subscribe** action, identical to pressing `Enter` on the result.
 
 ### Previewing Episodes Before Subscribing
 
 Before committing to a subscription, you can listen to a podcast's episodes straight from the search results. Whenever you select a podcast in the **Search results** list, freeAudio fetches that feed and shows its episodes — title and publish date — in the **Episodes in selected result** list underneath.
 
-- Select an episode in that preview list and press `Enter`, or open its context menu (Applications key / `Shift+F10`, or right‑click) and choose **Preview**, to start playing it through the normal player. All the usual playback controls (pause, volume, time‑shift, etc.) work on it exactly as they would on any other station or episode.
+- Select an episode in that preview list and press `Enter`, or open its context menu (Applications key / `Shift+F10`, or right-click) and choose **Preview**, to start playing it through the normal player. All the usual playback controls (pause, volume, time-shift, etc.) work on it exactly as they would on any other station or episode.
 - While an episode is being previewed, the same context menu shows **Stop Preview** in place of **Preview** — choose it, or press `Enter` again on that episode, to stop.
 - Previewing does not subscribe you to anything; it's purely for listening before you decide. The preview list itself is temporary — it's replaced as soon as you select a different search result, and it does not persist anywhere the way your actual subscriptions do.
 
@@ -452,11 +462,11 @@ Before committing to a subscription, you can listen to a podcast's episodes stra
 
 Once you have added some feeds, they appear in the **Subscriptions** list. Each entry shows the feed title and the number of episodes available.
 
-- **Select a feed** to see its episodes in the lower list. The **Feed details** read‑only text box below the subscriptions list shows the feed title, author, description, episode count, and URL.
+- **Select a feed** to see its episodes in the lower list. The **Feed details** read-only text box below the subscriptions list shows the feed title, author, description, episode count, and URL.
 - **Refresh a feed** — select it and press the **Refresh Feed** button (available via context menu, see below) to fetch the latest episodes. All feeds are also refreshed automatically in the background when you open the Podcasts tab, so you usually see the most recent episodes without manual intervention.
 - **Remove a feed** — select it and press `Delete` or use the context menu to remove it from your subscriptions. You will be asked for confirmation before removal.
 
-**Context menu for feeds:** Right‑click a feed, or select it and press the Applications key / `Shift+F10`, to open a menu with:
+**Context menu for feeds:** Right-click a feed, or select it and press the Applications key / `Shift+F10`, to open a menu with:
 - **Refresh Feed** — fetch new episodes now.
 - **Save Audio Profile for This Podcast** / **Clear Audio Profile** — see [Podcast Audio Profile](#podcast-audio-profile).
 - **Remove Feed** — delete the subscription.
@@ -480,7 +490,7 @@ Select a feed in the subscriptions list; its episodes appear in the **Episodes**
 
 **Resuming playback:** freeAudio saves your position in each podcast episode automatically — immediately whenever you pause or the episode finishes, and every 15 seconds in the background while you keep listening, so a crash or unexpected restart won't lose much progress. If you stop or pause playback and come back later, the episode resumes from the saved position. If you play the episode to the very end (within the last 3 seconds), it is marked as "Listened" and will not resume — it starts from the beginning next time, and the "Listened" prefix appears in the list.
 
-**Context menu for episodes:** Right‑click an episode, or select it and press the Applications key / `Shift+F10`, to open a menu with:
+**Context menu for episodes:** Right-click an episode, or select it and press the Applications key / `Shift+F10`, to open a menu with:
 - **Play Episode** — start playback.
 - **Download Episode** — download the episode file to your recordings folder.
 - **Save Audio Profile for This Podcast** / **Clear Audio Profile** — same commands as the feed's own context menu, included here for convenience so you don't have to switch back to the Subscriptions list. They still save one profile for the whole podcast, not a separate one for this episode — see [Podcast Audio Profile](#podcast-audio-profile).
@@ -496,11 +506,11 @@ Above the episode list is a **Filter** field. As you type, the episode list is f
 
 ### Podcast Playback Details
 
-Podcast episodes are played using the **BASS backend** (the same engine used for radio streams and, as of this version, the only playback backend freeAudio uses). Because episodes are downloaded progressively and are seekable, you can use the time-shift rewind/forward shortcuts (`Ctrl+Win+J`/`Ctrl+Win+K`) while playing a podcast to seek within the episode. The position is saved automatically so you can resume later.
+Podcast episodes are played using the **BASS backend** (the same engine used for radio streams, and the only playback backend freeAudio uses). Because episodes are downloaded progressively and are seekable, you can use the time-shift rewind/forward shortcuts (`Ctrl+Win+J`/`Ctrl+Win+K`) while playing a podcast to seek within the episode. The position is saved automatically so you can resume later.
 
 **Tiered seeking:** Unlike live radio's fixed 15-second rewind, seeking within a podcast, audio book, or jukebox track scales with how you press the key, so you can make a small correction or jump a long way without repeated presses:
 
-- **Holding the key down** (auto-repeat) steps back or forward **5 seconds** per repeat — the same small amount this shortcut has always used for files.
+- **Holding the key down** (auto-repeat) steps back or forward **5 seconds** per repeat — the same small step the shortcut uses on files.
 - **One deliberate tap** seeks **12 seconds**.
 - **Two taps** in quick succession seek **1 minute**.
 - **Three or more taps** seek **5 minutes**; further taps in the same burst don't escalate any further.
@@ -515,7 +525,7 @@ A deliberate tap is held for a brief moment before it actually seeks, in case an
 
 ### Podcast Audio Profile
 
-Right‑click a podcast in the Subscriptions list, or right‑click any of its episodes, and choose **Save Audio Profile for This Podcast** to save the current volume, effects, EQ gains and/or playback speed as a profile tied to that podcast. Whenever any episode of that podcast plays, the saved settings are applied automatically, overriding the global defaults. Because the command is available from both the feed context menu and the episode context menu, you can reach it without switching back to the Subscriptions list — either way, it always saves one profile for the whole podcast, not a separate one per episode.
+Right-click a podcast in the Subscriptions list, or right-click any of its episodes, and choose **Save Audio Profile for This Podcast** to save the current volume, effects, EQ gains and/or playback speed as a profile tied to that podcast. Whenever any episode of that podcast plays, the saved settings are applied automatically, overriding the global defaults. Because the command is available from both the feed context menu and the episode context menu, you can reach it without switching back to the Subscriptions list — either way, it always saves one profile for the whole podcast, not a separate one per episode.
 
 A dialog with 15 options lets you choose exactly what to save:
 - **Volume only**
@@ -561,7 +571,7 @@ Any source can be turned off individually from **NVDA Menu → Preferences → S
 Open the station browser with `Ctrl+Win+R` and switch to the **Audio Books** tab using `Ctrl+Tab` or `Alt+7`. The tab has three main areas:
 
 1. **Search** — a text field to search all enabled catalogues at once, with a results list that appears once a search is run.
-2. **Library** — the list of books you have added from either source, where you play, download and manage them.
+2. **Library** — the list of books you have added from any source, where you play, download and manage them.
 3. **Details** — a read-only box showing the source, title, author, narrator, publisher, format, number of parts, description and catalogue URL of whichever book is selected, in either list.
 
 ### Signing In
@@ -584,7 +594,7 @@ NVDA announces how many audio books were found in total.
 
 Selecting a result shows its details — author, narrator, publisher, format and part count — in the details box below.
 
-**Previewing:** Select a result and press `Space`, or open its context menu (Applications key / `Shift+F10`, or right‑click) and choose **Preview**, to start playing it from its first part without adding it to your library. While a book is being previewed, the same context menu shows **Stop Preview** in its place — choose it, or press `Space` again, to stop. Previewing a book does not save your listening position, since that is only tracked for books already in your library.
+**Previewing:** Select a result and press `Space`, or open its context menu (Applications key / `Shift+F10`, or right-click) and choose **Preview**, to start playing it from its first part without adding it to your library. While a book is being previewed, the same context menu shows **Stop Preview** in its place — choose it, or press `Space` again, to stop. Previewing a book does not save your listening position, since that is only tracked for books already in your library.
 
 **Adding to your library:** Select a result and press `Enter`, or use its context menu and choose **Add to Library**, to add it. freeAudio tells you if the book is already there.
 
@@ -596,7 +606,7 @@ Books you've added appear in the **Library** list, showing title, author and for
 - Use `F3` / `F4` on the Audio Books tab to move to the previous / next **book** in your library and start playing it. `Ctrl+←` / `Ctrl+→` do the same while the library list is focused.
 - Use `Shift+F3` / `Shift+F4` to move between **parts** of the currently playing book instead — the reverse of the Podcasts tab, where F3/F4 move between episodes and Shift+F3/F4 move between feeds. This is because a book is a single library entry even when it has several parts, so the finer-grained "part" navigation sits on the Shift-modified keys here.
 
-**Context menu for library entries:** Right‑click a book, or select it and press the Applications key / `Shift+F10`, to open a menu with:
+**Context menu for library entries:** Right-click a book, or select it and press the Applications key / `Shift+F10`, to open a menu with:
 - **Play Media** — start playing, same as `Enter`.
 - **Download Book** — download every part of the book; see [Downloading Audio Books](#downloading-audio-books) below.
 - **Copy the URL** — copy the book's catalogue page URL to the clipboard (the GETEM catalogue page for a GETEM book, or the archive.org details page for a LibriVox or Project Gutenberg book).
@@ -617,7 +627,7 @@ Like podcasts, resuming a book from its saved position plays a brief cassette-lo
 
 ### Audio Book Audio Profile
 
-Right‑click a book in your Library list and choose **Save Audio Profile for This Book** to save the current volume, effects, EQ gains and/or playback speed as a profile tied to that book. Whenever the book (or any of its parts) plays, the saved settings are applied automatically, overriding the global defaults. This works exactly the same way as [Podcast Audio Profile](#podcast-audio-profile) above, including the same set of save options (volume, effects, and/or playback speed, in any combination) and the same partial-update behaviour.
+Right-click a book in your Library list and choose **Save Audio Profile for This Book** to save the current volume, effects, EQ gains and/or playback speed as a profile tied to that book. Whenever the book (or any of its parts) plays, the saved settings are applied automatically, overriding the global defaults. This works exactly the same way as [Podcast Audio Profile](#podcast-audio-profile) above, including the same set of save options (volume, effects, and/or playback speed, in any combination) and the same partial-update behaviour.
 
 **Clear Audio Profile** removes the saved profile from the book; it is only enabled when the book currently has a saved profile.
 
@@ -649,7 +659,7 @@ Type any part of a filename into the **Search on devices** field and press `Ente
 
 - **Space** on a search result previews it — starts playback through the normal player. Press **Space** again on the same file to stop the preview.
 - **Enter** on a search result adds it to your jukebox.
-- The context menu (Applications key / `Shift+F10`, or right‑click) offers the same two actions: **Preview** / **Stop Preview** and **Add to Jukebox**.
+- The context menu (Applications key / `Shift+F10`, or right-click) offers the same two actions: **Preview** / **Stop Preview** and **Add to Jukebox**.
 - Starting a new search cancels any search still running, so a slow search on a large drive never delays a fresh one.
 
 ### Building Your Jukebox
@@ -754,7 +764,7 @@ On stations that broadcast ICY metadata, the track title and artist are saved di
 
 ## Liked Songs Tab
 
-The **Liked Songs** tab in the station browser displays all tracks saved in `likedSongs.txt`. The list is automatically reloaded from the file each time the tab is opened. Right‑click a song, or select it and press the Applications key / `Shift+F10`, to open a context menu with the same actions described below.
+The **Liked Songs** tab in the station browser displays all tracks saved in `likedSongs.txt`. The list is automatically reloaded from the file each time the tab is opened. Right-click a song, or select it and press the Applications key / `Shift+F10`, to open a context menu with the same actions described below.
 
 A **Filter** field above the list lets you narrow the displayed tracks in real time. Type any part of a song title or artist name and the list updates instantly on every keystroke. NVDA announces the number of matching results after each change. Press the `Down` arrow from the filter field to move focus directly into the list.
 
@@ -786,7 +796,7 @@ The following options can be configured from NVDA Menu → Preferences → Setti
 
 | Option | Description |
 |---|---|
-| Track change voice | Choose whether auto‑announced track changes are spoken using the NVDA synthesizer or a selected SAPI5 voice. |
+| Track change voice | Choose whether auto-announced track changes are spoken using the NVDA synthesizer or a selected SAPI5 voice. |
 | SAPI5 voice | When **Track change voice** is set to SAPI5, selects which installed SAPI5 voice is used to announce track changes. The list is populated in the background from the voices installed on the system. |
 | Audio output device | Sets the audio output device for radio playback. The list includes all BASS-compatible devices on the system plus a "System default" option. Changes are applied immediately on save; if the selected device is disconnected, the add-on automatically falls back to the system default and announces the change. |
 | Audio device refresh mode | Controls how freeAudio refreshes BASS output-device numbers. **Reliable** mode (default) probes devices live and tracks Bluetooth/USB changes more accurately, but can make device changes slightly slower. **Fast** mode uses the current BASS device list and is quicker, but device numbers may stay stale until BASS or NVDA is restarted. |
@@ -798,10 +808,10 @@ The following options can be configured from NVDA Menu → Preferences → Setti
 | Auto-announce track changes (ICY metadata) | When enabled, NVDA automatically reads the new track name each time it changes on a station that broadcasts ICY metadata. The first track is also announced immediately when switching to a new station. Disabled by default. |
 | Mute notifications | When enabled, NVDA does not announce station changes, playback state changes (play, pause, stop), or recording events (started, stopped, finished). Error messages, favourites feedback, music recognition results, and update notifications are not affected. Can also be toggled on the fly via an unassigned input gesture. Disabled by default. |
 | Braille messages | When enabled, freeAudio also sends its notifications directly to the braille display. This is useful for track titles, station changes, playback state and volume changes. Disabled by default. |
-| Enable time-shift buffer (rewind live radio) | Turns the rewind controls (`Ctrl+Win+J`/`Ctrl+Win+K`) on or off and grows the background capture from ~45 seconds up to the time determined in the settings. A small background capture of the currently playing station always runs, even when this is off — see the note in the **Time-Shift (Rewind Live Radio)** section below. Can also be toggled instantly with `Ctrl+Win+T`. Disabled by default — see the **Time-Shift (Rewind Live Radio)** section below for full details. |
+| Enable time-shift buffer (rewind live radio) | Turns the rewind controls (`Ctrl+Win+J`/`Ctrl+Win+K`) on or off and grows the background capture from ~45 seconds up to the **Time-shift buffer duration**. A small background capture of the currently playing station always runs, even when this is off — see the note in the **Time-Shift (Rewind Live Radio)** section above. Can also be toggled instantly with `Ctrl+Win+T`. Disabled by default — see the **Time-Shift (Rewind Live Radio)** section above for full details. |
+| Time-shift buffer duration | Sets the maximum length of the rewind buffer. Options range from 10 minutes up to 5 hours. Longer buffers consume more temporary disk space. |
 | Save liked songs to a text file | When enabled, track info copied to the clipboard by pressing `Ctrl+Win+I` three times is also appended to `Documents\freeAudio Recordings\likedSongs.txt`. If no ICY metadata is available, the Shazam recognition result is saved to the same file. Disabled by default. |
 | When Ctrl+Win+P is pressed with no active playback | Determines what happens when this shortcut is pressed and nothing is playing: start the last station or open the favourites list. |
-| Time-shift buffer duration | Sets the maximum length of the rewind buffer. Options range from 10 minutes up to 5 hours. Longer buffers consume more temporary disk space. |
 | When Ctrl+Win+P is pressed twice | Selects what happens when the shortcut is pressed twice in quick succession: do nothing, open the favourites list, open the recording tab or open the timer tab. When "do nothing" is selected, the first press responds instantly with no delay. |
 | When Ctrl+Win+P is pressed three times | Selects what happens when the shortcut is pressed three times in quick succession: do nothing, open the favourites list, open station search, open the recording tab or open the timer tab. |
 | Check for updates automatically | When enabled, a background update check runs each time NVDA starts; you are notified if a new version is found. When disabled, automatic checks stop but manual checks remain available. |
@@ -820,8 +830,9 @@ When **Mute notifications** is enabled in Settings, NVDA silences the following 
 - Station name when a new station starts playing
 - Playback state changes: play, pause, stop
 - Obligato mode: started / stopped
-- Recording events: started, stopped, finished (instant, song and scheduled recordings)
+- Recording events: started, stopped, finished (instant, song, every-song and scheduled recordings)
 - ICY track change announcements, even when **Auto-announce track changes** is also enabled
+- The notice that a station is being played in a special compatibility mode (see [Playback](#playback))
 
 The following announcements are intentionally **not** affected: error messages, favourites feedback (added / already in list), music recognition results, and update notifications.
 
@@ -837,11 +848,13 @@ This feature is disabled by default and can be toggled from NVDA Menu → Prefer
 
 ## Playback
 
-freeAudio uses **BASS** as its sole playback backend for everything — internet radio, podcasts, audio books, and jukebox tracks. No separate installation is required; it is bundled with the add-on. Support for VLC, PotPlayer and Windows Media Player as fallback backends has been removed; BASS is always used.
+freeAudio uses **BASS** as its sole playback backend for everything — internet radio, podcasts, audio books, and jukebox tracks. No separate installation is required; it is bundled with the add-on. freeAudio does not use VLC, PotPlayer or Windows Media Player.
 
 BASS sends audio directly to the Windows audio stack and appears in the Windows volume mixer as an independent audio source named "pythonw.exe", separate from NVDA. This means freeAudio audio flows on a completely separate channel from NVDA speech: the radio does not cut out, mix with, or get affected by NVDA's own audio settings while NVDA is speaking. The user can adjust the radio volume independently from NVDA in the Windows Volume Mixer. Supports HTTP, HTTPS and most embedded stream formats.
 
 Podcast episodes, audio book chapters, and jukebox tracks are played through BASS because it can open the stream as a seekable file (even while downloading), allowing precise position tracking, tiered rewind/fast-forward, playback speed, pitch transpose, and resuming. Audio mirroring, time-shift, and podcast/audio-book/jukebox seek and resume all depend on BASS and are always available.
+
+**HLS stations that need a compatibility mode:** a few HLS (`.m3u8`) stations package their audio in a way BASS cannot read smoothly — it keeps reopening the stream, which sounds like constant stuttering. For these (currently the ABC Australia radio streams) freeAudio automatically re-wraps the same audio, without re-encoding it, in a conventional layout, using a small server that runs only on your own computer, and plays that instead. Nothing needs to be configured. The first time you play such a station after NVDA starts, NVDA announces "This station uses a special playback mode to prevent stuttering." This announcement follows the **Mute notifications** setting.
 
 ## Update Check
 
@@ -860,10 +873,10 @@ freeAudio automatically checks for new versions via GitHub.
 
 ## Acknowledgments & Credits
 
-* **Original Foundation & Concepts:** Sincere thanks to **Gary Mp** ([GaryMp/freeradio](https://github.com/GaryMp/freeradio)) for the original radio add-on concepts and core favorite management structures that served as a foundational base for this project.
+* **Original Foundation & Concepts:** Sincere thanks to **Gary Mp** ([GaryMp/freeradio](https://github.com/GaryMp/freeradio)) for the original radio add-on concepts and core favourite management structures that served as a foundational base for this project.
 * **AI & LLM Tools:** Grateful acknowledgment to modern Large Language Model (LLM) tools (including Claude, ChatGPT, and Gemini) for assistance during the development, code refactoring, and feature implementation phases.
 * **Directory Service:** Station directory powered by the [Radio Browser API](https://www.radio-browser.info/).
-* **Community:** Sincere thanks to all NVDA community members and translators for their continuous support, feedback, and localization contributions.
+* **Community:** Sincere thanks to all NVDA community members and translators for their continuous support, feedback, and localisation contributions.
 
 ## License
 

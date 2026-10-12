@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: freeAudio 2026.25.0\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@groups.io'\n"
-"POT-Creation-Date: 2026-10-11 16:32+0300\n"
+"POT-Creation-Date: 2026-10-12 05:32+0300\n"
 "PO-Revision-Date: 2026-10-06 05:10+0200\n"
 "Last-Translator: \n"
 "Language-Team: Czech\n"
@@ -195,13 +195,16 @@ msgstr "Snížit hlasitost freeAudia o 5"
 
 #. Translators: Name of an NVDA command; speeds up playback rate, podcasts/audiobooks/GETEM chapters only.
 #: addon\globalPlugins\freeAudio\audioFxMixin.py:61
-msgid "Increase podcast playback speed"
+#, fuzzy
+msgid "Increase podcast, audio book and jukebox playback speed"
 msgstr "Zvýšit rychlost přehrávání podcastu"
 
 #. Translators: Name of an NVDA command; slows down playback rate, podcasts/audiobooks/GETEM chapters only.
 #: addon\globalPlugins\freeAudio\audioFxMixin.py:70
-msgid "Decrease podcast playback speed"
-msgstr "Snížit rychlost přehrávání podcastu"
+#, fuzzy
+msgid "Decrease podcast, audio book and jukebox playback speed"
+msgstr ""
+"Snížit transpozici výšky tónu (podcasty, audioknihy a skladby v jukeboxu)"
 
 #. Translators: Spoken when the playback-rate command returns the rate to normal (1.0x).
 #: addon\globalPlugins\freeAudio\audioFxMixin.py:81
@@ -3888,8 +3891,10 @@ msgstr ""
 
 #. Translators: Name of an NVDA command (Ctrl+Win+E); single-press toggles a plain instant recording, double-press records the current song, triple-press records every song until stopped - see this method's logic below.
 #: addon\globalPlugins\freeAudio\recordingMixin.py:238
-msgid "Start or stop instant recording"
-msgstr "Spustit nebo zastavit okamžité nahrávání"
+msgid ""
+"Start or stop instant recording. Press twice for current song recording, "
+"thrice for recording every song."
+msgstr ""
 
 #. Translators: Spoken when the single-press gesture stops an in-progress plain instant recording; %s is the saved filename.
 #: addon\globalPlugins\freeAudio\recordingMixin.py:313
@@ -5141,6 +5146,12 @@ msgstr ""
 "dokončení záznamu pomocí nástroje ffmpeg přemuxovány (kopírováním streamu) "
 "do standardního formátu MP4. Pokud není ffmpeg k dispozici, použije se "
 "záložní řešení, kdy se časová razítka fragmentů resetují od nuly.\n"
+
+#~ msgid "Decrease podcast playback speed"
+#~ msgstr "Snížit rychlost přehrávání podcastu"
+
+#~ msgid "Start or stop instant recording"
+#~ msgstr "Spustit nebo zastavit okamžité nahrávání"
 
 #~ msgid ""
 #~ "\n"

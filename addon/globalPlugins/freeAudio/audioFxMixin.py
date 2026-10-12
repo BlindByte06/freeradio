@@ -58,7 +58,7 @@ class AudioFxMixin:
 
 	@script(
 		# Translators: Name of an NVDA command; speeds up playback rate, podcasts/audiobooks/GETEM chapters only.
-		description=_("Increase podcast playback speed"),
+		description=_("Increase podcast, audio book and jukebox playback speed"),
 		category=_("freeAudio"),
 		gesture="kb:control+windows+shift+k",
 	)
@@ -67,7 +67,7 @@ class AudioFxMixin:
 
 	@script(
 		# Translators: Name of an NVDA command; slows down playback rate, podcasts/audiobooks/GETEM chapters only.
-		description=_("Decrease podcast playback speed"),
+		description=_("Decrease podcast, audio book and jukebox playback speed"),
 		category=_("freeAudio"),
 		gesture="kb:control+windows+shift+j",
 	)

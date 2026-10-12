@@ -235,7 +235,7 @@ class RecordingMixin:
 
 	@script(
 		# Translators: Name of an NVDA command (Ctrl+Win+E); single-press toggles a plain instant recording, double-press records the current song, triple-press records every song until stopped - see this method's logic below.
-		description=_("Start or stop instant recording"),
+		description=_("Start or stop instant recording. Press twice for current song recording, thrice for recording every song."),
 		category=_("freeAudio"),
 		gesture="kb:control+windows+e",
 	)

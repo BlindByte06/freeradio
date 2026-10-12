@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: freeAudio 2026.25.1\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@groups.io'\n"
-"POT-Creation-Date: 2026-10-11 16:32+0300\n"
+"POT-Creation-Date: 2026-10-12 05:32+0300\n"
 "PO-Revision-Date: 2026-10-07 14:12+0200\n"
 "Last-Translator: Rémy Ruiz <remyruiz@gmail.com>\n"
 "Language-Team: Rémy Ruiz <remyruiz@gmail.com>\n"
@@ -195,13 +195,17 @@ msgstr "Diminuer le volume de freeAudio de 5"
 
 #. Translators: Name of an NVDA command; speeds up playback rate, podcasts/audiobooks/GETEM chapters only.
 #: addon\globalPlugins\freeAudio\audioFxMixin.py:61
-msgid "Increase podcast playback speed"
+#, fuzzy
+msgid "Increase podcast, audio book and jukebox playback speed"
 msgstr "Augmenter la vitesse de lecture du podcast"
 
 #. Translators: Name of an NVDA command; slows down playback rate, podcasts/audiobooks/GETEM chapters only.
 #: addon\globalPlugins\freeAudio\audioFxMixin.py:70
-msgid "Decrease podcast playback speed"
-msgstr "Diminuer la vitesse de lecture du podcast"
+#, fuzzy
+msgid "Decrease podcast, audio book and jukebox playback speed"
+msgstr ""
+"Diminuer la hauteur de transposition (podcasts, livres audio et morceaux du "
+"jukebox)"
 
 #. Translators: Spoken when the playback-rate command returns the rate to normal (1.0x).
 #: addon\globalPlugins\freeAudio\audioFxMixin.py:81
@@ -3881,12 +3885,12 @@ msgstr "L'enregistrement du morceau a démarré: %s"
 msgid "Recording every song until stopped. Current song: %s"
 msgstr ""
 
-# ── Kayıt kısayolu (__init__.py)
-# ──────────────────────────────────────────────
 #. Translators: Name of an NVDA command (Ctrl+Win+E); single-press toggles a plain instant recording, double-press records the current song, triple-press records every song until stopped - see this method's logic below.
 #: addon\globalPlugins\freeAudio\recordingMixin.py:238
-msgid "Start or stop instant recording"
-msgstr "Démarrer ou arrêter l'enregistrement instantané"
+msgid ""
+"Start or stop instant recording. Press twice for current song recording, "
+"thrice for recording every song."
+msgstr ""
 
 #. Translators: Spoken when the single-press gesture stops an in-progress plain instant recording; %s is the saved filename.
 #: addon\globalPlugins\freeAudio\recordingMixin.py:313
@@ -5175,6 +5179,14 @@ msgstr ""
 "durées aberrantes. Après l'enregistrement, les fichiers sont remuxés au "
 "format MP4 standard avec ffmpeg (copie du flux). Si ffmpeg est indisponible, "
 "les horodatages des fragments sont réinitialisés à zéro.\n"
+
+#~ msgid "Decrease podcast playback speed"
+#~ msgstr "Diminuer la vitesse de lecture du podcast"
+
+# ── Kayıt kısayolu (__init__.py)
+# ──────────────────────────────────────────────
+#~ msgid "Start or stop instant recording"
+#~ msgstr "Démarrer ou arrêter l'enregistrement instantané"
 
 #~ msgid ""
 #~ "\n"
