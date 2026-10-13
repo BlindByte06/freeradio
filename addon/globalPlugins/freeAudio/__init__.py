@@ -421,9 +421,10 @@ from .recordingMixin import RecordingMixin
 from .trackInfoMixin import TrackInfoMixin
 from .miscTogglesMixin import MiscTogglesMixin
 from .obligatoMixin import ObligatoMixin
+from .bookmarkMixin import BookmarkMixin
 
 
-class GlobalPlugin(ObligatoMixin, MiscTogglesMixin, TrackInfoMixin, RecordingMixin, AudioFxMixin, TimeshiftMixin, PlaybackCoreMixin, AudioDeviceMixin, globalPluginHandler.GlobalPlugin):
+class GlobalPlugin(BookmarkMixin, ObligatoMixin, MiscTogglesMixin, TrackInfoMixin, RecordingMixin, AudioFxMixin, TimeshiftMixin, PlaybackCoreMixin, AudioDeviceMixin, globalPluginHandler.GlobalPlugin):
 
 	# Default gesture bindings for scripts defined on mixin base classes
 	# (AudioDeviceMixin, PlaybackCoreMixin, TimeshiftMixin, AudioFxMixin,
@@ -458,6 +459,7 @@ class GlobalPlugin(ObligatoMixin, MiscTogglesMixin, TrackInfoMixin, RecordingMix
 		"kb:control+windows+w": "openRecordingsFolder",
 		"kb:control+windows+i": "whatsPlaying",
 		"kb:control+shift+windows+m": "toggleObligato",
+		"kb:control+windows+f12": "addBookmark",
 	}
 
 	def __init__(self):
@@ -571,6 +573,8 @@ class GlobalPlugin(ObligatoMixin, MiscTogglesMixin, TrackInfoMixin, RecordingMix
 		# podcast episodes are left as manual advance - see
 		# RadioDialog._on_playback_finished()).
 		self._player.on_podcast_finished = self._on_podcast_finished
+		# Bookmarks: beep / note playback when playback reaches one.
+		self._init_bookmarks()
 		self._manager = stationManager.StationManager()
 		# Initialize Recorder with dll_dir, volume and main player reference
 		dll_dir = os.path.dirname(os.path.abspath(__file__))

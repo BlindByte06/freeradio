@@ -24,6 +24,8 @@ from . import getem
 from . import librivox
 from . import gutenberg_audiobooks
 from . import jukebox
+from . import bookmarks
+from . import bookmarkUI
 import urllib.parse
 import urllib.request
 from gui import nvdaControls
@@ -3987,6 +3989,23 @@ class RadioDialog(wx.Dialog):
 			gui.mainFrame.postPopup()
 			return
 
+		# Bookmark lists (Podcasts / Audio Books / Jukebox): '.', Enter,
+		# Space, Delete and the context-menu keys. Handled first so the
+		# generic '.' / Enter / Applications-key branches below never see them.
+		bm_list = self._focused_bookmark_list(focused)
+		if bm_list is not None and bm_list.handle_key(event):
+			return
+
+		# F12 adds a bookmark at the current playback position (the global
+		# equivalent is Ctrl+Windows+F12).
+		if key == wx.WXK_F12 and not (event.ControlDown() or event.AltDown() or event.ShiftDown()):
+			if self._plugin:
+				try:
+					self._plugin._add_bookmark_at_current()
+				except Exception:
+					pass
+			return
+
 		if key == ord(",") and focused == self._fav_list:
 			self._handle_fav_move_x()
 			return
@@ -6060,6 +6079,10 @@ class RadioDialog(wx.Dialog):
 		self._episode_list.SetMinSize((-1, 120))
 		sizer.Add(self._episode_list, 1, wx.EXPAND | wx.ALL, 8)
 
+		# --- Bookmarks of the selected episode (right after the episode list) ---
+		self._episode_bookmarks = bookmarkUI.BookmarkList(
+			self, panel, sizer, self._bookmarks_for_episode, self._start_bookmark_episode)
+
 		# --- Selected episode details (read-only, reachable by Tab right
 		# after the episode list) ---
 		self._episode_details = wx.TextCtrl(panel, style=wx.TE_MULTILINE | wx.TE_READONLY)
@@ -6431,6 +6454,7 @@ class RadioDialog(wx.Dialog):
 		episodes = getattr(self, "_episode_filtered", None) or []
 		ep = episodes[idx] if has_ep and idx < len(episodes) else None
 		self._episode_details.ChangeValue(self._format_episode_details(ep))
+		self._episode_bookmarks.refresh()
 
 	def _format_episode_details(self, ep):
 		"""Build the text shown in the read-only episode-details field for
@@ -6603,6 +6627,74 @@ class RadioDialog(wx.Dialog):
 			else:
 				station_dict["name"] = feed.title
 		self._play_callback(station_dict, [station_dict], 0, announce=announce)
+
+	# -- Bookmarks (see bookmarkUI.py / bookmarks.py) ------------------------
+
+	def _bookmark_lists(self):
+		names = ("_episode_bookmarks", "_getem_bookmarks", "_jukebox_bookmarks")
+		lists = [getattr(self, n, None) for n in names]
+		return [bl for bl in lists if bl is not None]
+
+	def refresh_bookmarks(self):
+		"""Re-read every bookmark list (called by the plugin after a bookmark
+		was added with the global command)."""
+		for bl in self._bookmark_lists():
+			try:
+				bl.refresh()
+			except Exception:
+				pass
+
+	def _focused_bookmark_list(self, focused=None):
+		focused = focused or wx.Window.FindFocus()
+		for bl in self._bookmark_lists():
+			if focused is bl.listbox:
+				return bl
+		return None
+
+	def _bookmarks_for_episode(self):
+		idx = self._episode_list.GetSelection()
+		episodes = getattr(self, "_episode_filtered", None) or []
+		if idx == wx.NOT_FOUND or idx >= len(episodes) or not episodes[idx].url:
+			return []
+		return [(episodes[idx].url, "", None)]
+
+	def _start_bookmark_episode(self, entry):
+		self._on_episode_play(None)
+
+	def _selected_library_book(self):
+		idx = self._getem_library_ctrl.GetSelection()
+		books = self._merged_library_books()
+		return books[idx] if idx != wx.NOT_FOUND and idx < len(books) else None
+
+	def _bookmarks_for_book(self):
+		book = self._selected_library_book()
+		chapters = (getattr(book, "chapters", None) or []) if book else []
+		mgr = bookmarks.get_manager()
+		multi = len(chapters) > 1
+		items = []
+		for i, ch in enumerate(chapters):
+			url = ch.get("url")
+			if not url or not mgr.has_bookmarks(url):
+				continue
+			title = (ch.get("title") or "").strip()
+			items.append((url, (title + " \u2014 ") if (multi and title) else "", i))
+		return items
+
+	def _start_bookmark_chapter(self, entry):
+		book = self._selected_library_book()
+		if book is None or entry.extra is None:
+			return
+		self._start_getem_chapter(book, entry.extra)
+
+	def _bookmarks_for_track(self):
+		idx = self._jukebox_tracks_list.GetSelection()
+		tracks = getattr(self, "_jukebox_selected_tracks", None) or []
+		if idx == wx.NOT_FOUND or idx >= len(tracks):
+			return []
+		return [(tracks[idx].path, "", None)]
+
+	def _start_bookmark_track(self, entry):
+		self._on_jukebox_track_play(None)
 
 	def _on_episode_download(self, event):
 		idx = self._episode_list.GetSelection()
@@ -7238,6 +7330,10 @@ class RadioDialog(wx.Dialog):
 		self._getem_library_ctrl.SetMinSize((-1, 120))
 		sizer.Add(self._getem_library_ctrl, 1, wx.EXPAND | wx.ALL, 8)
 
+		# --- Bookmarks of the selected book (all of its parts) ---
+		self._getem_bookmarks = bookmarkUI.BookmarkList(
+			self, panel, sizer, self._bookmarks_for_book, self._start_bookmark_chapter)
+
 		# --- Selected item details (read-only, reachable by Tab right
 		# after either list) ---
 		self._getem_details = wx.TextCtrl(panel, style=wx.TE_MULTILINE | wx.TE_READONLY)
@@ -7697,6 +7793,7 @@ class RadioDialog(wx.Dialog):
 		book = books[idx] if idx != wx.NOT_FOUND and idx < len(books) else None
 		self._getem_details.ChangeValue(self._format_getem_details(book))
 		self._maybe_fetch_getem_extra_fields(book)
+		self._getem_bookmarks.refresh()
 
 	def _on_getem_library_key(self, event):
 		# '.' (mark for bulk removal) is handled globally in
@@ -8417,6 +8514,10 @@ class RadioDialog(wx.Dialog):
 		self._jukebox_tracks_list.SetMinSize((-1, 120))
 		sizer.Add(self._jukebox_tracks_list, 1, wx.EXPAND | wx.ALL, 8)
 
+		# --- Bookmarks of the selected track ---
+		self._jukebox_bookmarks = bookmarkUI.BookmarkList(
+			self, panel, sizer, self._bookmarks_for_track, self._start_bookmark_track)
+
 		add_btn_sizer = wx.BoxSizer(wx.HORIZONTAL)
 		# Translators: Button label; adds a single audio file (via a file picker) to the jukebox library.
 		self._jukebox_add_file_btn = wx.Button(panel, label=_("Add &File..."))
@@ -8455,6 +8556,7 @@ class RadioDialog(wx.Dialog):
 		self._jukebox_tracks_list.Bind(wx.EVT_CHAR, self._on_list_char)
 		self._jukebox_list.Bind(wx.EVT_KEY_DOWN, self._on_jukebox_list_key)
 		self._jukebox_tracks_list.Bind(wx.EVT_KEY_DOWN, self._on_jukebox_tracks_key)
+		self._jukebox_tracks_list.Bind(wx.EVT_LISTBOX, lambda e: self._jukebox_bookmarks.refresh())
 		self._jukebox_add_file_btn.Bind(wx.EVT_BUTTON, self._on_jukebox_add_file)
 		self._jukebox_add_folder_btn.Bind(wx.EVT_BUTTON, self._on_jukebox_add_folder)
 		self._jukebox_remove_btn.Bind(wx.EVT_BUTTON, self._on_jukebox_remove_entry)
@@ -8721,6 +8823,8 @@ class RadioDialog(wx.Dialog):
 				if track.path == current_track_path:
 					self._jukebox_tracks_list.SetSelection(i)
 					break
+
+		self._jukebox_bookmarks.refresh()
 
 		if self._jukebox_selected_tracks:
 			threading.Thread(

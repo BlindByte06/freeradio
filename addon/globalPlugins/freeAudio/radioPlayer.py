@@ -18,6 +18,7 @@ import atexit
 import tempfile
 
 from . import timeshift as _timeshift_mod
+from .bookmarkPlayer import BookmarkPlayerMixin
 
 log = logging.getLogger()
 
@@ -942,7 +943,7 @@ class _BassEngine(_BassSubprocessEngine):
 		super().__init__(dll_dir, device_index=output_device)
 
 
-class RadioPlayer:
+class RadioPlayer(BookmarkPlayerMixin):
 	"""
 	Unified radio player.
 	BASS (in-process ctypes) is the sole playback backend.
@@ -1043,6 +1044,10 @@ class RadioPlayer:
 		self._watchdog_stop = threading.Event()
 		self._watchdog_thread = threading.Thread(target=self._watchdog_loop, daemon=True)
 		self._watchdog_thread.start()
+
+		# Bookmark watcher (beep / note playback when a bookmark is reached,
+		# A-B repeat) - see bookmarkPlayer.py.
+		self._init_bookmark_watcher()
 
 		# Podcast resume positions: {url: {"position": secs, "name": str,
 		# "updated": iso timestamp}}, persisted to disk so an episode
@@ -3560,4 +3565,4 @@ class RadioPlayer:
 		self._abort_tuning_transition()
 		self.stop()
 		if self._bass_engine:
-			self._bass_engine.unload()
+			self._bass_engine.unload()
