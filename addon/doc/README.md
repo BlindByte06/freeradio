@@ -8,6 +8,7 @@ freeAudio is a full-featured internet radio, podcast, audio-book, and local-juke
 - **Podcasts** — Subscribe to any RSS/Atom feed, or search Apple's podcast directory and preview episodes before subscribing. Playback position is saved automatically and resumes where you left off — see [Podcasts](#podcasts).
 - **Audio books** — Search, stream and download books from three sources: [GETEM](https://getem.boun.edu.tr/), Boğaziçi University's digital library for the visually impaired; [LibriVox](https://librivox.org/), the volunteer-read public-domain audiobook project; and the Project Gutenberg Open Audiobook Collection. LibriVox and Project Gutenberg need no account. Multi-part works resume automatically where you left off — see [Audio Books (GETEM, LibriVox and Project Gutenberg)](#audio-books-getem-librivox-and-project-gutenberg).
 - **Local Jukebox** — Search audio files stored on any attached drive by filename, or build a personal library of files and folders, and play them back with the same resume, seek, speed and pitch tools podcasts and audio books use — see [Local Jukebox](#local-jukebox).
+- **Bookmarks** — Drop a bookmark at the current position of any audio book part, podcast episode or jukebox track, then jump back to it later. A bookmark can carry a text note or a recorded voice note that plays when playback reaches it, and two bookmarks can be used to repeat the section between them — see [Bookmarks](#bookmarks).
 - **Recording** — Record what's playing instantly, record a single song from its start to its end, record every song on a station to its own file until you stop, or schedule one-off and recurring recordings — all without interrupting playback — see [Recording](#recording).
 - **Time-shift (rewind live radio)** — Pause and rewind a live station like a DVR, then catch back up to live whenever you want — see [Time-Shift (Rewind Live Radio)](#time-shift-rewind-live-radio).
 - **Music recognition and liked songs** — Identify tracks with no metadata using Shazam-based recognition, save liked songs to a text file, and look up their lyrics — see [Music Recognition](#music-recognition) and [Liked Songs](#liked-songs).
@@ -72,6 +73,7 @@ Some of these shortcuts overlap with ones Windows itself uses. If you'd rather k
 | `Ctrl+Win+Shift+J` | Decrease playback speed | Decreases the playback speed of a podcast episode, audio book, or jukebox track by 0.1x. |
 | `Shift+Win+K` | Transpose up | Raises the pitch of a podcast episode, audio book, or jukebox track in 1/8 whole-tone (0.25 semitone) steps, without changing its speed. Range: −12.00 to +12.00 semitones. See [Transpose (Pitch Shift)](#transpose-pitch-shift). |
 | `Shift+Win+J` | Transpose down | Lowers the pitch by 1/8 whole-tone steps, without changing speed. |
+| `Ctrl+Win+F12` | Add bookmark | Adds a bookmark at the current playback position of an audio book part, podcast episode or jukebox track. Not available for live radio stations. See [Bookmarks](#bookmarks). |
 | `Ctrl+Win+I` | Station info | Announces the currently playing station name, podcast episode, audio book or jukebox track. Press twice to show details such as country, genre and bitrate in a dialog. Press three times to copy the current track info (ICY metadata) to the clipboard if available; if no metadata is present, starts Shazam music recognition instead. Press four times to force music recognition in case of wrong ICY metadata. While a recording is running, its name is announced as well; during an every-song recording this is the song being recorded right now. |
 | `Ctrl+Win+M` | Audio mirror | Mirrors the current stream or media to an additional audio output device simultaneously. Press again to stop mirroring. |
 | `Ctrl+Win+Shift+M` | Obligato mode (background music) | Loops a chosen favourite station quietly in the background, on its own output device and volume, no matter what plays as the main media. First press opens a dialog to pick the station, output device, and relative volume. Press again to stop it. |
@@ -140,6 +142,7 @@ The following keys work only while the Station Browser window is active.
 | `F8` | Stop | Fully stops the current station and resets the player. |
 | `F9` | Rename | Opens rename dialog for the focused station in the Favourites tab. |
 | `F11` | Select output device | Opens the main output-device picker when BASS detects more than one physical output device. The current device is preselected; Enter applies and saves the choice. |
+| `F12` | Add bookmark | Adds a bookmark at the current playback position of an audio book part, podcast episode or jukebox track — the in-window equivalent of `Ctrl+Win+F12`. See [Bookmarks](#bookmarks). |
 
 #### List and Navigation Shortcuts
 
@@ -218,6 +221,8 @@ Favourites, Liked Songs, the Audio Books library, and the Jukebox list all suppo
 - Before anything is deleted, a single confirmation dialog summarizes how many items are about to be removed.
 
 Marks are per-list and are cleared once you remove the items (or unmark them individually); they are not saved between sessions.
+
+The bookmark lists on the Podcasts, Audio Books and Jukebox tabs use the same `.` marking, and marked bookmarks are what the **Delete Selected** and **Repeat Between Marked Bookmarks** commands act on — see [Bookmarks](#bookmarks).
 
 ### Exporting and Importing Favourites
 
@@ -429,7 +434,7 @@ Open the station browser with `Ctrl+Win+R` and switch to the **Podcasts** tab us
 
 1. **Search and add** — top section for discovering new podcasts, including a preview list that shows the episodes of whichever search result is currently selected.
 2. **Subscriptions** — list of your subscribed feeds.
-3. **Episodes** — list of episodes for the selected feed, with playback controls.
+3. **Episodes** — list of episodes for the selected feed, with playback controls. A **Bookmarks** list directly below it shows the bookmarks of the selected episode — see [Bookmarks](#bookmarks).
 
 ### Adding a Podcast Feed
 
@@ -571,7 +576,7 @@ Any source can be turned off individually from **NVDA Menu → Preferences → S
 Open the station browser with `Ctrl+Win+R` and switch to the **Audio Books** tab using `Ctrl+Tab` or `Alt+7`. The tab has three main areas:
 
 1. **Search** — a text field to search all enabled catalogues at once, with a results list that appears once a search is run.
-2. **Library** — the list of books you have added from any source, where you play, download and manage them.
+2. **Library** — the list of books you have added from any source, where you play, download and manage them. A **Bookmarks** list directly below it shows the bookmarks of the selected book — see [Bookmarks](#bookmarks).
 3. **Details** — a read-only box showing the source, title, author, narrator, publisher, format, number of parts, description and catalogue URL of whichever book is selected, in either list.
 
 ### Signing In
@@ -649,9 +654,9 @@ Open the station browser with `Ctrl+Win+R` and switch to the **Jukebox** tab wit
 
 1. **Search on devices** — a text field that searches every locally attached, ready drive for audio files whose filename contains the typed text. Press `Enter` to start the search.
 2. **Search results** — a list that appears once a search has been run, showing the matching files. Hidden until then, so the tab stays uncluttered when there's nothing to search.
-3. **Jukebox and Tracks** — the persistent list of items you've added, followed by the list of tracks in whichever entry is selected (for a file entry, just that one file; for a folder entry, every audio file found inside it).
+3. **Jukebox and Tracks** — the persistent list of items you've added, followed by the list of tracks in whichever entry is selected (for a file entry, just that one file; for a folder entry, every audio file found inside it). A **Bookmarks** list follows the Tracks list and shows the bookmarks of the selected track — see [Bookmarks](#bookmarks).
 
-The **Add File…**, **Add Folder…**, **Remove**, **Export Jukebox…** and **Import Jukebox…** buttons sit below the Tracks list.
+The **Add File…**, **Add Folder…**, **Remove**, **Export Jukebox…** and **Import Jukebox…** buttons sit at the bottom of the tab.
 
 ### Searching for Files on Devices
 
@@ -719,7 +724,7 @@ With an entry selected in the Jukebox list, press `comma` to enter move mode —
 
 ### Exporting and Importing the Jukebox Library
 
-The Jukebox tab includes two buttons for backing up and restoring your library, below the Tracks list:
+The Jukebox tab includes two buttons for backing up and restoring your library, at the bottom of the tab:
 
 **Export Jukebox…** — saves your entire Jukebox list to a file. A save dialog lets you choose between two formats:
 - **JSON** (`.json`) — a complete backup that preserves every entry's path, custom name, group, and saved audio profile. Recommended for restoring your library later or moving it to another computer.
@@ -742,6 +747,65 @@ To assign a shortcut:
 4. Press the desired key combination and confirm.
 
 The shortcut plays the entry immediately — for a file entry, the file itself; for a folder entry, its first track. If the entry is later removed from your Jukebox, its entry disappears from the category and any shortcut assigned to it is automatically cleared by NVDA. When a new entry is added, it appears in the category straight away — the Input Gestures dialog does not need to be reopened.
+
+## Bookmarks
+
+Bookmarks let you mark a spot in an **audio book part**, a **podcast episode** or a **jukebox track** and come back to it later. They are not available for live radio stations, which have no fixed positions to return to.
+
+### Adding a Bookmark
+
+- Press **`Ctrl+Win+F12`** from anywhere in Windows, or **`F12`** while the Station Browser is active, to add a bookmark at the current playback position.
+- NVDA announces the bookmark's name and position, for example "Bookmark added: Bookmark 2, 12:30".
+- If nothing is playing, or a live radio station is playing, freeAudio tells you so and no bookmark is added.
+
+A bookmark's default name is its **ordinal position** among the item's bookmarks, earliest first: "Bookmark 1", "Bookmark 2", and so on. Because the number follows the position in the item, adding an earlier bookmark renumbers the later ones that still have a default name. Bookmarks you have renamed keep their own name.
+
+### The Bookmark List
+
+Each of the Podcasts, Audio Books and Jukebox tabs has a **Bookmarks** list right next to the item it belongs to:
+
+- **Podcasts** — directly below the Episodes list, showing the bookmarks of the selected episode.
+- **Audio Books** — directly below the Library list, showing the bookmarks of every part of the selected book. When a book has several parts, each row starts with the part's title.
+- **Jukebox** — directly below the Tracks list, showing the bookmarks of the selected track.
+
+Each row shows the bookmark's name and position. A **[text]** or **[voice note]** marker is added when the bookmark has a text note or a voice note, and **(marked)** when you have marked it with `.`. The list follows the selection above it and is also refreshed when you add a bookmark with `Ctrl+Win+F12` while the window is open.
+
+| Key | Action |
+|---|---|
+| `.` | Marks or unmarks the focused bookmark. See [Marking and Removing Multiple Items](#marking-and-removing-multiple-items). |
+| `Enter` | Plays from the focused bookmark. |
+| `Space` | Pauses if something is playing; otherwise plays from the focused bookmark. |
+| `Delete` | Deletes every marked bookmark, or the focused one if none is marked. A confirmation dialog appears first. |
+| Applications key / `Shift+F10` | Opens the bookmark context menu. |
+
+### Bookmark Context Menu
+
+- **Play from Bookmark** — if the item is already loaded, playback jumps to the bookmark; otherwise the item starts playing from that position.
+- **Rename…** — gives the bookmark a custom name. Leave the field empty to go back to the default name.
+- **Delete Selected** — deletes the marked bookmarks, or the focused one if none is marked.
+- **Add or Edit Text…** — opens a multi-line field for a text note. Leave it empty to remove the text.
+- **Add Voice Note…** — opens a dialog that starts recording from the default microphone as soon as it appears. Press **Stop and Save** to attach the recording to the bookmark, or **Cancel** to discard it. Adding a new voice note replaces the previous one.
+- **Clear Notes** — removes both the text note and the voice note of the focused bookmark. Enabled only when the bookmark has a note.
+- **Repeat Between Marked Bookmarks** — see below. Enabled when at least two bookmarks are marked.
+- **Stop Repeat** — turns repeat mode off. Enabled while a repeat is active.
+
+### What Happens When Playback Reaches a Bookmark
+
+During normal playback, when the position reaches a bookmark, freeAudio plays **two quick beeps**. If the bookmark has no note, playback simply carries on.
+
+If the bookmark has a text note and/or a voice note, playback is **paused**, the text is spoken by NVDA's current synthesizer and the voice note is played, and then playback **resumes where it left off**. If you stop playback or start something else while the note is playing, playback is not resumed.
+
+Bookmarks are detected while playing normally. Seeking or jumping past a bookmark does not trigger it.
+
+### Repeating the Section Between Bookmarks
+
+Mark two or more bookmarks of the **same item** with `.`, then choose **Repeat Between Marked Bookmarks**. Playback jumps to the earliest marked bookmark and loops between the earliest and the latest marked bookmark, and NVDA announces the two positions. This is useful for going over a hard-to-follow passage, a language-learning phrase or a piece of music you are practising. Choose **Stop Repeat** to return to normal playback. The repeat is not saved between sessions, and if a different item starts playing the repeat range is ignored and dropped after about 20 seconds.
+
+### Bookmark Data Storage
+
+Bookmarks are stored in `freeAudio_bookmarks.json` in the NVDA user configuration folder, and voice notes are stored as `.wav` files in the `freeAudio_bookmark_audio` folder next to it. Both can be backed up or transferred to another computer. Deleting a bookmark also deletes its voice note file.
+
+Each bookmark belongs to the item's own resume key — the episode's URL, the audio book part's stable catalogue URL, or the jukebox track's file path. A jukebox file that is moved or renamed outside freeAudio is therefore treated as a different item and does not show its old bookmarks.
 
 ## Transpose (Pitch Shift)
 

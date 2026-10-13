@@ -434,12 +434,12 @@ msgstr "Seçili öğenin yer imleri"
 #. Translators: Marker appended to a bookmark's list row when it has a text note.
 #: addon\globalPlugins\freeAudio\bookmarkUI.py:156
 msgid "[text]"
-msgstr "[text]"
+msgstr "[metin]"
 
 #. Translators: Marker appended to a bookmark's list row when it has a voice note.
 #: addon\globalPlugins\freeAudio\bookmarkUI.py:159
 msgid "[voice note]"
-msgstr "[voice note]"
+msgstr "[sesli not]"
 
 #. Translators: Spoken after unmarking a bookmark; %s is its name.
 #. Translators: Spoken after unmarking a favourite station in the multi-select removal flow; %s is the station name.
