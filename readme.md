@@ -90,7 +90,7 @@ Next / previous shortcuts only navigate the favourites list; they do not work wi
 
 freeAudio also adds a **freeAudio** submenu to the NVDA Tools menu. From there you can directly open the Station Browser and freeAudio Settings.
 
-The window opened with `Ctrl+Win+R` contains eight tabs: All Stations, Favourites, Recording, Timer, Liked Songs, Podcasts, Audio Books and Jukebox. You can navigate between tabs with `Ctrl+Tab` or using `Alt+1` through `Alt+8`.
+The window opened with `Ctrl+Win+R` contains eight tabs: All Stations, Favourites, Recording, Timer, Liked Songs, Podcasts, Audio Books and Jukebox. You can navigate between tabs with `Ctrl+Tab` or using `Alt+1` through `Alt+8`. The Podcasts, Audio Books and Jukebox tabs can be switched off with the **Modules** setting (see [Settings](#settings)); tabs that are switched off are not shown.
 
 When the All Stations tab opens, the top 1,000 most-voted stations are automatically loaded from Radio Browser. Selecting a country from the dropdown updates the list to show that country's stations. Typing in the search field instantly performs a full search across the entire Radio Browser database simultaneously by name, country and genre.
 
@@ -655,7 +655,7 @@ The **Add File…**, **Add Folder…**, **Remove**, **Export Jukebox…** and **
 
 ### Searching for Files on Devices
 
-Type any part of a filename into the **Search on devices** field and press `Enter`. freeAudio walks every locally attached drive — fixed disks, USB drives, memory cards, mapped network drives — looking for audio files (`.mp3`, `.wav`, `.ogg`, `.flac`, `.m4a`, `.m4b`, `.aac`, `.wma`, `.opus`, and several more) whose filename contains the search text. The search runs in the background, so NVDA stays responsive.
+Type any part of a filename into the **Search on devices** field and press `Enter`. freeAudio walks every locally attached drive — fixed disks, USB drives and memory cards — looking for audio files (`.mp3`, `.wav`, `.ogg`, `.flac`, `.m4a`, `.m4b`, `.aac`, `.wma`, `.opus`, and several more) whose filename contains the search text. The search runs in the background, so NVDA stays responsive. Network drives are skipped by default, because searching a network share can turn a one-second search into one that takes minutes, or hangs if the share cannot be reached. To include them, turn on **Include network drives when searching the jukebox** in the settings.
 
 - **Space** on a search result previews it — starts playback through the normal player. Press **Space** again on the same file to stop the preview.
 - **Enter** on a search result adds it to your jukebox.
@@ -800,28 +800,55 @@ The following options can be configured from NVDA Menu → Preferences → Setti
 | SAPI5 voice | When **Track change voice** is set to SAPI5, selects which installed SAPI5 voice is used to announce track changes. The list is populated in the background from the voices installed on the system. |
 | Audio output device | Sets the audio output device for radio playback. The list includes all BASS-compatible devices on the system plus a "System default" option. Changes are applied immediately on save; if the selected device is disconnected, the add-on automatically falls back to the system default and announces the change. |
 | Audio device refresh mode | Controls how freeAudio refreshes BASS output-device numbers. **Reliable** mode (default) probes devices live and tracks Bluetooth/USB changes more accurately, but can make device changes slightly slower. **Fast** mode uses the current BASS device list and is quicker, but device numbers may stay stale until BASS or NVDA is restarted. |
-| Volume | Sets the add-on's starting volume (0–200). Changes made during playback with `Ctrl+Win+↑` / `Ctrl+Win+↓` are also reflected here. |
+| Volume | Sets the add-on's starting volume (0–100). During playback, `Ctrl+Win+↑` can raise the volume up to 200, but the starting volume saved here is capped at 100. |
 | Audio effects | Sets which effects (Chorus, Compressor, Distortion, Echo, Flanger, Gargle, Reverb, and the three EQ boosts) are active when NVDA starts or a station begins playing. Multiple effects can be checked at once, matching the Effects list in the Station Browser. |
 | EQ gain (Bass / Treble / Vocal) | Sets the gain level in dB for each EQ band (−15 to +15). These values apply when the corresponding EQ effect is active and are saved globally. Per-station overrides can be stored using the **Save Audio Profile** button in the Favourites tab. |
 | Station switch transition | Controls the transition behaviour when switching between **live radio stations**. **Instant cut** (default) stops the previous station immediately before the new one starts. **Short crossfade (1 second)** and **Normal crossfade (2 seconds)** start the new station immediately with no gap, then gradually fade out the previous station in the background once the new stream is confirmed active. **Station tuning sound effect** stops the previous station immediately and plays a station tuner sound effect before the new one starts. Has no effect and no performance impact when set to Instant cut. Does not apply to podcasts, audio books, or jukebox tracks — resuming those always plays its own brief cassette sound effect regardless of this setting; see [Podcast Playback Details](#podcast-playback-details). |
 | Resume last station on NVDA startup | When enabled, the last played station automatically restarts every time NVDA starts. |
 | Auto-announce track changes (ICY metadata) | When enabled, NVDA automatically reads the new track name each time it changes on a station that broadcasts ICY metadata. The first track is also announced immediately when switching to a new station. Disabled by default. |
 | Mute notifications | When enabled, NVDA does not announce station changes, playback state changes (play, pause, stop), or recording events (started, stopped, finished). Error messages, favourites feedback, music recognition results, and update notifications are not affected. Can also be toggled on the fly via an unassigned input gesture. Disabled by default. |
-| Braille messages | When enabled, freeAudio also sends its notifications directly to the braille display. This is useful for track titles, station changes, playback state and volume changes. Disabled by default. |
-| Enable time-shift buffer (rewind live radio) | Turns the rewind controls (`Ctrl+Win+J`/`Ctrl+Win+K`) on or off and grows the background capture from ~45 seconds up to the **Time-shift buffer duration**. A small background capture of the currently playing station always runs, even when this is off — see the note in the **Time-Shift (Rewind Live Radio)** section above. Can also be toggled instantly with `Ctrl+Win+T`. Disabled by default — see the **Time-Shift (Rewind Live Radio)** section above for full details. |
+| Show freeAudio messages on the braille display | When enabled, freeAudio also sends its notifications directly to the braille display. This is useful for track titles, station changes, playback state and volume changes. Disabled by default. |
+| Enable time-shift buffer (rewind live radio) | Turns the rewind controls (`Ctrl+Win+J`/`Ctrl+Win+K`) on or off and grows the background capture from ~45 seconds up to the **Time-shift buffer duration**. A small background capture of the currently playing station always runs, even when this is off — see the note in the **Time-Shift (Rewind Live Radio)** section above. Can also be toggled instantly with `Ctrl+Win+T`. Disabled by default — see the **Time-Shift (Rewind Live Radio)** section above for full details. It has no effect on podcasts and audio books. |
 | Time-shift buffer duration | Sets the maximum length of the rewind buffer. Options range from 10 minutes up to 5 hours. Longer buffers consume more temporary disk space. |
 | Save liked songs to a text file | When enabled, track info copied to the clipboard by pressing `Ctrl+Win+I` three times is also appended to `Documents\freeAudio Recordings\likedSongs.txt`. If no ICY metadata is available, the Shazam recognition result is saved to the same file. Disabled by default. |
 | When Ctrl+Win+P is pressed with no active playback | Determines what happens when this shortcut is pressed and nothing is playing: start the last station or open the favourites list. |
 | When Ctrl+Win+P is pressed twice | Selects what happens when the shortcut is pressed twice in quick succession: do nothing, open the favourites list, open the recording tab or open the timer tab. When "do nothing" is selected, the first press responds instantly with no delay. |
 | When Ctrl+Win+P is pressed three times | Selects what happens when the shortcut is pressed three times in quick succession: do nothing, open the favourites list, open station search, open the recording tab or open the timer tab. |
-| Check for updates automatically | When enabled, a background update check runs each time NVDA starts; you are notified if a new version is found. When disabled, automatic checks stop but manual checks remain available. |
+| Automatically check for updates on startup | When enabled, a background update check runs each time NVDA starts; you are notified if a new version is found. When disabled, automatic checks stop but manual checks remain available. |
+| Check for Updates Now | A button that checks for a new version immediately, even when automatic checks are turned off. While the check runs, the button reads "Checking...". |
 | ffmpeg.exe path | Path to the ffmpeg.exe used for music recognition. If left blank, an ffmpeg.exe in the add-on folder is used automatically. |
 | Recordings folder | Sets the folder where recorded files are saved. If left blank, the default location `Documents\freeAudio Recordings\` is used. A Browse button lets you select the folder interactively. Changes take effect immediately after saving. |
+| Modules | A checklist of the optional parts of freeAudio: **Podcasts**, **Audio Books** and **Jukebox**. All three are enabled by default. Unchecking one removes its tab from the Station Browser and its commands from NVDA's Input Gestures dialog, without deleting anything you have saved there (subscriptions, library, Jukebox list); checking it again brings everything back. Changes apply the next time the Station Browser is opened. |
+| Include network drives when searching the jukebox | When enabled, the Jukebox's **Search on devices** also scans network drives. Disabled by default, because searching a network share can take minutes, or hang if the share cannot be reached. |
 | Audio book sources | A checklist selecting which audio-book sources (**GETEM**, **LibriVox**, **Project Gutenberg**) are searched and shown in the Audio Books tab. All three are enabled by default. Unchecking a source hides its books from the merged search results and library list without deleting anything you've already added from it — see [Audio Books (GETEM, LibriVox and Project Gutenberg)](#audio-books-getem-librivox-and-project-gutenberg). |
 | GETEM username / GETEM password | Your [GETEM](https://getem.boun.edu.tr/) audio-book membership credentials, needed to stream or download a book's audio — see [Signing In](#signing-in). Stored encrypted on disk via the Windows Data Protection API, tied to your Windows user account; never stored as plain text. Leaving both fields empty and saving removes any stored credentials. LibriVox and Project Gutenberg require no account and have no equivalent field. |
 | Recording output format | Keeps the original stream, extracts audio without changing its codec, or converts completed recordings to MP3. The default is the original stream format. |
 | MP3 recording bitrate | Sets the bitrate used when the recording output format is MP3. The default is 128 kb/s. |
 | Disable internet connectivity check before playing | Recommended for users who experience a delay before a station starts playing. Also useful when DNS is blocked. |
+| Clean up: reset settings and delete saved data... | A button that opens a dialog for resetting freeAudio's settings and deleting the data it has saved — see [Clean Up: Reset Settings and Delete Saved Data](#clean-up-reset-settings-and-delete-saved-data). |
+
+### Clean Up: Reset Settings and Delete Saved Data
+
+The **Clean up: reset settings and delete saved data...** button at the bottom of the freeAudio settings page opens the **Reset settings / delete saved data** dialog. It lists what freeAudio stores in the NVDA configuration folder as check boxes. **Nothing is checked by default.** Each item shows how much space it takes, or "nothing saved":
+
+- **Settings** — reset to their defaults. The recordings folder and the **Save liked songs to a text file** option are kept.
+- **Favourite stations**
+- **Station list cache** — downloaded again when needed.
+- **Podcast subscriptions**
+- **Audio book libraries** — GETEM, LibriVox and Project Gutenberg.
+- **Saved GETEM login** — the stored user name and password.
+- **Jukebox list** — your music files are not deleted.
+- **Saved resume positions** — podcasts, audio books and Jukebox folders.
+- **Sleep timers and alarms**
+- **Scheduled recording plans** — the recordings themselves are not deleted.
+
+**Select all** checks every item. **Reset / delete selected** carries out your choice; if nothing is checked, freeAudio says "Nothing is selected." **Cancel** (or `Escape`) closes the dialog without doing anything.
+
+Before anything is changed, freeAudio lists the checked items, warns that this cannot be undone and asks you to confirm; the default answer is **No**. Afterwards a message says "Done.", or lists the items that could not be removed — usually because a file is in use. If the Station Browser is open when saved data is deleted, it is closed, and it is rebuilt from the remaining data the next time you open it.
+
+Recordings, the recordings folder and the liked songs text file are **never** touched, and a settings reset does not make freeAudio import data from the earlier FreeRadio add-on again.
+
+After a settings reset, the values still showing on the settings page are not saved when you press OK, so they cannot undo the reset. Restarting NVDA is recommended so that every setting takes effect.
 
 ## Mute Notifications
 
@@ -869,7 +896,7 @@ freeAudio automatically checks for new versions via GitHub.
 - If a directly downloadable `.nvda-addon` file is available on the GitHub release, a **Download and Install** button is shown. Once confirmed, the file is downloaded in the background, NVDA announces when the download starts, and NVDA's own installation screen opens automatically.
 - If no direct download link is available, an **Open Page** button is shown and the GitHub release page opens in the default browser.
 
-**To disable automatic checks:** Turn off the **Check for updates automatically** option from NVDA Menu → Preferences → Settings → freeAudio.
+**To disable automatic checks:** Turn off the **Automatically check for updates on startup** option from NVDA Menu → Preferences → Settings → freeAudio.
 
 ## Acknowledgments & Credits
 

@@ -627,6 +627,11 @@ class freeAudioSettingsPanel(gui.settingsDialogs.SettingsPanel):
 		self._check_now_btn.Bind(wx.EVT_BUTTON, self._on_check_now)
 		sHelper.addItem(self._check_now_btn)
 
+		# Translators: Button label; opens a dialog to reset freeAudio's settings and delete the data it has saved.
+		self._cleanup_btn = wx.Button(self, label=_("&Clean up: reset settings and delete saved data..."))
+		self._cleanup_btn.Bind(wx.EVT_BUTTON, self._on_cleanup)
+		sHelper.addItem(self._cleanup_btn)
+
 		# Load audio devices in the background.
 		threading.Thread(target=self._load_devices, daemon=True).start()
 
@@ -796,7 +801,21 @@ class freeAudioSettingsPanel(gui.settingsDialogs.SettingsPanel):
 			if dlg.ShowModal() == wx.ID_OK:
 				self._recordings_dir.SetValue(dlg.GetPath())
 
+	def _on_cleanup(self, event):
+		from .resetDialog import ResetDialog
+		dlg = ResetDialog(self, _get_freeAudio_plugin())
+		try:
+			dlg.ShowModal()
+			if dlg.settings_reset:
+				# The controls on this page still show the old values; saving
+				# them on OK would undo the reset.
+				self._settings_were_reset = True
+		finally:
+			dlg.Destroy()
+
 	def onSave(self):
+		if getattr(self, "_settings_were_reset", False):
+			return
 		vol = self._volume.GetValue()
 		config.conf["freeAudio"]["volume"]          = min(100, vol)
 		config.conf["freeAudio"]["resume_on_start"]        = self._resume.GetValue()

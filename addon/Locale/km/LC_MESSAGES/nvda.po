@@ -5,14 +5,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeRadio 2026.24.0\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@groups.io'\n"
-"POT-Creation-Date: 2026-10-12 05:32+0300\n"
-"PO-Revision-Date: 2026-09-28 21:05+0300\n"
+"POT-Creation-Date: 2026-10-13 04:58+0300\n"
+"PO-Revision-Date: 2026-10-13 05:27+0300\n"
 "Last-Translator: \n"
 "Language-Team: Khmer\n"
+"Language: km_KH\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: km_KH\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Poedit 3.9\n"
 "X-Poedit-Basepath: ../../../..\n"
@@ -24,71 +24,51 @@ msgid "Select the main freeAudio output device"
 msgstr "ជ្រើសរើសឧបករណ៍បញ្ចេញសំឡេងសំខាន់របស់ freeAudio"
 
 #. Translators: Title of the warning about the old FreeRadio add-on still being installed.
+#. Translators: Title of messages shown by the clean-up dialog.
 #. Translators: Title of this settings category as it appears in NVDA's own Settings dialog category tree.
-#: addon\globalPlugins\freeAudio\audioDeviceMixin.py:31
-#: addon\globalPlugins\freeAudio\audioDeviceMixin.py:166
-#: addon\globalPlugins\freeAudio\audioFxMixin.py:34
-#: addon\globalPlugins\freeAudio\audioFxMixin.py:48
-#: addon\globalPlugins\freeAudio\audioFxMixin.py:62
-#: addon\globalPlugins\freeAudio\audioFxMixin.py:71
-#: addon\globalPlugins\freeAudio\audioFxMixin.py:133
-#: addon\globalPlugins\freeAudio\audioFxMixin.py:143
-#: addon\globalPlugins\freeAudio\audioFxMixin.py:153
-#: addon\globalPlugins\freeAudio\audioFxMixin.py:230
-#: addon\globalPlugins\freeAudio\legacyMigration.py:185
-#: addon\globalPlugins\freeAudio\miscTogglesMixin.py:35
-#: addon\globalPlugins\freeAudio\miscTogglesMixin.py:54
-#: addon\globalPlugins\freeAudio\miscTogglesMixin.py:86
-#: addon\globalPlugins\freeAudio\miscTogglesMixin.py:108
-#: addon\globalPlugins\freeAudio\obligatoMixin.py:206
-#: addon\globalPlugins\freeAudio\playbackCoreMixin.py:84
-#: addon\globalPlugins\freeAudio\playbackCoreMixin.py:184
-#: addon\globalPlugins\freeAudio\playbackCoreMixin.py:243
-#: addon\globalPlugins\freeAudio\playbackCoreMixin.py:280
+#: addon\globalPlugins\freeAudio\audioDeviceMixin.py:31 addon\globalPlugins\freeAudio\audioDeviceMixin.py:166
+#: addon\globalPlugins\freeAudio\audioFxMixin.py:34 addon\globalPlugins\freeAudio\audioFxMixin.py:48
+#: addon\globalPlugins\freeAudio\audioFxMixin.py:62 addon\globalPlugins\freeAudio\audioFxMixin.py:71
+#: addon\globalPlugins\freeAudio\audioFxMixin.py:133 addon\globalPlugins\freeAudio\audioFxMixin.py:143
+#: addon\globalPlugins\freeAudio\audioFxMixin.py:153 addon\globalPlugins\freeAudio\audioFxMixin.py:230
+#: addon\globalPlugins\freeAudio\legacyMigration.py:185 addon\globalPlugins\freeAudio\miscTogglesMixin.py:35
+#: addon\globalPlugins\freeAudio\miscTogglesMixin.py:54 addon\globalPlugins\freeAudio\miscTogglesMixin.py:86
+#: addon\globalPlugins\freeAudio\miscTogglesMixin.py:108 addon\globalPlugins\freeAudio\obligatoMixin.py:206
+#: addon\globalPlugins\freeAudio\playbackCoreMixin.py:84 addon\globalPlugins\freeAudio\playbackCoreMixin.py:184
+#: addon\globalPlugins\freeAudio\playbackCoreMixin.py:243 addon\globalPlugins\freeAudio\playbackCoreMixin.py:280
 #: addon\globalPlugins\freeAudio\playbackCoreMixin.py:982
-#: addon\globalPlugins\freeAudio\playbackCoreMixin.py:1001
-#: addon\globalPlugins\freeAudio\recordingMixin.py:239
-#: addon\globalPlugins\freeAudio\recordingMixin.py:355
-#: addon\globalPlugins\freeAudio\settingsPanel.py:51
-#: addon\globalPlugins\freeAudio\timeshiftMixin.py:312
-#: addon\globalPlugins\freeAudio\timeshiftMixin.py:352
-#: addon\globalPlugins\freeAudio\timeshiftMixin.py:389
-#: addon\globalPlugins\freeAudio\trackInfoMixin.py:121
-#: addon\globalPlugins\freeAudio\trackInfoMixin.py:325
-#: addon\globalPlugins\freeAudio\trackInfoMixin.py:344
-#: addon\globalPlugins\freeAudio\trackInfoMixin.py:393
-#: addon\globalPlugins\freeAudio\__init__.py:982
-#: addon\globalPlugins\freeAudio\__init__.py:992
-#: addon\globalPlugins\freeAudio\__init__.py:1002
-#: addon\globalPlugins\freeAudio\__init__.py:1012
-#: addon\globalPlugins\freeAudio\__init__.py:1022
-#: addon\appModules\explorer.py:228 addon\appModules\explorer.py:261
+#: addon\globalPlugins\freeAudio\playbackCoreMixin.py:1001 addon\globalPlugins\freeAudio\recordingMixin.py:239
+#: addon\globalPlugins\freeAudio\recordingMixin.py:355 addon\globalPlugins\freeAudio\resetDialog.py:331
+#: addon\globalPlugins\freeAudio\resetDialog.py:344 addon\globalPlugins\freeAudio\resetDialog.py:373
+#: addon\globalPlugins\freeAudio\settingsPanel.py:51 addon\globalPlugins\freeAudio\timeshiftMixin.py:312
+#: addon\globalPlugins\freeAudio\timeshiftMixin.py:352 addon\globalPlugins\freeAudio\timeshiftMixin.py:389
+#: addon\globalPlugins\freeAudio\trackInfoMixin.py:121 addon\globalPlugins\freeAudio\trackInfoMixin.py:325
+#: addon\globalPlugins\freeAudio\trackInfoMixin.py:344 addon\globalPlugins\freeAudio\trackInfoMixin.py:393
+#: addon\globalPlugins\freeAudio\__init__.py:982 addon\globalPlugins\freeAudio\__init__.py:992
+#: addon\globalPlugins\freeAudio\__init__.py:1002 addon\globalPlugins\freeAudio\__init__.py:1012
+#: addon\globalPlugins\freeAudio\__init__.py:1022 addon\appModules\explorer.py:228
+#: addon\appModules\explorer.py:261
 msgid "freeAudio"
 msgstr "freeAudio"
 
 #. Translators: Spoken when no audio output devices could be found on the system at all.
 #. Translators: Spoken when no output devices are found while setting up audio mirroring.
-#: addon\globalPlugins\freeAudio\audioDeviceMixin.py:57
-#: addon\globalPlugins\freeAudio\audioDeviceMixin.py:191
+#: addon\globalPlugins\freeAudio\audioDeviceMixin.py:57 addon\globalPlugins\freeAudio\audioDeviceMixin.py:191
 msgid "No audio output devices found"
 msgstr "រកមិនឃើញឧបករណ៍បញ្ចេញសំឡេងទេ"
 
 #. Translators: Spoken instead of showing a picker, when only one physical audio output device exists.
 #: addon\globalPlugins\freeAudio\audioDeviceMixin.py:63
-msgid ""
-"Only one physical audio output device is available. freeAudio uses the "
-"system default output."
+msgid "Only one physical audio output device is available. freeAudio uses the system default output."
 msgstr "មានឧបករណ៍បញ្ចេញសំឡេងតែមួយប៉ុណ្ណោះ។ freeAudio ប្រើលទ្ធផលលំនាំដើមរបស់ប្រព័ន្ធ។"
 
 #. Translators: First entry in the output-device list; means 'use whatever Windows currently has as its default output'.
 #. Translators: Same meaning as 'System default' above; label shown when announcing the currently active output device.
 #. Translators: Same 'System default' first-entry convention as the main output-device picker (see audioDeviceMixin.py), used here to populate this dialog's own device list.
 #. Translators: Same 'System default' first-entry convention as the other device pickers, used here to populate the Settings panel's device list.
-#: addon\globalPlugins\freeAudio\audioDeviceMixin.py:71
-#: addon\globalPlugins\freeAudio\audioDeviceMixin.py:159
-#: addon\globalPlugins\freeAudio\obligatoMixin.py:95
-#: addon\globalPlugins\freeAudio\radioDialog.py:1710
-#: addon\globalPlugins\freeAudio\settingsPanel.py:655
+#: addon\globalPlugins\freeAudio\audioDeviceMixin.py:71 addon\globalPlugins\freeAudio\audioDeviceMixin.py:159
+#: addon\globalPlugins\freeAudio\obligatoMixin.py:95 addon\globalPlugins\freeAudio\radioDialog.py:1710
+#: addon\globalPlugins\freeAudio\settingsPanel.py:660
 msgid "System default"
 msgstr "លំនាំដើមប្រព័ន្ធ"
 
@@ -128,10 +108,8 @@ msgstr "ការចម្លងសំឡេងបានបញ្ឈប់ហើ
 #. Translators: Spoken when the delayed single-press action fires and finds nothing is playing.
 #. Translators: Spoken when the double-press (song-capture) gesture is used while nothing is playing.
 #. Translators: Spoken when this shortcut is pressed while nothing is playing.
-#: addon\globalPlugins\freeAudio\audioDeviceMixin.py:179
-#: addon\globalPlugins\freeAudio\recordingMixin.py:136
-#: addon\globalPlugins\freeAudio\recordingMixin.py:336
-#: addon\globalPlugins\freeAudio\__init__.py:1029
+#: addon\globalPlugins\freeAudio\audioDeviceMixin.py:179 addon\globalPlugins\freeAudio\recordingMixin.py:136
+#: addon\globalPlugins\freeAudio\recordingMixin.py:336 addon\globalPlugins\freeAudio\__init__.py:1029
 msgid "No station is playing"
 msgstr "មិនមានប៉ុស្តិ៍ណាមួយកំពុងចាក់ទេ"
 
@@ -173,12 +151,9 @@ msgstr "បង្កើនសំឡេង freeAudio ៥ ចំណុច"
 #. Translators: Spoken when F6 (volume up) is pressed inside the dialog; %d is the new volume level. Same wording as the main volumeUp NVDA command.
 #. Translators: Spoken when Ctrl+Up (volume up) is pressed inside the dialog on a focused control that doesn't otherwise handle it; %d is the new volume level. Same wording as the main volumeUp NVDA command.
 #. Translators: Spoken when Ctrl+Down (volume down) is pressed inside the dialog; %d is the new volume level. Same wording as the main volumeDown NVDA command.
-#: addon\globalPlugins\freeAudio\audioFxMixin.py:42
-#: addon\globalPlugins\freeAudio\audioFxMixin.py:56
-#: addon\globalPlugins\freeAudio\radioDialog.py:4079
-#: addon\globalPlugins\freeAudio\radioDialog.py:4093
-#: addon\globalPlugins\freeAudio\radioDialog.py:4274
-#: addon\globalPlugins\freeAudio\radioDialog.py:4282
+#: addon\globalPlugins\freeAudio\audioFxMixin.py:42 addon\globalPlugins\freeAudio\audioFxMixin.py:56
+#: addon\globalPlugins\freeAudio\radioDialog.py:4079 addon\globalPlugins\freeAudio\radioDialog.py:4093
+#: addon\globalPlugins\freeAudio\radioDialog.py:4274 addon\globalPlugins\freeAudio\radioDialog.py:4282
 #, python-format
 msgid "Volume %d"
 msgstr "កម្រិតសំឡេង %d"
@@ -190,15 +165,13 @@ msgstr "បន្ថយសំឡេង freeAudio ៥ ចំណុច"
 
 #. Translators: Name of an NVDA command; speeds up playback rate, podcasts/audiobooks/GETEM chapters only.
 #: addon\globalPlugins\freeAudio\audioFxMixin.py:61
-#, fuzzy
 msgid "Increase podcast, audio book and jukebox playback speed"
-msgstr "បង្កើនល្បឿនចាក់ផតខាស់"
+msgstr ""
 
 #. Translators: Name of an NVDA command; slows down playback rate, podcasts/audiobooks/GETEM chapters only.
 #: addon\globalPlugins\freeAudio\audioFxMixin.py:70
-#, fuzzy
 msgid "Decrease podcast, audio book and jukebox playback speed"
-msgstr "បន្ថយកម្ពស់សំឡេង (សម្រាប់ផតខាស់ សៀវភៅជាសំឡេង និងបទក្នុង jukebox)"
+msgstr ""
 
 #. Translators: Spoken when the playback-rate command returns the rate to normal (1.0x).
 #: addon\globalPlugins\freeAudio\audioFxMixin.py:81
@@ -213,9 +186,7 @@ msgstr "ល្បឿន %.1f"
 
 #. Translators: Spoken when playback-rate change fails because the optional bass_fx library used for time-stretching isn't installed.
 #: addon\globalPlugins\freeAudio\audioFxMixin.py:88
-msgid ""
-"Playback speed control needs the bass_fx add-on library — see the freeAudio "
-"docs."
+msgid "Playback speed control needs the bass_fx add-on library — see the freeAudio docs."
 msgstr "ការគ្រប់គ្រងល្បឿនចាក់ត្រូវការបណ្ណាល័យបន្ថែម bass_fx — សូមមើលឯកសារ freeAudio។"
 
 #. Translators: Spoken when the user tries to change playback rate while playing a live radio station rather than a podcast/audiobook.
@@ -234,8 +205,7 @@ msgid "Toggle bass boost"
 msgstr "បើក/បិទ ការបង្កើនស្តើងទាប (bass boost)"
 
 #. Translators: Short label used in the 'X enabled/disabled' announcement (see _toggle_eq_band) when toggling the bass-boost EQ band.
-#: addon\globalPlugins\freeAudio\audioFxMixin.py:138
-#: addon\globalPlugins\freeAudio\radioDialog.py:778
+#: addon\globalPlugins\freeAudio\audioFxMixin.py:138 addon\globalPlugins\freeAudio\radioDialog.py:778
 #: addon\globalPlugins\freeAudio\settingsPanel.py:181
 msgid "EQ: Bass Boost"
 msgstr "EQ: ការបង្កើនស្តើងទាប"
@@ -246,8 +216,7 @@ msgid "Toggle treble boost"
 msgstr "បើក/បិទ ការបង្កើនស្តើងខ្ពស់ (treble boost)"
 
 #. Translators: Short label used in the 'X enabled/disabled' announcement when toggling the treble-boost EQ band.
-#: addon\globalPlugins\freeAudio\audioFxMixin.py:148
-#: addon\globalPlugins\freeAudio\radioDialog.py:778
+#: addon\globalPlugins\freeAudio\audioFxMixin.py:148 addon\globalPlugins\freeAudio\radioDialog.py:778
 #: addon\globalPlugins\freeAudio\settingsPanel.py:182
 msgid "EQ: Treble Boost"
 msgstr "EQ: ការបង្កើនស្តើងខ្ពស់"
@@ -258,8 +227,7 @@ msgid "Toggle vocal boost"
 msgstr "បើក/បិទ ការបង្កើនសំឡេងមនុស្ស (vocal boost)"
 
 #. Translators: Short label used in the 'X enabled/disabled' announcement when toggling the vocal-boost EQ band.
-#: addon\globalPlugins\freeAudio\audioFxMixin.py:158
-#: addon\globalPlugins\freeAudio\radioDialog.py:778
+#: addon\globalPlugins\freeAudio\audioFxMixin.py:158 addon\globalPlugins\freeAudio\radioDialog.py:778
 #: addon\globalPlugins\freeAudio\settingsPanel.py:183
 msgid "EQ: Vocal Boost"
 msgstr "EQ: ការបង្កើនសំឡេងមនុស្ស"
@@ -272,14 +240,10 @@ msgstr "EQ: ការបង្កើនសំឡេងមនុស្ស"
 #. Translators: Same effect on/off announcement, spoken here after toggling via the Ctrl+1..Ctrl+0 keyboard shortcuts.
 #. Translators: Same "%(effect)s %(state)s" announcement pattern as radioDialog.py's _toggle_eq_band; spoken here when hovering an item in the Settings effects checklist. %(state)s is "enabled"/"disabled" below.
 #. Translators: Same announcement as the hover handler above, spoken here after actually toggling an effect via the checklist checkbox.
-#: addon\globalPlugins\freeAudio\audioFxMixin.py:221
-#: addon\globalPlugins\freeAudio\miscTogglesMixin.py:76
-#: addon\globalPlugins\freeAudio\miscTogglesMixin.py:125
-#: addon\globalPlugins\freeAudio\radioDialog.py:1795
-#: addon\globalPlugins\freeAudio\radioDialog.py:1808
-#: addon\globalPlugins\freeAudio\radioDialog.py:1833
-#: addon\globalPlugins\freeAudio\settingsPanel.py:702
-#: addon\globalPlugins\freeAudio\settingsPanel.py:714
+#: addon\globalPlugins\freeAudio\audioFxMixin.py:221 addon\globalPlugins\freeAudio\miscTogglesMixin.py:76
+#: addon\globalPlugins\freeAudio\miscTogglesMixin.py:125 addon\globalPlugins\freeAudio\radioDialog.py:1795
+#: addon\globalPlugins\freeAudio\radioDialog.py:1808 addon\globalPlugins\freeAudio\radioDialog.py:1833
+#: addon\globalPlugins\freeAudio\settingsPanel.py:707 addon\globalPlugins\freeAudio\settingsPanel.py:719
 #, python-format
 msgid "%(effect)s %(state)s"
 msgstr "%(effect)s %(state)s"
@@ -288,26 +252,18 @@ msgstr "%(effect)s %(state)s"
 #. Translators: Second half of the toggle announcement above; describes the feature's new on/off state.
 #. Translators: Second half of the toggle announcement; describes the feature's new on/off state.
 #. Translators: The two possible %(state)s values above, and in the two other identical announcements in _on_fx_changed/_toggle_fx_by_index below.
-#: addon\globalPlugins\freeAudio\audioFxMixin.py:224
-#: addon\globalPlugins\freeAudio\miscTogglesMixin.py:80
-#: addon\globalPlugins\freeAudio\miscTogglesMixin.py:129
-#: addon\globalPlugins\freeAudio\radioDialog.py:1798
-#: addon\globalPlugins\freeAudio\radioDialog.py:1810
-#: addon\globalPlugins\freeAudio\radioDialog.py:1835
-#: addon\globalPlugins\freeAudio\settingsPanel.py:704
-#: addon\globalPlugins\freeAudio\settingsPanel.py:716
+#: addon\globalPlugins\freeAudio\audioFxMixin.py:224 addon\globalPlugins\freeAudio\miscTogglesMixin.py:80
+#: addon\globalPlugins\freeAudio\miscTogglesMixin.py:129 addon\globalPlugins\freeAudio\radioDialog.py:1798
+#: addon\globalPlugins\freeAudio\radioDialog.py:1810 addon\globalPlugins\freeAudio\radioDialog.py:1835
+#: addon\globalPlugins\freeAudio\settingsPanel.py:709 addon\globalPlugins\freeAudio\settingsPanel.py:721
 #: addon\globalPlugins\freeAudio\timeshiftMixin.py:413
 msgid "enabled"
 msgstr "បានបើកដំណើរការ"
 
-#: addon\globalPlugins\freeAudio\audioFxMixin.py:224
-#: addon\globalPlugins\freeAudio\miscTogglesMixin.py:80
-#: addon\globalPlugins\freeAudio\miscTogglesMixin.py:129
-#: addon\globalPlugins\freeAudio\radioDialog.py:1798
-#: addon\globalPlugins\freeAudio\radioDialog.py:1810
-#: addon\globalPlugins\freeAudio\radioDialog.py:1835
-#: addon\globalPlugins\freeAudio\settingsPanel.py:704
-#: addon\globalPlugins\freeAudio\settingsPanel.py:716
+#: addon\globalPlugins\freeAudio\audioFxMixin.py:224 addon\globalPlugins\freeAudio\miscTogglesMixin.py:80
+#: addon\globalPlugins\freeAudio\miscTogglesMixin.py:129 addon\globalPlugins\freeAudio\radioDialog.py:1798
+#: addon\globalPlugins\freeAudio\radioDialog.py:1810 addon\globalPlugins\freeAudio\radioDialog.py:1835
+#: addon\globalPlugins\freeAudio\settingsPanel.py:709 addon\globalPlugins\freeAudio\settingsPanel.py:721
 #: addon\globalPlugins\freeAudio\timeshiftMixin.py:413
 msgid "disabled"
 msgstr "បានបិទដំណើរការ"
@@ -319,26 +275,22 @@ msgstr "បើក/បិទ បែបផែនការប្តូរស្ថ�
 
 #. Translators: One of the station-transition modes cycled by the crossfade command: plays no transition sound, cuts instantly.
 #. Translators: Choices for the crossfade setting, same wording and order as the in-app toggleStationTransition command's cycle (audioFxMixin.py) - continues for the next three lines.
-#: addon\globalPlugins\freeAudio\audioFxMixin.py:237
-#: addon\globalPlugins\freeAudio\settingsPanel.py:226
+#: addon\globalPlugins\freeAudio\audioFxMixin.py:237 addon\globalPlugins\freeAudio\settingsPanel.py:226
 msgid "Instant cut (no crossfade)"
 msgstr "កាត់ភ្លាមៗ (គ្មាន crossfade)"
 
 #. Translators: One of the station-transition modes: a brief 1-second audio crossfade between the old and new station.
-#: addon\globalPlugins\freeAudio\audioFxMixin.py:239
-#: addon\globalPlugins\freeAudio\settingsPanel.py:227
+#: addon\globalPlugins\freeAudio\audioFxMixin.py:239 addon\globalPlugins\freeAudio\settingsPanel.py:227
 msgid "Short crossfade (1 second)"
 msgstr "Crossfade ខ្លី (១ វិនាទី)"
 
 #. Translators: One of the station-transition modes: a longer 2-second audio crossfade between the old and new station.
-#: addon\globalPlugins\freeAudio\audioFxMixin.py:241
-#: addon\globalPlugins\freeAudio\settingsPanel.py:228
+#: addon\globalPlugins\freeAudio\audioFxMixin.py:241 addon\globalPlugins\freeAudio\settingsPanel.py:228
 msgid "Normal crossfade (2 seconds)"
 msgstr "Crossfade ធម្មតា (២ វិនាទី)"
 
 #. Translators: One of the station-transition modes: plays a radio-tuning sound effect instead of a crossfade.
-#: addon\globalPlugins\freeAudio\audioFxMixin.py:243
-#: addon\globalPlugins\freeAudio\settingsPanel.py:229
+#: addon\globalPlugins\freeAudio\audioFxMixin.py:243 addon\globalPlugins\freeAudio\settingsPanel.py:229
 msgid "Station tuning sound effect"
 msgstr "បែបផែនការសំឡេងលៃតម្រូវស្ថានីយ"
 
@@ -351,14 +303,10 @@ msgstr "បែបផែនការសំឡេងលៃតម្រូវស្
 #. Translators: Fallback LibrivoxBook.title when no title was supplied at construction.
 #. Translators: Fallback station name (used only for the confirmation message below) if the station has no name field at all.
 #. Translators: Fallback station name when a station dict has none.
-#: addon\globalPlugins\freeAudio\getem.py:430
-#: addon\globalPlugins\freeAudio\getem.py:460
-#: addon\globalPlugins\freeAudio\getem.py:1133
-#: addon\globalPlugins\freeAudio\gutenberg_audiobooks.py:190
-#: addon\globalPlugins\freeAudio\gutenberg_audiobooks.py:286
-#: addon\globalPlugins\freeAudio\librivox.py:160
-#: addon\globalPlugins\freeAudio\librivox.py:257
-#: addon\globalPlugins\freeAudio\radioDialog.py:3692
+#: addon\globalPlugins\freeAudio\getem.py:430 addon\globalPlugins\freeAudio\getem.py:460
+#: addon\globalPlugins\freeAudio\getem.py:1133 addon\globalPlugins\freeAudio\gutenberg_audiobooks.py:190
+#: addon\globalPlugins\freeAudio\gutenberg_audiobooks.py:286 addon\globalPlugins\freeAudio\librivox.py:160
+#: addon\globalPlugins\freeAudio\librivox.py:257 addon\globalPlugins\freeAudio\radioDialog.py:3692
 #: addon\globalPlugins\freeAudio\utils.py:338
 msgid "Unknown"
 msgstr "មិនស្គាល់"
@@ -371,8 +319,7 @@ msgstr "មិនស្គាល់"
 #. introducing new, differently-worded translations for the same
 #. three names.
 #. Translators: Names in the audio-book-sources checklist below; see the comment above for why these reuse RadioDialog's existing source-label strings rather than new translations.
-#: addon\globalPlugins\freeAudio\getem.py:568
-#: addon\globalPlugins\freeAudio\radioDialog.py:7170
+#: addon\globalPlugins\freeAudio\getem.py:568 addon\globalPlugins\freeAudio\radioDialog.py:7170
 #: addon\globalPlugins\freeAudio\settingsPanel.py:523
 msgid "GETEM"
 msgstr "GETEM"
@@ -389,8 +336,7 @@ msgstr "ការចូល GETEM បានបរាជ័យ។ សូមពិ�
 
 #. Translators: Error returned before attempting login when the settings dialog's GETEM username/password fields are empty.
 #: addon\globalPlugins\freeAudio\getem.py:720
-msgid ""
-"Please enter your GETEM username and password in freeAudio's settings first."
+msgid "Please enter your GETEM username and password in freeAudio's settings first."
 msgstr "សូមបញ្ចូលឈ្មោះអ្នកប្រើ និងពាក្យសម្ងាត់ GETEM របស់អ្នកនៅក្នុងការកំណត់ freeAudio ជាមុនសិន។"
 
 #. Translators: Error returned by search_getem() when the user submits an empty search box.
@@ -398,10 +344,8 @@ msgstr "សូមបញ្ចូលឈ្មោះអ្នកប្រើ ន�
 #. Translators: Error returned by search_librivox() when the user submits an empty search box.
 #. Translators: Spoken when the search button/enter is used with an empty search box.
 #. Translators: Spoken when the jukebox device-search is used with an empty search box.
-#: addon\globalPlugins\freeAudio\getem.py:756
-#: addon\globalPlugins\freeAudio\gutenberg_audiobooks.py:231
-#: addon\globalPlugins\freeAudio\librivox.py:197
-#: addon\globalPlugins\freeAudio\radioDialog.py:7411
+#: addon\globalPlugins\freeAudio\getem.py:756 addon\globalPlugins\freeAudio\gutenberg_audiobooks.py:231
+#: addon\globalPlugins\freeAudio\librivox.py:197 addon\globalPlugins\freeAudio\radioDialog.py:7411
 #: addon\globalPlugins\freeAudio\radioDialog.py:8522
 msgid "Please enter a search term."
 msgstr "សូមបញ្ចូលពាក្យស្វែងរក។"
@@ -416,14 +360,10 @@ msgstr "មិនអាចចូលទៅកាន់កាតាឡុក GETEM
 msgid "{0} - Part {1}"
 msgstr "{0} - ផ្នែក {1}"
 
-#: addon\globalPlugins\freeAudio\getem.py:924
-#: addon\globalPlugins\freeAudio\getem.py:1151
+#: addon\globalPlugins\freeAudio\getem.py:924 addon\globalPlugins\freeAudio\getem.py:1151
 msgid ""
-"No playable audio file was found on this work's GETEM page. It may require "
-"manual download from the site."
-msgstr ""
-"រកមិនឃើញឯកសារសំឡេងដែលអាចចាក់បាននៅលើទំព័រ GETEM នៃស្នាដៃនេះទេ។ "
-"វាអាចត្រូវការទាញយកដោយដៃពីគេហទំព័រ។"
+"No playable audio file was found on this work's GETEM page. It may require manual download from the site."
+msgstr "រកមិនឃើញឯកសារសំឡេងដែលអាចចាក់បាននៅលើទំព័រ GETEM នៃស្នាដៃនេះទេ។ វាអាចត្រូវការទាញយកដោយដៃពីគេហទំព័រ។"
 
 #. Translators: Error returned by get_book_by_url() when the pasted URL doesn't look like a GETEM work page link.
 #: addon\globalPlugins\freeAudio\getem.py:1115
@@ -452,12 +392,9 @@ msgstr "GETEM មិនបានត្រឡប់ឯកសារសំឡេង
 #. Translators: Fallback folder name used when saving a downloaded book, if the book's title is empty or has no usable characters.
 #. Translators: Fallback episode title when an RSS <item> has no <title> element.
 #. Translators: Fallback episode title when an Atom <entry> has no <atom:title> element.
-#: addon\globalPlugins\freeAudio\getem.py:1542
-#: addon\globalPlugins\freeAudio\gutenberg_audiobooks.py:621
-#: addon\globalPlugins\freeAudio\librivox.py:560
-#: addon\globalPlugins\freeAudio\librivox.py:663
-#: addon\globalPlugins\freeAudio\podcast.py:486
-#: addon\globalPlugins\freeAudio\podcast.py:537
+#: addon\globalPlugins\freeAudio\getem.py:1542 addon\globalPlugins\freeAudio\gutenberg_audiobooks.py:621
+#: addon\globalPlugins\freeAudio\librivox.py:560 addon\globalPlugins\freeAudio\librivox.py:663
+#: addon\globalPlugins\freeAudio\podcast.py:486 addon\globalPlugins\freeAudio\podcast.py:537
 msgid "Untitled"
 msgstr "គ្មានចំណងជើង"
 
@@ -501,35 +438,28 @@ msgid "This book has no archive.org item to read audio files from."
 msgstr "សៀវភៅនេះគ្មានធាតុ archive.org សម្រាប់អានឯកសារសំឡេងទេ។"
 
 #. Translators: Error returned by get_book_by_url() when the pasted URL doesn't match archive.org's book-details link pattern.
-#: addon\globalPlugins\freeAudio\gutenberg_audiobooks.py:424
-#: addon\globalPlugins\freeAudio\librivox.py:418
+#: addon\globalPlugins\freeAudio\gutenberg_audiobooks.py:424 addon\globalPlugins\freeAudio\librivox.py:418
 msgid "This doesn't look like an archive.org book link."
 msgstr "នេះមើលទៅមិនដូចជាតំណភ្ជាប់សៀវភៅ archive.org ទេ។"
 
 #. Translators: Error returned when the archive.org identifier from a pasted link does not resolve to any item at all.
-#: addon\globalPlugins\freeAudio\gutenberg_audiobooks.py:443
-#: addon\globalPlugins\freeAudio\librivox.py:437
+#: addon\globalPlugins\freeAudio\gutenberg_audiobooks.py:443 addon\globalPlugins\freeAudio\librivox.py:437
 msgid "Could not find a book at this address on archive.org."
 msgstr "មិនអាចរកឃើញសៀវភៅនៅអាសយដ្ឋាននេះនៅលើ archive.org ទេ។"
 
 #. Translators: Error returned when the resolved archive.org item exists but isn't tagged as part of this specific audiobook collection.
 #: addon\globalPlugins\freeAudio\gutenberg_audiobooks.py:451
-msgid ""
-"This archive.org item isn't part of the Project Gutenberg Open Audiobook "
-"Collection."
-msgstr ""
-"ធាតុ archive.org នេះមិនមែនជាផ្នែកនៃបណ្ណាល័យសៀវភៅជាសំឡេងបើកចំហរបស់គម្រោង Gutenberg ទេ។"
+msgid "This archive.org item isn't part of the Project Gutenberg Open Audiobook Collection."
+msgstr "ធាតុ archive.org នេះមិនមែនជាផ្នែកនៃបណ្ណាល័យសៀវភៅជាសំឡេងបើកចំហរបស់គម្រោង Gutenberg ទេ។"
 
 #. Translators: Error returned by the chapter-listing step when archive.org has no playable audio file for the resolved book.
 #. Translators: Error returned by the archive.org metadata path when no playable audio file was found for the resolved book.
-#: addon\globalPlugins\freeAudio\gutenberg_audiobooks.py:514
-#: addon\globalPlugins\freeAudio\librivox.py:498
+#: addon\globalPlugins\freeAudio\gutenberg_audiobooks.py:514 addon\globalPlugins\freeAudio\librivox.py:498
 msgid "No playable audio file was found for this book on archive.org."
 msgstr "រកមិនឃើញឯកសារសំឡេងដែលអាចចាក់បានសម្រាប់សៀវភៅនេះនៅលើ archive.org ទេ។"
 
 #. Translators: Raised internally when a chapter/book download completes but produced a zero-byte file; caught and shown to the user as a download failure.
-#: addon\globalPlugins\freeAudio\gutenberg_audiobooks.py:579
-#: addon\globalPlugins\freeAudio\librivox.py:621
+#: addon\globalPlugins\freeAudio\gutenberg_audiobooks.py:579 addon\globalPlugins\freeAudio\librivox.py:621
 msgid "The downloaded file was empty."
 msgstr "ឯកសារដែលបានទាញយកគឺទទេ។"
 
@@ -553,8 +483,7 @@ msgstr "មិនមែនជាឯកសារសំឡេងដែលស្គ
 
 #. Translators: Error returned by JukeboxManager.add_file()/add_folder() when that exact path is already saved in the jukebox library.
 #. Translators: See the add_file() comment above: same message, returned by add_folder() when the folder is already in the jukebox.
-#: addon\globalPlugins\freeAudio\jukebox.py:1217
-#: addon\globalPlugins\freeAudio\jukebox.py:1231
+#: addon\globalPlugins\freeAudio\jukebox.py:1217 addon\globalPlugins\freeAudio\jukebox.py:1231
 msgid "Already in the jukebox."
 msgstr "មាននៅក្នុង jukebox រួចហើយ។"
 
@@ -579,21 +508,17 @@ msgstr "មិនមែនជាឯកសារបញ្ជីចាក់ M3U �
 
 #: addon\globalPlugins\freeAudio\legacyMigration.py:179
 msgid ""
-"The previous version of this add-on, FreeRadio, is still installed alongside "
-"freeAudio. Running both at the same time makes them compete for the same "
-"shortcuts and audio device. Your settings and data have been copied to "
-"freeAudio. Please uninstall FreeRadio (NVDA menu, Tools, Add-on Store or "
-"Manage add-ons) and restart NVDA."
+"The previous version of this add-on, FreeRadio, is still installed alongside freeAudio. Running both at the "
+"same time makes them compete for the same shortcuts and audio device. Your settings and data have been copied "
+"to freeAudio. Please uninstall FreeRadio (NVDA menu, Tools, Add-on Store or Manage add-ons) and restart NVDA."
 msgstr ""
 "កំណែមុននៃកម្មវិធីបន្ថែមនេះ គឺ FreeRadio នៅតែត្រូវបានដំឡើងជាមួយ freeAudio។ "
-"ការដំណើរការទាំងពីរក្នុងពេលតែមួយធ្វើឱ្យពួកវាប្រកួតប្រជែងគ្នាសម្រាប់ផ្លូវកាត់ និងឧបករណ៍សំឡេងដូចគ្នា។ "
-"ការកំណត់ និងទិន្នន័យរបស់អ្នកត្រូវបានចម្លងទៅ freeAudio។ សូមលុបកម្មវិធីបន្ថែម FreeRadio (ម៉ឺនុយ "
-"NVDA ឧបករណ៍ ហាងកម្មវិធីបន្ថែម ឬគ្រប់គ្រងកម្មវិធីបន្ថែម) ហើយចាប់ផ្តើម NVDA ឡើងវិញ។"
+"ការដំណើរការទាំងពីរក្នុងពេលតែមួយធ្វើឱ្យពួកវាប្រកួតប្រជែងគ្នាសម្រាប់ផ្លូវកាត់ និងឧបករណ៍សំឡេងដូចគ្នា។ ការកំណត់ និងទិន្នន័យរបស់អ្នកត្រូវបានចម្លងទៅ "
+"freeAudio។ សូមលុបកម្មវិធីបន្ថែម FreeRadio (ម៉ឺនុយ NVDA ឧបករណ៍ ហាងកម្មវិធីបន្ថែម ឬគ្រប់គ្រងកម្មវិធីបន្ថែម) ហើយចាប់ផ្តើម NVDA ឡើងវិញ។"
 
 #. Translators: Fixed source label for LibriVox audiobooks, shown in the station-details dialog and the Audio Books tab (same role as getem.py's/gutenberg_audiobooks.py's 'audiobook_source').
 #. Translators: Source-name label for a book from the LibriVox catalog, shown alongside the audio-book details.
-#: addon\globalPlugins\freeAudio\librivox.py:339
-#: addon\globalPlugins\freeAudio\radioDialog.py:7165
+#: addon\globalPlugins\freeAudio\librivox.py:339 addon\globalPlugins\freeAudio\radioDialog.py:7165
 #: addon\globalPlugins\freeAudio\settingsPanel.py:523
 msgid "LibriVox"
 msgstr "LibriVox"
@@ -620,12 +545,8 @@ msgstr "រកមិនឃើញឯកសារសំឡេងដែលអាច
 
 #. Translators: Name of an NVDA command; mutes/unmutes all of freeAudio's spoken notifications (station changes, playback state, recording, volume level) at once.
 #: addon\globalPlugins\freeAudio\miscTogglesMixin.py:34
-msgid ""
-"Toggle mute notifications (station changes, playback, recording, volume "
-"level)"
-msgstr ""
-"បិទ/បើកការជូនដំណឹងអំពីការបិទសំឡេង (station changes, playback, recording, volume "
-"level)"
+msgid "Toggle mute notifications (station changes, playback, recording, volume level)"
+msgstr "បិទ/បើកការជូនដំណឹងអំពីការបិទសំឡេង (station changes, playback, recording, volume level)"
 
 #. Notifications are now muted — speak this final confirmation before silencing.
 #. Translators: Spoken once, right before notifications go silent, to confirm the toggle happened (further notifications are suppressed after this).
@@ -645,8 +566,7 @@ msgstr "បើក ឬបិទ ការប្រកាសដោយស្វ័�
 
 #. Translators: Feature name reused as both the settings-panel checkbox label (with '&' marking its access key) and, with the '&' stripped, as %(effect)s in the toggle announcement above.
 #. Translators: Checkbox label for the track-change announcement setting (same feature as the toggleAnnounceTrackChanges command).
-#: addon\globalPlugins\freeAudio\miscTogglesMixin.py:78
-#: addon\globalPlugins\freeAudio\settingsPanel.py:251
+#: addon\globalPlugins\freeAudio\miscTogglesMixin.py:78 addon\globalPlugins\freeAudio\settingsPanel.py:251
 msgid "&Auto-announce track changes (ICY metadata)"
 msgstr "ប្រកាសការផ្លាស់ប្តូរបទចម្រៀង ឬតន្ត្រីដោយស្វ័យប្រវត្តិ (ICY metadata) &A"
 
@@ -662,8 +582,7 @@ msgstr "បើក ឬបិទ ការរក្សាទុកបទចម្�
 
 #. Translators: Feature name for the save-liked-songs toggle, used the same way as the track-change one above (checkbox label with '&' access key, and %(effect)s with it stripped).
 #. Translators: Checkbox label for the save-liked-songs setting (same feature as the toggleSaveLikedSongs command).
-#: addon\globalPlugins\freeAudio\miscTogglesMixin.py:127
-#: addon\globalPlugins\freeAudio\settingsPanel.py:343
+#: addon\globalPlugins\freeAudio\miscTogglesMixin.py:127 addon\globalPlugins\freeAudio\settingsPanel.py:343
 msgid "&Save liked songs to a text file"
 msgstr "រក្សាទុកបទចម្រៀងដែលចូលចិត្តទៅក្នុងឯកសារអត្ថបទ &S"
 
@@ -679,12 +598,11 @@ msgstr "ចម្រៀងមិនស្គាល់"
 
 #: addon\globalPlugins\freeAudio\musicRecognizer.py:881
 msgid ""
-"ffmpeg.exe not found. Download ffmpeg from https://ffmpeg.org/download.html "
-"and place ffmpeg.exe in the freeAudio addon folder, or set the path in "
-"settings."
+"ffmpeg.exe not found. Download ffmpeg from https://ffmpeg.org/download.html and place ffmpeg.exe in the "
+"freeAudio addon folder, or set the path in settings."
 msgstr ""
-"រកមិនឃើញ ffmpeg.exe ទេ។ ទាញយក ffmpeg ពី https://ffmpeg.org/download.html "
-"ហើយដាក់ ffmpeg.exe នៅក្នុងឯកសារកម្មវិធីជំនួយរបស់ freeAudio ឬកំណត់ path ក្នុងការកំណត់។"
+"រកមិនឃើញ ffmpeg.exe ទេ។ ទាញយក ffmpeg ពី https://ffmpeg.org/download.html ហើយដាក់ ffmpeg.exe "
+"នៅក្នុងឯកសារកម្មវិធីជំនួយរបស់ freeAudio ឬកំណត់ path ក្នុងការកំណត់។"
 
 #. Translators: Title of the Obligato mode setup dialog.
 #: addon\globalPlugins\freeAudio\obligatoMixin.py:55
@@ -693,15 +611,13 @@ msgstr "របៀប Obligato"
 
 #. Translators: Static label above the favourite-station picker in the Obligato setup dialog.
 #. Translators: Accessible name for the favourite-station picker list (same text as the static label above it).
-#: addon\globalPlugins\freeAudio\obligatoMixin.py:65
-#: addon\globalPlugins\freeAudio\obligatoMixin.py:73
+#: addon\globalPlugins\freeAudio\obligatoMixin.py:65 addon\globalPlugins\freeAudio\obligatoMixin.py:73
 msgid "Background station:"
 msgstr "ស្ថានីយ៍ផ្ទៃខាងក្រោយ៖"
 
 #. Translators: Static label above the output-device choice in the Obligato setup dialog.
 #. Translators: Accessible name for the output-device choice control.
-#: addon\globalPlugins\freeAudio\obligatoMixin.py:89
-#: addon\globalPlugins\freeAudio\obligatoMixin.py:102
+#: addon\globalPlugins\freeAudio\obligatoMixin.py:89 addon\globalPlugins\freeAudio\obligatoMixin.py:102
 msgid "Audio output:"
 msgstr "ទិន្នផលសំឡេង៖"
 
@@ -712,8 +628,7 @@ msgstr "ដូចគ្នានឹងទិន្នផលសំខាន់"
 
 #. Translators: Static label above the background-volume choice in the Obligato setup dialog.
 #. Translators: Accessible name for the background-volume choice control.
-#: addon\globalPlugins\freeAudio\obligatoMixin.py:129
-#: addon\globalPlugins\freeAudio\obligatoMixin.py:144
+#: addon\globalPlugins\freeAudio\obligatoMixin.py:129 addon\globalPlugins\freeAudio\obligatoMixin.py:144
 msgid "Background volume:"
 msgstr "កម្រិតសំឡេងផ្ទៃខាងក្រោយ៖"
 
@@ -747,24 +662,18 @@ msgstr "បើក/បិទ របៀបតន្ត្រីផ្ទៃខា�
 
 #. Translators: Spoken when the toggle command is pressed but the favourites list is empty, since Obligato can only play a saved favourite station.
 #: addon\globalPlugins\freeAudio\obligatoMixin.py:221
-msgid ""
-"No favourite stations. Add a station to favourites first to use Obligato "
-"mode."
-msgstr ""
-"គ្មានស្ថានីយ៍ក្នុងបញ្ជីចំណូលចិត្តទេ។ សូមបន្ថែមស្ថានីយ៍មួយទៅក្នុងបញ្ជីចំណូលចិត្តជាមុនសិន ដើម្បីប្រើរបៀប "
-"Obligato។"
+msgid "No favourite stations. Add a station to favourites first to use Obligato mode."
+msgstr "គ្មានស្ថានីយ៍ក្នុងបញ្ជីចំណូលចិត្តទេ។ សូមបន្ថែមស្ថានីយ៍មួយទៅក្នុងបញ្ជីចំណូលចិត្តជាមុនសិន ដើម្បីប្រើរបៀប Obligato។"
 
 #. Translators: Spoken when the chosen background station has no resolvable stream URL to play.
 #. Translators: Spoken when trying to play a station that has no resolvable stream URL at all.
-#: addon\globalPlugins\freeAudio\obligatoMixin.py:284
-#: addon\globalPlugins\freeAudio\playbackCoreMixin.py:768
+#: addon\globalPlugins\freeAudio\obligatoMixin.py:284 addon\globalPlugins\freeAudio\playbackCoreMixin.py:768
 msgid "No stream URL available for this station"
 msgstr "គ្មាន stream URL សម្រាប់ស្ថានីយ៍វិទ្យុនេះទេ"
 
 #. Translators: Spoken when starting Obligato mode fails because there is no internet connection to reach the chosen station.
 #. Translators: Spoken when trying to play a station but the internet-connectivity pre-check fails.
-#: addon\globalPlugins\freeAudio\obligatoMixin.py:299
-#: addon\globalPlugins\freeAudio\playbackCoreMixin.py:779
+#: addon\globalPlugins\freeAudio\obligatoMixin.py:299 addon\globalPlugins\freeAudio\playbackCoreMixin.py:779
 msgid "No internet connection. Please check your connection and try again."
 msgstr "គ្មានការតភ្ជាប់អ៊ីនធឺណិតទេ។ សូមពិនិត្យមើលការតភ្ជាប់របស់អ្នក ហើយព្យាយាមម្តងទៀត។"
 
@@ -804,22 +713,17 @@ msgstr "ផ្អាក ឬបន្តការចាក់សំឡេងរ�
 #. Translators: Same "Paused" wording as elsewhere; spoken here when Space pauses playback from the audio-book library list.
 #. Translators: Same "Paused" wording as elsewhere; spoken here when Space pauses playback from the jukebox library list.
 #. Translators: Same "Paused" wording as elsewhere; spoken here when Space pauses playback from the jukebox tracks list.
-#: addon\globalPlugins\freeAudio\playbackCoreMixin.py:161
-#: addon\globalPlugins\freeAudio\radioDialog.py:3446
-#: addon\globalPlugins\freeAudio\radioDialog.py:4113
-#: addon\globalPlugins\freeAudio\radioDialog.py:4687
-#: addon\globalPlugins\freeAudio\radioDialog.py:4742
-#: addon\globalPlugins\freeAudio\radioDialog.py:6531
-#: addon\globalPlugins\freeAudio\radioDialog.py:7725
-#: addon\globalPlugins\freeAudio\radioDialog.py:8901
+#: addon\globalPlugins\freeAudio\playbackCoreMixin.py:161 addon\globalPlugins\freeAudio\radioDialog.py:3446
+#: addon\globalPlugins\freeAudio\radioDialog.py:4113 addon\globalPlugins\freeAudio\radioDialog.py:4687
+#: addon\globalPlugins\freeAudio\radioDialog.py:4742 addon\globalPlugins\freeAudio\radioDialog.py:6531
+#: addon\globalPlugins\freeAudio\radioDialog.py:7725 addon\globalPlugins\freeAudio\radioDialog.py:8901
 #: addon\globalPlugins\freeAudio\radioDialog.py:8991
 msgid "Paused"
 msgstr "បានផ្អាក"
 
 #. Translators: Spoken when the pause/resume command resumes playback.
 #. Translators: Spoken when F7 resumes playback from inside the dialog.
-#: addon\globalPlugins\freeAudio\playbackCoreMixin.py:165
-#: addon\globalPlugins\freeAudio\radioDialog.py:4118
+#: addon\globalPlugins\freeAudio\playbackCoreMixin.py:165 addon\globalPlugins\freeAudio\radioDialog.py:4118
 msgid "Playing"
 msgstr "កំពុងចាក់"
 
@@ -830,8 +734,7 @@ msgstr "បញ្ឈប់ការចាក់សំឡេងរបស់ freeA
 
 #. Translators: Line in the stop-confirmation dialog listing an in-progress, immediately-started recording that will be cut off; %s is the station name.
 #. Translators: Line listing an in-progress instant recording in the F8 stop-confirmation dialog; %s is the station name.
-#: addon\globalPlugins\freeAudio\playbackCoreMixin.py:197
-#: addon\globalPlugins\freeAudio\trackInfoMixin.py:615
+#: addon\globalPlugins\freeAudio\playbackCoreMixin.py:197 addon\globalPlugins\freeAudio\trackInfoMixin.py:615
 #, python-format
 msgid "Instant recording: %s"
 msgstr "ការថតភ្លាមៗ: %s"
@@ -842,18 +745,14 @@ msgstr "ការថតភ្លាមៗ: %s"
 #. Translators: Same active-scheduled-recording announcement as script_whatsPlaying.
 #. Translators: Same active-scheduled-recording announcement as script_whatsPlaying's paused case.
 #. Translators: Line listing an active scheduled recording in the F8 stop-confirmation dialog; %s is the station name.
-#: addon\globalPlugins\freeAudio\playbackCoreMixin.py:200
-#: addon\globalPlugins\freeAudio\trackInfoMixin.py:193
-#: addon\globalPlugins\freeAudio\trackInfoMixin.py:232
-#: addon\globalPlugins\freeAudio\trackInfoMixin.py:500
-#: addon\globalPlugins\freeAudio\trackInfoMixin.py:530
-#: addon\globalPlugins\freeAudio\trackInfoMixin.py:618
+#: addon\globalPlugins\freeAudio\playbackCoreMixin.py:200 addon\globalPlugins\freeAudio\trackInfoMixin.py:193
+#: addon\globalPlugins\freeAudio\trackInfoMixin.py:232 addon\globalPlugins\freeAudio\trackInfoMixin.py:500
+#: addon\globalPlugins\freeAudio\trackInfoMixin.py:530 addon\globalPlugins\freeAudio\trackInfoMixin.py:618
 #, python-format
 msgid "Scheduled recording: %s"
 msgstr "ការកំណត់ពេលថត: %s"
 
-#: addon\globalPlugins\freeAudio\playbackCoreMixin.py:204
-#: addon\globalPlugins\freeAudio\trackInfoMixin.py:622
+#: addon\globalPlugins\freeAudio\playbackCoreMixin.py:204 addon\globalPlugins\freeAudio\trackInfoMixin.py:622
 #, python-format
 msgid ""
 "The following recordings are active and will be stopped:\n"
@@ -868,8 +767,7 @@ msgstr ""
 
 #. Translators: Title of the confirmation dialog shown when stopping playback would cut off active recordings.
 #. Translators: Title of the F8 stop-confirmation dialog.
-#: addon\globalPlugins\freeAudio\playbackCoreMixin.py:212
-#: addon\globalPlugins\freeAudio\trackInfoMixin.py:630
+#: addon\globalPlugins\freeAudio\playbackCoreMixin.py:212 addon\globalPlugins\freeAudio\trackInfoMixin.py:630
 msgid "Active Recordings"
 msgstr "កំពុងដំណើរការថត"
 
@@ -877,10 +775,8 @@ msgstr "កំពុងដំណើរការថត"
 #. Translators: Spoken when the stop command is used and there were no active recordings to confirm about.
 #. Translators: Spoken by F8 (stop) after confirming the stop and ending any active recordings.
 #. Translators: Spoken by F8 (stop) when there were no active recordings to confirm about.
-#: addon\globalPlugins\freeAudio\playbackCoreMixin.py:226
-#: addon\globalPlugins\freeAudio\playbackCoreMixin.py:238
-#: addon\globalPlugins\freeAudio\trackInfoMixin.py:644
-#: addon\globalPlugins\freeAudio\trackInfoMixin.py:658
+#: addon\globalPlugins\freeAudio\playbackCoreMixin.py:226 addon\globalPlugins\freeAudio\playbackCoreMixin.py:238
+#: addon\globalPlugins\freeAudio\trackInfoMixin.py:644 addon\globalPlugins\freeAudio\trackInfoMixin.py:658
 msgid "freeAudio stopped"
 msgstr "freeAudio បានបញ្ឈប់ហើយ"
 
@@ -895,9 +791,7 @@ msgid "Play previous station"
 msgstr "ចាក់ស្ថានីយ៍វិទ្យុមុន"
 
 #: addon\globalPlugins\freeAudio\playbackCoreMixin.py:723
-msgid ""
-"Could not resume the last audio book - it may have been removed from your "
-"library."
+msgid "Could not resume the last audio book - it may have been removed from your library."
 msgstr "មិនអាចបន្តសៀវភៅជាសំឡេងចុងក្រោយបានទេ - វាអាចត្រូវបានដកចេញពីបណ្ណាល័យរបស់អ្នក។"
 
 #. Translators: Fallback station name used in log/error contexts if the station dict has no name field.
@@ -973,8 +867,7 @@ msgstr "រកមិនឃើញហ្វីតទេ។"
 
 #. Translators: Not shown to the user: internal 'no change' result from an HTTP 304 (feed unchanged since last fetch) response, so refresh can skip re-parsing. Kept as a translatable string for consistency with the other returned messages, though callers treat it as a no-op rather than an error to display.
 #. Translators: Same 304-not-modified no-op result as above, returned from the Atom parsing branch.
-#: addon\globalPlugins\freeAudio\podcast.py:422
-#: addon\globalPlugins\freeAudio\podcast.py:458
+#: addon\globalPlugins\freeAudio\podcast.py:422 addon\globalPlugins\freeAudio\podcast.py:458
 msgid "No new episodes (304)."
 msgstr "គ្មានភាគថ្មីទេ (304)។"
 
@@ -1020,8 +913,7 @@ msgstr "រុករក... &w"
 
 #. Translators: Title of the folder-picker dialog used by the Browse button next to a custom recordings-folder path.
 #. Translators: Title of the folder-picker dialog for choosing the recordings folder.
-#: addon\globalPlugins\freeAudio\radioDialog.py:297
-#: addon\globalPlugins\freeAudio\settingsPanel.py:792
+#: addon\globalPlugins\freeAudio\radioDialog.py:297 addon\globalPlugins\freeAudio\settingsPanel.py:797
 msgid "Select recordings folder"
 msgstr "ជ្រើសរើសឯកសារថត"
 
@@ -1124,8 +1016,7 @@ msgstr[0] "%d ផ្នែក"
 
 #. Translators: Field:value line for the podcast's/episode's author; see this function's docstring above for why it reuses the feed-details 'By:' string.
 #. Translators: Field:value line for the feed's author, in the feed-details text block.
-#: addon\globalPlugins\freeAudio\radioDialog.py:544
-#: addon\globalPlugins\freeAudio\radioDialog.py:6276
+#: addon\globalPlugins\freeAudio\radioDialog.py:544 addon\globalPlugins\freeAudio\radioDialog.py:6276
 #, python-format
 msgid "By: %s"
 msgstr "ដោយ៖ %s"
@@ -1158,8 +1049,7 @@ msgstr "ស្ថានីយ៍វិទ្យុទាំងអស់"
 
 #. Translators: Tab label for the user's saved favourite stations.
 #. Translators: Accessible name for the favourites list.
-#: addon\globalPlugins\freeAudio\radioDialog.py:708
-#: addon\globalPlugins\freeAudio\radioDialog.py:1082
+#: addon\globalPlugins\freeAudio\radioDialog.py:708 addon\globalPlugins\freeAudio\radioDialog.py:1082
 msgid "Favourites"
 msgstr "ចំណូលចិត្ត"
 
@@ -1175,92 +1065,77 @@ msgstr "កម្មវិធីកំណត់ម៉ោង"
 
 #. Translators: Tab label for the list of liked/favourited songs (with lyrics lookup).
 #. Translators: Accessible name for the liked-songs list (same text as its static label above).
-#: addon\globalPlugins\freeAudio\radioDialog.py:717
-#: addon\globalPlugins\freeAudio\radioDialog.py:5576
+#: addon\globalPlugins\freeAudio\radioDialog.py:717 addon\globalPlugins\freeAudio\radioDialog.py:5576
 msgid "Liked Songs"
 msgstr "ចម្រៀងដែលចូលចិត្ត"
 
 #. Translators: Tab label for podcast subscriptions and episodes.
 #. Translators: Names in the modules checklist below (which optional tabs are shown in the station browser dialog).
-#: addon\globalPlugins\freeAudio\radioDialog.py:722
-#: addon\globalPlugins\freeAudio\settingsPanel.py:474
+#: addon\globalPlugins\freeAudio\radioDialog.py:722 addon\globalPlugins\freeAudio\settingsPanel.py:474
 msgid "Podcasts"
 msgstr "ផតខាស់"
 
 #. Translators: Tab label for the audio-book library (GETEM/LibriVox/Project Gutenberg).
-#: addon\globalPlugins\freeAudio\radioDialog.py:726
-#: addon\globalPlugins\freeAudio\settingsPanel.py:474
+#: addon\globalPlugins\freeAudio\radioDialog.py:726 addon\globalPlugins\freeAudio\settingsPanel.py:474
 msgid "Audio Books"
 msgstr "សៀវភៅជាសំឡេង"
 
 #. Translators: Tab label for the local jukebox (user-added audio files/folders).
-#: addon\globalPlugins\freeAudio\radioDialog.py:730
-#: addon\globalPlugins\freeAudio\settingsPanel.py:474
+#: addon\globalPlugins\freeAudio\radioDialog.py:730 addon\globalPlugins\freeAudio\settingsPanel.py:474
 msgid "Jukebox"
 msgstr "Jukebox"
 
 #. Translators: Static label for the output-device choice control, shown above every tab.
 #. Translators: Accessible name for the output-device dropdown (same text as its static label).
-#: addon\globalPlugins\freeAudio\radioDialog.py:737
-#: addon\globalPlugins\freeAudio\radioDialog.py:742
+#: addon\globalPlugins\freeAudio\radioDialog.py:737 addon\globalPlugins\freeAudio\radioDialog.py:742
 msgid "Output device:"
 msgstr "ឧបករណ៍បញ្ចេញសំឡេង:"
 
 #. Translators: Placeholder shown in the output-device dropdown while the device list is still being fetched.
 #. Translators: Spoken while resolving a pasted book-detail URL directly to one book (rather than running a keyword search).
-#: addon\globalPlugins\freeAudio\radioDialog.py:740
-#: addon\globalPlugins\freeAudio\radioDialog.py:7462
+#: addon\globalPlugins\freeAudio\radioDialog.py:740 addon\globalPlugins\freeAudio\radioDialog.py:7462
 msgid "Loading..."
 msgstr "កំពុងដំណើរការ"
 
 #. Translators: Static label for the volume spin control, shown above every tab.
 #. Translators: Accessible name for the volume spin control (same text as its static label).
-#: addon\globalPlugins\freeAudio\radioDialog.py:756
-#: addon\globalPlugins\freeAudio\radioDialog.py:762
+#: addon\globalPlugins\freeAudio\radioDialog.py:756 addon\globalPlugins\freeAudio\radioDialog.py:762
 msgid "Volume:"
 msgstr "កម្រិតសំឡេង:"
 
 #. Effects
 #. Translators: Static label for the audio-effects checklist, shown above every tab.
 #. Translators: Accessible name for the audio-effects checklist (same text as its static label).
-#: addon\globalPlugins\freeAudio\radioDialog.py:768
-#: addon\globalPlugins\freeAudio\radioDialog.py:782
+#: addon\globalPlugins\freeAudio\radioDialog.py:768 addon\globalPlugins\freeAudio\radioDialog.py:782
 msgid "Effects:"
 msgstr "បែបផែន:"
 
 #. Translators: Names of the audio effects offered in the Settings effects checklist, in the same order as _fx_keys above - same wording as radioDialog.py's in-dialog effects list (continues for the next several lines: Compressor, Distortion, Echo, Flanger, Gargle, Reverb, then the three EQ boost bands).
-#: addon\globalPlugins\freeAudio\radioDialog.py:776
-#: addon\globalPlugins\freeAudio\settingsPanel.py:174
+#: addon\globalPlugins\freeAudio\radioDialog.py:776 addon\globalPlugins\freeAudio\settingsPanel.py:174
 msgid "Chorus"
 msgstr "បន្ទរ"
 
-#: addon\globalPlugins\freeAudio\radioDialog.py:776
-#: addon\globalPlugins\freeAudio\settingsPanel.py:175
+#: addon\globalPlugins\freeAudio\radioDialog.py:776 addon\globalPlugins\freeAudio\settingsPanel.py:175
 msgid "Compressor"
 msgstr "Compressor"
 
-#: addon\globalPlugins\freeAudio\radioDialog.py:776
-#: addon\globalPlugins\freeAudio\settingsPanel.py:176
+#: addon\globalPlugins\freeAudio\radioDialog.py:776 addon\globalPlugins\freeAudio\settingsPanel.py:176
 msgid "Distortion"
 msgstr "ការប្ដូរទ្រង់ទ្រាយសំឡេង"
 
-#: addon\globalPlugins\freeAudio\radioDialog.py:777
-#: addon\globalPlugins\freeAudio\settingsPanel.py:177
+#: addon\globalPlugins\freeAudio\radioDialog.py:777 addon\globalPlugins\freeAudio\settingsPanel.py:177
 msgid "Echo"
 msgstr "Echo"
 
-#: addon\globalPlugins\freeAudio\radioDialog.py:777
-#: addon\globalPlugins\freeAudio\settingsPanel.py:178
+#: addon\globalPlugins\freeAudio\radioDialog.py:777 addon\globalPlugins\freeAudio\settingsPanel.py:178
 msgid "Flanger"
 msgstr "Flanger"
 
-#: addon\globalPlugins\freeAudio\radioDialog.py:777
-#: addon\globalPlugins\freeAudio\settingsPanel.py:179
+#: addon\globalPlugins\freeAudio\radioDialog.py:777 addon\globalPlugins\freeAudio\settingsPanel.py:179
 msgid "Gargle"
 msgstr "Gargle"
 
-#: addon\globalPlugins\freeAudio\radioDialog.py:777
-#: addon\globalPlugins\freeAudio\settingsPanel.py:180
+#: addon\globalPlugins\freeAudio\radioDialog.py:777 addon\globalPlugins\freeAudio\settingsPanel.py:180
 msgid "Reverb"
 msgstr "Reverb"
 
@@ -1286,24 +1161,21 @@ msgstr "ចាក់/ផ្អាក &P"
 
 #. Translators: Button label; removes the selected custom station (only enabled for user-added stations, not the built-in catalog).
 #. Translators: Context-menu item; same action as the Delete Station button (custom stations only).
-#: addon\globalPlugins\freeAudio\radioDialog.py:822
-#: addon\globalPlugins\freeAudio\radioDialog.py:3808
+#: addon\globalPlugins\freeAudio\radioDialog.py:822 addon\globalPlugins\freeAudio\radioDialog.py:3808
 msgid "&Delete Station"
 msgstr "លុបស្ថានីយ៍វិទ្យុ &D"
 
 #. Translators: Button label; adds the currently selected station to favourites.
 #. --- Favourite management ---
 #. Translators: Context-menu item; same action as the Add to Favourites button.
-#: addon\globalPlugins\freeAudio\radioDialog.py:825
-#: addon\globalPlugins\freeAudio\radioDialog.py:3803
+#: addon\globalPlugins\freeAudio\radioDialog.py:825 addon\globalPlugins\freeAudio\radioDialog.py:3803
 msgid "Add to Fa&vorites"
 msgstr "បន្ថែមទៅចំណូលចិត្ត &v"
 
 #. Translators: Button label; opens the selected station's details dialog (info, description, tags).
 #. --- Details ---
 #. Translators: Context-menu item; same action as the Station Details button.
-#: addon\globalPlugins\freeAudio\radioDialog.py:827
-#: addon\globalPlugins\freeAudio\radioDialog.py:3796
+#: addon\globalPlugins\freeAudio\radioDialog.py:827 addon\globalPlugins\freeAudio\radioDialog.py:3796
 msgid "Station Detai&ls"
 msgstr "ព័ត៌មានលម្អិតអំពីស្ថានីយ៍វិទ្យុ &l"
 
@@ -1321,17 +1193,12 @@ msgstr "ធ្វើ&បច្ចុប្បន្នភាពបញ្ជី�
 
 #. Translators: Tooltip for the Update Station List button.
 #: addon\globalPlugins\freeAudio\radioDialog.py:837
-msgid ""
-"Re-downloads the full station list from the server, so search and browsing "
-"use the latest data."
-msgstr ""
-"ទាញយកបញ្ជីស្ថានីយ៍ពេញលេញម្ដងទៀតពីម៉ាស៊ីនបម្រើ ដើម្បីឱ្យការស្វែងរក និងការរុករក "
-"ប្រើប្រាស់ទិន្នន័យថ្មីបំផុត។"
+msgid "Re-downloads the full station list from the server, so search and browsing use the latest data."
+msgstr "ទាញយកបញ្ជីស្ថានីយ៍ពេញលេញម្ដងទៀតពីម៉ាស៊ីនបម្រើ ដើម្បីឱ្យការស្វែងរក និងការរុករក ប្រើប្រាស់ទិន្នន័យថ្មីបំផុត។"
 
 #. Translators: Button label; closes the station browser dialog.
 #. Translators: Button label; closes the lyrics dialog.
-#: addon\globalPlugins\freeAudio\radioDialog.py:840
-#: addon\globalPlugins\freeAudio\radioDialog.py:9333
+#: addon\globalPlugins\freeAudio\radioDialog.py:840 addon\globalPlugins\freeAudio\radioDialog.py:9333
 msgid "&Close"
 msgstr "បិទ &C"
 
@@ -1342,8 +1209,7 @@ msgstr "ផតខាស់ត្រូវបានបិទ។ សូមបើ�
 
 #. Translators: Spoken when the Audio Books shortcut is pressed but the Audio Books module is disabled in settings.
 #: addon\globalPlugins\freeAudio\radioDialog.py:1007
-msgid ""
-"Audio Books are disabled - enable them in freeAudio settings to use this"
+msgid "Audio Books are disabled - enable them in freeAudio settings to use this"
 msgstr "សៀវភៅជាសំឡេងត្រូវបានបិទ។ សូមបើកវានៅក្នុងការកំណត់ freeAudio ដើម្បីប្រើមុខងារនេះ។"
 
 #. Translators: Spoken when the Jukebox shortcut is pressed but the Jukebox module is disabled in settings.
@@ -1356,10 +1222,8 @@ msgstr "Jukebox ត្រូវបានបិទ។ សូមបើកវាន
 #. Translators: Label above the field that filters the timer station list below it.
 #. Translators: Label above the field that filters the liked-songs list below it.
 #. Translators: Label for the field that filters the episode list below by title or number.
-#: addon\globalPlugins\freeAudio\radioDialog.py:1072
-#: addon\globalPlugins\freeAudio\radioDialog.py:1236
-#: addon\globalPlugins\freeAudio\radioDialog.py:1463
-#: addon\globalPlugins\freeAudio\radioDialog.py:5566
+#: addon\globalPlugins\freeAudio\radioDialog.py:1072 addon\globalPlugins\freeAudio\radioDialog.py:1236
+#: addon\globalPlugins\freeAudio\radioDialog.py:1463 addon\globalPlugins\freeAudio\radioDialog.py:5566
 #: addon\globalPlugins\freeAudio\radioDialog.py:6047
 msgid "Filter:"
 msgstr "តម្រងសំឡេង:"
@@ -1372,8 +1236,7 @@ msgstr "តម្រងសំឡេងចំណូលចិត្ត"
 #. Translators: Button label; saves the currently selected station's audio profile (volume/effects/EQ), so it's re-applied automatically whenever that station is played.
 #. --- Audio profile ---
 #. Translators: Context-menu item; same action as the Save Audio Profile button.
-#: addon\globalPlugins\freeAudio\radioDialog.py:1087
-#: addon\globalPlugins\freeAudio\radioDialog.py:3831
+#: addon\globalPlugins\freeAudio\radioDialog.py:1087 addon\globalPlugins\freeAudio\radioDialog.py:3831
 msgid "Save Audio Pr&ofile for This Station"
 msgstr "រក្សាទុកទម្រង់សំឡេងសម្រាប់ស្ថានីយ៍វិទ្យុនេះ &o"
 
@@ -1383,20 +1246,16 @@ msgstr "រក្សាទុកទម្រង់សំឡេងសម្រា
 #. Translators: Context menu item - removes the saved audio profile from this audio book
 #. Translators: Jukebox track context menu item - removes the saved audio profile from this file
 #. Translators: Jukebox context menu item - removes the saved audio profile from this file
-#: addon\globalPlugins\freeAudio\radioDialog.py:1092
-#: addon\globalPlugins\freeAudio\radioDialog.py:3836
-#: addon\globalPlugins\freeAudio\radioDialog.py:6973
-#: addon\globalPlugins\freeAudio\radioDialog.py:7089
-#: addon\globalPlugins\freeAudio\radioDialog.py:8146
-#: addon\globalPlugins\freeAudio\radioDialog.py:9020
+#: addon\globalPlugins\freeAudio\radioDialog.py:1092 addon\globalPlugins\freeAudio\radioDialog.py:3836
+#: addon\globalPlugins\freeAudio\radioDialog.py:6973 addon\globalPlugins\freeAudio\radioDialog.py:7089
+#: addon\globalPlugins\freeAudio\radioDialog.py:8146 addon\globalPlugins\freeAudio\radioDialog.py:9020
 #: addon\globalPlugins\freeAudio\radioDialog.py:9291
 msgid "Clear Audio Prof&ile"
 msgstr "សម្អាតទម្រង់សំឡេង &i"
 
 #. Translators: Button label; opens a rename prompt for the selected custom favourite station.
 #. Translators: Context-menu item; same action as the Rename Station button.
-#: addon\globalPlugins\freeAudio\radioDialog.py:1097
-#: addon\globalPlugins\freeAudio\radioDialog.py:3818
+#: addon\globalPlugins\freeAudio\radioDialog.py:1097 addon\globalPlugins\freeAudio\radioDialog.py:3818
 msgid "Re&name Station"
 msgstr "ប្តូរឈ្មោះស្ថានីយ៍វិទ្យុ &n"
 
@@ -1413,8 +1272,7 @@ msgstr "នាំ&ចូលបញ្ជីចំណូលចិត្ត..."
 #. Sort combo
 #. Translators: Label for the station-list sort-order combo box, on the All Stations tab.
 #. Translators: Accessible name for the sort-order combo box (same text as its static label).
-#: addon\globalPlugins\freeAudio\radioDialog.py:1137
-#: addon\globalPlugins\freeAudio\radioDialog.py:1146
+#: addon\globalPlugins\freeAudio\radioDialog.py:1137 addon\globalPlugins\freeAudio\radioDialog.py:1146
 msgid "Sort:"
 msgstr "តម្រៀប:"
 
@@ -1437,10 +1295,8 @@ msgstr "ប្រទេស:"
 #. Translators: Initial population of the country combo with the same 'All' first-entry convention as _populate_country_combo.
 #. Translators: Same 'All' entry as the country combo's first item on the All Stations tab, excluded here while merging newly-seen country names into this combo's choices.
 #. Translators: Rebuilds this combo's choice list with 'All' first, followed by the merged/sorted country names.
-#: addon\globalPlugins\freeAudio\radioDialog.py:1156
-#: addon\globalPlugins\freeAudio\radioDialog.py:2391
-#: addon\globalPlugins\freeAudio\radioDialog.py:2425
-#: addon\globalPlugins\freeAudio\radioDialog.py:2428
+#: addon\globalPlugins\freeAudio\radioDialog.py:1156 addon\globalPlugins\freeAudio\radioDialog.py:2391
+#: addon\globalPlugins\freeAudio\radioDialog.py:2425 addon\globalPlugins\freeAudio\radioDialog.py:2428
 msgid "All"
 msgstr "ទាំងអស់"
 
@@ -1457,8 +1313,7 @@ msgstr "ដែនកំណត់លទ្ធផល:"
 #. Translators: Label above the free-text search field for the All Stations list.
 #. Translators: Label for the podcast search field.
 #. Translators: Label for the audio-book search field (searches GETEM/LibriVox/Project Gutenberg catalogs together).
-#: addon\globalPlugins\freeAudio\radioDialog.py:1179
-#: addon\globalPlugins\freeAudio\radioDialog.py:5986
+#: addon\globalPlugins\freeAudio\radioDialog.py:1179 addon\globalPlugins\freeAudio\radioDialog.py:5986
 #: addon\globalPlugins\freeAudio\radioDialog.py:7209
 msgid "Search:"
 msgstr "ស្វែងរក:"
@@ -1486,16 +1341,14 @@ msgstr "កំណត់ពេលថត"
 #. Translators: Label for the station-selection list (used both as a static label and as the accessible name below).
 #. Translators: Label for the station-selection list, used for the 'start radio' timer action (also used as its accessible name below).
 #. Translators: Accessible name for the timer station list (same text as its static label above).
-#: addon\globalPlugins\freeAudio\radioDialog.py:1229
-#: addon\globalPlugins\freeAudio\radioDialog.py:1456
+#: addon\globalPlugins\freeAudio\radioDialog.py:1229 addon\globalPlugins\freeAudio\radioDialog.py:1456
 #: addon\globalPlugins\freeAudio\radioDialog.py:1478
 msgid "Station:"
 msgstr "ស្ថានីយ៍វិទ្យុ:"
 
 #. Translators: Accessible name for the station filter text field.
 #. Translators: Accessible name for the timer station filter field.
-#: addon\globalPlugins\freeAudio\radioDialog.py:1241
-#: addon\globalPlugins\freeAudio\radioDialog.py:1468
+#: addon\globalPlugins\freeAudio\radioDialog.py:1241 addon\globalPlugins\freeAudio\radioDialog.py:1468
 msgid "Filter stations"
 msgstr "តម្រងស្ថានីយ៍"
 
@@ -1506,12 +1359,9 @@ msgstr "តម្រងស្ថានីយ៍"
 #. --- Time ---
 #. Translators: Label for the start-time field (also used as its accessible name below); value is typed as HH:MM.
 #. Translators: Accessible name for the start-time field (same text as its static label above).
-#: addon\globalPlugins\freeAudio\radioDialog.py:1252
-#: addon\globalPlugins\freeAudio\radioDialog.py:1396
-#: addon\globalPlugins\freeAudio\radioDialog.py:1401
-#: addon\globalPlugins\freeAudio\radioDialog.py:5301
-#: addon\globalPlugins\freeAudio\radioDialog.py:9467
-#: addon\globalPlugins\freeAudio\radioDialog.py:9470
+#: addon\globalPlugins\freeAudio\radioDialog.py:1252 addon\globalPlugins\freeAudio\radioDialog.py:1396
+#: addon\globalPlugins\freeAudio\radioDialog.py:1401 addon\globalPlugins\freeAudio\radioDialog.py:5301
+#: addon\globalPlugins\freeAudio\radioDialog.py:9467 addon\globalPlugins\freeAudio\radioDialog.py:9470
 msgid "Start time (HH:MM):"
 msgstr "ពេលវេលាចាប់ផ្តើម (HH:MM):"
 
@@ -1519,8 +1369,7 @@ msgstr "ពេលវេលាចាប់ផ្តើម (HH:MM):"
 #. --- Duration ---
 #. Translators: Label for the recording-duration field (also used as its accessible name below); value is in minutes.
 #. Translators: Accessible name for the duration field (same text as its static label above).
-#: addon\globalPlugins\freeAudio\radioDialog.py:1260
-#: addon\globalPlugins\freeAudio\radioDialog.py:9475
+#: addon\globalPlugins\freeAudio\radioDialog.py:1260 addon\globalPlugins\freeAudio\radioDialog.py:9475
 #: addon\globalPlugins\freeAudio\radioDialog.py:9478
 msgid "Duration (minutes):"
 msgstr "រយៈពេល (minutes):"
@@ -1529,8 +1378,7 @@ msgstr "រយៈពេល (minutes):"
 #. Translators: Label above the two recurrence radio buttons (once vs. weekly) - same wording as the Recording tab's scheduling section.
 #. --- Recurrence ---
 #. Translators: Label above the recurrence radio buttons (once vs. weekly) - same wording as the Recording tab's scheduling section.
-#: addon\globalPlugins\freeAudio\radioDialog.py:1270
-#: addon\globalPlugins\freeAudio\radioDialog.py:1410
+#: addon\globalPlugins\freeAudio\radioDialog.py:1270 addon\globalPlugins\freeAudio\radioDialog.py:1410
 #: addon\globalPlugins\freeAudio\radioDialog.py:9483
 msgid "Recurrence:"
 msgstr "ការធ្វើឡើងវិញ:"
@@ -1538,8 +1386,7 @@ msgstr "ការធ្វើឡើងវិញ:"
 #. Translators: Radio button: schedule a single one-time recording.
 #. Translators: Radio button: schedule a single one-time timer - same wording as the Recording tab's scheduling section.
 #. Translators: Radio button: this is a single one-time recording.
-#: addon\globalPlugins\freeAudio\radioDialog.py:1276
-#: addon\globalPlugins\freeAudio\radioDialog.py:1416
+#: addon\globalPlugins\freeAudio\radioDialog.py:1276 addon\globalPlugins\freeAudio\radioDialog.py:1416
 #: addon\globalPlugins\freeAudio\radioDialog.py:9485
 msgid "Only &once"
 msgstr "តែ &ម្ដង"
@@ -1551,8 +1398,7 @@ msgstr "តែ &ម្ដង"
 #. entries saved with the old fixed-count "weekly" mode are treated
 #. the same way here; saving will convert them to indefinite.
 #. Translators: Radio button: this recording repeats every week on the checked days.
-#: addon\globalPlugins\freeAudio\radioDialog.py:1285
-#: addon\globalPlugins\freeAudio\radioDialog.py:1425
+#: addon\globalPlugins\freeAudio\radioDialog.py:1285 addon\globalPlugins\freeAudio\radioDialog.py:1425
 #: addon\globalPlugins\freeAudio\radioDialog.py:9491
 msgid "Repeat &weekly"
 msgstr "ធ្វើម្ដងទៀតរៀងរាល់សប្ដាហ៍ &W"
@@ -1563,12 +1409,9 @@ msgstr "ធ្វើម្ដងទៀតរៀងរាល់សប្ដាហ
 #. Translators: Accessible name for the day-of-week checklist (same text as its static label).
 #. Translators: Label above the day-of-week checklist, shown only for the weekly-repeat recurrence mode.
 #. Translators: Accessible name for the day-of-week checklist (same text as its static label above).
-#: addon\globalPlugins\freeAudio\radioDialog.py:1297
-#: addon\globalPlugins\freeAudio\radioDialog.py:1309
-#: addon\globalPlugins\freeAudio\radioDialog.py:1435
-#: addon\globalPlugins\freeAudio\radioDialog.py:1447
-#: addon\globalPlugins\freeAudio\radioDialog.py:9506
-#: addon\globalPlugins\freeAudio\radioDialog.py:9510
+#: addon\globalPlugins\freeAudio\radioDialog.py:1297 addon\globalPlugins\freeAudio\radioDialog.py:1309
+#: addon\globalPlugins\freeAudio\radioDialog.py:1435 addon\globalPlugins\freeAudio\radioDialog.py:1447
+#: addon\globalPlugins\freeAudio\radioDialog.py:9506 addon\globalPlugins\freeAudio\radioDialog.py:9510
 msgid "Active days:"
 msgstr "ថ្ងៃសកម្ម:"
 
@@ -1576,87 +1419,63 @@ msgstr "ថ្ងៃសកម្ម:"
 #. Translators: Day-of-week checklist items, Monday through Sunday - same wording as the Recording tab's scheduling section.
 #. Translators: Day names used when listing a recurring schedule's active days; see the format examples in this method's docstring above.
 #. Translators: Day names used when listing a recurring timer's active days - same wording as the Recording tab's scheduling section.
-#: addon\globalPlugins\freeAudio\radioDialog.py:1302
-#: addon\globalPlugins\freeAudio\radioDialog.py:1440
-#: addon\globalPlugins\freeAudio\radioDialog.py:1980
-#: addon\globalPlugins\freeAudio\radioDialog.py:5349
-#: addon\globalPlugins\freeAudio\radioDialog.py:5512
-#: addon\globalPlugins\freeAudio\radioDialog.py:9502
+#: addon\globalPlugins\freeAudio\radioDialog.py:1302 addon\globalPlugins\freeAudio\radioDialog.py:1440
+#: addon\globalPlugins\freeAudio\radioDialog.py:1980 addon\globalPlugins\freeAudio\radioDialog.py:5349
+#: addon\globalPlugins\freeAudio\radioDialog.py:5512 addon\globalPlugins\freeAudio\radioDialog.py:9502
 msgid "Monday"
 msgstr "ថ្ងៃច័ន្ទ"
 
-#: addon\globalPlugins\freeAudio\radioDialog.py:1302
-#: addon\globalPlugins\freeAudio\radioDialog.py:1440
-#: addon\globalPlugins\freeAudio\radioDialog.py:1980
-#: addon\globalPlugins\freeAudio\radioDialog.py:5349
-#: addon\globalPlugins\freeAudio\radioDialog.py:5512
-#: addon\globalPlugins\freeAudio\radioDialog.py:9502
+#: addon\globalPlugins\freeAudio\radioDialog.py:1302 addon\globalPlugins\freeAudio\radioDialog.py:1440
+#: addon\globalPlugins\freeAudio\radioDialog.py:1980 addon\globalPlugins\freeAudio\radioDialog.py:5349
+#: addon\globalPlugins\freeAudio\radioDialog.py:5512 addon\globalPlugins\freeAudio\radioDialog.py:9502
 msgid "Tuesday"
 msgstr "ថ្ងៃអង្គារ"
 
-#: addon\globalPlugins\freeAudio\radioDialog.py:1302
-#: addon\globalPlugins\freeAudio\radioDialog.py:1440
-#: addon\globalPlugins\freeAudio\radioDialog.py:1980
-#: addon\globalPlugins\freeAudio\radioDialog.py:5349
-#: addon\globalPlugins\freeAudio\radioDialog.py:5512
-#: addon\globalPlugins\freeAudio\radioDialog.py:9502
+#: addon\globalPlugins\freeAudio\radioDialog.py:1302 addon\globalPlugins\freeAudio\radioDialog.py:1440
+#: addon\globalPlugins\freeAudio\radioDialog.py:1980 addon\globalPlugins\freeAudio\radioDialog.py:5349
+#: addon\globalPlugins\freeAudio\radioDialog.py:5512 addon\globalPlugins\freeAudio\radioDialog.py:9502
 msgid "Wednesday"
 msgstr "ថ្ងៃពុធ"
 
-#: addon\globalPlugins\freeAudio\radioDialog.py:1302
-#: addon\globalPlugins\freeAudio\radioDialog.py:1440
-#: addon\globalPlugins\freeAudio\radioDialog.py:1980
-#: addon\globalPlugins\freeAudio\radioDialog.py:5349
-#: addon\globalPlugins\freeAudio\radioDialog.py:5512
-#: addon\globalPlugins\freeAudio\radioDialog.py:9502
+#: addon\globalPlugins\freeAudio\radioDialog.py:1302 addon\globalPlugins\freeAudio\radioDialog.py:1440
+#: addon\globalPlugins\freeAudio\radioDialog.py:1980 addon\globalPlugins\freeAudio\radioDialog.py:5349
+#: addon\globalPlugins\freeAudio\radioDialog.py:5512 addon\globalPlugins\freeAudio\radioDialog.py:9502
 msgid "Thursday"
 msgstr "ថ្ងៃព្រហស្បតិ៍"
 
-#: addon\globalPlugins\freeAudio\radioDialog.py:1303
-#: addon\globalPlugins\freeAudio\radioDialog.py:1441
-#: addon\globalPlugins\freeAudio\radioDialog.py:1981
-#: addon\globalPlugins\freeAudio\radioDialog.py:5350
-#: addon\globalPlugins\freeAudio\radioDialog.py:5513
-#: addon\globalPlugins\freeAudio\radioDialog.py:9503
+#: addon\globalPlugins\freeAudio\radioDialog.py:1303 addon\globalPlugins\freeAudio\radioDialog.py:1441
+#: addon\globalPlugins\freeAudio\radioDialog.py:1981 addon\globalPlugins\freeAudio\radioDialog.py:5350
+#: addon\globalPlugins\freeAudio\radioDialog.py:5513 addon\globalPlugins\freeAudio\radioDialog.py:9503
 msgid "Friday"
 msgstr "ថ្ងៃសុក្រ"
 
-#: addon\globalPlugins\freeAudio\radioDialog.py:1303
-#: addon\globalPlugins\freeAudio\radioDialog.py:1441
-#: addon\globalPlugins\freeAudio\radioDialog.py:1981
-#: addon\globalPlugins\freeAudio\radioDialog.py:5350
-#: addon\globalPlugins\freeAudio\radioDialog.py:5513
-#: addon\globalPlugins\freeAudio\radioDialog.py:9503
+#: addon\globalPlugins\freeAudio\radioDialog.py:1303 addon\globalPlugins\freeAudio\radioDialog.py:1441
+#: addon\globalPlugins\freeAudio\radioDialog.py:1981 addon\globalPlugins\freeAudio\radioDialog.py:5350
+#: addon\globalPlugins\freeAudio\radioDialog.py:5513 addon\globalPlugins\freeAudio\radioDialog.py:9503
 msgid "Saturday"
 msgstr "ថ្ងៃសៅរ៍"
 
-#: addon\globalPlugins\freeAudio\radioDialog.py:1303
-#: addon\globalPlugins\freeAudio\radioDialog.py:1441
-#: addon\globalPlugins\freeAudio\radioDialog.py:1981
-#: addon\globalPlugins\freeAudio\radioDialog.py:5350
-#: addon\globalPlugins\freeAudio\radioDialog.py:5513
-#: addon\globalPlugins\freeAudio\radioDialog.py:9503
+#: addon\globalPlugins\freeAudio\radioDialog.py:1303 addon\globalPlugins\freeAudio\radioDialog.py:1441
+#: addon\globalPlugins\freeAudio\radioDialog.py:1981 addon\globalPlugins\freeAudio\radioDialog.py:5350
+#: addon\globalPlugins\freeAudio\radioDialog.py:5513 addon\globalPlugins\freeAudio\radioDialog.py:9503
 msgid "Sunday"
 msgstr "ថ្ងៃអាទិត្យ"
 
 #. Translators: Label above the two playback-mode radio buttons for a scheduled recording.
 #. --- Playback mode ---
 #. Translators: Label above the two playback-mode radio buttons for this scheduled recording.
-#: addon\globalPlugins\freeAudio\radioDialog.py:1317
-#: addon\globalPlugins\freeAudio\radioDialog.py:9519
+#: addon\globalPlugins\freeAudio\radioDialog.py:1317 addon\globalPlugins\freeAudio\radioDialog.py:9519
 msgid "Playback during recording:"
 msgstr "ការចាក់កំឡុងពេលថត:"
 
 #. Translators: Radio button: play the station out loud while also recording it.
-#: addon\globalPlugins\freeAudio\radioDialog.py:1322
-#: addon\globalPlugins\freeAudio\radioDialog.py:9521
+#: addon\globalPlugins\freeAudio\radioDialog.py:1322 addon\globalPlugins\freeAudio\radioDialog.py:9521
 msgid "Record while &listening (play and record simultaneously)"
 msgstr "ថតពេលកំពុងស្តាប់ (play and record simultaneously) &l"
 
 #. Translators: Radio button: record silently, without audio output, to save resources.
 #. Translators: Radio button: record silently, without audio output.
-#: addon\globalPlugins\freeAudio\radioDialog.py:1328
-#: addon\globalPlugins\freeAudio\radioDialog.py:9523
+#: addon\globalPlugins\freeAudio\radioDialog.py:1328 addon\globalPlugins\freeAudio\radioDialog.py:9523
 msgid "Record &only (no audio output)"
 msgstr "សម្រាប់តែថតប៉ុណ្ណោះ (no audio output) &o"
 
@@ -1702,12 +1521,8 @@ msgstr "លុបកម្មវិធីកំណត់ម៉ោងដែលប
 
 #. Translators: Spoken when the favourites list gains focus, reminding the user how the comma-to-reorder command works (see _handle_fav_move_x).
 #: addon\globalPlugins\freeAudio\radioDialog.py:1902
-msgid ""
-"Press comma to pick a station, navigate to the target position, then press "
-"comma again to drop."
-msgstr ""
-"ចុច comma ដើម្បីជ្រើសរើសស្ថានីយ៍វិទ្យុ រុករកទីតាំងគោលដៅ បន្ទាប់មកចុច comma "
-"ម្តងទៀតដើម្បីរក្សាទុកវា។"
+msgid "Press comma to pick a station, navigate to the target position, then press comma again to drop."
+msgstr "ចុច comma ដើម្បីជ្រើសរើសស្ថានីយ៍វិទ្យុ រុករកទីតាំងគោលដៅ បន្ទាប់មកចុច comma ម្តងទៀតដើម្បីរក្សាទុកវា។"
 
 #. Translators: Spoken when the favourites filter matches nothing.
 #: addon\globalPlugins\freeAudio\radioDialog.py:1918
@@ -1725,25 +1540,20 @@ msgstr[0] "%d ចំណូលចិត្ត"
 #. Translators: Mode word used inside the 'Schedule added' announcement below: whether the recording plays out loud too, or is silent/record-only. Used for both the multi-date (once, several days checked) and single-date branches.
 #. Translators: Same mode word as in the multi-date branch above, reused here for the single-date scheduling branch.
 #. Translators: Same mode word as radioDialog.py's scheduling UI, reused here in this object's debug/log string representation.
-#: addon\globalPlugins\freeAudio\radioDialog.py:1993
-#: addon\globalPlugins\freeAudio\radioDialog.py:2135
-#: addon\globalPlugins\freeAudio\radioDialog.py:2185
-#: addon\globalPlugins\freeAudio\recorder.py:1856
+#: addon\globalPlugins\freeAudio\radioDialog.py:1993 addon\globalPlugins\freeAudio\radioDialog.py:2135
+#: addon\globalPlugins\freeAudio\radioDialog.py:2185 addon\globalPlugins\freeAudio\recorder.py:1856
 msgid "Record only"
 msgstr "ថតតែមួយមុខប៉ុណ្ណោះ"
 
-#: addon\globalPlugins\freeAudio\radioDialog.py:1993
-#: addon\globalPlugins\freeAudio\radioDialog.py:2135
-#: addon\globalPlugins\freeAudio\radioDialog.py:2185
-#: addon\globalPlugins\freeAudio\recorder.py:1856
+#: addon\globalPlugins\freeAudio\radioDialog.py:1993 addon\globalPlugins\freeAudio\radioDialog.py:2135
+#: addon\globalPlugins\freeAudio\radioDialog.py:2185 addon\globalPlugins\freeAudio\recorder.py:1856
 msgid "Listen and record"
 msgstr "ស្តាប់ និងថតក្នុងពេលដំណាលគ្នា"
 
 #. Translators: Recurrence description shown when a weekly schedule has every day of the week checked (no day restriction).
 #. Translators: Recurrence description shown when a weekly timer has every day of the week checked (no day restriction) - same wording as the Recording tab's scheduling section.
 #. Translators: Recurrence description appended to the timer-added confirmation - same wording as the Recording tab's scheduling section.
-#: addon\globalPlugins\freeAudio\radioDialog.py:1999
-#: addon\globalPlugins\freeAudio\radioDialog.py:5372
+#: addon\globalPlugins\freeAudio\radioDialog.py:1999 addon\globalPlugins\freeAudio\radioDialog.py:5372
 #: addon\globalPlugins\freeAudio\radioDialog.py:5509
 msgid "Every day"
 msgstr "ជារៀងរាល់ថ្ងៃ"
@@ -1751,8 +1561,7 @@ msgstr "ជារៀងរាល់ថ្ងៃ"
 #. Translators: Recurrence description shown when a weekly schedule is restricted to specific days; %s is a comma-joined list of day names from _FULL_DAY_NAMES above, e.g. 'Every Monday, Saturday'.
 #. Translators: Recurrence description shown when a weekly timer is restricted to specific days; %s is a comma-joined list of day names - same wording as the Recording tab's scheduling section.
 #. Translators: Recurrence description appended to the timer-added confirmation - same wording as the Recording tab's scheduling section.
-#: addon\globalPlugins\freeAudio\radioDialog.py:2002
-#: addon\globalPlugins\freeAudio\radioDialog.py:5375
+#: addon\globalPlugins\freeAudio\radioDialog.py:2002 addon\globalPlugins\freeAudio\radioDialog.py:5375
 #: addon\globalPlugins\freeAudio\radioDialog.py:5516
 #, python-format
 msgid "Every %s"
@@ -1766,15 +1575,13 @@ msgstr "%s — %s — %s, %d នាទី, %s"
 
 #. Translators: Spoken when the recording-schedule station filter matches nothing.
 #. Translators: Spoken when the timer station filter matches nothing.
-#: addon\globalPlugins\freeAudio\radioDialog.py:2034
-#: addon\globalPlugins\freeAudio\radioDialog.py:5400
+#: addon\globalPlugins\freeAudio\radioDialog.py:2034 addon\globalPlugins\freeAudio\radioDialog.py:5400
 msgid "No stations found"
 msgstr "រកមិនឃើញស្ថានីយ៍"
 
 #. Translators: Plural forms spoken after filtering the recording-schedule station list; %d is how many match.
 #. Translators: Plural forms spoken after filtering the timer station list; %d is how many match.
-#: addon\globalPlugins\freeAudio\radioDialog.py:2037
-#: addon\globalPlugins\freeAudio\radioDialog.py:5403
+#: addon\globalPlugins\freeAudio\radioDialog.py:2037 addon\globalPlugins\freeAudio\radioDialog.py:5403
 #, python-format
 msgid "%d station"
 msgid_plural "%d stations"
@@ -1788,16 +1595,14 @@ msgstr "ការថតមិនដំណើរការទេ"
 #. Translators: Spoken when the typed start time doesn't parse as a valid HH:MM 24-hour time.
 #. Translators: Spoken when the typed time doesn't parse as a valid HH:MM 24-hour time; same message as the recording-schedule form.
 #. Translators: Same time-format error as the Add Schedule form, shown here when saving an edited schedule with an invalid time.
-#: addon\globalPlugins\freeAudio\radioDialog.py:2077
-#: addon\globalPlugins\freeAudio\radioDialog.py:5431
+#: addon\globalPlugins\freeAudio\radioDialog.py:2077 addon\globalPlugins\freeAudio\radioDialog.py:5431
 #: addon\globalPlugins\freeAudio\radioDialog.py:9582
 msgid "Invalid time format. Use HH:MM"
 msgstr "ទម្រង់ពេលវេលាមិនត្រឹមត្រូវ។ សូមប្រើ HH:MM"
 
 #. Translators: Spoken when trying to add a schedule with no station chosen in the list.
 #. Translators: Spoken when adding an alarm-type timer with no station chosen.
-#: addon\globalPlugins\freeAudio\radioDialog.py:2100
-#: addon\globalPlugins\freeAudio\radioDialog.py:5482
+#: addon\globalPlugins\freeAudio\radioDialog.py:2100 addon\globalPlugins\freeAudio\radioDialog.py:5482
 msgid "Please select a station"
 msgstr "សូមជ្រើសរើសស្ថានីយ៍វិទ្យុមួយ"
 
@@ -1809,16 +1614,14 @@ msgstr "បានបន្ថែមកាលវិភាគ: %(station)s នៅ�
 
 #. Translators: Body of the warning dialog shown when one or more of the new schedule's dates overlaps an existing recording; %(names)s is a comma-joined list of the conflicting recordings' station names.
 #. Translators: Same conflict-warning message as above, used in the single-date scheduling branch; %(names)s is the conflicting recording(s).
-#: addon\globalPlugins\freeAudio\radioDialog.py:2147
-#: addon\globalPlugins\freeAudio\radioDialog.py:2195
+#: addon\globalPlugins\freeAudio\radioDialog.py:2147 addon\globalPlugins\freeAudio\radioDialog.py:2195
 #, python-format
 msgid "Time conflict with: %(names)s. Switched to record-only mode."
 msgstr "ពេលវេលាជាន់គ្នាជាមួយ: %(names)s. បានប្ដូរទៅរបៀបថតតែប៉ុណ្ណោះ។"
 
 #. Translators: Title of the schedule-conflict warning dialog.
 #. Translators: Same dialog title as above, reused in the single-date scheduling branch.
-#: addon\globalPlugins\freeAudio\radioDialog.py:2151
-#: addon\globalPlugins\freeAudio\radioDialog.py:2197
+#: addon\globalPlugins\freeAudio\radioDialog.py:2151 addon\globalPlugins\freeAudio\radioDialog.py:2197
 msgid "Schedule Conflict"
 msgstr "កាលវិភាគជាន់គ្នា"
 
@@ -2027,15 +1830,13 @@ msgstr "នាំចេញបញ្ជីចំណូលចិត្ត"
 
 #. Translators: Body of the error dialog shown when writing the export file fails; %(error)s is the underlying error message.
 #. Translators: Body of the error dialog shown when writing the jukebox export file fails; %(error)s is the underlying error message.
-#: addon\globalPlugins\freeAudio\radioDialog.py:3282
-#: addon\globalPlugins\freeAudio\radioDialog.py:5154
+#: addon\globalPlugins\freeAudio\radioDialog.py:3282 addon\globalPlugins\freeAudio\radioDialog.py:5154
 #, python-format
 msgid "Export failed: %(error)s"
 msgstr "ការនាំចេញបានបរាជ័យ: %(error)s"
 
 #. Translators: Title of the export-error dialog.
-#: addon\globalPlugins\freeAudio\radioDialog.py:3284
-#: addon\globalPlugins\freeAudio\radioDialog.py:5156
+#: addon\globalPlugins\freeAudio\radioDialog.py:3284 addon\globalPlugins\freeAudio\radioDialog.py:5156
 msgid "Export Error"
 msgstr "កំហុសក្នុងការនាំចេញ"
 
@@ -2052,23 +1853,17 @@ msgstr[0] ""
 "%(path)s"
 
 #. Translators: Title of the export-success dialog.
-#: addon\globalPlugins\freeAudio\radioDialog.py:3299
-#: addon\globalPlugins\freeAudio\radioDialog.py:5171
+#: addon\globalPlugins\freeAudio\radioDialog.py:3299 addon\globalPlugins\freeAudio\radioDialog.py:5171
 msgid "Export Complete"
 msgstr "ការនាំចេញបានបញ្ចប់"
 
 #: addon\globalPlugins\freeAudio\radioDialog.py:3308
-msgid ""
-"Supported files (*.json;*.m3u)|*.json;*.m3u|JSON favourites (*.json)|*.json|"
-"M3U playlist (*.m3u)|*.m3u"
-msgstr ""
-"ឯកសារដែលគាំទ្រ (*.json;*.m3u)|*.json;*.m3u|ចំណូលចិត្ត JSON (*.json)|*.json|បញ្ជីចាក់ "
-"M3U (*.m3u)|*.m3u"
+msgid "Supported files (*.json;*.m3u)|*.json;*.m3u|JSON favourites (*.json)|*.json|M3U playlist (*.m3u)|*.m3u"
+msgstr "ឯកសារដែលគាំទ្រ (*.json;*.m3u)|*.json;*.m3u|ចំណូលចិត្ត JSON (*.json)|*.json|បញ្ជីចាក់ M3U (*.m3u)|*.m3u"
 
 #. Translators: Title of the file-picker dialog for importing favourites.
 #. Translators: Title of the merge-vs-replace confirmation dialog (same title as the file-picker above).
-#: addon\globalPlugins\freeAudio\radioDialog.py:3315
-#: addon\globalPlugins\freeAudio\radioDialog.py:3334
+#: addon\globalPlugins\freeAudio\radioDialog.py:3315 addon\globalPlugins\freeAudio\radioDialog.py:3334
 msgid "Import Favourites"
 msgstr "នាំចូលបញ្ជីចំណូលចិត្ត"
 
@@ -2086,8 +1881,7 @@ msgstr ""
 
 #. Translators: Body of the error dialog shown when the favourites file exists but its content is invalid; %(error)s is the underlying error message.
 #. Translators: Body of the error dialog shown when the jukebox import file exists but its content is invalid; %(error)s is the underlying error message.
-#: addon\globalPlugins\freeAudio\radioDialog.py:3347
-#: addon\globalPlugins\freeAudio\radioDialog.py:5225
+#: addon\globalPlugins\freeAudio\radioDialog.py:3347 addon\globalPlugins\freeAudio\radioDialog.py:5225
 #, python-format
 msgid "Import failed: %(error)s"
 msgstr "ការនាំចូលបានបរាជ័យ: %(error)s"
@@ -2095,8 +1889,7 @@ msgstr "ការនាំចូលបានបរាជ័យ: %(error)s"
 #. Translators: Title of the import-error dialog.
 #. Translators: Same import-error dialog title as above, reused for the file-read failure case.
 #. Translators: Title of the import-error dialog.
-#: addon\globalPlugins\freeAudio\radioDialog.py:3349
-#: addon\globalPlugins\freeAudio\radioDialog.py:3359
+#: addon\globalPlugins\freeAudio\radioDialog.py:3349 addon\globalPlugins\freeAudio\radioDialog.py:3359
 #: addon\globalPlugins\freeAudio\radioDialog.py:5227
 msgid "Import Error"
 msgstr "កំហុសក្នុងការនាំចូល"
@@ -2120,8 +1913,7 @@ msgid_plural "Favourites replaced with %(count)d stations from the file."
 msgstr[0] "បញ្ជីចំណូលចិត្តត្រូវបានជំនួសដោយ %(count)d ស្ថានីយ៍ពីឯកសារ។"
 
 #. Translators: Title of the final import-success dialog.
-#: addon\globalPlugins\freeAudio\radioDialog.py:3385
-#: addon\globalPlugins\freeAudio\radioDialog.py:5250
+#: addon\globalPlugins\freeAudio\radioDialog.py:3385 addon\globalPlugins\freeAudio\radioDialog.py:5250
 msgid "Import Complete"
 msgstr "ការនាំចូលបានបញ្ចប់"
 
@@ -2136,15 +1928,13 @@ msgid "Rename Station"
 msgstr "ប្តូរឈ្មោះស្ថានីយ៍វិទ្យុ"
 
 #. Translators: Spoken if the user submits an empty name in the rename dialog.
-#: addon\globalPlugins\freeAudio\radioDialog.py:3419
-#: addon\globalPlugins\freeAudio\radioDialog.py:5058
+#: addon\globalPlugins\freeAudio\radioDialog.py:3419 addon\globalPlugins\freeAudio\radioDialog.py:5058
 msgid "Name cannot be empty"
 msgstr "ឈ្មោះមិនអាចទទេបានទេ"
 
 #. Translators: Spoken after successfully renaming a station; %s is the new name.
 #. Translators: Spoken after successfully renaming a jukebox entry; %s is the new name.
-#: addon\globalPlugins\freeAudio\radioDialog.py:3433
-#: addon\globalPlugins\freeAudio\radioDialog.py:5066
+#: addon\globalPlugins\freeAudio\radioDialog.py:3433 addon\globalPlugins\freeAudio\radioDialog.py:5066
 #, python-format
 msgid "Renamed to: %s"
 msgstr "បានប្តូរឈ្មោះទៅជា: %s"
@@ -2157,8 +1947,7 @@ msgstr "បានបន្ថែមទៅចំណូលចិត្ត"
 #. Translators: Field-name row header in the station-details dialog's info table (see _show_station_details_for docstring); value is the station name.
 #. Translators: Field-name row header in this dialog's station-details table; value is the station name.
 #. Translators: Same "Station" field-name row header as _build_radio_station_details, referenced here to find that row's position so the "Now playing" row can be inserted right after it.
-#: addon\globalPlugins\freeAudio\radioDialog.py:3517
-#: addon\globalPlugins\freeAudio\trackInfoMixin.py:742
+#: addon\globalPlugins\freeAudio\radioDialog.py:3517 addon\globalPlugins\freeAudio\trackInfoMixin.py:742
 #: addon\globalPlugins\freeAudio\trackInfoMixin.py:1093
 msgid "Station"
 msgstr "ស្ថានីយ៍វិទ្យុ"
@@ -2167,30 +1956,25 @@ msgstr "ស្ថានីយ៍វិទ្យុ"
 #. Translators: Same field-name row header as above, used when only the raw country string (no resolvable code) is available.
 #. Translators: Field-name row header for the country field; value is the resolved country name, optionally with the raw code in parentheses.
 #. Translators: Same field-name row header as above, used when only the raw country string (no resolvable code) is available.
-#: addon\globalPlugins\freeAudio\radioDialog.py:3525
-#: addon\globalPlugins\freeAudio\radioDialog.py:3528
-#: addon\globalPlugins\freeAudio\trackInfoMixin.py:756
-#: addon\globalPlugins\freeAudio\trackInfoMixin.py:759
+#: addon\globalPlugins\freeAudio\radioDialog.py:3525 addon\globalPlugins\freeAudio\radioDialog.py:3528
+#: addon\globalPlugins\freeAudio\trackInfoMixin.py:756 addon\globalPlugins\freeAudio\trackInfoMixin.py:759
 msgid "Country"
 msgstr "ប្រទេស"
 
 #. Translators: Field-name row header for the station's language field.
-#: addon\globalPlugins\freeAudio\radioDialog.py:3532
-#: addon\globalPlugins\freeAudio\trackInfoMixin.py:764
+#: addon\globalPlugins\freeAudio\radioDialog.py:3532 addon\globalPlugins\freeAudio\trackInfoMixin.py:764
 msgid "Language"
 msgstr "ភាសា"
 
 #. Translators: Field-name row header for the station's tags/genre field; value is the first few comma-joined tags.
-#: addon\globalPlugins\freeAudio\radioDialog.py:3537
-#: addon\globalPlugins\freeAudio\trackInfoMixin.py:772
+#: addon\globalPlugins\freeAudio\radioDialog.py:3537 addon\globalPlugins\freeAudio\trackInfoMixin.py:772
 msgid "Genre"
 msgstr "ប្រភេទសិល្បៈ"
 
 #. Translators: Field label used when both codec and bitrate are known together, e.g. 'MP3, 128 kbps' as the value.
 #. Translators: Field-name row header shown when both codec and bitrate are known together, e.g. 'MP3, 128 kbps' as the value.
 #. Translators: Field-name row header for the track's audio file format/container.
-#: addon\globalPlugins\freeAudio\radioDialog.py:3546
-#: addon\globalPlugins\freeAudio\trackInfoMixin.py:782
+#: addon\globalPlugins\freeAudio\radioDialog.py:3546 addon\globalPlugins\freeAudio\trackInfoMixin.py:782
 #: addon\globalPlugins\freeAudio\trackInfoMixin.py:890
 msgid "Format"
 msgstr "ទម្រង់"
@@ -2198,64 +1982,55 @@ msgstr "ទម្រង់"
 #. Translators: Field-name row header shown when only the bitrate (no codec) is known; value is e.g. '128 kbps'.
 #. Translators: Field-name row header shown when only the bitrate (no codec) is known.
 #. Translators: Field-name row header for the track's audio bitrate; value has its own %d-based unit string.
-#: addon\globalPlugins\freeAudio\radioDialog.py:3549
-#: addon\globalPlugins\freeAudio\trackInfoMixin.py:785
+#: addon\globalPlugins\freeAudio\radioDialog.py:3549 addon\globalPlugins\freeAudio\trackInfoMixin.py:785
 #: addon\globalPlugins\freeAudio\trackInfoMixin.py:895
 msgid "Bitrate"
 msgstr "អត្រាប៊ីត"
 
 #. Translators: Field-name row header shown when only the codec (no bitrate) is known.
-#: addon\globalPlugins\freeAudio\radioDialog.py:3552
-#: addon\globalPlugins\freeAudio\trackInfoMixin.py:788
+#: addon\globalPlugins\freeAudio\radioDialog.py:3552 addon\globalPlugins\freeAudio\trackInfoMixin.py:788
 msgid "Codec"
 msgstr "Codec"
 
 #. Translators: Field-name row header for the station's homepage URL.
-#: addon\globalPlugins\freeAudio\radioDialog.py:3556
-#: addon\globalPlugins\freeAudio\trackInfoMixin.py:793
+#: addon\globalPlugins\freeAudio\radioDialog.py:3556 addon\globalPlugins\freeAudio\trackInfoMixin.py:793
 msgid "Website"
 msgstr "គេហទំព័រ"
 
 #. Translators: Field-name row header for the resolved audio stream URL.
-#: addon\globalPlugins\freeAudio\radioDialog.py:3560
-#: addon\globalPlugins\freeAudio\trackInfoMixin.py:798
+#: addon\globalPlugins\freeAudio\radioDialog.py:3560 addon\globalPlugins\freeAudio\trackInfoMixin.py:798
 msgid "Stream URL"
 msgstr "Stream URL"
 
 #. Translators: Field-name row header for the station's Radio Browser vote count.
-#: addon\globalPlugins\freeAudio\radioDialog.py:3568
-#: addon\globalPlugins\freeAudio\trackInfoMixin.py:807
+#: addon\globalPlugins\freeAudio\radioDialog.py:3568 addon\globalPlugins\freeAudio\trackInfoMixin.py:807
 msgid "Votes"
 msgstr "ការបោះឆ្នោត"
 
 #. Translators: Spoken if none of the above fields have any data to show for this station.
 #. Translators: Spoken if none of the station/track/podcast/audiobook detail fields have any data to show.
 #. Translators: Same "no detail available" message as _show_station_details_dialog, spoken here by this older voice-only variant.
-#: addon\globalPlugins\freeAudio\radioDialog.py:3572
-#: addon\globalPlugins\freeAudio\trackInfoMixin.py:1005
+#: addon\globalPlugins\freeAudio\radioDialog.py:3572 addon\globalPlugins\freeAudio\trackInfoMixin.py:1005
 #: addon\globalPlugins\freeAudio\trackInfoMixin.py:1136
 msgid "No station detail available"
 msgstr "មិនមានព័ត៌មានលម្អិតអំពីស្ថានីយ៍វិទ្យុទេ"
 
 #. Translators: Title of the station-details dialog.
 #. Translators: Title of this track-info details dialog.
-#: addon\globalPlugins\freeAudio\radioDialog.py:3578
-#: addon\globalPlugins\freeAudio\trackInfoMixin.py:1011
+#: addon\globalPlugins\freeAudio\radioDialog.py:3578 addon\globalPlugins\freeAudio\trackInfoMixin.py:1011
 msgid "Station Details"
 msgstr "ព័ត៌មានលម្អិតអំពីស្ថានីយ៍វិទ្យុ"
 
 #. Translators: Button label; copies all the detail rows above (as text) to the clipboard.
 #. "Copy all" button — copies all details to clipboard in one action
 #. Translators: Button label; copies every detail row shown in this dialog to the clipboard as text.
-#: addon\globalPlugins\freeAudio\radioDialog.py:3606
-#: addon\globalPlugins\freeAudio\trackInfoMixin.py:1044
+#: addon\globalPlugins\freeAudio\radioDialog.py:3606 addon\globalPlugins\freeAudio\trackInfoMixin.py:1044
 msgid "&Copy all to clipboard"
 msgstr "ចម្លងទៅ clipboard ទាំងអស់ &C"
 
 #. Translators: Spoken after the Copy button in the station-details dialog succeeds.
 #. Translators: Spoken after the Copy All button succeeds.
-#: addon\globalPlugins\freeAudio\radioDialog.py:3613
-#: addon\globalPlugins\freeAudio\trackInfoMixin.py:1051
+#: addon\globalPlugins\freeAudio\radioDialog.py:3613 addon\globalPlugins\freeAudio\trackInfoMixin.py:1051
 msgid "Station details copied to clipboard"
 msgstr "ព័ត៌មានលម្អិតអំពីស្ថានីយ៍វិទ្យុបានចម្លងទៅ clipboard"
 
@@ -2323,25 +2098,21 @@ msgstr "%(name)s៖ ការពិនិត្យស្ទ្រីមបរា
 #. Translators: Context-menu item; bulk-removes every liked song marked with '.', asking for confirmation once for the whole batch.
 #. Translators: Context-menu item; bulk-removes every audio book marked with '.', asking for confirmation once for the whole batch.
 #. Translators: Context-menu item; bulk-removes every jukebox entry marked with '.', asking for confirmation once for the whole batch.
-#: addon\globalPlugins\freeAudio\radioDialog.py:3813
-#: addon\globalPlugins\freeAudio\radioDialog.py:5867
-#: addon\globalPlugins\freeAudio\radioDialog.py:8157
-#: addon\globalPlugins\freeAudio\radioDialog.py:9268
+#: addon\globalPlugins\freeAudio\radioDialog.py:3813 addon\globalPlugins\freeAudio\radioDialog.py:5867
+#: addon\globalPlugins\freeAudio\radioDialog.py:8157 addon\globalPlugins\freeAudio\radioDialog.py:9268
 msgid "Remove &Selected"
 msgstr "លុបអ្វីដែលបានជ្រើសរើស &R"
 
 #. Translators: Context-menu item; assigns a user-typed folder/group name to every '.'-marked favourite (or just the focused one if none are marked), so favourites can be organised into groups manually - not only ones imported with a group-title tag.
 #. Translators: Context-menu item; assigns a user-typed group name to every '.'-marked jukebox entry (or just the focused one if none are marked), mirroring the same feature for favourites.
-#: addon\globalPlugins\freeAudio\radioDialog.py:3823
-#: addon\globalPlugins\freeAudio\radioDialog.py:9277
+#: addon\globalPlugins\freeAudio\radioDialog.py:3823 addon\globalPlugins\freeAudio\radioDialog.py:9277
 msgid "Assign to &Group..."
 msgstr "កំណត់ទៅ &ក្រុម..."
 
 #. --- Stream test ---
 #. Translators: Context-menu item; re-checks whether the station's stream URL is currently reachable.
 #. Translators: Button label; checks whether the typed stream URL is reachable and playable before adding the station.
-#: addon\globalPlugins\freeAudio\radioDialog.py:3844
-#: addon\globalPlugins\freeAudio\radioDialog.py:9374
+#: addon\globalPlugins\freeAudio\radioDialog.py:3844 addon\globalPlugins\freeAudio\radioDialog.py:9374
 msgid "&Test URL"
 msgstr "សាកល្បង &URL"
 
@@ -2354,19 +2125,16 @@ msgstr "រកមិនឃើញឯកសារជំនួយទេ។"
 #. Translators: Spoken when the 'move favourite' keyboard command (comma) is pressed the first time on a station, picking it up for reordering; %s is the station name. Press comma again elsewhere in the list to drop it there.
 #. Mid tone: item picked
 #. Translators: Spoken when the 'move jukebox entry' keyboard command (comma) is pressed the first time on an entry, picking it up for reordering; %s is the entry title. Press comma again elsewhere in the list to drop it there.
-#: addon\globalPlugins\freeAudio\radioDialog.py:4544
-#: addon\globalPlugins\freeAudio\radioDialog.py:4603
+#: addon\globalPlugins\freeAudio\radioDialog.py:4544 addon\globalPlugins\freeAudio\radioDialog.py:4603
 #, python-format
-msgid ""
-"%s selected. Navigate to the target position and press comma again to drop."
+msgid "%s selected. Navigate to the target position and press comma again to drop."
 msgstr "%s បានជ្រើសរើសរួចហើយ។ រុករកទីតាំងគោលដៅ ហើយចុច comma ម្តងទៀតដើម្បីរក្សាទុក។"
 
 #. Low tone: cancelled
 #. Translators: Spoken if the move-in-progress is cancelled (e.g. Escape) before a drop position is chosen.
 #. Low tone: cancelled
 #. Translators: Spoken if the move-in-progress is cancelled before a drop position is chosen.
-#: addon\globalPlugins\freeAudio\radioDialog.py:4551
-#: addon\globalPlugins\freeAudio\radioDialog.py:4610
+#: addon\globalPlugins\freeAudio\radioDialog.py:4551 addon\globalPlugins\freeAudio\radioDialog.py:4610
 msgid "Move cancelled"
 msgstr "ការផ្លាស់ទីត្រូវបានលុបចោល"
 
@@ -2374,8 +2142,7 @@ msgstr "ការផ្លាស់ទីត្រូវបានលុបចោ
 #. Translators: Spoken after successfully reordering a favourite station; %s is the station name.
 #. High tone: successfully moved
 #. Translators: Spoken after successfully reordering a jukebox entry; %s is the entry title.
-#: addon\globalPlugins\freeAudio\radioDialog.py:4587
-#: addon\globalPlugins\freeAudio\radioDialog.py:4623
+#: addon\globalPlugins\freeAudio\radioDialog.py:4587 addon\globalPlugins\freeAudio\radioDialog.py:4623
 #, python-format
 msgid "Moved: %s"
 msgstr "បានផ្លាស់ទី: %s"
@@ -2400,23 +2167,17 @@ msgstr[0] "បានដកជម្រើស %d ចំណូលចិត្ត"
 #. Translators: Same two placeholder rows as in _on_liked_remove/_get_liked_selection callers, treated as "nothing selected".
 #. Translators: Two placeholder rows shown in the (otherwise empty or filtered-empty) liked-songs list; both are checked here so trying to remove a placeholder row is silently ignored instead of erroring.
 #. Translators: Same two placeholder-row strings as above, excluded when counting how many real songs remain after a removal.
-#: addon\globalPlugins\freeAudio\radioDialog.py:4883
-#: addon\globalPlugins\freeAudio\radioDialog.py:5669
-#: addon\globalPlugins\freeAudio\radioDialog.py:5684
-#: addon\globalPlugins\freeAudio\radioDialog.py:5709
-#: addon\globalPlugins\freeAudio\radioDialog.py:5725
-#: addon\globalPlugins\freeAudio\radioDialog.py:5886
+#: addon\globalPlugins\freeAudio\radioDialog.py:4883 addon\globalPlugins\freeAudio\radioDialog.py:5669
+#: addon\globalPlugins\freeAudio\radioDialog.py:5684 addon\globalPlugins\freeAudio\radioDialog.py:5709
+#: addon\globalPlugins\freeAudio\radioDialog.py:5725 addon\globalPlugins\freeAudio\radioDialog.py:5886
 #: addon\globalPlugins\freeAudio\radioDialog.py:5933
 msgid "No liked songs yet."
 msgstr "មិនទាន់មានបទចម្រៀងដែលចូលចិត្តនៅឡើយទេ។"
 
 #. Translators: Placeholder row shown when the liked-songs filter matches nothing.
-#: addon\globalPlugins\freeAudio\radioDialog.py:4883
-#: addon\globalPlugins\freeAudio\radioDialog.py:5663
-#: addon\globalPlugins\freeAudio\radioDialog.py:5684
-#: addon\globalPlugins\freeAudio\radioDialog.py:5725
-#: addon\globalPlugins\freeAudio\radioDialog.py:5886
-#: addon\globalPlugins\freeAudio\radioDialog.py:5933
+#: addon\globalPlugins\freeAudio\radioDialog.py:4883 addon\globalPlugins\freeAudio\radioDialog.py:5663
+#: addon\globalPlugins\freeAudio\radioDialog.py:5684 addon\globalPlugins\freeAudio\radioDialog.py:5725
+#: addon\globalPlugins\freeAudio\radioDialog.py:5886 addon\globalPlugins\freeAudio\radioDialog.py:5933
 msgid "No results found."
 msgstr "រកមិនឃើញលទ្ធផល។"
 
@@ -2466,10 +2227,8 @@ msgstr[0] "បានដកជម្រើស %d ធាតុ jukebox"
 #. Translators: Spoken after unmarking a liked song in the multi-select removal flow; %s is the song string.
 #. Translators: Spoken after unmarking an audio book in the multi-select removal flow; %s is the book title.
 #. Translators: Spoken after unmarking a jukebox entry in the multi-select removal flow; %s is the entry title.
-#: addon\globalPlugins\freeAudio\radioDialog.py:4972
-#: addon\globalPlugins\freeAudio\radioDialog.py:5785
-#: addon\globalPlugins\freeAudio\radioDialog.py:7746
-#: addon\globalPlugins\freeAudio\radioDialog.py:8926
+#: addon\globalPlugins\freeAudio\radioDialog.py:4972 addon\globalPlugins\freeAudio\radioDialog.py:5785
+#: addon\globalPlugins\freeAudio\radioDialog.py:7746 addon\globalPlugins\freeAudio\radioDialog.py:8926
 #, python-format
 msgid "Unmarked: %s"
 msgstr "បានដកជម្រើសចេញ: %s"
@@ -2478,25 +2237,21 @@ msgstr "បានដកជម្រើសចេញ: %s"
 #. Translators: Spoken after marking a liked song in the multi-select removal flow; %s is the song string.
 #. Translators: Spoken after marking an audio book in the multi-select removal flow; %s is the book title.
 #. Translators: Spoken after marking a jukebox entry in the multi-select removal flow; %s is the entry title.
-#: addon\globalPlugins\freeAudio\radioDialog.py:4976
-#: addon\globalPlugins\freeAudio\radioDialog.py:5789
-#: addon\globalPlugins\freeAudio\radioDialog.py:7750
-#: addon\globalPlugins\freeAudio\radioDialog.py:8930
+#: addon\globalPlugins\freeAudio\radioDialog.py:4976 addon\globalPlugins\freeAudio\radioDialog.py:5789
+#: addon\globalPlugins\freeAudio\radioDialog.py:7750 addon\globalPlugins\freeAudio\radioDialog.py:8930
 #, python-format
 msgid "Marked: %s"
 msgstr "បានជ្រើសរើស: %s"
 
 #. Translators: Prompt of the dialog that assigns a folder/group name to the marked favourite(s); leaving the field empty removes them from any group instead.
 #. Translators: Prompt of the dialog that assigns a folder/group name to the marked jukebox entry/entries; leaving the field empty removes them from a group instead.
-#: addon\globalPlugins\freeAudio\radioDialog.py:5000
-#: addon\globalPlugins\freeAudio\radioDialog.py:5085
+#: addon\globalPlugins\freeAudio\radioDialog.py:5000 addon\globalPlugins\freeAudio\radioDialog.py:5085
 msgid "Enter a group name (leave empty to remove from a group):"
 msgstr "បញ្ចូលឈ្មោះក្រុម (ទុកទទេដើម្បីដកចេញពីក្រុម):"
 
 #. Translators: Title of the assign-to-group dialog.
 #. Translators: Title of the jukebox assign-to-group dialog.
-#: addon\globalPlugins\freeAudio\radioDialog.py:5002
-#: addon\globalPlugins\freeAudio\radioDialog.py:5087
+#: addon\globalPlugins\freeAudio\radioDialog.py:5002 addon\globalPlugins\freeAudio\radioDialog.py:5087
 msgid "Assign to Group"
 msgstr "កំណត់ទៅក្រុម"
 
@@ -2557,16 +2312,12 @@ msgstr[0] ""
 
 #: addon\globalPlugins\freeAudio\radioDialog.py:5183
 msgid ""
-"Supported files (*.json;*.m3u)|*.json;*.m3u|JSON jukebox library (*.json)|*."
-"json|M3U playlist (*.m3u)|*.m3u"
-msgstr ""
-"ឯកសារដែលគាំទ្រ (*.json;*.m3u)|*.json;*.m3u|បណ្ណាល័យ Jukebox JSON (*.json)|*.json|"
-"បញ្ជីចាក់ M3U (*.m3u)|*.m3u"
+"Supported files (*.json;*.m3u)|*.json;*.m3u|JSON jukebox library (*.json)|*.json|M3U playlist (*.m3u)|*.m3u"
+msgstr "ឯកសារដែលគាំទ្រ (*.json;*.m3u)|*.json;*.m3u|បណ្ណាល័យ Jukebox JSON (*.json)|*.json|បញ្ជីចាក់ M3U (*.m3u)|*.m3u"
 
 #. Translators: Title of the file-picker dialog for importing a jukebox library.
 #. Translators: Title of the merge-vs-replace confirmation dialog (same title as the file-picker above).
-#: addon\globalPlugins\freeAudio\radioDialog.py:5190
-#: addon\globalPlugins\freeAudio\radioDialog.py:5209
+#: addon\globalPlugins\freeAudio\radioDialog.py:5190 addon\globalPlugins\freeAudio\radioDialog.py:5209
 msgid "Import Jukebox"
 msgstr "នាំចូល Jukebox"
 
@@ -2618,8 +2369,7 @@ msgstr "បញ្ឈប់ពេលវេលា (HH:MM):"
 
 #. Translators: Internal marker value distinguishing a sleep-timer entry from an alarm entry in the timer list; not itself user-visible (the visible strings are built separately below).
 #. Translators: Fallback display label for a sleep timer in the pending-timers list, used when no station name applies (unlike an alarm timer, which is labelled with the station name instead).
-#: addon\globalPlugins\freeAudio\radioDialog.py:5358
-#: addon\globalPlugins\freeAudio\timerManager.py:56
+#: addon\globalPlugins\freeAudio\radioDialog.py:5358 addon\globalPlugins\freeAudio\timerManager.py:56
 msgid "Sleep timer"
 msgstr "កម្មវិធីកំណត់ម៉ោងផ្អាក"
 
@@ -2680,38 +2430,33 @@ msgstr "តម្រងបទចម្រៀងដែលចូលចិត្ត
 
 #. Translators: Button label; opens a web search for the selected song on Spotify.
 #. Translators: Context-menu item; same action as the Play on Spotify button.
-#: addon\globalPlugins\freeAudio\radioDialog.py:5583
-#: addon\globalPlugins\freeAudio\radioDialog.py:5845
+#: addon\globalPlugins\freeAudio\radioDialog.py:5583 addon\globalPlugins\freeAudio\radioDialog.py:5845
 msgid "Play on &Spotify"
 msgstr "ចាក់នៅលើ &Spotify"
 
 #. Translators: Button label; opens a web search for the selected song on YouTube.
 #. Translators: Context-menu item; same action as the Play on YouTube button.
-#: addon\globalPlugins\freeAudio\radioDialog.py:5587
-#: addon\globalPlugins\freeAudio\radioDialog.py:5850
+#: addon\globalPlugins\freeAudio\radioDialog.py:5587 addon\globalPlugins\freeAudio\radioDialog.py:5850
 msgid "Play on Y&ouTube"
 msgstr "ចាក់នៅលើ Y&ouTube"
 
 #. Translators: Button label; looks up and shows lyrics for the selected song.
 #. Translators: Context-menu item; same action as the Show Lyrics button.
-#: addon\globalPlugins\freeAudio\radioDialog.py:5591
-#: addon\globalPlugins\freeAudio\radioDialog.py:5855
+#: addon\globalPlugins\freeAudio\radioDialog.py:5591 addon\globalPlugins\freeAudio\radioDialog.py:5855
 msgid "Show &Lyrics"
 msgstr "បង្ហាញ&ពាក្យចម្រៀង"
 
 #. Translators: Button label; removes the selected song from the liked list.
 #. Translators: Context-menu item; same action as the Remove button.
 #. Translators: Context-menu item; removes the selected entry from the jukebox library.
-#: addon\globalPlugins\freeAudio\radioDialog.py:5595
-#: addon\globalPlugins\freeAudio\radioDialog.py:5862
+#: addon\globalPlugins\freeAudio\radioDialog.py:5595 addon\globalPlugins\freeAudio\radioDialog.py:5862
 #: addon\globalPlugins\freeAudio\radioDialog.py:9264
 msgid "Re&move"
 msgstr "ដកចេញ &m"
 
 #. Translators: Button label; re-fetches/refreshes the liked-songs list from disk.
 #. Translators: Context-menu item; same action as the Refresh button.
-#: addon\globalPlugins\freeAudio\radioDialog.py:5599
-#: addon\globalPlugins\freeAudio\radioDialog.py:5874
+#: addon\globalPlugins\freeAudio\radioDialog.py:5599 addon\globalPlugins\freeAudio\radioDialog.py:5874
 msgid "R&efresh"
 msgstr "រីហ្វ្រេស &e"
 
@@ -2745,8 +2490,7 @@ msgid "Remove Songs"
 msgstr "លុប​ចម្រៀង"
 
 #. Translators: Spoken if writing the updated liked-songs file back to disk fails; %s is the underlying error message.
-#: addon\globalPlugins\freeAudio\radioDialog.py:5820
-#: addon\globalPlugins\freeAudio\radioDialog.py:5919
+#: addon\globalPlugins\freeAudio\radioDialog.py:5820 addon\globalPlugins\freeAudio\radioDialog.py:5919
 #, python-format
 msgid "Could not remove song: %s"
 msgstr "មិនអាចលុបបទចម្រៀងចេញបានទេ: %s"
@@ -2793,8 +2537,7 @@ msgstr "រកមិនឃើញពាក្យចម្រៀងសម្រា
 
 #. Translators: Accessible name/hint for the podcast search field: it accepts either a search phrase or a direct feed URL, and searches or subscribes on Enter.
 #: addon\globalPlugins\freeAudio\radioDialog.py:5989
-msgid ""
-"Search podcasts, or enter a podcast feed URL. Press enter to search or add"
+msgid "Search podcasts, or enter a podcast feed URL. Press enter to search or add"
 msgstr "ស្វែងរកផតខាស់ ឬបញ្ចូល URL ហ្វីតផតខាស់។ ចុច Enter ដើម្បីស្វែងរក ឬបន្ថែម"
 
 #. --- Search results list ---
@@ -2813,8 +2556,7 @@ msgstr "ស្វែងរកផតខាស់ ឬបញ្ចូល URL ហ្
 #. _set_jukebox_results_visible(), mirroring
 #. _set_podcast_results_visible()'s reasoning exactly.
 #. Translators: Label above the list of audio files found by the device search.
-#: addon\globalPlugins\freeAudio\radioDialog.py:6000
-#: addon\globalPlugins\freeAudio\radioDialog.py:7219
+#: addon\globalPlugins\freeAudio\radioDialog.py:6000 addon\globalPlugins\freeAudio\radioDialog.py:7219
 #: addon\globalPlugins\freeAudio\radioDialog.py:8386
 msgid "Search results:"
 msgstr "លទ្ធផលស្វែងរក៖"
@@ -2846,7 +2588,8 @@ msgid "Subscriptions:"
 msgstr "ការជាវ៖"
 
 #. Translators: Accessible name for the podcast-subscriptions list.
-#: addon\globalPlugins\freeAudio\radioDialog.py:6032
+#. Translators: Check box in the clean-up dialog; deletes the podcast subscriptions.
+#: addon\globalPlugins\freeAudio\radioDialog.py:6032 addon\globalPlugins\freeAudio\resetDialog.py:91
 msgid "Podcast subscriptions"
 msgstr "ការជាវផតខាស់"
 
@@ -2873,15 +2616,13 @@ msgstr "ភាគនៃផតខាស់"
 
 #. Translators: Accessible name for the read-only episode-details text field.
 #. Translators: Field-name row header for the multi-line block of episode metadata (author, published date, duration, description) built by radioDialog.py's _format_podcast_episode_lines().
-#: addon\globalPlugins\freeAudio\radioDialog.py:6067
-#: addon\globalPlugins\freeAudio\trackInfoMixin.py:847
+#: addon\globalPlugins\freeAudio\radioDialog.py:6067 addon\globalPlugins\freeAudio\trackInfoMixin.py:847
 msgid "Episode details"
 msgstr "ព័ត៌មានលម្អិតអំពីភាគ"
 
 #. Translators: Button label; downloads the currently selected episode to disk.
 #. Translators: Context-menu item; downloads a permanent local copy of the selected episode.
-#: addon\globalPlugins\freeAudio\radioDialog.py:6076
-#: addon\globalPlugins\freeAudio\radioDialog.py:7072
+#: addon\globalPlugins\freeAudio\radioDialog.py:6076 addon\globalPlugins\freeAudio\radioDialog.py:7072
 msgid "&Download Episode"
 msgstr "ទាញយក&ភាគ"
 
@@ -2902,16 +2643,14 @@ msgstr "កំពុងទាញយកហ្វីតផតខាស់..."
 
 #. Translators: Spoken when subscribing to a feed fails; %s is the underlying error.
 #. Translators: Same error as _on_podcast_add_done, spoken here after subscribing directly from a search result instead of a pasted URL.
-#: addon\globalPlugins\freeAudio\radioDialog.py:6213
-#: addon\globalPlugins\freeAudio\radioDialog.py:6853
+#: addon\globalPlugins\freeAudio\radioDialog.py:6213 addon\globalPlugins\freeAudio\radioDialog.py:6853
 #, python-format
 msgid "Could not add feed: %s"
 msgstr "មិនអាចបន្ថែមហ្វីត៖ %s"
 
 #. Translators: Spoken after successfully subscribing to a feed; %s is the feed title.
 #. Translators: Same confirmation as _on_podcast_add_done, spoken here after subscribing directly from a search result.
-#: addon\globalPlugins\freeAudio\radioDialog.py:6218
-#: addon\globalPlugins\freeAudio\radioDialog.py:6856
+#: addon\globalPlugins\freeAudio\radioDialog.py:6218 addon\globalPlugins\freeAudio\radioDialog.py:6856
 #, python-format
 msgid "Feed added: %s"
 msgstr "បានបន្ថែមហ្វីត៖ %s"
@@ -2930,8 +2669,7 @@ msgstr "ទម្រង់សំឡេងត្រូវបានសម្អា
 
 #. Translators: Plural forms for the episode-count line in the feed-details text block.
 #. Translators: Plural forms spoken after filtering the episode list; %d is how many match. Same wording as the feed-details episode count above.
-#: addon\globalPlugins\freeAudio\radioDialog.py:6279
-#: addon\globalPlugins\freeAudio\radioDialog.py:6346
+#: addon\globalPlugins\freeAudio\radioDialog.py:6279 addon\globalPlugins\freeAudio\radioDialog.py:6346
 #, python-format
 msgid "%d episode"
 msgid_plural "%d episodes"
@@ -2979,16 +2717,14 @@ msgstr "ហ្វីតត្រូវបានលុប៖ %s"
 
 #. Translators: Spoken when trying to download an episode that was already downloaded before; %s is the existing filename.
 #. Translators: Spoken when the episode was already downloaded before; %s is the existing filename. Same wording as the Podcasts tab download action.
-#: addon\globalPlugins\freeAudio\radioDialog.py:6620
-#: addon\globalPlugins\freeAudio\recordingMixin.py:55
+#: addon\globalPlugins\freeAudio\radioDialog.py:6620 addon\globalPlugins\freeAudio\recordingMixin.py:55
 #, python-format
 msgid "File already exists: %s"
 msgstr "ឯកសារមានរួចហើយ៖ %s"
 
 #. Translators: Spoken when an episode download starts; %s is the episode title.
 #. Translators: Spoken when the Ctrl+Win+V episode download starts; %s is the episode title.
-#: addon\globalPlugins\freeAudio\radioDialog.py:6624
-#: addon\globalPlugins\freeAudio\recordingMixin.py:59
+#: addon\globalPlugins\freeAudio\radioDialog.py:6624 addon\globalPlugins\freeAudio\recordingMixin.py:59
 #, python-format
 msgid "Downloading: %s"
 msgstr "កំពុងទាញយក៖ %s"
@@ -2996,8 +2732,7 @@ msgstr "កំពុងទាញយក៖ %s"
 #. Translators: Spoken when a podcast episode download finishes; %s is the saved filename.
 #. Translators: Spoken when every part of a book downloaded successfully; %s is the book title.
 #. Translators: Spoken when the Ctrl+Win+V episode download finishes; %s is the saved filename.
-#: addon\globalPlugins\freeAudio\radioDialog.py:6631
-#: addon\globalPlugins\freeAudio\radioDialog.py:8344
+#: addon\globalPlugins\freeAudio\radioDialog.py:6631 addon\globalPlugins\freeAudio\radioDialog.py:8344
 #: addon\globalPlugins\freeAudio\recordingMixin.py:65
 #, python-format
 msgid "Download complete: %s"
@@ -3007,10 +2742,8 @@ msgstr "ការទាញយកបានបញ្ចប់៖ %s"
 #. Translators: Spoken when a book download fails entirely (zero parts saved); %s is the error message, or the book title if no specific error was captured.
 #. Translators: Spoken when the Ctrl+Win+V episode download fails; %s is the underlying error.
 #. Translators: Spoken when downloading the new-version installer file fails; %s is the underlying error message.
-#: addon\globalPlugins\freeAudio\radioDialog.py:6634
-#: addon\globalPlugins\freeAudio\radioDialog.py:8355
-#: addon\globalPlugins\freeAudio\recordingMixin.py:68
-#: addon\globalPlugins\freeAudio\__init__.py:1496
+#: addon\globalPlugins\freeAudio\radioDialog.py:6634 addon\globalPlugins\freeAudio\radioDialog.py:8355
+#: addon\globalPlugins\freeAudio\recordingMixin.py:68 addon\globalPlugins\freeAudio\__init__.py:1496
 #, python-format
 msgid "Download failed: %s"
 msgstr "ការទាញយកបានបរាជ័យ: %s"
@@ -3038,8 +2771,7 @@ msgstr "រកឃើញផតខាស់ %d។"
 
 #. Translators: Placeholder row shown in the episode-preview list when the selected search result has no usable feed link.
 #. Translators: Spoken when trying to subscribe directly from a search result that has no usable feed link.
-#: addon\globalPlugins\freeAudio\radioDialog.py:6728
-#: addon\globalPlugins\freeAudio\radioDialog.py:6838
+#: addon\globalPlugins\freeAudio\radioDialog.py:6728 addon\globalPlugins\freeAudio\radioDialog.py:6838
 msgid "This podcast has no feed URL."
 msgstr "ផតខាស់នេះគ្មាន URL ហ្វីតទេ។"
 
@@ -3056,14 +2788,12 @@ msgstr "រកមិនឃើញភាគណាមួយទេ។"
 #. Translators: Same Preview/Stop Preview toggle pattern as the GETEM/jukebox context menus, applied to a podcast episode preview.
 #. Translators: Context-menu item label toggles between these two: 'Preview' plays a short sample of the selected search result before adding it, 'Stop Preview' appears while that sample is playing.
 #. Translators: Same Preview/Stop Preview toggle pattern as the GETEM search-result context menu, applied to a jukebox device-search result.
-#: addon\globalPlugins\freeAudio\radioDialog.py:6818
-#: addon\globalPlugins\freeAudio\radioDialog.py:7616
+#: addon\globalPlugins\freeAudio\radioDialog.py:6818 addon\globalPlugins\freeAudio\radioDialog.py:7616
 #: addon\globalPlugins\freeAudio\radioDialog.py:8627
 msgid "&Stop Preview"
 msgstr "បញ្ឈប់ការមើលជាមុន(&S)"
 
-#: addon\globalPlugins\freeAudio\radioDialog.py:6818
-#: addon\globalPlugins\freeAudio\radioDialog.py:7616
+#: addon\globalPlugins\freeAudio\radioDialog.py:6818 addon\globalPlugins\freeAudio\radioDialog.py:7616
 #: addon\globalPlugins\freeAudio\radioDialog.py:8627
 msgid "&Preview"
 msgstr "មើលជាមុន(&P)"
@@ -3109,8 +2839,7 @@ msgid "Re&move Feed"
 msgstr "លុបហ្វីត(&M)"
 
 #. Translators: Context menu item - saves an audio profile (volume/effects/speed) that applies to every episode of this podcast
-#: addon\globalPlugins\freeAudio\radioDialog.py:6969
-#: addon\globalPlugins\freeAudio\radioDialog.py:7085
+#: addon\globalPlugins\freeAudio\radioDialog.py:6969 addon\globalPlugins\freeAudio\radioDialog.py:7085
 msgid "Save Audio Pr&ofile for This Podcast"
 msgstr "រក្សាទុកទម្រង់សំឡេងសម្រាប់ផតខាស់នេះ &o"
 
@@ -3155,19 +2884,14 @@ msgid "Copied to clipboard"
 msgstr "បានចម្លងទៅក្ដារតម្បៀតខ្ទាស់"
 
 #. Translators: Source-name label for a book from the Project Gutenberg Open Audiobook Collection.
-#: addon\globalPlugins\freeAudio\radioDialog.py:7168
-#: addon\globalPlugins\freeAudio\settingsPanel.py:523
+#: addon\globalPlugins\freeAudio\radioDialog.py:7168 addon\globalPlugins\freeAudio\settingsPanel.py:523
 msgid "Project Gutenberg"
 msgstr "គម្រោង Gutenberg"
 
 #. Translators: Accessible name of the audio book search field - searches both GETEM and LibriVox at once
 #: addon\globalPlugins\freeAudio\radioDialog.py:7187
-msgid ""
-"Search audio books by title, author, narrator, subject, or publisher. Press "
-"enter to search"
-msgstr ""
-"ស្វែងរកសៀវភៅជាសំឡេងតាមចំណងជើង អ្នកនិពន្ធ អ្នកនិទាន ប្រធានបទ ឬអ្នកបោះពុម្ពផ្សាយ។ ចុច Enter "
-"ដើម្បីស្វែងរក"
+msgid "Search audio books by title, author, narrator, subject, or publisher. Press enter to search"
+msgstr "ស្វែងរកសៀវភៅជាសំឡេងតាមចំណងជើង អ្នកនិពន្ធ អ្នកនិទាន ប្រធានបទ ឬអ្នកបោះពុម្ពផ្សាយ។ ចុច Enter ដើម្បីស្វែងរក"
 
 #. Translators: Accessible name for the audio-book search-results list.
 #: addon\globalPlugins\freeAudio\radioDialog.py:7223
@@ -3187,21 +2911,17 @@ msgstr "បណ្ណាល័យសៀវភៅជាសំឡេង"
 
 #. Translators: Accessible name for the read-only audio-book details text field.
 #. Translators: Field-name row header for the multi-line block of audio-book metadata (author, narrator, publisher, etc.) built by radioDialog.py's _format_audiobook_lines().
-#: addon\globalPlugins\freeAudio\radioDialog.py:7245
-#: addon\globalPlugins\freeAudio\trackInfoMixin.py:974
+#: addon\globalPlugins\freeAudio\radioDialog.py:7245 addon\globalPlugins\freeAudio\trackInfoMixin.py:974
 msgid "Audio book details"
 msgstr "ព័ត៌មានលម្អិតសៀវភៅជាសំឡេង"
 
 #: addon\globalPlugins\freeAudio\radioDialog.py:7418
-msgid ""
-"No audio book sources are enabled. Enable at least one in freeAudio settings."
-msgstr ""
-"មិនមានប្រភពសៀវភៅជាសំឡេងណាមួយត្រូវបានបើកទេ។ សូមបើកយ៉ាងហោចណាស់មួយនៅក្នុងការកំណត់ freeAudio។"
+msgid "No audio book sources are enabled. Enable at least one in freeAudio settings."
+msgstr "មិនមានប្រភពសៀវភៅជាសំឡេងណាមួយត្រូវបានបើកទេ។ សូមបើកយ៉ាងហោចណាស់មួយនៅក្នុងការកំណត់ freeAudio។"
 
 #. Translators: Spoken while a keyword search across the enabled audio-book sources is in progress.
 #. Translators: Placeholder row shown in the results list while a device search is in progress.
-#: addon\globalPlugins\freeAudio\radioDialog.py:7479
-#: addon\globalPlugins\freeAudio\radioDialog.py:8536
+#: addon\globalPlugins\freeAudio\radioDialog.py:7479 addon\globalPlugins\freeAudio\radioDialog.py:8536
 msgid "Searching..."
 msgstr "កំពុងស្វែងរក..."
 
@@ -3258,8 +2978,7 @@ msgstr[0] "សៀវភៅ %d ត្រូវបានដកចេញរួច�
 #. Translators: Spoken while resolving a book's chapter list before playing it for the first time; %s is the book title.
 #. Translators: Spoken when starting a specific GETEM chapter/part; %s is the chapter title.
 #. Translators: Same message as _play_getem_book, spoken here while resolving a book's chapter list before downloading it.
-#: addon\globalPlugins\freeAudio\radioDialog.py:7824
-#: addon\globalPlugins\freeAudio\radioDialog.py:7879
+#: addon\globalPlugins\freeAudio\radioDialog.py:7824 addon\globalPlugins\freeAudio\radioDialog.py:7879
 #: addon\globalPlugins\freeAudio\radioDialog.py:8274
 #, python-format
 msgid "Loading: %s"
@@ -3267,8 +2986,7 @@ msgstr "កំពុងផ្ទុក៖ %s"
 
 #. Translators: Spoken when F3 (previous book) is pressed with no books in the audio-book library.
 #. Translators: Spoken when F4 (next book) is pressed with no books in the audio-book library.
-#: addon\globalPlugins\freeAudio\radioDialog.py:7946
-#: addon\globalPlugins\freeAudio\radioDialog.py:7968
+#: addon\globalPlugins\freeAudio\radioDialog.py:7946 addon\globalPlugins\freeAudio\radioDialog.py:7968
 msgid "Library is empty"
 msgstr "បណ្ណាល័យទទេ"
 
@@ -3289,8 +3007,7 @@ msgstr "ផ្នែកទីមួយរួចហើយ"
 
 #. Translators: Spoken when Shift+F4 (next part) is pressed on the last part of a book, meaning the whole book is now finished; %s is the book title.
 #. Translators: Spoken when a jukebox folder finishes playing all its tracks; %s is the folder/entry title.
-#: addon\globalPlugins\freeAudio\radioDialog.py:8025
-#: addon\globalPlugins\freeAudio\radioDialog.py:8086
+#: addon\globalPlugins\freeAudio\radioDialog.py:8025 addon\globalPlugins\freeAudio\radioDialog.py:8086
 #, python-format
 msgid "Finished: %s"
 msgstr "បានបញ្ចប់៖ %s"
@@ -3368,10 +3085,8 @@ msgstr "កំពុងទាញយកសៀវភៅ៖ %s"
 #. Translators: Spoken when a book download partially fails; %(saved)d is the number of parts saved, %(total)d the total number of parts, %(title)s the book title, %(error)s the error from the last failed part.
 #: addon\globalPlugins\freeAudio\radioDialog.py:8347
 #, python-format
-msgid ""
-"Downloaded %(saved)d of %(total)d parts of %(title)s. Last error: %(error)s"
-msgstr ""
-"បានទាញយក %(saved)d ក្នុងចំណោម %(total)d ផ្នែកនៃ %(title)s។ កំហុសចុងក្រោយ៖ %(error)s"
+msgid "Downloaded %(saved)d of %(total)d parts of %(title)s. Last error: %(error)s"
+msgstr "បានទាញយក %(saved)d ក្នុងចំណោម %(total)d ផ្នែកនៃ %(title)s។ កំហុសចុងក្រោយ៖ %(error)s"
 
 #. Translators: Label for the jukebox device-search field.
 #: addon\globalPlugins\freeAudio\radioDialog.py:8374
@@ -3446,8 +3161,7 @@ msgstr "កំពុងស្វែងរកក្នុងថាសសម្រ
 
 #. Translators: Placeholder row shown in the results list when a device search finds nothing.
 #. Translators: Spoken alongside the placeholder row above.
-#: addon\globalPlugins\freeAudio\radioDialog.py:8558
-#: addon\globalPlugins\freeAudio\radioDialog.py:8560
+#: addon\globalPlugins\freeAudio\radioDialog.py:8558 addon\globalPlugins\freeAudio\radioDialog.py:8560
 msgid "No matching audio files found."
 msgstr "រកមិនឃើញឯកសារសំឡេងដែលត្រូវគ្នាទេ។"
 
@@ -3461,8 +3175,7 @@ msgstr[0] "រកឃើញ %d ឯកសារ។"
 #. Translators: Same confirmation as adding a folder; spoken here after adding a single audio file from a device-search result.
 #. Translators: Same confirmation as adding a single file; spoken here after adding a single folder to the jukebox.
 #. Translators: Spoken after successfully adding an Explorer file or folder to the jukebox; %s is its display title.
-#: addon\globalPlugins\freeAudio\radioDialog.py:8616
-#: addon\globalPlugins\freeAudio\radioDialog.py:9123
+#: addon\globalPlugins\freeAudio\radioDialog.py:8616 addon\globalPlugins\freeAudio\radioDialog.py:9123
 #: addon\appModules\explorer.py:213
 #, python-format
 msgid "Added to jukebox: %s"
@@ -3475,8 +3188,7 @@ msgstr "បន្ថែមទៅ Jukebox &A"
 
 #. Translators: Spoken when trying to play a jukebox library entry that has no usable audio files.
 #. Translators: Spoken when a jukebox entry's Input Gestures shortcut is triggered but the entry has no usable audio files.
-#: addon\globalPlugins\freeAudio\radioDialog.py:8867
-#: addon\globalPlugins\freeAudio\__init__.py:857
+#: addon\globalPlugins\freeAudio\radioDialog.py:8867 addon\globalPlugins\freeAudio\__init__.py:857
 msgid "No playable audio in this item."
 msgstr "គ្មានសំឡេងដែលអាចចាក់បាននៅក្នុងធាតុនេះទេ។"
 
@@ -3488,8 +3200,7 @@ msgstr[0] "តើអ្នកចង់ដកធាតុ %d ដែលបាន�
 
 #. Translators: Title of the bulk-remove confirmation dialog for jukebox entries.
 #. Translators: Title of the jukebox remove-confirmation dialog.
-#: addon\globalPlugins\freeAudio\radioDialog.py:8953
-#: addon\globalPlugins\freeAudio\radioDialog.py:9140
+#: addon\globalPlugins\freeAudio\radioDialog.py:8953 addon\globalPlugins\freeAudio\radioDialog.py:9140
 msgid "Remove From Jukebox"
 msgstr "ដកចេញពី Jukebox"
 
@@ -3502,22 +3213,19 @@ msgstr[0] "ធាតុ %d ត្រូវបានដកចេញរួចរ�
 
 #. Translators: Context-menu item; plays the selected track from within a jukebox folder entry.
 #. Translators: Context-menu item; plays the selected jukebox file/folder.
-#: addon\globalPlugins\freeAudio\radioDialog.py:9010
-#: addon\globalPlugins\freeAudio\radioDialog.py:9255
+#: addon\globalPlugins\freeAudio\radioDialog.py:9010 addon\globalPlugins\freeAudio\radioDialog.py:9255
 msgid "&Play"
 msgstr "ចាក់ &P"
 
 #. Translators: Jukebox track context menu item - saves an audio profile (volume/effects/speed/transpose) that applies to this file
 #. Translators: Jukebox context menu item - saves an audio profile (volume/effects/speed/transpose) that applies to this file
-#: addon\globalPlugins\freeAudio\radioDialog.py:9016
-#: addon\globalPlugins\freeAudio\radioDialog.py:9286
+#: addon\globalPlugins\freeAudio\radioDialog.py:9016 addon\globalPlugins\freeAudio\radioDialog.py:9286
 msgid "Save Audio Pr&ofile for This File"
 msgstr "រក្សាទុកទម្រង់សំឡេងសម្រាប់ឯកសារនេះ &o"
 
 #. Translators: Context-menu item; copies the selected track's file path to the clipboard.
 #. Translators: Context-menu item; copies the selected entry's file/folder path to the clipboard.
-#: addon\globalPlugins\freeAudio\radioDialog.py:9026
-#: addon\globalPlugins\freeAudio\radioDialog.py:9297
+#: addon\globalPlugins\freeAudio\radioDialog.py:9026 addon\globalPlugins\freeAudio\radioDialog.py:9297
 msgid "&Copy Path"
 msgstr "ចម្លងផ្លូវ &C"
 
@@ -3635,8 +3343,7 @@ msgstr "បន្ថែម &A"
 
 #. Translators: Status text shown next to the Test URL button when it's pressed with an empty URL field.
 #. Translators: Spoken alongside the status text above.
-#: addon\globalPlugins\freeAudio\radioDialog.py:9409
-#: addon\globalPlugins\freeAudio\radioDialog.py:9411
+#: addon\globalPlugins\freeAudio\radioDialog.py:9409 addon\globalPlugins\freeAudio\radioDialog.py:9411
 msgid "Please enter a URL first."
 msgstr "សូមបញ្ចូល URL ជាមុនសិន។"
 
@@ -3685,8 +3392,7 @@ msgstr "រក្សាទុក &S"
 
 #. Translators: Fallback episode title used for the downloaded filename if the currently playing episode has no name.
 #. Translators: Field-name row header in this dialog's podcast-episode details table; value is the episode title.
-#: addon\globalPlugins\freeAudio\recordingMixin.py:44
-#: addon\globalPlugins\freeAudio\trackInfoMixin.py:831
+#: addon\globalPlugins\freeAudio\recordingMixin.py:44 addon\globalPlugins\freeAudio\trackInfoMixin.py:831
 msgid "Episode"
 msgstr "ភាគ"
 
@@ -3703,47 +3409,36 @@ msgstr "ការ​ថត​បទចម្រៀង​បាន​បញ្ឈ
 
 #. Translators: Fallback spoken when song-capture is stopped but no output path was returned (e.g. nothing was actually captured).
 #. Translators: Fallback spoken when auto-stop finds nothing to save (e.g. capture just started).
-#: addon\globalPlugins\freeAudio\recordingMixin.py:116
-#: addon\globalPlugins\freeAudio\trackInfoMixin.py:1192
+#: addon\globalPlugins\freeAudio\recordingMixin.py:116 addon\globalPlugins\freeAudio\trackInfoMixin.py:1192
 msgid "Song recording stopped"
 msgstr "ការ​ថត​បទចម្រៀង​បាន​បញ្ឈប់"
 
 #. Translators: Spoken when a recording of every song (triple-press Ctrl+Win+E) is stopped; %d is how many songs were saved.
 #: addon\globalPlugins\freeAudio\recordingMixin.py:125
-#, fuzzy, python-format
+#, python-format
 msgid "Song recording stopped. Songs saved: %d"
-msgstr "ការ​ថត​បទចម្រៀង​បាន​បញ្ឈប់: %s"
+msgstr ""
 
 #. Translators: Spoken when double-pressing Ctrl+Win+E (song-capture) on a podcast/audiobook episode, which can't be recorded this way; points to the Ctrl+Win+V download command instead.
 #. Translators: Same message as the song-capture path above, spoken here when single-pressing Ctrl+Win+E on a podcast/audiobook episode.
-#: addon\globalPlugins\freeAudio\recordingMixin.py:156
-#: addon\globalPlugins\freeAudio\recordingMixin.py:323
-msgid ""
-"Podcast or audiobook cannot be recorded. To download the episode or book, "
-"press Ctrl+Win+V."
+#: addon\globalPlugins\freeAudio\recordingMixin.py:156 addon\globalPlugins\freeAudio\recordingMixin.py:323
+msgid "Podcast or audiobook cannot be recorded. To download the episode or book, press Ctrl+Win+V."
 msgstr "ផតខាស់ ឬសៀវភៅជាសំឡេង មិនអាចថតបានទេ។ ដើម្បីទាញយកភាគ ឬសៀវភៅ សូមចុច Ctrl+Win+V។"
 
 #. Translators: Spoken when double-pressing Ctrl+Win+E (song-capture) on a jukebox track, which is already a local file.
 #. Translators: Same message as the song-capture path above, spoken here when single-pressing Ctrl+Win+E on a jukebox track.
-#: addon\globalPlugins\freeAudio\recordingMixin.py:165
-#: addon\globalPlugins\freeAudio\recordingMixin.py:331
+#: addon\globalPlugins\freeAudio\recordingMixin.py:165 addon\globalPlugins\freeAudio\recordingMixin.py:331
 msgid "Jukebox tracks are already local files and cannot be recorded."
 msgstr "បទនៅក្នុង jukebox ជាឯកសារមូលដ្ឋានរួចហើយ ដូច្នេះមិនអាចថតបានទេ។"
 
 #. Translators: Spoken when trying to start song-capture recording on a station with no ICY track-title metadata, so there's no song boundary to record against.
 #: addon\globalPlugins\freeAudio\recordingMixin.py:183
-msgid ""
-"This station does not broadcast track metadata. Song recording is not "
-"available."
-msgstr ""
-"ស្ថានីយវិទ្យុនេះមិនផ្សាយទិន្នន័យមេតានៃបទចម្រៀង ឬតន្ត្រីទេ។ "
-"ដំណើរការថតបទចម្រៀងមិនអាចចាប់ផ្ដើមបានទេ។"
+msgid "This station does not broadcast track metadata. Song recording is not available."
+msgstr "ស្ថានីយវិទ្យុនេះមិនផ្សាយទិន្នន័យមេតានៃបទចម្រៀង ឬតន្ត្រីទេ។ ដំណើរការថតបទចម្រៀងមិនអាចចាប់ផ្ដើមបានទេ។"
 
 #. Translators: Spoken when recording every song (triple-press Ctrl+Win+E) is not possible on this station because its stream carries no track-change markers.
 #: addon\globalPlugins\freeAudio\recordingMixin.py:192
-msgid ""
-"This station does not support recording every song. Double-press to record "
-"the current song."
+msgid "This station does not support recording every song. Double-press to record the current song."
 msgstr ""
 
 #. Translators: Generic fallback spoken if starting song-capture recording raises an unexpected exception.
@@ -3766,8 +3461,7 @@ msgstr ""
 #. Translators: Name of an NVDA command (Ctrl+Win+E); single-press toggles a plain instant recording, double-press records the current song, triple-press records every song until stopped - see this method's logic below.
 #: addon\globalPlugins\freeAudio\recordingMixin.py:238
 msgid ""
-"Start or stop instant recording. Press twice for current song recording, "
-"thrice for recording every song."
+"Start or stop instant recording. Press twice for current song recording, thrice for recording every song."
 msgstr ""
 
 #. Translators: Spoken when the single-press gesture stops an in-progress plain instant recording; %s is the saved filename.
@@ -3783,8 +3477,7 @@ msgstr "ដំណើរការថតបានបញ្ឈប់ហើយ"
 
 #. Translators: Spoken when a plain instant recording starts (single-press Ctrl+Win+E); %s is the station name.
 #. Translators: Spoken when a scheduled or manual recording begins; %s is the station name.
-#: addon\globalPlugins\freeAudio\recordingMixin.py:343
-#: addon\globalPlugins\freeAudio\__init__.py:587
+#: addon\globalPlugins\freeAudio\recordingMixin.py:343 addon\globalPlugins\freeAudio\__init__.py:587
 #, python-format
 msgid "Recording started: %s"
 msgstr "ដំណើរការថតបានចាប់ផ្ដើមហើយ: %s"
@@ -3805,14 +3498,126 @@ msgstr "បើកឯកសារថតរបស់ freeAudio"
 msgid "Could not open recordings folder: %s"
 msgstr "មិនអាចបើកឯកសារថតបានទេ: %s"
 
+#. Translators: Check box in the clean-up dialog; resets freeAudio's settings to their defaults.
+#: addon\globalPlugins\freeAudio\resetDialog.py:73
+msgid "Settings (reset to defaults; the recordings folder and the liked songs option are kept)"
+msgstr ""
+
+#. Translators: Check box in the clean-up dialog; deletes the favourite stations list.
+#: addon\globalPlugins\freeAudio\resetDialog.py:79
+msgid "Favorite stations"
+msgstr ""
+
+#. Translators: Check box in the clean-up dialog; deletes the downloaded station list cache.
+#: addon\globalPlugins\freeAudio\resetDialog.py:85
+msgid "Station list cache (downloaded again when needed)"
+msgstr ""
+
+#. Translators: Check box in the clean-up dialog; deletes the audio book libraries of all sources.
+#: addon\globalPlugins\freeAudio\resetDialog.py:97
+msgid "Audio book libraries (GETEM, LibriVox, Project Gutenberg)"
+msgstr ""
+
+#. Translators: Check box in the clean-up dialog; deletes the saved GETEM user name and password.
+#: addon\globalPlugins\freeAudio\resetDialog.py:107
+msgid "Saved GETEM login"
+msgstr ""
+
+#. Translators: Check box in the clean-up dialog; empties the Jukebox list (the music files themselves are not touched).
+#: addon\globalPlugins\freeAudio\resetDialog.py:113
+msgid "Jukebox list (your music files are not deleted)"
+msgstr ""
+
+#. Translators: Check box in the clean-up dialog; deletes saved resume positions.
+#: addon\globalPlugins\freeAudio\resetDialog.py:119
+msgid "Saved resume positions (podcasts, audio books, Jukebox folders)"
+msgstr ""
+
+#. Translators: Check box in the clean-up dialog; deletes sleep timers and alarms.
+#: addon\globalPlugins\freeAudio\resetDialog.py:128
+msgid "Sleep timers and alarms"
+msgstr ""
+
+#. Translators: Check box in the clean-up dialog; deletes the scheduled recording plans (not the recordings).
+#: addon\globalPlugins\freeAudio\resetDialog.py:134
+msgid "Scheduled recording plans (recordings themselves are not deleted)"
+msgstr ""
+
+#. Translators: Title of the clean-up dialog opened from freeAudio's settings.
+#: addon\globalPlugins\freeAudio\resetDialog.py:255
+msgid "Reset settings / delete saved data"
+msgstr ""
+
+#. Translators: Added after a clean-up item's name when there is nothing saved for it.
+#: addon\globalPlugins\freeAudio\resetDialog.py:272
+msgid "nothing saved"
+msgstr ""
+
+#. Translators: Label of the check list in the clean-up dialog.
+#: addon\globalPlugins\freeAudio\resetDialog.py:277
+msgid "Select what to reset or delete (nothing is selected by default):"
+msgstr ""
+
+#. Translators: Note in the clean-up dialog.
+#: addon\globalPlugins\freeAudio\resetDialog.py:284
+msgid "Recordings and liked songs are never touched by this."
+msgstr ""
+
+#. Translators: Button in the clean-up dialog; checks every item.
+#: addon\globalPlugins\freeAudio\resetDialog.py:289
+msgid "Select &all"
+msgstr ""
+
+#. Translators: Button in the clean-up dialog; resets/deletes the checked items.
+#: addon\globalPlugins\freeAudio\resetDialog.py:292
+msgid "&Reset / delete selected"
+msgstr ""
+
+#. Translators: Button in the clean-up dialog; closes it without doing anything.
+#. Translators: 'Cancel' button label on the update-available dialog, paired with whichever install/open-page label is used as the other button.
+#: addon\globalPlugins\freeAudio\resetDialog.py:296 addon\globalPlugins\freeAudio\__init__.py:1461
+msgid "&Cancel"
+msgstr "បោះបង់ &C"
+
+#. Translators: Shown in the clean-up dialog when the reset/delete button is pressed with nothing checked.
+#: addon\globalPlugins\freeAudio\resetDialog.py:329
+msgid "Nothing is selected."
+msgstr ""
+
+#. Translators: Confirmation in the clean-up dialog. {items} is the list of checked items, one per line.
+#: addon\globalPlugins\freeAudio\resetDialog.py:341
+msgid ""
+"The following will be reset or deleted. This cannot be undone.\n"
+"\n"
+"{items}\n"
+"\n"
+"Continue?"
+msgstr ""
+
+#. Translators: Shown after the clean-up when some items could not be removed. {items} is the list, one per line.
+#: addon\globalPlugins\freeAudio\resetDialog.py:358
+msgid ""
+"Done, except for the following, which could not be removed (a file may be in use):\n"
+"\n"
+"{items}"
+msgstr ""
+
+#. Translators: Shown after the clean-up finished without problems.
+#: addon\globalPlugins\freeAudio\resetDialog.py:365
+msgid "Done."
+msgstr ""
+
+#. Translators: Added to the clean-up result when settings were reset.
+#: addon\globalPlugins\freeAudio\resetDialog.py:370
+msgid ""
+"Settings were reset. Changes made on the freeAudio settings page before this will not be saved. Restarting "
+"NVDA is recommended so every setting takes effect."
+msgstr ""
+
 #. Translators: Checkbox label for the time-shift/rewind feature setting.
 #: addon\globalPlugins\freeAudio\settingsPanel.py:89
-msgid ""
-"&Enable time-shift buffer (rewind live radio, no effect on podcasts and "
-"audio books)"
-msgstr ""
-"បើក&តំបន់ផ្ទុកបណ្ដោះអាសន្នសម្រាប់ប្ដូរពេលវេលា (រំកិលថយក្រោយវិទ្យុផ្ទាល់ គ្មានឥទ្ធិពលលើផតខាស់ "
-"និងសៀវភៅជាសំឡេង)"
+msgid "&Enable time-shift buffer (rewind live radio, no effect on podcasts and audio books)"
+msgstr "បើក&តំបន់ផ្ទុកបណ្ដោះអាសន្នសម្រាប់ប្ដូរពេលវេលា (រំកិលថយក្រោយវិទ្យុផ្ទាល់ គ្មានឥទ្ធិពលលើផតខាស់ និងសៀវភៅជាសំឡេង)"
 
 #. Translators: Label for the time-shift buffer-length choice control.
 #: addon\globalPlugins\freeAudio\settingsPanel.py:97
@@ -3843,12 +3648,11 @@ msgstr "៥ ម៉ោង"
 #. Translators: Grey explanatory hint shown under the buffer-duration choice, warning about disk usage for long buffers.
 #: addon\globalPlugins\freeAudio\settingsPanel.py:117
 msgid ""
-"Longer buffers use more temporary disk space, especially for high-bitrate "
-"stations — a 5-hour buffer can use several gigabytes."
+"Longer buffers use more temporary disk space, especially for high-bitrate stations — a 5-hour buffer can use "
+"several gigabytes."
 msgstr ""
-"តំបន់ផ្ទុកបណ្ដោះអាសន្នដែលវែងជាងនេះ ប្រើប្រាស់ទំហំថាសបណ្ដោះអាសន្នកាន់តែច្រើន "
-"ជាពិសេសសម្រាប់ស្ថានីយ៍ដែលមានអត្រាប៊ីតខ្ពស់ — តំបន់ផ្ទុកបណ្ដោះអាសន្នរយៈពេល ៥ "
-"ម៉ោងអាចប្រើបានច្រើនជីហ្គាបៃ។"
+"តំបន់ផ្ទុកបណ្ដោះអាសន្នដែលវែងជាងនេះ ប្រើប្រាស់ទំហំថាសបណ្ដោះអាសន្នកាន់តែច្រើន ជាពិសេសសម្រាប់ស្ថានីយ៍ដែលមានអត្រាប៊ីតខ្ពស់ — "
+"តំបន់ផ្ទុកបណ្ដោះអាសន្នរយៈពេល ៥ ម៉ោងអាចប្រើបានច្រើនជីហ្គាបៃ។"
 
 #. --- Audio output device (BASS only) ---
 #. (index, name) list — populated from BASS
@@ -3938,8 +3742,7 @@ msgstr "សំឡេង SAPI5: &v"
 
 #. Translators: Placeholder/first entry in the SAPI5 voice list, meaning 'use whatever the system's default SAPI5 voice is' rather than a specific named voice.
 #. Translators: First entry in the SAPI5 voice list once real voices have loaded, meaning 'use the system default SAPI5 voice'.
-#: addon\globalPlugins\freeAudio\settingsPanel.py:279
-#: addon\globalPlugins\freeAudio\settingsPanel.py:296
+#: addon\globalPlugins\freeAudio\settingsPanel.py:279 addon\globalPlugins\freeAudio\settingsPanel.py:296
 msgid "Default (system)"
 msgstr "លំនាំដើម (system)"
 
@@ -3963,8 +3766,7 @@ msgstr "នៅពេលដែល Ctrl+Win+P ត្រូវបានចុច �
 msgid "Resume last station"
 msgstr "បន្តស្ថានីយវិទ្យុចុងក្រោយទៀត"
 
-#: addon\globalPlugins\freeAudio\settingsPanel.py:355
-#: addon\globalPlugins\freeAudio\settingsPanel.py:370
+#: addon\globalPlugins\freeAudio\settingsPanel.py:355 addon\globalPlugins\freeAudio\settingsPanel.py:370
 #: addon\globalPlugins\freeAudio\settingsPanel.py:394
 msgid "Open favourites list"
 msgstr "បើកបញ្ជីចំណូលចិត្ត"
@@ -3975,43 +3777,35 @@ msgid "When Ctrl+Win+P is pressed twice:"
 msgstr "នៅពេលដែល Ctrl+Win+P ត្រូវបានចុចពីរដង:"
 
 #. Translators: Choices for what a double/triple Ctrl+Win+P press can do - each opens a different freeAudio tab or performs a quick action; this same nine-item list is reused for both the double-press and triple-press settings (continues for the next eight lines).
-#: addon\globalPlugins\freeAudio\settingsPanel.py:369
-#: addon\globalPlugins\freeAudio\settingsPanel.py:393
+#: addon\globalPlugins\freeAudio\settingsPanel.py:369 addon\globalPlugins\freeAudio\settingsPanel.py:393
 msgid "Do nothing"
 msgstr "គ្មានសកម្មភាពអ្វីទាំងអស់"
 
-#: addon\globalPlugins\freeAudio\settingsPanel.py:371
-#: addon\globalPlugins\freeAudio\settingsPanel.py:395
+#: addon\globalPlugins\freeAudio\settingsPanel.py:371 addon\globalPlugins\freeAudio\settingsPanel.py:395
 msgid "Open station search"
 msgstr "បើកការស្វែងរកស្ថានីយ៍វិទ្យុ"
 
-#: addon\globalPlugins\freeAudio\settingsPanel.py:372
-#: addon\globalPlugins\freeAudio\settingsPanel.py:396
+#: addon\globalPlugins\freeAudio\settingsPanel.py:372 addon\globalPlugins\freeAudio\settingsPanel.py:396
 msgid "Open recording tab"
 msgstr "បើកផ្ទាំងថត"
 
-#: addon\globalPlugins\freeAudio\settingsPanel.py:373
-#: addon\globalPlugins\freeAudio\settingsPanel.py:397
+#: addon\globalPlugins\freeAudio\settingsPanel.py:373 addon\globalPlugins\freeAudio\settingsPanel.py:397
 msgid "Open timer tab"
 msgstr "បើកផ្ទាំងកម្មវិធីកំណត់ម៉ោង"
 
-#: addon\globalPlugins\freeAudio\settingsPanel.py:374
-#: addon\globalPlugins\freeAudio\settingsPanel.py:398
+#: addon\globalPlugins\freeAudio\settingsPanel.py:374 addon\globalPlugins\freeAudio\settingsPanel.py:398
 msgid "Open liked songs tab"
 msgstr "បើកផ្ទាំងចម្រៀងដែលចូលចិត្ត"
 
-#: addon\globalPlugins\freeAudio\settingsPanel.py:375
-#: addon\globalPlugins\freeAudio\settingsPanel.py:399
+#: addon\globalPlugins\freeAudio\settingsPanel.py:375 addon\globalPlugins\freeAudio\settingsPanel.py:399
 msgid "Open addon settings"
 msgstr "បើកការកំណត់របស់កម្មវិធីជំនួយ"
 
-#: addon\globalPlugins\freeAudio\settingsPanel.py:376
-#: addon\globalPlugins\freeAudio\settingsPanel.py:400
+#: addon\globalPlugins\freeAudio\settingsPanel.py:376 addon\globalPlugins\freeAudio\settingsPanel.py:400
 msgid "Announce currently playing station"
 msgstr "ប្រាប់អំពីព័ត៌មានស្ថានីយ៍វិទ្យុដែលកំពុងចាក់"
 
-#: addon\globalPlugins\freeAudio\settingsPanel.py:377
-#: addon\globalPlugins\freeAudio\settingsPanel.py:401
+#: addon\globalPlugins\freeAudio\settingsPanel.py:377 addon\globalPlugins\freeAudio\settingsPanel.py:401
 msgid "Stop radio"
 msgstr "បញ្ឈប់វិទ្យុ"
 
@@ -4045,7 +3839,7 @@ msgstr "ឯកសារថត:"
 #. Translators: Grey hint under the recordings-folder field explaining what happens if it's left empty.
 #: addon\globalPlugins\freeAudio\settingsPanel.py:446
 msgid "(empty = default: Documents\\freeAudio Recordings)"
-msgstr "(ទទេ = លំនាំដើម: Documents\\freeAudio Recordings)"
+msgstr ""
 
 #. Translators: Button label; opens a folder-picker to choose the recordings folder.
 #: addon\globalPlugins\freeAudio\settingsPanel.py:450
@@ -4089,11 +3883,10 @@ msgstr "ពាក្យសម្ងាត់ GETEM:"
 #. Translators: Grey hint under the GETEM credential fields explaining how they are stored (see the comment above).
 #: addon\globalPlugins\freeAudio\settingsPanel.py:564
 msgid ""
-"Stored encrypted on this computer, for this Windows user only. Leave both "
-"fields empty and save to remove them."
+"Stored encrypted on this computer, for this Windows user only. Leave both fields empty and save to remove "
+"them."
 msgstr ""
-"ត្រូវបានរក្សាទុកដោយការអ៊ិនគ្រីបលើកុំព្យូទ័រនេះ សម្រាប់តែអ្នកប្រើ Windows នេះប៉ុណ្ណោះ។ "
-"ទុកវាលទាំងពីរឱ្យទទេ ហើយរក្សាទុកដើម្បីលុបពួកវាចេញ។"
+"ត្រូវបានរក្សាទុកដោយការអ៊ិនគ្រីបលើកុំព្យូទ័រនេះ សម្រាប់តែអ្នកប្រើ Windows នេះប៉ុណ្ណោះ។ ទុកវាលទាំងពីរឱ្យទទេ ហើយរក្សាទុកដើម្បីលុបពួកវាចេញ។"
 
 #. --- Recording output format ---
 #. Translators: Label for the recording-output-format choice control.
@@ -4121,9 +3914,7 @@ msgstr "អត្រាប៊ីតការថត MP3៖"
 
 #. Translators: Checkbox label for skipping the pre-playback internet reachability check.
 #: addon\globalPlugins\freeAudio\settingsPanel.py:607
-msgid ""
-"&Disable internet connectivity check before playing (recommended if DNS is "
-"blocked)"
+msgid "&Disable internet connectivity check before playing (recommended if DNS is blocked)"
 msgstr "បិទការត្រួតពិនិត្យការតភ្ជាប់អ៊ីនធឺណិតមុនពេលចាក់ (recommended if DNS is blocked) &D"
 
 #. Translators: Checkbox label for the automatic update-check setting.
@@ -4133,18 +3924,22 @@ msgstr "ពិនិត្យដោយស្វ័យប្រវត្តិស
 
 #. Translators: Button label; triggers an immediate manual update check.
 #. Translators: Restores the button's normal label once the manual update check finishes.
-#: addon\globalPlugins\freeAudio\settingsPanel.py:626
-#: addon\globalPlugins\freeAudio\settingsPanel.py:782
+#: addon\globalPlugins\freeAudio\settingsPanel.py:626 addon\globalPlugins\freeAudio\settingsPanel.py:787
 msgid "Check for Updates &Now"
 msgstr "ពិនិត្យមើលការធ្វើបច្ចុប្បន្នភាពឥឡូវនេះ &N"
 
+#. Translators: Button label; opens a dialog to reset freeAudio's settings and delete the data it has saved.
+#: addon\globalPlugins\freeAudio\settingsPanel.py:631
+msgid "&Clean up: reset settings and delete saved data..."
+msgstr ""
+
 #. Translators: Title of the file-picker dialog for choosing ffmpeg.exe.
-#: addon\globalPlugins\freeAudio\settingsPanel.py:758
+#: addon\globalPlugins\freeAudio\settingsPanel.py:763
 msgid "Select ffmpeg.exe"
 msgstr "ជ្រើសរើស ffmpeg.exe"
 
 #. Translators: Temporary label on the Check for Updates Now button while the check is in progress.
-#: addon\globalPlugins\freeAudio\settingsPanel.py:769
+#: addon\globalPlugins\freeAudio\settingsPanel.py:774
 msgid "Checking..."
 msgstr "កំពុងពិនិត្យ..."
 
@@ -4152,8 +3947,7 @@ msgstr "កំពុងពិនិត្យ..."
 #. Translators: Spoken when a sleep timer fires and stops playback instantly (nothing was playing to fade out).
 #. Use _notify so the stop message is suppressed when notifications are muted.
 #. Translators: Spoken at the end of the fade-out, once volume has reached 0 and playback actually stops.
-#: addon\globalPlugins\freeAudio\timerManager.py:219
-#: addon\globalPlugins\freeAudio\timerManager.py:247
+#: addon\globalPlugins\freeAudio\timerManager.py:219 addon\globalPlugins\freeAudio\timerManager.py:247
 msgid "Sleep timer: radio stopped"
 msgstr "កម្មវិធីកំណត់ម៉ោងផ្អាក: វិទ្យុបានឈប់"
 
@@ -4169,12 +3963,9 @@ msgstr "កម្មវិធីកំណត់ម៉ោងផ្អាក់: �
 #. Translators: Same elapsed/remaining wording as script_whatsPlaying, appended here for a podcast/audiobook.
 #. Translators: Same elapsed/remaining wording as script_whatsPlaying's paused case.
 #. Translators: Same elapsed/remaining wording as elsewhere, appended here for a podcast/audiobook.
-#: addon\globalPlugins\freeAudio\timeshiftMixin.py:94
-#: addon\globalPlugins\freeAudio\trackInfoMixin.py:179
-#: addon\globalPlugins\freeAudio\trackInfoMixin.py:214
-#: addon\globalPlugins\freeAudio\trackInfoMixin.py:491
-#: addon\globalPlugins\freeAudio\trackInfoMixin.py:517
-#: addon\globalPlugins\freeAudio\trackInfoMixin.py:694
+#: addon\globalPlugins\freeAudio\timeshiftMixin.py:94 addon\globalPlugins\freeAudio\trackInfoMixin.py:179
+#: addon\globalPlugins\freeAudio\trackInfoMixin.py:214 addon\globalPlugins\freeAudio\trackInfoMixin.py:491
+#: addon\globalPlugins\freeAudio\trackInfoMixin.py:517 addon\globalPlugins\freeAudio\trackInfoMixin.py:694
 #, python-format
 msgid "%(elapsed)s elapsed, %(remaining)s remaining"
 msgstr "កន្លងផុត %(elapsed)s នៅសល់ %(remaining)s"
@@ -4182,8 +3973,7 @@ msgstr "កន្លងផុត %(elapsed)s នៅសល់ %(remaining)s"
 #. Translators: Same position announcement as above, used when the total length isn't known so only elapsed time can be reported.
 #. Translators: Same elapsed-only wording as _announce_seek_position()'s no-length case, appended here when paused with an unknown total length.
 #. Translators: Same elapsed-only wording as script_whatsPlaying's paused case.
-#: addon\globalPlugins\freeAudio\timeshiftMixin.py:99
-#: addon\globalPlugins\freeAudio\trackInfoMixin.py:220
+#: addon\globalPlugins\freeAudio\timeshiftMixin.py:99 addon\globalPlugins\freeAudio\trackInfoMixin.py:220
 #: addon\globalPlugins\freeAudio\trackInfoMixin.py:523
 #, python-format
 msgid "%(elapsed)s elapsed"
@@ -4197,8 +3987,7 @@ msgstr "កន្លងផុត %(elapsed)s"
 #. the failure case above already uses.
 #. Translators: Fallback spoken if _announce_seek_position() can't report a position after seeking to the start/end of an audio-book part or jukebox track.
 #. Translators: Spoken if a plain (non-boundary) podcast/audiobook seek fails.
-#: addon\globalPlugins\freeAudio\timeshiftMixin.py:184
-#: addon\globalPlugins\freeAudio\timeshiftMixin.py:192
+#: addon\globalPlugins\freeAudio\timeshiftMixin.py:184 addon\globalPlugins\freeAudio\timeshiftMixin.py:192
 #: addon\globalPlugins\freeAudio\timeshiftMixin.py:214
 msgid "Could not seek"
 msgstr "មិនអាចរំកិលបាន"
@@ -4216,24 +4005,19 @@ msgstr "បានរំកិលថយក្រោយ %d វិនាទី"
 
 #. Translators: Name of an NVDA command (Ctrl+Win+J); rewinds the live time-shift buffer, or seeks backward within a podcast/audiobook file if one is playing.
 #: addon\globalPlugins\freeAudio\timeshiftMixin.py:311
-msgid ""
-"Time-shift: rewind 15 seconds (enters time-shift mode if not already active)"
-msgstr ""
-"ការផ្លាស់ប្ដូរពេលវេលា: រំកិលថយក្រោយ ១៥ វិនាទី (ចូលមុខងារផ្លាស់ប្ដូរពេលវេលា "
-"ប្រសិនបើមិនទាន់ស្ថិតនៅក្នុងនោះ)"
+msgid "Time-shift: rewind 15 seconds (enters time-shift mode if not already active)"
+msgstr "ការផ្លាស់ប្ដូរពេលវេលា: រំកិលថយក្រោយ ១៥ វិនាទី (ចូលមុខងារផ្លាស់ប្ដូរពេលវេលា ប្រសិនបើមិនទាន់ស្ថិតនៅក្នុងនោះ)"
 
 #. Translators: Spoken when Ctrl+Win+J (rewind) is pressed while the time-shift feature itself is turned off in settings.
 #. Translators: Same message as the rewind command, spoken here when Ctrl+Win+K (forward) is pressed with time-shift turned off.
-#: addon\globalPlugins\freeAudio\timeshiftMixin.py:325
-#: addon\globalPlugins\freeAudio\timeshiftMixin.py:336
+#: addon\globalPlugins\freeAudio\timeshiftMixin.py:325 addon\globalPlugins\freeAudio\timeshiftMixin.py:336
 #: addon\globalPlugins\freeAudio\timeshiftMixin.py:365
 msgid "Time-shift buffer is disabled. Enable it in freeAudio settings."
 msgstr "ការផ្លាស់ប្ដូរពេលវេលាត្រូវបានបិទ។ បើកវានៅក្នុងការកំណត់ freeAudio។"
 
 #. Translators: One of the reasons a rewind/forward can fail, mapped from rewind_timeshift()'s return reason to a spoken message (continues for the next six lines: feature disabled, wrong backend, HLS unsupported, not enough buffer yet, buffer file not ready, engine error).
 #: addon\globalPlugins\freeAudio\timeshiftMixin.py:335
-msgid ""
-"Time-shift requires the BASS audio backend, which is currently disabled."
+msgid "Time-shift requires the BASS audio backend, which is currently disabled."
 msgstr "ការផ្លាស់ប្ដូរពេលវេលាទាមទារ BASS backend ដែលបច្ចុប្បន្នត្រូវបានបិទ។"
 
 #: addon\globalPlugins\freeAudio\timeshiftMixin.py:337
@@ -4241,20 +4025,13 @@ msgid "Time-shift is not available for the current playback backend."
 msgstr "ការផ្លាស់ប្ដូរពេលវេលាមិនអាចប្រើបានសម្រាប់ backend ចាក់បច្ចុប្បន្នទេ។"
 
 #: addon\globalPlugins\freeAudio\timeshiftMixin.py:338
-msgid ""
-"Time-shift is not supported for this station's stream (no seekable audio "
-"could be extracted)."
-msgstr ""
-"ការផ្លាស់ប្ដូរពេលវេលាមិនត្រូវបានគាំទ្រសម្រាប់ស្ទ្រីមរបស់ស្ថានីយ៍នេះទេ "
-"(មិនអាចទាញយកសំឡេងដែលអាចរំកិលបានទេ)។"
+msgid "Time-shift is not supported for this station's stream (no seekable audio could be extracted)."
+msgstr "ការផ្លាស់ប្ដូរពេលវេលាមិនត្រូវបានគាំទ្រសម្រាប់ស្ទ្រីមរបស់ស្ថានីយ៍នេះទេ (មិនអាចទាញយកសំឡេងដែលអាចរំកិលបានទេ)។"
 
 #: addon\globalPlugins\freeAudio\timeshiftMixin.py:339
 msgid ""
-"Not enough buffered audio to rewind yet. Wait a few seconds after the "
-"station starts playing and try again."
-msgstr ""
-"មិនមានសំឡេងក្នុង buffer គ្រប់គ្រាន់ ដើម្បីដកថយទេ។ រង់ចាំពីរបីវិនាទីបន្ទាប់ពីស្ថានីយ៍ចាប់ផ្ដើមចាក់ "
-"ហើយព្យាយាមម្ដងទៀត។"
+"Not enough buffered audio to rewind yet. Wait a few seconds after the station starts playing and try again."
+msgstr "មិនមានសំឡេងក្នុង buffer គ្រប់គ្រាន់ ដើម្បីដកថយទេ។ រង់ចាំពីរបីវិនាទីបន្ទាប់ពីស្ថានីយ៍ចាប់ផ្ដើមចាក់ ហើយព្យាយាមម្ដងទៀត។"
 
 #: addon\globalPlugins\freeAudio\timeshiftMixin.py:340
 msgid "Time-shift buffer file is not ready yet."
@@ -4277,8 +4054,7 @@ msgstr "ដកថយទៅ %.0f វិនាទីមុនការផ្សា
 
 #. Translators: Name of an NVDA command (Ctrl+Win+K); fast-forwards the live time-shift buffer (snapping to live once caught up), or seeks forward within a podcast/audiobook file if one is playing.
 #: addon\globalPlugins\freeAudio\timeshiftMixin.py:351
-msgid ""
-"Time-shift: fast-forward 15 seconds, or return to live if already caught up"
+msgid "Time-shift: fast-forward 15 seconds, or return to live if already caught up"
 msgstr "ការផ្លាស់ប្ដូរពេលវេលា: រំកិលទៅមុខ ១៥ វិនាទី ឬត្រឡប់ទៅការផ្សាយផ្ទាល់ ប្រសិនបើបានដល់ហើយ"
 
 #. Translators: Spoken when fast-forward is pressed but playback is already at the live edge (not time-shifted).
@@ -4321,16 +4097,15 @@ msgstr "ការទទួលស្គាល់បានបរាជ័យ: %s"
 #. Translators: Name of an NVDA command (Ctrl+Win+I); its behaviour escalates with repeated presses as the description itself explains.
 #: addon\globalPlugins\freeAudio\trackInfoMixin.py:120
 msgid ""
-"Announce currently playing station. Press twice for full details, three "
-"times to copy track info, four times to force music recognition."
+"Announce currently playing station. Press twice for full details, three times to copy track info, four times "
+"to force music recognition."
 msgstr ""
-"ប្រាប់ព័ត៌មានរបស់ស្ថានីយ៍វិទ្យុដែលកំពុងចាក់ឥឡូវនេះ។ ចុចពីរដងសម្រាប់ព័ត៌មានលម្អិតទាំងស្រុង "
-"បីដងដើម្បីចម្លងព័ត៌មានបទចម្រៀង តន្ត្រី បួនដងដើម្បីបង្ខំការស្គាល់តន្ត្រី។"
+"ប្រាប់ព័ត៌មានរបស់ស្ថានីយ៍វិទ្យុដែលកំពុងចាក់ឥឡូវនេះ។ ចុចពីរដងសម្រាប់ព័ត៌មានលម្អិតទាំងស្រុង បីដងដើម្បីចម្លងព័ត៌មានបទចម្រៀង តន្ត្រី "
+"បួនដងដើម្បីបង្ខំការស្គាល់តន្ត្រី។"
 
 #. Translators: First line of the What's Playing announcement when nothing is playing but one or more scheduled recordings are still running silently in the background; station names are appended after it, joined with two spaces.
 #. Translators: Same as the Ctrl+Win+I version, spoken here by the F2 dialog equivalent.
-#: addon\globalPlugins\freeAudio\trackInfoMixin.py:133
-#: addon\globalPlugins\freeAudio\trackInfoMixin.py:434
+#: addon\globalPlugins\freeAudio\trackInfoMixin.py:133 addon\globalPlugins\freeAudio\trackInfoMixin.py:434
 msgid "Radio inactive. Active scheduled recordings:"
 msgstr "វិទ្យុមិនដំណើរការទេ។ ការកំណត់ពេលថតកំពុងដំណើរការ:"
 
@@ -4341,12 +4116,9 @@ msgstr "វិទ្យុមិនដំណើរការទេ។ ការ�
 #. Translators: Same "not active" message as elsewhere, spoken here by the F2 dialog equivalent of What's Playing.
 #. Translators: Same "not active" message as elsewhere, spoken here when F8 (stop) is pressed with nothing playing and no recordings active.
 #. Translators: Same "not active" message as elsewhere, spoken here by this hotkey-triggered station announcement.
-#: addon\globalPlugins\freeAudio\trackInfoMixin.py:139
-#: addon\globalPlugins\freeAudio\trackInfoMixin.py:330
-#: addon\globalPlugins\freeAudio\trackInfoMixin.py:350
-#: addon\globalPlugins\freeAudio\trackInfoMixin.py:399
-#: addon\globalPlugins\freeAudio\trackInfoMixin.py:440
-#: addon\globalPlugins\freeAudio\trackInfoMixin.py:651
+#: addon\globalPlugins\freeAudio\trackInfoMixin.py:139 addon\globalPlugins\freeAudio\trackInfoMixin.py:330
+#: addon\globalPlugins\freeAudio\trackInfoMixin.py:350 addon\globalPlugins\freeAudio\trackInfoMixin.py:399
+#: addon\globalPlugins\freeAudio\trackInfoMixin.py:440 addon\globalPlugins\freeAudio\trackInfoMixin.py:651
 #: addon\globalPlugins\freeAudio\trackInfoMixin.py:667
 msgid "freeAudio is not active"
 msgstr "freeAudio មិនដំណើរការទេ"
@@ -4354,8 +4126,7 @@ msgstr "freeAudio មិនដំណើរការទេ"
 #. Translators: Announcement spoken by Ctrl+Win+I (What's Playing) when the station provides an ICY track title; %(station)s is the station name, %(track)s the current track.
 #. Translators: Same What's Playing announcement as script_whatsPlaying, spoken here by the F2 in-dialog variant (_whats_playing_from_dialog); %(station)s/%(track)s as above.
 #. Translators: Same Playing announcement as script_whatsPlaying, spoken here by this hotkey-triggered variant.
-#: addon\globalPlugins\freeAudio\trackInfoMixin.py:167
-#: addon\globalPlugins\freeAudio\trackInfoMixin.py:480
+#: addon\globalPlugins\freeAudio\trackInfoMixin.py:167 addon\globalPlugins\freeAudio\trackInfoMixin.py:480
 #: addon\globalPlugins\freeAudio\trackInfoMixin.py:683
 #, python-format
 msgid "Playing: %(station)s — %(track)s"
@@ -4363,8 +4134,7 @@ msgstr "កំពុងចាក់: %(station)s — %(track)s"
 
 #. Translators: Same What's Playing announcement, used when no ICY track title is available - just the station name.
 #. Translators: Same fallback as script_whatsPlaying, used when no ICY track title is available.
-#: addon\globalPlugins\freeAudio\trackInfoMixin.py:172
-#: addon\globalPlugins\freeAudio\trackInfoMixin.py:485
+#: addon\globalPlugins\freeAudio\trackInfoMixin.py:172 addon\globalPlugins\freeAudio\trackInfoMixin.py:485
 #: addon\globalPlugins\freeAudio\trackInfoMixin.py:688
 #, python-format
 msgid "Playing: %s"
@@ -4374,10 +4144,8 @@ msgstr "កំពុងចាក់: %s"
 #. Translators: Same active-recording announcement as the playing-state case, appended here when paused.
 #. Translators: Same active-recording announcement as script_whatsPlaying.
 #. Translators: Same active-recording announcement as script_whatsPlaying's paused case.
-#: addon\globalPlugins\freeAudio\trackInfoMixin.py:187
-#: addon\globalPlugins\freeAudio\trackInfoMixin.py:226
-#: addon\globalPlugins\freeAudio\trackInfoMixin.py:497
-#: addon\globalPlugins\freeAudio\trackInfoMixin.py:527
+#: addon\globalPlugins\freeAudio\trackInfoMixin.py:187 addon\globalPlugins\freeAudio\trackInfoMixin.py:226
+#: addon\globalPlugins\freeAudio\trackInfoMixin.py:497 addon\globalPlugins\freeAudio\trackInfoMixin.py:527
 #, python-format
 msgid "Recording: %s"
 msgstr "កំពុងថត: %s"
@@ -4385,8 +4153,7 @@ msgstr "កំពុងថត: %s"
 #. Translators: What's Playing announcement when playback is paused rather than actively playing; %s is the station/track name.
 #. Translators: Same Paused announcement as script_whatsPlaying, spoken here by the F2 dialog equivalent.
 #. Translators: Same Paused announcement as elsewhere, spoken here by this hotkey-triggered variant.
-#: addon\globalPlugins\freeAudio\trackInfoMixin.py:200
-#: addon\globalPlugins\freeAudio\trackInfoMixin.py:505
+#: addon\globalPlugins\freeAudio\trackInfoMixin.py:200 addon\globalPlugins\freeAudio\trackInfoMixin.py:505
 #: addon\globalPlugins\freeAudio\trackInfoMixin.py:702
 #, python-format
 msgid "Paused: %s"
@@ -4399,20 +4166,16 @@ msgstr "បានផ្អាក: %s"
 #. Translators: Same as elsewhere, spoken when this standalone gesture has no stream URL to attempt recognition on.
 #. Translators: Same as the Ctrl+Win+I triple-press case, spoken here by the F2 dialog equivalent (3rd press).
 #. Translators: Same as the Ctrl+Win+I fourth-press case, spoken here by the F2 dialog equivalent (4th press).
-#: addon\globalPlugins\freeAudio\trackInfoMixin.py:287
-#: addon\globalPlugins\freeAudio\trackInfoMixin.py:312
-#: addon\globalPlugins\freeAudio\trackInfoMixin.py:378
-#: addon\globalPlugins\freeAudio\trackInfoMixin.py:407
-#: addon\globalPlugins\freeAudio\trackInfoMixin.py:577
-#: addon\globalPlugins\freeAudio\trackInfoMixin.py:597
+#: addon\globalPlugins\freeAudio\trackInfoMixin.py:287 addon\globalPlugins\freeAudio\trackInfoMixin.py:312
+#: addon\globalPlugins\freeAudio\trackInfoMixin.py:378 addon\globalPlugins\freeAudio\trackInfoMixin.py:407
+#: addon\globalPlugins\freeAudio\trackInfoMixin.py:577 addon\globalPlugins\freeAudio\trackInfoMixin.py:597
 msgid "No track info available"
 msgstr "មិនមានព័ត៌មានបទចម្រៀង ឬតន្ត្រីទេ"
 
 #. Translators: Spoken by the triple-press action before kicking off Shazam recognition, since no ICY track title was available to just copy.
 #. Translators: Same as the What's Playing triple-press case, spoken before starting Shazam recognition.
 #. Translators: Same as the Ctrl+Win+I triple-press case, spoken here by the F2 dialog equivalent before starting Shazam recognition.
-#: addon\globalPlugins\freeAudio\trackInfoMixin.py:292
-#: addon\globalPlugins\freeAudio\trackInfoMixin.py:381
+#: addon\globalPlugins\freeAudio\trackInfoMixin.py:292 addon\globalPlugins\freeAudio\trackInfoMixin.py:381
 #: addon\globalPlugins\freeAudio\trackInfoMixin.py:580
 msgid "No track metadata found. Starting music recognition…"
 msgstr "រកមិនឃើញទិន្នន័យមេតានៃបទចម្រៀង ឬតន្ត្រីទេ។ កំពុងចាប់ផ្តើមការស្គាល់តន្ត្រី…"
@@ -4420,8 +4183,7 @@ msgstr "រកមិនឃើញទិន្នន័យមេតានៃបទ
 #. Translators: Spoken when the fourth press starts forced Shazam recognition, regardless of whether ICY metadata exists.
 #. Translators: Same as elsewhere, spoken when this standalone gesture starts forced Shazam recognition.
 #. Translators: Same as the Ctrl+Win+I fourth-press case, spoken here by the F2 dialog equivalent.
-#: addon\globalPlugins\freeAudio\trackInfoMixin.py:315
-#: addon\globalPlugins\freeAudio\trackInfoMixin.py:410
+#: addon\globalPlugins\freeAudio\trackInfoMixin.py:315 addon\globalPlugins\freeAudio\trackInfoMixin.py:410
 #: addon\globalPlugins\freeAudio\trackInfoMixin.py:600
 msgid "Starting music recognition…"
 msgstr "កំពុងចាប់ផ្តើមការស្គាល់តន្ត្រី…"
@@ -4442,9 +4204,7 @@ msgstr "បង្ហាញព័ត៌មានលម្អិតនៃស្ថ
 #. rapid key presses can assign a single keystroke to this action.
 #. Translators: Name of an NVDA command; unbound-gesture equivalent of pressing Ctrl+Win+I (or F2 in the dialog) three times.
 #: addon\globalPlugins\freeAudio\trackInfoMixin.py:343
-msgid ""
-"Copy current track info to clipboard, or start music recognition if "
-"unavailable"
+msgid "Copy current track info to clipboard, or start music recognition if unavailable"
 msgstr "ចម្លងព័ត៌មានបទចម្រៀងបច្ចុប្បន្នទៅក្ដារតម្បៀតខ្ទាស់ ឬចាប់ផ្ដើមការស្គាល់តន្ត្រី ប្រសិនបើមិនមាន"
 
 #. Equivalent to pressing Control+Windows+I (or F2 in the dialog) four times.
@@ -4458,8 +4218,7 @@ msgstr "បង្ខំការស្គាល់តន្ត្រីសម្
 
 #. Translators: Field-name row header for the current ICY track title, when the station broadcasts one.
 #. Translators: Same "Now playing" field-name row header as _build_radio_station_details, referenced here to check whether that row already exists in the dialog.
-#: addon\globalPlugins\freeAudio\trackInfoMixin.py:747
-#: addon\globalPlugins\freeAudio\trackInfoMixin.py:1074
+#: addon\globalPlugins\freeAudio\trackInfoMixin.py:747 addon\globalPlugins\freeAudio\trackInfoMixin.py:1074
 msgid "Now playing"
 msgstr "ឥឡូវនេះកំពុងចាក់"
 
@@ -4539,8 +4298,7 @@ msgstr "សៀវភៅ"
 
 #. Translators: Field-name row header for the current chapter/part when both its position and the total count are known; value is "Title (n/total)".
 #. Translators: Same field-name row header as above, used when the chapter position/total count is not known - just the chapter title.
-#: addon\globalPlugins\freeAudio\trackInfoMixin.py:947
-#: addon\globalPlugins\freeAudio\trackInfoMixin.py:952
+#: addon\globalPlugins\freeAudio\trackInfoMixin.py:947 addon\globalPlugins\freeAudio\trackInfoMixin.py:952
 msgid "Chapter"
 msgstr "ជំពូក"
 
@@ -4566,20 +4324,15 @@ msgstr "មិនអាចចូលប្រើ clipboard បានទេ"
 msgid "Already in liked songs: %s"
 msgstr "មាននៅក្នុងបទចម្រៀងដែលចូលចិត្តរួចហើយ: %s"
 
-#: addon\globalPlugins\freeAudio\trackInfoMixin.py:1188
-#: addon\globalPlugins\freeAudio\trackInfoMixin.py:1228
+#: addon\globalPlugins\freeAudio\trackInfoMixin.py:1188 addon\globalPlugins\freeAudio\trackInfoMixin.py:1228
 #, python-format
 msgid "Song recording saved: %s"
 msgstr "ការ​ថត​ចម្រៀង​ត្រូវ​បាន​រក្សា​ទុក: %s"
 
 #. Translators: Spoken automatically while a live recording is in progress if the time-shift disk-space limit is reached and old buffered audio is being discarded faster than usual.
 #: addon\globalPlugins\freeAudio\__init__.py:498
-msgid ""
-"Time-shift buffer: running low on disk space, the oldest audio is being "
-"dropped more aggressively."
-msgstr ""
-"តំបន់ផ្ទុកបណ្ដោះអាសន្នសម្រាប់ប្ដូរពេលវេលា៖ ទំហំថាសជិតអស់ហើយ "
-"សំឡេងចាស់ជាងគេកំពុងត្រូវបានលុបចេញយ៉ាងខ្លាំងក្លា។"
+msgid "Time-shift buffer: running low on disk space, the oldest audio is being dropped more aggressively."
+msgstr "តំបន់ផ្ទុកបណ្ដោះអាសន្នសម្រាប់ប្ដូរពេលវេលា៖ ទំហំថាសជិតអស់ហើយ សំឡេងចាស់ជាងគេកំពុងត្រូវបានលុបចេញយ៉ាងខ្លាំងក្លា។"
 
 #. Translators: Spoken when a recording finishes normally; %s is the saved output filename.
 #: addon\globalPlugins\freeAudio\__init__.py:591
@@ -4603,11 +4356,9 @@ msgstr "ការបំប្លែងការថតបានបរាជ័យ
 #: addon\globalPlugins\freeAudio\__init__.py:607
 #, python-format
 msgid ""
-"Could not use the selected folder for '%(station)s' (%(reason)s). Saved to "
-"the default recordings folder instead."
-msgstr ""
-"មិនអាចប្រើថតដែលបានជ្រើសរើសសម្រាប់ '%(station)s' (%(reason)s) បានទេ។ "
-"បានរក្សាទុកទៅក្នុងថតលំនាំដើមវិញ។"
+"Could not use the selected folder for '%(station)s' (%(reason)s). Saved to the default recordings folder "
+"instead."
+msgstr "មិនអាចប្រើថតដែលបានជ្រើសរើសសម្រាប់ '%(station)s' (%(reason)s) បានទេ។ បានរក្សាទុកទៅក្នុងថតលំនាំដើមវិញ។"
 
 #. ── 2. Create / refresh a script for every favourite ─────────────────
 #. Translators: Script category shown in NVDA's Input Gestures dialog, grouping the auto-generated 'play this favourite station' shortcuts separately from freeAudio's main commands.
@@ -4627,8 +4378,7 @@ msgstr "ស្ថានីយ៍លែងនៅក្នុងបញ្ជីច
 #. NVDA reads __doc__ as the script description and
 #. __name__ as the script identifier.
 #. Translators: Auto-generated description of a per-jukebox-entry shortcut, shown in NVDA's Input Gestures dialog; %s is the entry's display title.
-#: addon\globalPlugins\freeAudio\__init__.py:733
-#: addon\globalPlugins\freeAudio\__init__.py:813
+#: addon\globalPlugins\freeAudio\__init__.py:733 addon\globalPlugins\freeAudio\__init__.py:813
 #, python-format
 msgid "%s playback shortcut"
 msgstr "ផ្លូវកាត់សម្រាប់ចាក់ %s"
@@ -4688,11 +4438,9 @@ msgstr "បើក jukebox មូលដ្ឋានរបស់ freeAudio"
 #. Translators: Name of an NVDA command whose behaviour depends on what is currently playing: adds a live station to favourites, or downloads the current audio book/podcast episode.
 #: addon\globalPlugins\freeAudio\__init__.py:1021
 msgid ""
-"Add currently playing station to favourites, download the whole audio book "
-"if one is playing, or download the episode if a podcast is playing"
-msgstr ""
-"បន្ថែមស្ថានីយ៍ដែលកំពុងចាក់ទៅក្នុងបញ្ជីចំណូលចិត្ត ទាញយកសៀវភៅជាសំឡេងទាំងមូលប្រសិនបើមានកំពុងចាក់ "
-"ឬទាញយកភាគប្រសិនបើមានផតខាស់កំពុងចាក់"
+"Add currently playing station to favourites, download the whole audio book if one is playing, or download the "
+"episode if a podcast is playing"
+msgstr "បន្ថែមស្ថានីយ៍ដែលកំពុងចាក់ទៅក្នុងបញ្ជីចំណូលចិត្ត ទាញយកសៀវភៅជាសំឡេងទាំងមូលប្រសិនបើមានកំពុងចាក់ ឬទាញយកភាគប្រសិនបើមានផតខាស់កំពុងចាក់"
 
 #. Translators: Spoken when this shortcut is pressed while something is playing that is neither a station, podcast episode, nor audio book (e.g. a local jukebox track).
 #: addon\globalPlugins\freeAudio\__init__.py:1041
@@ -4767,8 +4515,7 @@ msgstr ""
 "\n"
 "តើអ្នកចង់ទាញយក និងដំឡើងវាឥឡូវនេះទេ?"
 
-#: addon\globalPlugins\freeAudio\__init__.py:1440
-#: addon\globalPlugins\freeAudio\__init__.py:1449
+#: addon\globalPlugins\freeAudio\__init__.py:1440 addon\globalPlugins\freeAudio\__init__.py:1449
 #: addon\globalPlugins\freeAudio\__init__.py:1517
 msgid "unknown"
 msgstr "មិនស្គាល់"
@@ -4802,11 +4549,6 @@ msgstr "បើកទំព័រ &O"
 msgid "freeAudio Update Available"
 msgstr "មានការធ្វើបច្ចុប្បន្នភាព freeAudio ហើយ"
 
-#. Translators: 'Cancel' button label on the update-available dialog, paired with whichever install/open-page label is used as the other button.
-#: addon\globalPlugins\freeAudio\__init__.py:1461
-msgid "&Cancel"
-msgstr "បោះបង់ &C"
-
 #. Translators: Spoken while the new version is being downloaded for direct install; %s is the version number being downloaded.
 #: addon\globalPlugins\freeAudio\__init__.py:1477
 #, python-format
@@ -4839,12 +4581,8 @@ msgstr "ចាក់ឯកសារដែលកំពុងផ្តោតដោ
 #. the folder to already be a persisted JukeboxManager entry).
 #. Translators: Spoken when the "play focused item" Explorer shortcut is used on a folder rather than a file.
 #: addon\appModules\explorer.py:242
-msgid ""
-"This is a folder. Playing only works for files - add it to the jukebox to "
-"play the whole folder."
-msgstr ""
-"នេះគឺជាថត។ ការចាក់ដំណើរការបានសម្រាប់តែឯកសារប៉ុណ្ណោះ - សូមបន្ថែមវាទៅ jukebox "
-"ដើម្បីចាក់ថតទាំងមូល។"
+msgid "This is a folder. Playing only works for files - add it to the jukebox to play the whole folder."
+msgstr "នេះគឺជាថត។ ការចាក់ដំណើរការបានសម្រាប់តែឯកសារប៉ុណ្ណោះ - សូមបន្ថែមវាទៅ jukebox ដើម្បីចាក់ថតទាំងមូល។"
 
 #. Translators: Spoken when the "play focused item" Explorer shortcut is used on a file that isn't a recognized audio format.
 #: addon\appModules\explorer.py:246
@@ -4887,41 +4625,31 @@ msgstr "freeAudio: វិទ្យុ និងច្រើនទៀត"
 #. Translators: Long description to be shown for this add-on
 #: buildVars.py:19
 msgid ""
-"freeAudio is an internet radio, podcast, audio-book, and local music add-on "
-"for NVDA that provides seamless access to thousands of internet radio "
-"stations via the Radio Browser open directory, RSS/Atom podcast feeds, the "
-"libriVox + GETEM digital library for the visually impaired, and your own "
-"local audio files and folders through its built-in jukebox. It features a "
-"fully accessible station browser with search, country filter, favourites "
-"management, and per-station, per-podcast, per-audio-book, and per-jukebox-"
-"track audio profiles. Podcast episodes, audio book chapters, and jukebox "
-"tracks resume automatically from where you left off - jukebox folders even "
-"pick up on the last track you were playing - with adjustable pitch-"
-"preserving playback speed and independent pitch-shift (semitone transpose). "
-"Playback is handled by BASS, with support for volume control, audio effects, "
-"output device selection, and simultaneous audio mirroring to a second "
-"device. Additional features include instant and scheduled recording, time-"
-"shift rewind of live radio, sleep and alarm timers, automatic ICY metadata "
-"announcements, Shazam-based music recognition, and a liked-songs log with "
-"lyrics lookup. All controls and shortcuts are designed for NVDA "
-"accessibility."
+"freeAudio is an internet radio, podcast, audio-book, and local music add-on for NVDA that provides seamless "
+"access to thousands of internet radio stations via the Radio Browser open directory, RSS/Atom podcast feeds, "
+"the libriVox + GETEM digital library for the visually impaired, and your own local audio files and folders "
+"through its built-in jukebox. It features a fully accessible station browser with search, country filter, "
+"favourites management, and per-station, per-podcast, per-audio-book, and per-jukebox-track audio profiles. "
+"Podcast episodes, audio book chapters, and jukebox tracks resume automatically from where you left off - "
+"jukebox folders even pick up on the last track you were playing - with adjustable pitch-preserving playback "
+"speed and independent pitch-shift (semitone transpose). Playback is handled by BASS, with support for volume "
+"control, audio effects, output device selection, and simultaneous audio mirroring to a second device. "
+"Additional features include instant and scheduled recording, time-shift rewind of live radio, sleep and alarm "
+"timers, automatic ICY metadata announcements, Shazam-based music recognition, and a liked-songs log with "
+"lyrics lookup. All controls and shortcuts are designed for NVDA accessibility."
 msgstr ""
 "freeAudio គឺជាកម្មវិធីបន្ថែមវិទ្យុអ៊ីនធឺណិត ផតខាស សៀវភៅអូឌីយ៉ូ និងតន្ត្រីក្នុងស្រុកសម្រាប់ NVDA "
-"ដែលផ្តល់នូវការចូលប្រើប្រាស់យ៉ាងរលូនទៅកាន់ស្ថានីយ៍វិទ្យុអ៊ីនធឺណិតរាប់ពាន់តាមរយៈថតបើកចំហរបស់កម្មវិធីរុករកវិទ្យុ "
-"មតិព័ត៌មានផតខាស RSS/Atom បណ្ណាល័យឌីជីថល libriVox + GETEM សម្រាប់អ្នកខ្សោយភ្នែក "
-"និងឯកសារអូឌីយ៉ូក្នុងស្រុក និងថតឯកសារផ្ទាល់ខ្លួនរបស់អ្នកតាមរយៈម៉ាស៊ីនចាក់ចម្រៀងដែលភ្ជាប់មកជាមួយ។ "
-"វាមានលក្ខណៈពិសេសនៃកម្មវិធីរុករកស្ថានីយ៍ដែលអាចចូលប្រើបានយ៉ាងពេញលេញជាមួយនឹងការស្វែងរក "
-"តម្រងប្រទេស ការគ្រប់គ្រងចំណូលចិត្ត និងទម្រង់អូឌីយ៉ូក្នុងមួយស្ថានីយ៍ ក្នុងមួយផតខាស ក្នុងមួយសៀវភៅអូឌីយ៉ូ "
-"និងក្នុងមួយម៉ាស៊ីនចាក់ចម្រៀង។ វគ្គផតខាស ជំពូកសៀវភៅអូឌីយ៉ូ "
-"និងបទចម្រៀងម៉ាស៊ីនចាក់ចម្រៀងនឹងបន្តដោយស្វ័យប្រវត្តិពីកន្លែងដែលអ្នកឈប់ - "
-"ថតម៉ាស៊ីនចាក់ចម្រៀងថែមទាំងជ្រើសរើសបទចុងក្រោយដែលអ្នកកំពុងចាក់ - "
-"ជាមួយនឹងល្បឿនចាក់ឡើងវិញដែលអាចលៃតម្រូវបាន និងការផ្លាស់ប្តូរសំឡេងឯករាជ្យ "
-"(ការផ្លាស់ប្តូរពាក់កណ្តាលសម្លេង)។ ការចាក់ឡើងវិញត្រូវបានគ្រប់គ្រងដោយ BASS "
-"ជាមួយនឹងការគាំទ្រសម្រាប់ការគ្រប់គ្រងកម្រិតសំឡេង បែបផែនអូឌីយ៉ូ ការជ្រើសរើសឧបករណ៍ទិន្នផល "
-"និងការឆ្លុះបញ្ចាំងអូឌីយ៉ូក្នុងពេលដំណាលគ្នាទៅកាន់ឧបករណ៍ទីពីរ។ មុខងារបន្ថែមរួមមាន ការថតភ្លាមៗ "
-"និងកំណត់ពេល ការចាក់ឡើងវិញតាមពេលវេលានៃវិទ្យុផ្សាយផ្ទាល់ កម្មវិធីកំណត់ពេលគេង និងម៉ោងរោទិ៍ "
-"ការប្រកាសទិន្នន័យមេតា ICY ដោយស្វ័យប្រវត្តិ ការសម្គាល់តន្ត្រីដែលមានមូលដ្ឋានលើ Shazam "
-"និងកំណត់ហេតុបទចម្រៀងដែលអ្នកចូលចិត្តជាមួយនឹងការស្វែងរកទំនុកច្រៀង។ ការគ្រប់គ្រង "
+"ដែលផ្តល់នូវការចូលប្រើប្រាស់យ៉ាងរលូនទៅកាន់ស្ថានីយ៍វិទ្យុអ៊ីនធឺណិតរាប់ពាន់តាមរយៈថតបើកចំហរបស់កម្មវិធីរុករកវិទ្យុ មតិព័ត៌មានផតខាស RSS/Atom "
+"បណ្ណាល័យឌីជីថល libriVox + GETEM សម្រាប់អ្នកខ្សោយភ្នែក និងឯកសារអូឌីយ៉ូក្នុងស្រុក "
+"និងថតឯកសារផ្ទាល់ខ្លួនរបស់អ្នកតាមរយៈម៉ាស៊ីនចាក់ចម្រៀងដែលភ្ជាប់មកជាមួយ។ "
+"វាមានលក្ខណៈពិសេសនៃកម្មវិធីរុករកស្ថានីយ៍ដែលអាចចូលប្រើបានយ៉ាងពេញលេញជាមួយនឹងការស្វែងរក តម្រងប្រទេស ការគ្រប់គ្រងចំណូលចិត្ត "
+"និងទម្រង់អូឌីយ៉ូក្នុងមួយស្ថានីយ៍ ក្នុងមួយផតខាស ក្នុងមួយសៀវភៅអូឌីយ៉ូ និងក្នុងមួយម៉ាស៊ីនចាក់ចម្រៀង។ វគ្គផតខាស ជំពូកសៀវភៅអូឌីយ៉ូ "
+"និងបទចម្រៀងម៉ាស៊ីនចាក់ចម្រៀងនឹងបន្តដោយស្វ័យប្រវត្តិពីកន្លែងដែលអ្នកឈប់ - ថតម៉ាស៊ីនចាក់ចម្រៀងថែមទាំងជ្រើសរើសបទចុងក្រោយដែលអ្នកកំពុងចាក់ - "
+"ជាមួយនឹងល្បឿនចាក់ឡើងវិញដែលអាចលៃតម្រូវបាន និងការផ្លាស់ប្តូរសំឡេងឯករាជ្យ (ការផ្លាស់ប្តូរពាក់កណ្តាលសម្លេង)។ "
+"ការចាក់ឡើងវិញត្រូវបានគ្រប់គ្រងដោយ BASS ជាមួយនឹងការគាំទ្រសម្រាប់ការគ្រប់គ្រងកម្រិតសំឡេង បែបផែនអូឌីយ៉ូ ការជ្រើសរើសឧបករណ៍ទិន្នផល "
+"និងការឆ្លុះបញ្ចាំងអូឌីយ៉ូក្នុងពេលដំណាលគ្នាទៅកាន់ឧបករណ៍ទីពីរ។ មុខងារបន្ថែមរួមមាន ការថតភ្លាមៗ និងកំណត់ពេល "
+"ការចាក់ឡើងវិញតាមពេលវេលានៃវិទ្យុផ្សាយផ្ទាល់ កម្មវិធីកំណត់ពេលគេង និងម៉ោងរោទិ៍ ការប្រកាសទិន្នន័យមេតា ICY ដោយស្វ័យប្រវត្តិ "
+"ការសម្គាល់តន្ត្រីដែលមានមូលដ្ឋានលើ Shazam និងកំណត់ហេតុបទចម្រៀងដែលអ្នកចូលចិត្តជាមួយនឹងការស្វែងរកទំនុកច្រៀង។ ការគ្រប់គ្រង "
 "និងផ្លូវកាត់ទាំងអស់ត្រូវបានរចនាឡើងសម្រាប់ភាពងាយស្រួលចូលប្រើ NVDA."
 
 #. Brief changelog for this version
@@ -4931,237 +4659,65 @@ msgid ""
 "\n"
 "## New Features\n"
 "\n"
-"- **Jukebox now has the same feature set as Favourites:** Jukebox entries "
-"can now be reordered in-place (comma-key pick/drop), renamed (custom display "
-"name, doesn't touch the file/folder on disk), assigned to groups, and "
-"exported/imported as JSON (full fidelity: groups + per-file audio profiles) "
-"or M3U (path + custom name only). An auto-generated NVDA Input Gestures "
-"shortcut is also created per entry under a new \"freeAudio Jukebox\" "
-"category — works even when the dialog is closed.\n"
+"- **Jukebox now has the same feature set as Favourites:** Jukebox entries can now be reordered in-place "
+"(comma-key pick/drop), renamed (custom display name, doesn't touch the file/folder on disk), assigned to "
+"groups, and exported/imported as JSON (full fidelity: groups + per-file audio profiles) or M3U (path + custom "
+"name only). An auto-generated NVDA Input Gestures shortcut is also created per entry under a new \"freeAudio "
+"Jukebox\" category — works even when the dialog is closed.\n"
 "\n"
-"- **Per-module enable/disable:** A new \"Modules\" checklist in settings "
-"lets users turn the Podcasts, Audio Books, and/or Jukebox tabs off entirely. "
-"All three remain enabled by default, so existing users see no change. "
-"Disabling a module hides its tab and related gestures but never touches its "
-"saved data (subscriptions, library, jukebox entries) — re-enabling restores "
-"everything as it was.\n"
+"- **Per-module enable/disable:** A new \"Modules\" checklist in settings lets users turn the Podcasts, Audio "
+"Books, and/or Jukebox tabs off entirely. All three remain enabled by default, so existing users see no "
+"change. Disabling a module hides its tab and related gestures but never touches its saved data "
+"(subscriptions, library, jukebox entries) — re-enabling restores everything as it was.\n"
 "\n"
-"- **Plain Left/Right for seeking in Jukebox/Audio Books/Podcasts lists:** "
-"Left/Right in these tabs' item lists now seeks within the currently playing "
-"item, calling the same methods as the global Ctrl+Win+J/K commands. Episode/"
-"chapter/track switching still works via Ctrl+Left/Right and F3/F4; the old "
-"plain Left/Right episode-switch behavior only remains as a fallback when "
-"nothing is playing yet.\n"
+"- **Plain Left/Right for seeking in Jukebox/Audio Books/Podcasts lists:** Left/Right in these tabs' item "
+"lists now seeks within the currently playing item, calling the same methods as the global Ctrl+Win+J/K "
+"commands. Episode/chapter/track switching still works via Ctrl+Left/Right and F3/F4; the old plain Left/Right "
+"episode-switch behavior only remains as a fallback when nothing is playing yet.\n"
 "\n"
 "## Improvements\n"
 "\n"
-"- **Timer tab focus behaviour fixed:** Switching to the Timer tab now forces "
-"focus to the Start/Stop action radio buttons only on first open. On every "
-"later switch, focus stays where you left it — matching every other tab.\n"
+"- **Timer tab focus behaviour fixed:** Switching to the Timer tab now forces focus to the Start/Stop action "
+"radio buttons only on first open. On every later switch, focus stays where you left it — matching every other "
+"tab.\n"
 "\n"
-"- **HLS short-segment merger removed:** The ffmpeg-based `_HlsStreamMerger` "
-"and its detection helpers have been dropped. HLS streams now always play "
-"directly through BASS, and stall reconnects use the original URL.\n"
+"- **HLS short-segment merger removed:** The ffmpeg-based `_HlsStreamMerger` and its detection helpers have "
+"been dropped. HLS streams now always play directly through BASS, and stall reconnects use the original URL.\n"
 "\n"
 "## Bug Fixes\n"
 "\n"
-"- **Wrong duration in fMP4 (HLS) recordings fixed:** Fragmented MP4 "
-"recordings had no header duration and carried the stream's absolute clock, "
-"so players showed absurd lengths. After recording, files are remuxed to a "
-"standard MP4 with ffmpeg (stream copy); when ffmpeg is unavailable, fragment "
-"timestamps are rebased to zero as a fallback.\n"
+"- **Wrong duration in fMP4 (HLS) recordings fixed:** Fragmented MP4 recordings had no header duration and "
+"carried the stream's absolute clock, so players showed absurd lengths. After recording, files are remuxed to "
+"a standard MP4 with ffmpeg (stream copy); when ffmpeg is unavailable, fragment timestamps are rebased to zero "
+"as a fallback.\n"
 msgstr ""
 "\n"
 "## មុខងារថ្មី\n"
 "\n"
-"- **Jukebox ឥឡូវមានមុខងារដូចគ្នានឹងចំណូលចិត្ត៖** ធាតុ Jukebox "
-"អាចត្រូវបានរៀបលំដាប់ឡើងវិញនៅនឹងកន្លែង (ចុចក្បៀសដើម្បីលើក និងទម្លាក់) ប្តូរឈ្មោះ "
-"(ឈ្មោះបង្ហាញផ្ទាល់ខ្លួន ដោយមិនប៉ះពាល់ឯកសារ ឬថតនៅលើថាស) កំណត់ទៅក្រុម និងនាំចេញ/នាំចូលជា JSON "
-"(រក្សាទុកពេញលេញ៖ ក្រុម និងប្រវត្តិរូបសំឡេងរបស់ឯកសារនីមួយៗ) ឬ M3U (ផ្លូវ "
-"និងឈ្មោះផ្ទាល់ខ្លួនប៉ុណ្ណោះ)។ ផ្លូវកាត់នៅក្នុងការកំណត់ចលនាបញ្ចូលរបស់ NVDA "
-"ក៏ត្រូវបានបង្កើតដោយស្វ័យប្រវត្តិសម្រាប់ធាតុនីមួយៗ ក្រោមប្រភេទថ្មី \"freeAudio Jukebox\" "
-"ហើយដំណើរការបានទោះបីបង្អួចត្រូវបានបិទក៏ដោយ។\n"
+"- **Jukebox ឥឡូវមានមុខងារដូចគ្នានឹងចំណូលចិត្ត៖** ធាតុ Jukebox អាចត្រូវបានរៀបលំដាប់ឡើងវិញនៅនឹងកន្លែង (ចុចក្បៀសដើម្បីលើក និងទម្លាក់) "
+"ប្តូរឈ្មោះ (ឈ្មោះបង្ហាញផ្ទាល់ខ្លួន ដោយមិនប៉ះពាល់ឯកសារ ឬថតនៅលើថាស) កំណត់ទៅក្រុម និងនាំចេញ/នាំចូលជា JSON (រក្សាទុកពេញលេញ៖ ក្រុម "
+"និងប្រវត្តិរូបសំឡេងរបស់ឯកសារនីមួយៗ) ឬ M3U (ផ្លូវ និងឈ្មោះផ្ទាល់ខ្លួនប៉ុណ្ណោះ)។ ផ្លូវកាត់នៅក្នុងការកំណត់ចលនាបញ្ចូលរបស់ NVDA "
+"ក៏ត្រូវបានបង្កើតដោយស្វ័យប្រវត្តិសម្រាប់ធាតុនីមួយៗ ក្រោមប្រភេទថ្មី \"freeAudio Jukebox\" ហើយដំណើរការបានទោះបីបង្អួចត្រូវបានបិទក៏ដោយ។\n"
 "\n"
-"- **បើក/បិទម៉ូឌុលនីមួយៗ៖** បញ្ជី \"ម៉ូឌុល\" ថ្មីនៅក្នុងការកំណត់អនុញ្ញាតឱ្យអ្នកប្រើបិទផ្ទាំងផតខាស់ "
-"សៀវភៅជាសំឡេង និង/ឬ Jukebox ទាំងស្រុង។ ទាំងបីនៅតែបើកតាមលំនាំដើម "
-"ដូច្នេះអ្នកប្រើបច្ចុប្បន្ននឹងមិនឃើញការផ្លាស់ប្តូរអ្វីទេ។ ការបិទម៉ូឌុលលាក់ផ្ទាំង "
-"និងសកម្មភាពផ្លូវកាត់ដែលពាក់ព័ន្ធ ប៉ុន្តែមិនប៉ះពាល់ទិន្នន័យដែលបានរក្សាទុក (ការជាវ បណ្ណាល័យ ធាតុ "
-"Jukebox) ទេ ហើយការបើកវាឡើងវិញនឹងស្ដារអ្វីៗដូចដើម។\n"
+"- **បើក/បិទម៉ូឌុលនីមួយៗ៖** បញ្ជី \"ម៉ូឌុល\" ថ្មីនៅក្នុងការកំណត់អនុញ្ញាតឱ្យអ្នកប្រើបិទផ្ទាំងផតខាស់ សៀវភៅជាសំឡេង និង/ឬ Jukebox ទាំងស្រុង។ "
+"ទាំងបីនៅតែបើកតាមលំនាំដើម ដូច្នេះអ្នកប្រើបច្ចុប្បន្ននឹងមិនឃើញការផ្លាស់ប្តូរអ្វីទេ។ ការបិទម៉ូឌុលលាក់ផ្ទាំង និងសកម្មភាពផ្លូវកាត់ដែលពាក់ព័ន្ធ "
+"ប៉ុន្តែមិនប៉ះពាល់ទិន្នន័យដែលបានរក្សាទុក (ការជាវ បណ្ណាល័យ ធាតុ Jukebox) ទេ ហើយការបើកវាឡើងវិញនឹងស្ដារអ្វីៗដូចដើម។\n"
 "\n"
-"- **ព្រួញឆ្វេង/ស្តាំធម្មតាសម្រាប់ការរំលង នៅក្នុងបញ្ជី Jukebox សៀវភៅជាសំឡេង និងផតខាស់៖** "
-"ព្រួញឆ្វេង/ស្តាំនៅក្នុងបញ្ជីធាតុនៃផ្ទាំងទាំងនេះ ឥឡូវរំលងនៅក្នុងធាតុដែលកំពុងចាក់ "
-"ដោយហៅវិធីសាស្ត្រដូចគ្នានឹងពាក្យបញ្ជាសកល Ctrl+Win+J/K។ ការប្តូរភាគ/ជំពូក/"
-"បទនៅតែអាចធ្វើបានតាម Ctrl+ឆ្វេង/ស្តាំ និង F3/F4។ ឥរិយាបថប្តូរភាគចាស់ដោយប្រើព្រួញឆ្វេង/"
-"ស្តាំធម្មតា នៅសល់តែជាជម្រើសបម្រុង នៅពេលមិនទាន់មានអ្វីកំពុងចាក់ប៉ុណ្ណោះ។\n"
+"- **ព្រួញឆ្វេង/ស្តាំធម្មតាសម្រាប់ការរំលង នៅក្នុងបញ្ជី Jukebox សៀវភៅជាសំឡេង និងផតខាស់៖** ព្រួញឆ្វេង/ស្តាំនៅក្នុងបញ្ជីធាតុនៃផ្ទាំងទាំងនេះ "
+"ឥឡូវរំលងនៅក្នុងធាតុដែលកំពុងចាក់ ដោយហៅវិធីសាស្ត្រដូចគ្នានឹងពាក្យបញ្ជាសកល Ctrl+Win+J/K។ ការប្តូរភាគ/ជំពូក/បទនៅតែអាចធ្វើបានតាម "
+"Ctrl+ឆ្វេង/ស្តាំ និង F3/F4។ ឥរិយាបថប្តូរភាគចាស់ដោយប្រើព្រួញឆ្វេង/ស្តាំធម្មតា នៅសល់តែជាជម្រើសបម្រុង នៅពេលមិនទាន់មានអ្វីកំពុងចាក់ប៉ុណ្ណោះ។\n"
 "\n"
 "## ការកែលម្អ\n"
 "\n"
-"- **បានជួសជុលឥរិយាបថផ្តោតនៅក្នុងផ្ទាំងកម្មវិធីកំណត់ម៉ោង៖** ការប្តូរទៅផ្ទាំងកម្មវិធីកំណត់ម៉ោង "
-"ឥឡូវបង្ខំការផ្តោតទៅប៉ូតុងជម្រើសចាប់ផ្តើម/បញ្ឈប់ តែនៅពេលបើកលើកដំបូងប៉ុណ្ណោះ។ គ្រប់ការប្តូរក្រោយៗ "
-"ការផ្តោតនៅតែនៅកន្លែងដែលអ្នកបានទុក ដូចផ្ទាំងផ្សេងទៀតទាំងអស់។\n"
+"- **បានជួសជុលឥរិយាបថផ្តោតនៅក្នុងផ្ទាំងកម្មវិធីកំណត់ម៉ោង៖** ការប្តូរទៅផ្ទាំងកម្មវិធីកំណត់ម៉ោង ឥឡូវបង្ខំការផ្តោតទៅប៉ូតុងជម្រើសចាប់ផ្តើម/បញ្ឈប់ "
+"តែនៅពេលបើកលើកដំបូងប៉ុណ្ណោះ។ គ្រប់ការប្តូរក្រោយៗ ការផ្តោតនៅតែនៅកន្លែងដែលអ្នកបានទុក ដូចផ្ទាំងផ្សេងទៀតទាំងអស់។\n"
 "\n"
-"- **បានដកការបញ្ចូលផ្នែក HLS ខ្លីៗចេញ៖** `_HlsStreamMerger` ដែលផ្អែកលើ ffmpeg "
-"និងអ្នកជំនួយការរកឃើញរបស់វា ត្រូវបានលុបចោល។ ឥឡូវស្ទ្រីម HLS តែងតែចាក់ដោយផ្ទាល់តាម BASS "
-"ហើយការតភ្ជាប់ឡើងវិញពេលជាប់គាំងប្រើ URL ដើម។\n"
+"- **បានដកការបញ្ចូលផ្នែក HLS ខ្លីៗចេញ៖** `_HlsStreamMerger` ដែលផ្អែកលើ ffmpeg និងអ្នកជំនួយការរកឃើញរបស់វា ត្រូវបានលុបចោល។ "
+"ឥឡូវស្ទ្រីម HLS តែងតែចាក់ដោយផ្ទាល់តាម BASS ហើយការតភ្ជាប់ឡើងវិញពេលជាប់គាំងប្រើ URL ដើម។\n"
 "\n"
 "## ការជួសជុលបញ្ហា\n"
 "\n"
-"- **បានជួសជុលរយៈពេលខុសនៅក្នុងការថត fMP4 (HLS)៖** ការថត MP4 "
-"ដែលបែងចែកជាបំណែកមិនមានរយៈពេលក្នុងបឋមកថា ហើយមានកាលពេលដាច់ខាតរបស់ស្ទ្រីម "
-"ដូច្នេះកម្មវិធីចាក់បង្ហាញប្រវែងមិនសមហេតុផល។ ក្រោយការថត ឯកសារឥឡូវត្រូវបានបំប្លែងឡើងវិញដោយប្រើ "
-"ffmpeg ទៅជា MP4 ស្តង់ដារ (ចម្លងស្ទ្រីម)។ នៅពេលគ្មាន ffmpeg "
-"ត្រាពេលវេលានៃបំណែកត្រូវបានកំណត់ឡើងវិញត្រឹមសូន្យជាវិធីបម្រុង។\n"
+"- **បានជួសជុលរយៈពេលខុសនៅក្នុងការថត fMP4 (HLS)៖** ការថត MP4 ដែលបែងចែកជាបំណែកមិនមានរយៈពេលក្នុងបឋមកថា "
+"ហើយមានកាលពេលដាច់ខាតរបស់ស្ទ្រីម ដូច្នេះកម្មវិធីចាក់បង្ហាញប្រវែងមិនសមហេតុផល។ ក្រោយការថត ឯកសារឥឡូវត្រូវបានបំប្លែងឡើងវិញដោយប្រើ ffmpeg "
+"ទៅជា MP4 ស្តង់ដារ (ចម្លងស្ទ្រីម)។ នៅពេលគ្មាន ffmpeg ត្រាពេលវេលានៃបំណែកត្រូវបានកំណត់ឡើងវិញត្រឹមសូន្យជាវិធីបម្រុង។\n"
 
-#~ msgid "Decrease podcast playback speed"
-#~ msgstr "បន្ថយល្បឿនចាក់ផតខាស់"
-
-#~ msgid "Start or stop instant recording"
-#~ msgstr "ចាប់ផ្តើម ឬបញ្ឈប់ដំណើរការថតភ្លាមៗ"
-
-#~ msgid ""
-#~ "\n"
-#~ "# freeAudio: What's New\n"
-#~ "\n"
-#~ "## FreeRadio is now freeAudio\n"
-#~ "\n"
-#~ "- Your settings, favourites, podcasts, jukebox library and recordings "
-#~ "location are carried over automatically on first start.\n"
-#~ "- Custom shortcuts assigned in Input Gestures must be set again.\n"
-#~ "- Uninstall the old FreeRadio add-on to avoid conflicts.\n"
-#~ "\n"
-#~ "## Added\n"
-#~ "\n"
-#~ "### Favourite groups (folders)\n"
-#~ "\n"
-#~ "- **M3U import:** reads the `group-title` attribute. If only the first "
-#~ "station in a folder carries the tag, as common exporters such as "
-#~ "DVBViewer write it, the group is carried forward to the stations that "
-#~ "follow.\n"
-#~ "- **M3U export:** writes `group-title` again, so a round trip through "
-#~ "freeAudio no longer drops the folder structure. JSON import and export "
-#~ "keep the same group field.\n"
-#~ "- **List display:** each favourite shows its folder as a trailing \"— "
-#~ "Group\" suffix. This is display only, and the station's name is never "
-#~ "changed.\n"
-#~ "- **Filter box:** now also matches the group and splits your text on "
-#~ "whitespace, so each word can match a different field. For example, "
-#~ "\"Houston Classical\" finds \"Houston Public Media Classical\", even "
-#~ "though that phrase never appears in one piece.\n"
-#~ "- **Assign to Group…** (new context-menu command): mark favourites with `."
-#~ "`, then type a group name to organise them by hand, or leave the name "
-#~ "empty to clear the group. It works for hand-made favourites too, not only "
-#~ "imported M3U ones.\n"
-#~ "- **Backward compatible:** favourites without a group default to an empty "
-#~ "group, and the list looks and behaves exactly as before until you import "
-#~ "a grouped playlist or use Assign to Group.\n"
-#~ "\n"
-#~ "### Mark a range of items\n"
-#~ "\n"
-#~ "Favourites, Liked Songs, Audio Books and Jukebox already let you mark "
-#~ "single rows with `.` for bulk removal. You can now mark whole ranges:\n"
-#~ "\n"
-#~ "- **Shift+End:** marks or unmarks from the focused row to the last row.\n"
-#~ "- **Shift+Home:** marks or unmarks from the focused row to the first "
-#~ "row.\n"
-#~ "\n"
-#~ "The focused row's current state decides the direction: if it is unmarked, "
-#~ "the whole range gets marked, and if it is marked, the whole range gets "
-#~ "unmarked. This mirrors how Shift+Home and Shift+End extend a selection in "
-#~ "a text field. Afterwards focus moves to the far end of the range and the "
-#~ "number of rows changed is announced. The placeholder rows in Liked Songs "
-#~ "(\"No liked songs yet.\", \"No results found.\") are never marked.\n"
-#~ "\n"
-#~ "### Timers\n"
-#~ "\n"
-#~ "- New **recurring** option for timers.\n"
-#~ "\n"
-#~ "### Windows Explorer integration\n"
-#~ "\n"
-#~ "A new `appModules/explorer.py`, active only in the file list of `explorer."
-#~ "exe`, not in the address bar, tree view, ribbon, search box or other "
-#~ "Explorer controls. It adds two commands, both unassigned by default:\n"
-#~ "\n"
-#~ "- **Play the focused file with freeAudio**\n"
-#~ "- **Add the focused file or folder to the freeAudio jukebox**\n"
-#~ "\n"
-#~ "Assign a key (for example `.` or `,`) in Input Gestures while focused in "
-#~ "Explorer. It is bound only there and still works as itself everywhere "
-#~ "else.\n"
-#~ "\n"
-#~ "## Fixed\n"
-#~ "\n"
-#~ "- **The freeAudio window sometimes failed to come to the foreground**, "
-#~ "requiring an NVDA restart. If you minimized the window instead of closing "
-#~ "it, it stayed in the taskbar and could not be brought back. Reopening it "
-#~ "now restores a minimized window before raising it.\n"
-#~ msgstr ""
-#~ "\n"
-#~ "# freeAudio: អ្វីដែលថ្មី\n"
-#~ "\n"
-#~ "## FreeRadio ឥឡូវនេះគឺ freeAudio\n"
-#~ "\n"
-#~ "- ការកំណត់ ចំណូលចិត្ត ផតខាស់ បណ្ណាល័យ jukebox "
-#~ "និងទីតាំងការថតរបស់អ្នកត្រូវបានផ្ទេរដោយស្វ័យប្រវត្តិនៅពេលចាប់ផ្តើមលើកដំបូង។\n"
-#~ "- ផ្លូវកាត់ផ្ទាល់ខ្លួនដែលបានកំណត់ក្នុង Input Gestures ត្រូវតែកំណត់ឡើងវិញ។\n"
-#~ "- សូមលុបកម្មវិធីបន្ថែម FreeRadio ចាស់ចេញ ដើម្បីជៀសវាងការប៉ះទង្គិច។\n"
-#~ "\n"
-#~ "## បន្ថែម\n"
-#~ "\n"
-#~ "### ក្រុមចំណូលចិត្ត (ថត)\n"
-#~ "\n"
-#~ "- **ការនាំចូល M3U:** អានគុណលក្ខណៈ `group-title`។ "
-#~ "ប្រសិនបើមានតែស្ថានីយ៍ទីមួយក្នុងថតដែលផ្ទុកស្លាក ដូចដែលឧបករណ៍នាំចេញទូទៅដូចជា DVBViewer សរសេរ "
-#~ "នោះក្រុមនឹងត្រូវបានផ្ទេរទៅស្ថានីយ៍បន្ទាប់ៗ។\n"
-#~ "- **ការនាំចេញ M3U:** សរសេរ `group-title` ឡើងវិញ ដូច្នេះការធ្វើដំណើរទៅមកតាម "
-#~ "freeAudio លែងបាត់បង់រចនាសម្ព័ន្ធថតទៀតហើយ។ ការនាំចូល និងនាំចេញ JSON "
-#~ "រក្សាវាលក្រុមដូចគ្នា។\n"
-#~ "- **ការបង្ហាញបញ្ជី:** ចំណូលចិត្តនីមួយៗបង្ហាញថតរបស់វាជាបច្ច័យ \"— ក្រុម\" នៅខាងចុង។ "
-#~ "នេះគ្រាន់តែជាការបង្ហាញប៉ុណ្ណោះ ហើយឈ្មោះស្ថានីយ៍មិនត្រូវបានផ្លាស់ប្តូរទេ។\n"
-#~ "- **ប្រអប់តម្រង:** ឥឡូវនេះក៏ត្រូវគ្នានឹងក្រុម និងបំបែកអត្ថបទរបស់អ្នកនៅលើចន្លោះ "
-#~ "ដូច្នេះពាក្យនីមួយៗអាចត្រូវគ្នានឹងវាលផ្សេងៗគ្នា។ ឧទាហរណ៍ \"Houston Classical\" រកឃើញ "
-#~ "\"Houston Public Media Classical\" ទោះបីជាឃ្លានោះមិនដែលបង្ហាញជាដុំតែមួយក៏ដោយ។\n"
-#~ "- **កំណត់ទៅក្រុម…** (ពាក្យបញ្ជាម៉ឺនុយបរិបទថ្មី): សម្គាល់ចំណូលចិត្តដោយ `.` "
-#~ "បន្ទាប់មកវាយឈ្មោះក្រុមដើម្បីរៀបចំពួកវាដោយដៃ ឬទុកឈ្មោះទទេដើម្បីសម្អាតក្រុម។ "
-#~ "វាដំណើរការសម្រាប់ចំណូលចិត្តដែលបង្កើតដោយដៃផងដែរ មិនត្រឹមតែសម្រាប់អ្វីដែលនាំចូលពី M3U "
-#~ "ប៉ុណ្ណោះទេ។\n"
-#~ "- **ត្រូវគ្នាថយក្រោយ:** ចំណូលចិត្តដែលគ្មានក្រុមនឹងមានក្រុមទទេជាលំនាំដើម ហើយបញ្ជីមើលទៅ "
-#~ "និងដំណើរការដូចមុនដដែល រហូតដល់អ្នកនាំចូលបញ្ជីចាក់ដែលបានដាក់ជាក្រុម ឬប្រើកំណត់ទៅក្រុម។\n"
-#~ "\n"
-#~ "### សម្គាល់ជួរធាតុ\n"
-#~ "\n"
-#~ "ចំណូលចិត្ត ចម្រៀងដែលចូលចិត្ត សៀវភៅជាសំឡេង និង Jukebox អនុញ្ញាតឱ្យអ្នកសម្គាល់ជួរនីមួយៗដោយ `.` "
-#~ "សម្រាប់ការលុបជាក្រុមរួចហើយ។ ឥឡូវនេះអ្នកអាចសម្គាល់ជួរទាំងមូល:\n"
-#~ "\n"
-#~ "- **Shift+End:** សម្គាល់ ឬដកការសម្គាល់ពីជួរដែលកំពុងផ្តោតទៅជួរចុងក្រោយ។\n"
-#~ "- **Shift+Home:** សម្គាល់ ឬដកការសម្គាល់ពីជួរដែលកំពុងផ្តោតទៅជួរដំបូង។\n"
-#~ "\n"
-#~ "ស្ថានភាពបច្ចុប្បន្នរបស់ជួរដែលកំពុងផ្តោតកំណត់ទិសដៅ: ប្រសិនបើវាមិនត្រូវបានសម្គាល់ "
-#~ "ជួរទាំងមូលនឹងត្រូវបានសម្គាល់ ហើយប្រសិនបើវាត្រូវបានសម្គាល់ ជួរទាំងមូលនឹងត្រូវបានដកការសម្គាល់។ "
-#~ "វាឆ្លុះបញ្ចាំងពីរបៀបដែល Shift+Home និង Shift+End ពង្រីកជម្រើសក្នុងវាលអត្ថបទ។ បន្ទាប់មក "
-#~ "ការផ្តោតនឹងផ្លាស់ទៅចុងឆ្ងាយនៃជួរ ហើយចំនួនជួរដែលបានផ្លាស់ប្តូរនឹងត្រូវបានប្រកាស។ "
-#~ "ជួរកន្លែងទំនេរក្នុងចម្រៀងដែលចូលចិត្ត (\"មិនទាន់មានបទចម្រៀងដែលចូលចិត្តនៅឡើយទេ។\", "
-#~ "\"រកមិនឃើញលទ្ធផល។\") មិនដែលត្រូវបានសម្គាល់ទេ។\n"
-#~ "\n"
-#~ "### កម្មវិធីកំណត់ម៉ោង\n"
-#~ "\n"
-#~ "- ជម្រើស **ការធ្វើឡើងវិញ** ថ្មីសម្រាប់កម្មវិធីកំណត់ម៉ោង។\n"
-#~ "\n"
-#~ "### ការរួមបញ្ចូលជាមួយ Windows Explorer\n"
-#~ "\n"
-#~ "ឯកសារ `appModules/explorer.py` ថ្មី ដំណើរការតែនៅក្នុងបញ្ជីឯកសាររបស់ `explorer."
-#~ "exe` មិនមែននៅក្នុងរបារអាសយដ្ឋាន ទិដ្ឋភាពដើមឈើ រីបប៊ូន ប្រអប់ស្វែងរក "
-#~ "ឬវត្ថុបញ្ជាផ្សេងទៀតរបស់ Explorer ទេ។ វាបន្ថែមពាក្យបញ្ជាពីរ "
-#~ "ដែលទាំងពីរមិនត្រូវបានចាត់តាំងតាមលំនាំដើម:\n"
-#~ "\n"
-#~ "- **ចាក់ឯកសារដែលកំពុងផ្តោតដោយ freeAudio**\n"
-#~ "- **បន្ថែមឯកសារ ឬថតដែលកំពុងផ្តោតទៅ jukebox របស់ freeAudio**\n"
-#~ "\n"
-#~ "ចាត់តាំងគ្រាប់ចុចមួយ (ឧទាហរណ៍ `.` ឬ `,`) នៅក្នុង Input Gestures ខណៈពេលផ្តោតក្នុង "
-#~ "Explorer។ វាត្រូវបានចងតែនៅទីនោះ ហើយនៅតែដំណើរការដូចខ្លួនឯងនៅគ្រប់ទីកន្លែងផ្សេងទៀត។\n"
-#~ "\n"
-#~ "## បានកែតម្រូវ\n"
-#~ "\n"
-#~ "- **ពេលខ្លះវិនដូ freeAudio បរាជ័យក្នុងការផ្លាស់មកផ្ទៃខាងមុខ** ដែលទាមទារការចាប់ផ្តើម "
-#~ "NVDA ឡើងវិញ។ ប្រសិនបើអ្នកបង្រួមវិនដូជំនួសឱ្យការបិទវា វានៅតែក្នុងរបារភារកិច្ច "
-#~ "ហើយមិនអាចនាំមកវិញបានទេ។ ឥឡូវនេះ "
-#~ "ការបើកវាឡើងវិញនឹងស្ដារវិនដូដែលបានបង្រួមមុនពេលលើកវាឡើង។\n"

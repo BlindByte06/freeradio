@@ -5,14 +5,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: freeAudio 2026.25.0\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@groups.io'\n"
-"POT-Creation-Date: 2026-10-12 05:32+0300\n"
-"PO-Revision-Date: 2026-10-06 05:10+0200\n"
+"POT-Creation-Date: 2026-10-13 04:58+0300\n"
+"PO-Revision-Date: 2026-10-13 05:19+0300\n"
 "Last-Translator: \n"
 "Language-Team: Czech\n"
+"Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: cs\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n>=2 && n<=4 ? 1 : 2);\n"
 "X-Generator: Poedit 3.9\n"
 "X-Poedit-Basepath: ../../../..\n"
@@ -26,6 +26,7 @@ msgid "Select the main freeAudio output device"
 msgstr "Vyberte hlavní výstupní zařízení freeAudia"
 
 #. Translators: Title of the warning about the old FreeRadio add-on still being installed.
+#. Translators: Title of messages shown by the clean-up dialog.
 #. Translators: Title of this settings category as it appears in NVDA's own Settings dialog category tree.
 #: addon\globalPlugins\freeAudio\audioDeviceMixin.py:31
 #: addon\globalPlugins\freeAudio\audioDeviceMixin.py:166
@@ -51,6 +52,9 @@ msgstr "Vyberte hlavní výstupní zařízení freeAudia"
 #: addon\globalPlugins\freeAudio\playbackCoreMixin.py:1001
 #: addon\globalPlugins\freeAudio\recordingMixin.py:239
 #: addon\globalPlugins\freeAudio\recordingMixin.py:355
+#: addon\globalPlugins\freeAudio\resetDialog.py:331
+#: addon\globalPlugins\freeAudio\resetDialog.py:344
+#: addon\globalPlugins\freeAudio\resetDialog.py:373
 #: addon\globalPlugins\freeAudio\settingsPanel.py:51
 #: addon\globalPlugins\freeAudio\timeshiftMixin.py:312
 #: addon\globalPlugins\freeAudio\timeshiftMixin.py:352
@@ -92,7 +96,7 @@ msgstr ""
 #: addon\globalPlugins\freeAudio\audioDeviceMixin.py:159
 #: addon\globalPlugins\freeAudio\obligatoMixin.py:95
 #: addon\globalPlugins\freeAudio\radioDialog.py:1710
-#: addon\globalPlugins\freeAudio\settingsPanel.py:655
+#: addon\globalPlugins\freeAudio\settingsPanel.py:660
 msgid "System default"
 msgstr "Výchozí"
 
@@ -195,16 +199,13 @@ msgstr "Snížit hlasitost freeAudia o 5"
 
 #. Translators: Name of an NVDA command; speeds up playback rate, podcasts/audiobooks/GETEM chapters only.
 #: addon\globalPlugins\freeAudio\audioFxMixin.py:61
-#, fuzzy
 msgid "Increase podcast, audio book and jukebox playback speed"
-msgstr "Zvýšit rychlost přehrávání podcastu"
+msgstr ""
 
 #. Translators: Name of an NVDA command; slows down playback rate, podcasts/audiobooks/GETEM chapters only.
 #: addon\globalPlugins\freeAudio\audioFxMixin.py:70
-#, fuzzy
 msgid "Decrease podcast, audio book and jukebox playback speed"
 msgstr ""
-"Snížit transpozici výšky tónu (podcasty, audioknihy a skladby v jukeboxu)"
 
 #. Translators: Spoken when the playback-rate command returns the rate to normal (1.0x).
 #: addon\globalPlugins\freeAudio\audioFxMixin.py:81
@@ -286,8 +287,8 @@ msgstr "EQ: Zesílení vokálů"
 #: addon\globalPlugins\freeAudio\radioDialog.py:1795
 #: addon\globalPlugins\freeAudio\radioDialog.py:1808
 #: addon\globalPlugins\freeAudio\radioDialog.py:1833
-#: addon\globalPlugins\freeAudio\settingsPanel.py:702
-#: addon\globalPlugins\freeAudio\settingsPanel.py:714
+#: addon\globalPlugins\freeAudio\settingsPanel.py:707
+#: addon\globalPlugins\freeAudio\settingsPanel.py:719
 #, python-format
 msgid "%(effect)s %(state)s"
 msgstr "%(effect)s %(state)s"
@@ -302,8 +303,8 @@ msgstr "%(effect)s %(state)s"
 #: addon\globalPlugins\freeAudio\radioDialog.py:1798
 #: addon\globalPlugins\freeAudio\radioDialog.py:1810
 #: addon\globalPlugins\freeAudio\radioDialog.py:1835
-#: addon\globalPlugins\freeAudio\settingsPanel.py:704
-#: addon\globalPlugins\freeAudio\settingsPanel.py:716
+#: addon\globalPlugins\freeAudio\settingsPanel.py:709
+#: addon\globalPlugins\freeAudio\settingsPanel.py:721
 #: addon\globalPlugins\freeAudio\timeshiftMixin.py:413
 msgid "enabled"
 msgstr "zapnuto"
@@ -314,8 +315,8 @@ msgstr "zapnuto"
 #: addon\globalPlugins\freeAudio\radioDialog.py:1798
 #: addon\globalPlugins\freeAudio\radioDialog.py:1810
 #: addon\globalPlugins\freeAudio\radioDialog.py:1835
-#: addon\globalPlugins\freeAudio\settingsPanel.py:704
-#: addon\globalPlugins\freeAudio\settingsPanel.py:716
+#: addon\globalPlugins\freeAudio\settingsPanel.py:709
+#: addon\globalPlugins\freeAudio\settingsPanel.py:721
 #: addon\globalPlugins\freeAudio\timeshiftMixin.py:413
 msgid "disabled"
 msgstr "vypnuto"
@@ -705,9 +706,9 @@ msgid ""
 "and place ffmpeg.exe in the freeAudio addon folder, or set the path in "
 "settings."
 msgstr ""
-"Soubor ffmpeg.exe nebyl nalezen. Stáhněte si ffmpeg z adresy https://ffmpeg."
-"org/download.html a umístěte jej do složky doplňku freeAudio, případně "
-"zvolte cestu k souboru v nastavení."
+"Soubor ffmpeg.exe nebyl nalezen. Stáhněte si ffmpeg z adresy https://"
+"ffmpeg.org/download.html a umístěte jej do složky doplňku freeAudio, "
+"případně zvolte cestu k souboru v nastavení."
 
 #. Translators: Title of the Obligato mode setup dialog.
 #: addon\globalPlugins\freeAudio\obligatoMixin.py:55
@@ -1050,7 +1051,7 @@ msgstr "Procházet..."
 #. Translators: Title of the folder-picker dialog used by the Browse button next to a custom recordings-folder path.
 #. Translators: Title of the folder-picker dialog for choosing the recordings folder.
 #: addon\globalPlugins\freeAudio\radioDialog.py:297
-#: addon\globalPlugins\freeAudio\settingsPanel.py:792
+#: addon\globalPlugins\freeAudio\settingsPanel.py:797
 msgid "Select recordings folder"
 msgstr "Vyberte složku pro ukládání nahrávek"
 
@@ -2111,8 +2112,8 @@ msgid ""
 "Supported files (*.json;*.m3u)|*.json;*.m3u|JSON favourites (*.json)|*.json|"
 "M3U playlist (*.m3u)|*.m3u"
 msgstr ""
-"Podporované soubory (*.json;*.m3u)|*.json;*.m3u|Oblíbené JSON (*.json)|*."
-"json|Playlist M3U (*.m3u)|*.m3u"
+"Podporované soubory (*.json;*.m3u)|*.json;*.m3u|Oblíbené JSON (*.json)|"
+"*.json|Playlist M3U (*.m3u)|*.m3u"
 
 #. Translators: Title of the file-picker dialog for importing favourites.
 #. Translators: Title of the merge-vs-replace confirmation dialog (same title as the file-picker above).
@@ -2645,11 +2646,11 @@ msgstr[2] ""
 
 #: addon\globalPlugins\freeAudio\radioDialog.py:5183
 msgid ""
-"Supported files (*.json;*.m3u)|*.json;*.m3u|JSON jukebox library (*.json)|*."
-"json|M3U playlist (*.m3u)|*.m3u"
+"Supported files (*.json;*.m3u)|*.json;*.m3u|JSON jukebox library (*.json)|"
+"*.json|M3U playlist (*.m3u)|*.m3u"
 msgstr ""
-"Podporované soubory (*.json;*.m3u)|*.json;*.m3u|Knihovna jukeboxu JSON (*."
-"json)|*.json|Playlist M3U (*.m3u)|*.m3u"
+"Podporované soubory (*.json;*.m3u)|*.json;*.m3u|Knihovna jukeboxu JSON "
+"(*.json)|*.json|Playlist M3U (*.m3u)|*.m3u"
 
 #. Translators: Title of the file-picker dialog for importing a jukebox library.
 #. Translators: Title of the merge-vs-replace confirmation dialog (same title as the file-picker above).
@@ -2950,7 +2951,9 @@ msgid "Subscriptions:"
 msgstr "Odběry:"
 
 #. Translators: Accessible name for the podcast-subscriptions list.
+#. Translators: Check box in the clean-up dialog; deletes the podcast subscriptions.
 #: addon\globalPlugins\freeAudio\radioDialog.py:6032
+#: addon\globalPlugins\freeAudio\resetDialog.py:91
 msgid "Podcast subscriptions"
 msgstr "Odběry podcastů"
 
@@ -3482,8 +3485,8 @@ msgstr "Stahování knihy: %s"
 msgid ""
 "Downloaded %(saved)d of %(total)d parts of %(title)s. Last error: %(error)s"
 msgstr ""
-"Staženo %(saved)d z %(total)d částí knihy %(title)s. Poslední chyba: %(error)"
-"s"
+"Staženo %(saved)d z %(total)d částí knihy %(title)s. Poslední chyba: "
+"%(error)s"
 
 #. Translators: Label for the jukebox device-search field.
 #: addon\globalPlugins\freeAudio\radioDialog.py:8374
@@ -3834,9 +3837,9 @@ msgstr "Nahrávání skladby zastaveno"
 
 #. Translators: Spoken when a recording of every song (triple-press Ctrl+Win+E) is stopped; %d is how many songs were saved.
 #: addon\globalPlugins\freeAudio\recordingMixin.py:125
-#, fuzzy, python-format
+#, python-format
 msgid "Song recording stopped. Songs saved: %d"
-msgstr "Nahrávání skladby zastaveno: %s"
+msgstr ""
 
 #. Translators: Spoken when double-pressing Ctrl+Win+E (song-capture) on a podcast/audiobook episode, which can't be recorded this way; points to the Ctrl+Win+V download command instead.
 #. Translators: Same message as the song-capture path above, spoken here when single-pressing Ctrl+Win+E on a podcast/audiobook episode.
@@ -3930,6 +3933,127 @@ msgstr "Otevřít složku pro ukládání nahrávek"
 #, python-format
 msgid "Could not open recordings folder: %s"
 msgstr "Nepodařilo se otevřít složku s nahrávkami: %s"
+
+#. Translators: Check box in the clean-up dialog; resets freeAudio's settings to their defaults.
+#: addon\globalPlugins\freeAudio\resetDialog.py:73
+msgid ""
+"Settings (reset to defaults; the recordings folder and the liked songs "
+"option are kept)"
+msgstr ""
+
+#. Translators: Check box in the clean-up dialog; deletes the favourite stations list.
+#: addon\globalPlugins\freeAudio\resetDialog.py:79
+msgid "Favorite stations"
+msgstr ""
+
+#. Translators: Check box in the clean-up dialog; deletes the downloaded station list cache.
+#: addon\globalPlugins\freeAudio\resetDialog.py:85
+msgid "Station list cache (downloaded again when needed)"
+msgstr ""
+
+#. Translators: Check box in the clean-up dialog; deletes the audio book libraries of all sources.
+#: addon\globalPlugins\freeAudio\resetDialog.py:97
+msgid "Audio book libraries (GETEM, LibriVox, Project Gutenberg)"
+msgstr ""
+
+#. Translators: Check box in the clean-up dialog; deletes the saved GETEM user name and password.
+#: addon\globalPlugins\freeAudio\resetDialog.py:107
+msgid "Saved GETEM login"
+msgstr ""
+
+#. Translators: Check box in the clean-up dialog; empties the Jukebox list (the music files themselves are not touched).
+#: addon\globalPlugins\freeAudio\resetDialog.py:113
+msgid "Jukebox list (your music files are not deleted)"
+msgstr ""
+
+#. Translators: Check box in the clean-up dialog; deletes saved resume positions.
+#: addon\globalPlugins\freeAudio\resetDialog.py:119
+msgid "Saved resume positions (podcasts, audio books, Jukebox folders)"
+msgstr ""
+
+#. Translators: Check box in the clean-up dialog; deletes sleep timers and alarms.
+#: addon\globalPlugins\freeAudio\resetDialog.py:128
+msgid "Sleep timers and alarms"
+msgstr ""
+
+#. Translators: Check box in the clean-up dialog; deletes the scheduled recording plans (not the recordings).
+#: addon\globalPlugins\freeAudio\resetDialog.py:134
+msgid "Scheduled recording plans (recordings themselves are not deleted)"
+msgstr ""
+
+#. Translators: Title of the clean-up dialog opened from freeAudio's settings.
+#: addon\globalPlugins\freeAudio\resetDialog.py:255
+msgid "Reset settings / delete saved data"
+msgstr ""
+
+#. Translators: Added after a clean-up item's name when there is nothing saved for it.
+#: addon\globalPlugins\freeAudio\resetDialog.py:272
+msgid "nothing saved"
+msgstr ""
+
+#. Translators: Label of the check list in the clean-up dialog.
+#: addon\globalPlugins\freeAudio\resetDialog.py:277
+msgid "Select what to reset or delete (nothing is selected by default):"
+msgstr ""
+
+#. Translators: Note in the clean-up dialog.
+#: addon\globalPlugins\freeAudio\resetDialog.py:284
+msgid "Recordings and liked songs are never touched by this."
+msgstr ""
+
+#. Translators: Button in the clean-up dialog; checks every item.
+#: addon\globalPlugins\freeAudio\resetDialog.py:289
+msgid "Select &all"
+msgstr ""
+
+#. Translators: Button in the clean-up dialog; resets/deletes the checked items.
+#: addon\globalPlugins\freeAudio\resetDialog.py:292
+msgid "&Reset / delete selected"
+msgstr ""
+
+#. Translators: Button in the clean-up dialog; closes it without doing anything.
+#. Translators: 'Cancel' button label on the update-available dialog, paired with whichever install/open-page label is used as the other button.
+#: addon\globalPlugins\freeAudio\resetDialog.py:296
+#: addon\globalPlugins\freeAudio\__init__.py:1461
+msgid "&Cancel"
+msgstr "&Storno"
+
+#. Translators: Shown in the clean-up dialog when the reset/delete button is pressed with nothing checked.
+#: addon\globalPlugins\freeAudio\resetDialog.py:329
+msgid "Nothing is selected."
+msgstr ""
+
+#. Translators: Confirmation in the clean-up dialog. {items} is the list of checked items, one per line.
+#: addon\globalPlugins\freeAudio\resetDialog.py:341
+msgid ""
+"The following will be reset or deleted. This cannot be undone.\n"
+"\n"
+"{items}\n"
+"\n"
+"Continue?"
+msgstr ""
+
+#. Translators: Shown after the clean-up when some items could not be removed. {items} is the list, one per line.
+#: addon\globalPlugins\freeAudio\resetDialog.py:358
+msgid ""
+"Done, except for the following, which could not be removed (a file may be in "
+"use):\n"
+"\n"
+"{items}"
+msgstr ""
+
+#. Translators: Shown after the clean-up finished without problems.
+#: addon\globalPlugins\freeAudio\resetDialog.py:365
+msgid "Done."
+msgstr ""
+
+#. Translators: Added to the clean-up result when settings were reset.
+#: addon\globalPlugins\freeAudio\resetDialog.py:370
+msgid ""
+"Settings were reset. Changes made on the freeAudio settings page before this "
+"will not be saved. Restarting NVDA is recommended so every setting takes "
+"effect."
+msgstr ""
 
 #. Translators: Checkbox label for the time-shift/rewind feature setting.
 #: addon\globalPlugins\freeAudio\settingsPanel.py:89
@@ -4173,7 +4297,7 @@ msgstr "Složka pro ukládání nahrávek:"
 #. Translators: Grey hint under the recordings-folder field explaining what happens if it's left empty.
 #: addon\globalPlugins\freeAudio\settingsPanel.py:446
 msgid "(empty = default: Documents\\freeAudio Recordings)"
-msgstr "(prázdné = výchozí umístění: Dokumenty\\freeAudio Recordings)"
+msgstr ""
 
 #. Translators: Button label; opens a folder-picker to choose the recordings folder.
 #: addon\globalPlugins\freeAudio\settingsPanel.py:450
@@ -4264,17 +4388,22 @@ msgstr "&Automaticky kontrolovat aktualizace při spuštění"
 #. Translators: Button label; triggers an immediate manual update check.
 #. Translators: Restores the button's normal label once the manual update check finishes.
 #: addon\globalPlugins\freeAudio\settingsPanel.py:626
-#: addon\globalPlugins\freeAudio\settingsPanel.py:782
+#: addon\globalPlugins\freeAudio\settingsPanel.py:787
 msgid "Check for Updates &Now"
 msgstr "Zkontrolovat dostupnost aktualizací"
 
+#. Translators: Button label; opens a dialog to reset freeAudio's settings and delete the data it has saved.
+#: addon\globalPlugins\freeAudio\settingsPanel.py:631
+msgid "&Clean up: reset settings and delete saved data..."
+msgstr ""
+
 #. Translators: Title of the file-picker dialog for choosing ffmpeg.exe.
-#: addon\globalPlugins\freeAudio\settingsPanel.py:758
+#: addon\globalPlugins\freeAudio\settingsPanel.py:763
 msgid "Select ffmpeg.exe"
 msgstr "Vyberte ffmpeg.exe"
 
 #. Translators: Temporary label on the Check for Updates Now button while the check is in progress.
-#: addon\globalPlugins\freeAudio\settingsPanel.py:769
+#: addon\globalPlugins\freeAudio\settingsPanel.py:774
 msgid "Checking..."
 msgstr "Kontroluji..."
 
@@ -4943,11 +5072,6 @@ msgstr "&Otevřít stránku"
 msgid "freeAudio Update Available"
 msgstr "k dispozici je aktualizace freeAudia"
 
-#. Translators: 'Cancel' button label on the update-available dialog, paired with whichever install/open-page label is used as the other button.
-#: addon\globalPlugins\freeAudio\__init__.py:1461
-msgid "&Cancel"
-msgstr "&Storno"
-
 #. Translators: Spoken while the new version is being downloaded for direct install; %s is the version number being downloaded.
 #: addon\globalPlugins\freeAudio\__init__.py:1477
 #, python-format
@@ -5147,166 +5271,3 @@ msgstr ""
 "do standardního formátu MP4. Pokud není ffmpeg k dispozici, použije se "
 "záložní řešení, kdy se časová razítka fragmentů resetují od nuly.\n"
 
-#~ msgid "Decrease podcast playback speed"
-#~ msgstr "Snížit rychlost přehrávání podcastu"
-
-#~ msgid "Start or stop instant recording"
-#~ msgstr "Spustit nebo zastavit okamžité nahrávání"
-
-#~ msgid ""
-#~ "\n"
-#~ "# freeAudio: What's New\n"
-#~ "\n"
-#~ "## FreeRadio is now freeAudio\n"
-#~ "\n"
-#~ "- Your settings, favourites, podcasts, jukebox library and recordings "
-#~ "location are carried over automatically on first start.\n"
-#~ "- Custom shortcuts assigned in Input Gestures must be set again.\n"
-#~ "- Uninstall the old FreeRadio add-on to avoid conflicts.\n"
-#~ "\n"
-#~ "## Added\n"
-#~ "\n"
-#~ "### Favourite groups (folders)\n"
-#~ "\n"
-#~ "- **M3U import:** reads the `group-title` attribute. If only the first "
-#~ "station in a folder carries the tag, as common exporters such as "
-#~ "DVBViewer write it, the group is carried forward to the stations that "
-#~ "follow.\n"
-#~ "- **M3U export:** writes `group-title` again, so a round trip through "
-#~ "freeAudio no longer drops the folder structure. JSON import and export "
-#~ "keep the same group field.\n"
-#~ "- **List display:** each favourite shows its folder as a trailing \"— "
-#~ "Group\" suffix. This is display only, and the station's name is never "
-#~ "changed.\n"
-#~ "- **Filter box:** now also matches the group and splits your text on "
-#~ "whitespace, so each word can match a different field. For example, "
-#~ "\"Houston Classical\" finds \"Houston Public Media Classical\", even "
-#~ "though that phrase never appears in one piece.\n"
-#~ "- **Assign to Group…** (new context-menu command): mark favourites with `."
-#~ "`, then type a group name to organise them by hand, or leave the name "
-#~ "empty to clear the group. It works for hand-made favourites too, not only "
-#~ "imported M3U ones.\n"
-#~ "- **Backward compatible:** favourites without a group default to an empty "
-#~ "group, and the list looks and behaves exactly as before until you import "
-#~ "a grouped playlist or use Assign to Group.\n"
-#~ "\n"
-#~ "### Mark a range of items\n"
-#~ "\n"
-#~ "Favourites, Liked Songs, Audio Books and Jukebox already let you mark "
-#~ "single rows with `.` for bulk removal. You can now mark whole ranges:\n"
-#~ "\n"
-#~ "- **Shift+End:** marks or unmarks from the focused row to the last row.\n"
-#~ "- **Shift+Home:** marks or unmarks from the focused row to the first "
-#~ "row.\n"
-#~ "\n"
-#~ "The focused row's current state decides the direction: if it is unmarked, "
-#~ "the whole range gets marked, and if it is marked, the whole range gets "
-#~ "unmarked. This mirrors how Shift+Home and Shift+End extend a selection in "
-#~ "a text field. Afterwards focus moves to the far end of the range and the "
-#~ "number of rows changed is announced. The placeholder rows in Liked Songs "
-#~ "(\"No liked songs yet.\", \"No results found.\") are never marked.\n"
-#~ "\n"
-#~ "### Timers\n"
-#~ "\n"
-#~ "- New **recurring** option for timers.\n"
-#~ "\n"
-#~ "### Windows Explorer integration\n"
-#~ "\n"
-#~ "A new `appModules/explorer.py`, active only in the file list of `explorer."
-#~ "exe`, not in the address bar, tree view, ribbon, search box or other "
-#~ "Explorer controls. It adds two commands, both unassigned by default:\n"
-#~ "\n"
-#~ "- **Play the focused file with freeAudio**\n"
-#~ "- **Add the focused file or folder to the freeAudio jukebox**\n"
-#~ "\n"
-#~ "Assign a key (for example `.` or `,`) in Input Gestures while focused in "
-#~ "Explorer. It is bound only there and still works as itself everywhere "
-#~ "else.\n"
-#~ "\n"
-#~ "## Fixed\n"
-#~ "\n"
-#~ "- **The freeAudio window sometimes failed to come to the foreground**, "
-#~ "requiring an NVDA restart. If you minimized the window instead of closing "
-#~ "it, it stayed in the taskbar and could not be brought back. Reopening it "
-#~ "now restores a minimized window before raising it.\n"
-#~ msgstr ""
-#~ "\n"
-#~ "# freeAudio: Co je nového\n"
-#~ "\n"
-#~ "## FreeRadio je nyní freeAudio\n"
-#~ "\n"
-#~ "- Vaše nastavení, oblíbené položky, podcasty, knihovna jukeboxu a "
-#~ "umístění nahrávek se při prvním spuštění přenesou automaticky.\n"
-#~ "- Vlastní klávesové zkratky přiřazené ve Vstupních gestech je nutné "
-#~ "nastavit znovu.\n"
-#~ "- Odinstalujte starý doplněk FreeRadio, abyste předešli konfliktům "
-#~ "klávesových zkratek či nestandartnímu chování doplňku.\n"
-#~ "\n"
-#~ "## Přidáno\n"
-#~ "\n"
-#~ "### Skupiny oblíbených (složky)\n"
-#~ "\n"
-#~ "- **Import M3U:** čte atribut `group-title`. Pokud značku nese pouze "
-#~ "první stanice ve složce, jak to běžně zapisují exportéry jako DVBViewer, "
-#~ "skupina se přenese na následující stanice.\n"
-#~ "- **Export M3U:** znovu zapisuje `group-title`, takže obousměrný přenos "
-#~ "přes freeAudio již neztrácí strukturu složek. Import a export JSON "
-#~ "zachovává stejné pole skupiny.\n"
-#~ "- **Zobrazení seznamu:** každá oblíbená položka zobrazuje svou složku "
-#~ "jako koncovou příponu \"— Skupina\". Jde pouze o zobrazení, název stanice "
-#~ "se nikdy nemění.\n"
-#~ "- **Pole filtru:** nyní odpovídá také skupině a rozděluje text na mezery, "
-#~ "takže každé slovo může odpovídat jinému poli. Například \"Houston "
-#~ "Classical\" najde \"Houston Public Media Classical\", i když se tato "
-#~ "fráze nikdy nevyskytuje vcelku.\n"
-#~ "- **Přiřadit do skupiny…** (nový příkaz kontextové nabídky): označte "
-#~ "oblíbené položky pomocí `.` a poté zadejte název skupiny pro ruční "
-#~ "uspořádání, nebo ponechte název prázdný pro vymazání skupiny. Funguje i "
-#~ "pro ručně vytvořené oblíbené položky, nejen pro importované z M3U.\n"
-#~ "- **Zpětně kompatibilní:** oblíbené položky bez skupiny mají výchozí "
-#~ "prázdnou skupinu a seznam vypadá a chová se přesně jako dříve, dokud "
-#~ "neimportujete seskupený playlist nebo nepoužijete Přiřadit do skupiny.\n"
-#~ "\n"
-#~ "### Označení rozsahu položek\n"
-#~ "\n"
-#~ "Oblíbené, Oblíbené skladby, Audioknihy a Jukebox již umožňují označit "
-#~ "jednotlivé řádky pomocí `.` pro hromadné odstranění. Nyní můžete označit "
-#~ "celé rozsahy:\n"
-#~ "\n"
-#~ "- **Shift+End:** označí nebo odznačí od zaměřeného řádku po poslední "
-#~ "řádek.\n"
-#~ "- **Shift+Home:** označí nebo odznačí od zaměřeného řádku po první "
-#~ "řádek.\n"
-#~ "\n"
-#~ "Aktuální stav zaměřeného řádku určuje směr: pokud je neoznačen, označí se "
-#~ "celý rozsah, a pokud je označen, odznačí se celý rozsah. To odpovídá "
-#~ "tomu, jak Shift+Home a Shift+End rozšiřují výběr v textovém poli. Poté se "
-#~ "fokus přesune na vzdálený konec rozsahu a oznámí se počet změněných "
-#~ "řádků. Zástupné řádky v Oblíbených skladbách (\"Zatím žádné oblíbené "
-#~ "skladby.\", \"Nebyly nalezeny žádné výsledky.\") se nikdy neoznačují.\n"
-#~ "\n"
-#~ "### Časovače\n"
-#~ "\n"
-#~ "- Nová možnost **opakování** pro časovače.\n"
-#~ "\n"
-#~ "### Integrace s Průzkumníkem Windows\n"
-#~ "\n"
-#~ "Nový soubor `appModules/explorer.py`, aktivní pouze v seznamu souborů "
-#~ "`explorer.exe`, nikoli v adresním řádku, stromovém zobrazení, pásu karet, "
-#~ "vyhledávacím poli ani jiných ovládacích prvcích Průzkumníka. Přidává dva "
-#~ "příkazy, oba ve výchozím stavu nepřiřazené:\n"
-#~ "\n"
-#~ "- **Přehrát zaměřený soubor pomocí freeAudio**\n"
-#~ "- **Přidat zaměřený soubor nebo složku do jukeboxu freeAudio**\n"
-#~ "\n"
-#~ "Přiřaďte klávesu (například `.` nebo `,`) ve Vstupních gestech, když jste "
-#~ "zaměřeni v Průzkumníkovi. Je vázána pouze tam a všude jinde stále funguje "
-#~ "jako sama sebe.\n"
-#~ "\n"
-#~ "## Opraveno\n"
-#~ "\n"
-#~ "- * Okno freeAudio se někdy nepodařilo zobrazit v popředí, takže bylo "
-#~ "nutné restartovat NVDA. Pokud jste okno místo zavření minimalizovali, "
-#~ "zůstalo na hlavním panelu a nebylo možné jej znovu zobrazit. Nyní jeho "
-#~ "opětovné otevření nejprve obnoví minimalizované okno a poté jej přesune "
-#~ "do popředí.\n"

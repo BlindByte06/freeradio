@@ -5,8 +5,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: freeAudio 2026.25.0\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@groups.io'\n"
-"POT-Creation-Date: 2026-10-12 05:32+0300\n"
-"PO-Revision-Date: 2026-10-12 05:35+0300\n"
+"POT-Creation-Date: 2026-10-13 04:58+0300\n"
+"PO-Revision-Date: 2026-10-13 05:15+0300\n"
 "Last-Translator: \n"
 "Language-Team: tr\n"
 "Language: tr\n"
@@ -25,6 +25,7 @@ msgid "Select the main freeAudio output device"
 msgstr "Ana freeAudio çıkış cihazını seçin"
 
 #. Translators: Title of the warning about the old FreeRadio add-on still being installed.
+#. Translators: Title of messages shown by the clean-up dialog.
 #. Translators: Title of this settings category as it appears in NVDA's own Settings dialog category tree.
 #: addon\globalPlugins\freeAudio\audioDeviceMixin.py:31
 #: addon\globalPlugins\freeAudio\audioDeviceMixin.py:166
@@ -50,6 +51,9 @@ msgstr "Ana freeAudio çıkış cihazını seçin"
 #: addon\globalPlugins\freeAudio\playbackCoreMixin.py:1001
 #: addon\globalPlugins\freeAudio\recordingMixin.py:239
 #: addon\globalPlugins\freeAudio\recordingMixin.py:355
+#: addon\globalPlugins\freeAudio\resetDialog.py:331
+#: addon\globalPlugins\freeAudio\resetDialog.py:344
+#: addon\globalPlugins\freeAudio\resetDialog.py:373
 #: addon\globalPlugins\freeAudio\settingsPanel.py:51
 #: addon\globalPlugins\freeAudio\timeshiftMixin.py:312
 #: addon\globalPlugins\freeAudio\timeshiftMixin.py:352
@@ -91,7 +95,7 @@ msgstr ""
 #: addon\globalPlugins\freeAudio\audioDeviceMixin.py:159
 #: addon\globalPlugins\freeAudio\obligatoMixin.py:95
 #: addon\globalPlugins\freeAudio\radioDialog.py:1710
-#: addon\globalPlugins\freeAudio\settingsPanel.py:655
+#: addon\globalPlugins\freeAudio\settingsPanel.py:660
 msgid "System default"
 msgstr "Sistem varsayılanı"
 
@@ -281,8 +285,8 @@ msgstr "EQ: Vokal Güçlendirme"
 #: addon\globalPlugins\freeAudio\radioDialog.py:1795
 #: addon\globalPlugins\freeAudio\radioDialog.py:1808
 #: addon\globalPlugins\freeAudio\radioDialog.py:1833
-#: addon\globalPlugins\freeAudio\settingsPanel.py:702
-#: addon\globalPlugins\freeAudio\settingsPanel.py:714
+#: addon\globalPlugins\freeAudio\settingsPanel.py:707
+#: addon\globalPlugins\freeAudio\settingsPanel.py:719
 #, python-format
 msgid "%(effect)s %(state)s"
 msgstr "%(effect)s %(state)s"
@@ -297,8 +301,8 @@ msgstr "%(effect)s %(state)s"
 #: addon\globalPlugins\freeAudio\radioDialog.py:1798
 #: addon\globalPlugins\freeAudio\radioDialog.py:1810
 #: addon\globalPlugins\freeAudio\radioDialog.py:1835
-#: addon\globalPlugins\freeAudio\settingsPanel.py:704
-#: addon\globalPlugins\freeAudio\settingsPanel.py:716
+#: addon\globalPlugins\freeAudio\settingsPanel.py:709
+#: addon\globalPlugins\freeAudio\settingsPanel.py:721
 #: addon\globalPlugins\freeAudio\timeshiftMixin.py:413
 msgid "enabled"
 msgstr "açık"
@@ -309,8 +313,8 @@ msgstr "açık"
 #: addon\globalPlugins\freeAudio\radioDialog.py:1798
 #: addon\globalPlugins\freeAudio\radioDialog.py:1810
 #: addon\globalPlugins\freeAudio\radioDialog.py:1835
-#: addon\globalPlugins\freeAudio\settingsPanel.py:704
-#: addon\globalPlugins\freeAudio\settingsPanel.py:716
+#: addon\globalPlugins\freeAudio\settingsPanel.py:709
+#: addon\globalPlugins\freeAudio\settingsPanel.py:721
 #: addon\globalPlugins\freeAudio\timeshiftMixin.py:413
 msgid "disabled"
 msgstr "kapalı"
@@ -1048,7 +1052,7 @@ msgstr "Gö&zat..."
 #. Translators: Title of the folder-picker dialog used by the Browse button next to a custom recordings-folder path.
 #. Translators: Title of the folder-picker dialog for choosing the recordings folder.
 #: addon\globalPlugins\freeAudio\radioDialog.py:297
-#: addon\globalPlugins\freeAudio\settingsPanel.py:792
+#: addon\globalPlugins\freeAudio\settingsPanel.py:797
 msgid "Select recordings folder"
 msgstr "Kayıtların tutulacağı klasörü seç"
 
@@ -2918,7 +2922,9 @@ msgid "Subscriptions:"
 msgstr "Abonelikler:"
 
 #. Translators: Accessible name for the podcast-subscriptions list.
+#. Translators: Check box in the clean-up dialog; deletes the podcast subscriptions.
 #: addon\globalPlugins\freeAudio\radioDialog.py:6032
+#: addon\globalPlugins\freeAudio\resetDialog.py:91
 msgid "Podcast subscriptions"
 msgstr "Podcast abonelikleri"
 
@@ -3896,6 +3902,144 @@ msgstr "FreeAudio kayıt klasörünü aç"
 msgid "Could not open recordings folder: %s"
 msgstr "Kayıt klasörü açılamıyor: %s"
 
+#. Translators: Check box in the clean-up dialog; resets freeAudio's settings to their defaults.
+#: addon\globalPlugins\freeAudio\resetDialog.py:73
+msgid ""
+"Settings (reset to defaults; the recordings folder and the liked songs "
+"option are kept)"
+msgstr ""
+"Ayarlar (varsayılanlara sıfırla; kayıtlar klasörü ve beğenilen şarkılar "
+"seçeneği korunur)"
+
+#. Translators: Check box in the clean-up dialog; deletes the favourite stations list.
+#: addon\globalPlugins\freeAudio\resetDialog.py:79
+msgid "Favorite stations"
+msgstr "Favori istasyonlar"
+
+#. Translators: Check box in the clean-up dialog; deletes the downloaded station list cache.
+#: addon\globalPlugins\freeAudio\resetDialog.py:85
+msgid "Station list cache (downloaded again when needed)"
+msgstr "İstasyon listesi önbelleği (gerektiğinde yeniden indirilir)"
+
+#. Translators: Check box in the clean-up dialog; deletes the audio book libraries of all sources.
+#: addon\globalPlugins\freeAudio\resetDialog.py:97
+msgid "Audio book libraries (GETEM, LibriVox, Project Gutenberg)"
+msgstr "Sesli kitap kütüphanesi (GETEM, LibriVox, Project Gutenberg)"
+
+#. Translators: Check box in the clean-up dialog; deletes the saved GETEM user name and password.
+#: addon\globalPlugins\freeAudio\resetDialog.py:107
+msgid "Saved GETEM login"
+msgstr "Kayıtlı GETEM giriş bilgileri"
+
+#. Translators: Check box in the clean-up dialog; empties the Jukebox list (the music files themselves are not touched).
+#: addon\globalPlugins\freeAudio\resetDialog.py:113
+msgid "Jukebox list (your music files are not deleted)"
+msgstr "Müzik kkutusu listesi (müzik dosyalarınız silinmez)"
+
+#. Translators: Check box in the clean-up dialog; deletes saved resume positions.
+#: addon\globalPlugins\freeAudio\resetDialog.py:119
+msgid "Saved resume positions (podcasts, audio books, Jukebox folders)"
+msgstr ""
+"Kaydedilen devam pozisyonları (podcast’ler, sesli kitaplar, müzik kutusu "
+"klasörleri)"
+
+#. Translators: Check box in the clean-up dialog; deletes sleep timers and alarms.
+#: addon\globalPlugins\freeAudio\resetDialog.py:128
+msgid "Sleep timers and alarms"
+msgstr "Uyku zamanlayıcıları ve alarmlar"
+
+#. Translators: Check box in the clean-up dialog; deletes the scheduled recording plans (not the recordings).
+#: addon\globalPlugins\freeAudio\resetDialog.py:134
+msgid "Scheduled recording plans (recordings themselves are not deleted)"
+msgstr "Planlanmış kayıtlar (kaydedilmiş dosyalar silinmez)"
+
+#. Translators: Title of the clean-up dialog opened from freeAudio's settings.
+#: addon\globalPlugins\freeAudio\resetDialog.py:255
+msgid "Reset settings / delete saved data"
+msgstr "Ayarları sıfırla / kaydedilen verileri sil"
+
+#. Translators: Added after a clean-up item's name when there is nothing saved for it.
+#: addon\globalPlugins\freeAudio\resetDialog.py:272
+msgid "nothing saved"
+msgstr "Hiçbir şey kaydedilmedi"
+
+#. Translators: Label of the check list in the clean-up dialog.
+#: addon\globalPlugins\freeAudio\resetDialog.py:277
+msgid "Select what to reset or delete (nothing is selected by default):"
+msgstr ""
+"Sıfırlamak veya silmek istediğiniz öğeyi seçin (varsayılan olarak hiçbir şey "
+"seçili değildir):"
+
+#. Translators: Note in the clean-up dialog.
+#: addon\globalPlugins\freeAudio\resetDialog.py:284
+msgid "Recordings and liked songs are never touched by this."
+msgstr "Kayıtlar ve beğenilen şarkılar bundan asla etkilenmez."
+
+#. Translators: Button in the clean-up dialog; checks every item.
+#: addon\globalPlugins\freeAudio\resetDialog.py:289
+msgid "Select &all"
+msgstr "&Tümünü seç"
+
+#. Translators: Button in the clean-up dialog; resets/deletes the checked items.
+#: addon\globalPlugins\freeAudio\resetDialog.py:292
+msgid "&Reset / delete selected"
+msgstr "&Seçilenleri sıfırla/sil"
+
+#. Translators: Button in the clean-up dialog; closes it without doing anything.
+#. Translators: 'Cancel' button label on the update-available dialog, paired with whichever install/open-page label is used as the other button.
+#: addon\globalPlugins\freeAudio\resetDialog.py:296
+#: addon\globalPlugins\freeAudio\__init__.py:1461
+msgid "&Cancel"
+msgstr "&İptal"
+
+#. Translators: Shown in the clean-up dialog when the reset/delete button is pressed with nothing checked.
+#: addon\globalPlugins\freeAudio\resetDialog.py:329
+msgid "Nothing is selected."
+msgstr "Hiçbir şey seçili değil."
+
+#. Translators: Confirmation in the clean-up dialog. {items} is the list of checked items, one per line.
+#: addon\globalPlugins\freeAudio\resetDialog.py:341
+msgid ""
+"The following will be reset or deleted. This cannot be undone.\n"
+"\n"
+"{items}\n"
+"\n"
+"Continue?"
+msgstr ""
+"Aşağıdakiler sıfırlanacak veya silinecek. Bu işlem geri alınamaz.\n"
+"\n"
+"{items}\n"
+"\n"
+"Devam edilsin mi?"
+
+#. Translators: Shown after the clean-up when some items could not be removed. {items} is the list, one per line.
+#: addon\globalPlugins\freeAudio\resetDialog.py:358
+msgid ""
+"Done, except for the following, which could not be removed (a file may be in "
+"use):\n"
+"\n"
+"{items}"
+msgstr ""
+"Tamamlandı; Kaldırılamayan şunlar hariç (bir dosya kullanımda olabilir):\n"
+"\n"
+"{items}"
+
+#. Translators: Shown after the clean-up finished without problems.
+#: addon\globalPlugins\freeAudio\resetDialog.py:365
+msgid "Done."
+msgstr "Tamamlandı."
+
+#. Translators: Added to the clean-up result when settings were reset.
+#: addon\globalPlugins\freeAudio\resetDialog.py:370
+msgid ""
+"Settings were reset. Changes made on the freeAudio settings page before this "
+"will not be saved. Restarting NVDA is recommended so every setting takes "
+"effect."
+msgstr ""
+"Ayarlar sıfırlandı. Bundan önce freeAudio ayarları sayfasında yapılan "
+"değişiklikler kaydedilmeyecek. Tüm ayarların etkili olması için NVDA’yı "
+"yeniden başlatmanız önerilir."
+
 #. Translators: Checkbox label for the time-shift/rewind feature setting.
 #: addon\globalPlugins\freeAudio\settingsPanel.py:89
 msgid ""
@@ -4140,7 +4284,7 @@ msgstr "Kayıtların tutulduğu klasör:"
 #. Translators: Grey hint under the recordings-folder field explaining what happens if it's left empty.
 #: addon\globalPlugins\freeAudio\settingsPanel.py:446
 msgid "(empty = default: Documents\\freeAudio Recordings)"
-msgstr "(boş = varsayılan: Belgeler\freeAudio Recordings)"
+msgstr "(Boş = varsayılan: Belgeler\\\\freeAudio recordings)"
 
 #. Translators: Button label; opens a folder-picker to choose the recordings folder.
 #: addon\globalPlugins\freeAudio\settingsPanel.py:450
@@ -4231,17 +4375,22 @@ msgstr "&Başlangıçta güncellemeleri otomatik olarak kontrol et"
 #. Translators: Button label; triggers an immediate manual update check.
 #. Translators: Restores the button's normal label once the manual update check finishes.
 #: addon\globalPlugins\freeAudio\settingsPanel.py:626
-#: addon\globalPlugins\freeAudio\settingsPanel.py:782
+#: addon\globalPlugins\freeAudio\settingsPanel.py:787
 msgid "Check for Updates &Now"
 msgstr "Güncellemeleri &şimdi Kontrol Et"
 
+#. Translators: Button label; opens a dialog to reset freeAudio's settings and delete the data it has saved.
+#: addon\globalPlugins\freeAudio\settingsPanel.py:631
+msgid "&Clean up: reset settings and delete saved data..."
+msgstr "Temizle: Ayarları &sıfırla ve kaydedilen verileri sil..."
+
 #. Translators: Title of the file-picker dialog for choosing ffmpeg.exe.
-#: addon\globalPlugins\freeAudio\settingsPanel.py:758
+#: addon\globalPlugins\freeAudio\settingsPanel.py:763
 msgid "Select ffmpeg.exe"
 msgstr "Ffmpeg.exe'yi seçin"
 
 #. Translators: Temporary label on the Check for Updates Now button while the check is in progress.
-#: addon\globalPlugins\freeAudio\settingsPanel.py:769
+#: addon\globalPlugins\freeAudio\settingsPanel.py:774
 msgid "Checking..."
 msgstr "Kontrol ediliyor..."
 
@@ -4911,11 +5060,6 @@ msgstr "&Sayfayı Aç"
 #: addon\globalPlugins\freeAudio\__init__.py:1457
 msgid "freeAudio Update Available"
 msgstr "freeAudio Güncellemesi Mevcut"
-
-#. Translators: 'Cancel' button label on the update-available dialog, paired with whichever install/open-page label is used as the other button.
-#: addon\globalPlugins\freeAudio\__init__.py:1461
-msgid "&Cancel"
-msgstr "&İptal"
 
 #. Translators: Spoken while the new version is being downloaded for direct install; %s is the version number being downloaded.
 #: addon\globalPlugins\freeAudio\__init__.py:1477
