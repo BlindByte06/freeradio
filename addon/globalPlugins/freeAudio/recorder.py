@@ -2419,7 +2419,7 @@ class Recorder:
 		"""Continuous capture: the song being recorded right now (follows the
 		track changes), otherwise None."""
 		writer = self._writer
-		if self._song_capture and getattr(self, "_song_continuous", False) and writer is not None:
+		if self.is_song_capture and getattr(self, "_song_continuous", False) and writer is not None:
 			return writer._seg_title
 		return None
 
