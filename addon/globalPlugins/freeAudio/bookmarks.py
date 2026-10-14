@@ -199,6 +199,12 @@ class BookmarkManager:
 			self._save()
 		return len(removed)
 
+	def clear_all(self):
+		"""Forget every bookmark in memory (used by the clean-up dialog,
+		which then deletes the bookmarks file and the voice-note folder)."""
+		with self._lock:
+			self._data = {}
+
 	@staticmethod
 	def _delete_file(path):
 		try:

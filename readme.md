@@ -803,7 +803,7 @@ Mark two or more bookmarks of the **same item** with `.`, then choose **Repeat B
 
 ### Bookmark Data Storage
 
-Bookmarks are stored in `freeAudio_bookmarks.json` in the NVDA user configuration folder, and voice notes are stored as `.wav` files in the `freeAudio_bookmark_audio` folder next to it. Both can be backed up or transferred to another computer. Deleting a bookmark also deletes its voice note file.
+Bookmarks are stored in `freeAudio_bookmarks.json` in the NVDA user configuration folder, and voice notes are stored as `.wav` files in the `freeAudio_bookmark_audio` folder next to it. Both can be backed up or transferred to another computer. Deleting a bookmark also deletes its voice note file. All bookmarks and voice notes can be removed at once with the **Bookmarks** item of the clean-up dialog — see [Clean Up: Reset Settings and Delete Saved Data](#clean-up-reset-settings-and-delete-saved-data).
 
 Each bookmark belongs to the item's own resume key — the episode's URL, the audio book part's stable catalogue URL, or the jukebox track's file path. A jukebox file that is moved or renamed outside freeAudio is therefore treated as a different item and does not show its old bookmarks.
 
@@ -903,6 +903,7 @@ The **Clean up: reset settings and delete saved data...** button at the bottom o
 - **Saved GETEM login** — the stored user name and password.
 - **Jukebox list** — your music files are not deleted.
 - **Saved resume positions** — podcasts, audio books and Jukebox folders.
+- **Bookmarks** — every bookmark, including its text note and voice note.
 - **Sleep timers and alarms**
 - **Scheduled recording plans** — the recordings themselves are not deleted.
 

@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: freeAudio 2026.25.1\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@groups.io'\n"
-"POT-Creation-Date: 2026-10-13 22:44+0300\n"
+"POT-Creation-Date: 2026-10-14 06:16+0300\n"
 "PO-Revision-Date: 2026-10-13 05:23+0300\n"
 "Last-Translator: Rémy Ruiz <remyruiz@gmail.com>\n"
 "Language-Team: Rémy Ruiz <remyruiz@gmail.com>\n"
@@ -53,9 +53,9 @@ msgstr "Seleccione el dispositivo de salida principal de freeAudio"
 #: addon\globalPlugins\freeAudio\playbackCoreMixin.py:1001
 #: addon\globalPlugins\freeAudio\recordingMixin.py:239
 #: addon\globalPlugins\freeAudio\recordingMixin.py:355
-#: addon\globalPlugins\freeAudio\resetDialog.py:331
-#: addon\globalPlugins\freeAudio\resetDialog.py:344
-#: addon\globalPlugins\freeAudio\resetDialog.py:373
+#: addon\globalPlugins\freeAudio\resetDialog.py:345
+#: addon\globalPlugins\freeAudio\resetDialog.py:358
+#: addon\globalPlugins\freeAudio\resetDialog.py:387
 #: addon\globalPlugins\freeAudio\settingsPanel.py:51
 #: addon\globalPlugins\freeAudio\timeshiftMixin.py:312
 #: addon\globalPlugins\freeAudio\timeshiftMixin.py:352
@@ -4183,60 +4183,65 @@ msgstr ""
 msgid "Saved resume positions (podcasts, audio books, Jukebox folders)"
 msgstr ""
 
-#. Translators: Check box in the clean-up dialog; deletes sleep timers and alarms.
+#. Translators: Check box in the clean-up dialog; deletes all bookmarks of audio books, podcast episodes and jukebox tracks, including their voice notes.
 #: addon\globalPlugins\freeAudio\resetDialog.py:128
+msgid "Bookmarks (including their text and voice notes)"
+msgstr ""
+
+#. Translators: Check box in the clean-up dialog; deletes sleep timers and alarms.
+#: addon\globalPlugins\freeAudio\resetDialog.py:137
 msgid "Sleep timers and alarms"
 msgstr ""
 
 #. Translators: Check box in the clean-up dialog; deletes the scheduled recording plans (not the recordings).
-#: addon\globalPlugins\freeAudio\resetDialog.py:134
+#: addon\globalPlugins\freeAudio\resetDialog.py:143
 msgid "Scheduled recording plans (recordings themselves are not deleted)"
 msgstr ""
 
 #. Translators: Title of the clean-up dialog opened from freeAudio's settings.
-#: addon\globalPlugins\freeAudio\resetDialog.py:255
+#: addon\globalPlugins\freeAudio\resetDialog.py:269
 msgid "Reset settings / delete saved data"
 msgstr ""
 
 #. Translators: Added after a clean-up item's name when there is nothing saved for it.
-#: addon\globalPlugins\freeAudio\resetDialog.py:272
+#: addon\globalPlugins\freeAudio\resetDialog.py:286
 msgid "nothing saved"
 msgstr ""
 
 #. Translators: Label of the check list in the clean-up dialog.
-#: addon\globalPlugins\freeAudio\resetDialog.py:277
+#: addon\globalPlugins\freeAudio\resetDialog.py:291
 msgid "Select what to reset or delete (nothing is selected by default):"
 msgstr ""
 
 #. Translators: Note in the clean-up dialog.
-#: addon\globalPlugins\freeAudio\resetDialog.py:284
+#: addon\globalPlugins\freeAudio\resetDialog.py:298
 msgid "Recordings and liked songs are never touched by this."
 msgstr ""
 
 #. Translators: Button in the clean-up dialog; checks every item.
-#: addon\globalPlugins\freeAudio\resetDialog.py:289
+#: addon\globalPlugins\freeAudio\resetDialog.py:303
 msgid "Select &all"
 msgstr ""
 
 #. Translators: Button in the clean-up dialog; resets/deletes the checked items.
-#: addon\globalPlugins\freeAudio\resetDialog.py:292
+#: addon\globalPlugins\freeAudio\resetDialog.py:306
 msgid "&Reset / delete selected"
 msgstr ""
 
 #. Translators: Button in the clean-up dialog; closes it without doing anything.
 #. Translators: 'Cancel' button label on the update-available dialog, paired with whichever install/open-page label is used as the other button.
-#: addon\globalPlugins\freeAudio\resetDialog.py:296
+#: addon\globalPlugins\freeAudio\resetDialog.py:310
 #: addon\globalPlugins\freeAudio\__init__.py:1465
 msgid "&Cancel"
 msgstr "&Cancelar"
 
 #. Translators: Shown in the clean-up dialog when the reset/delete button is pressed with nothing checked.
-#: addon\globalPlugins\freeAudio\resetDialog.py:329
+#: addon\globalPlugins\freeAudio\resetDialog.py:343
 msgid "Nothing is selected."
 msgstr ""
 
 #. Translators: Confirmation in the clean-up dialog. {items} is the list of checked items, one per line.
-#: addon\globalPlugins\freeAudio\resetDialog.py:341
+#: addon\globalPlugins\freeAudio\resetDialog.py:355
 msgid ""
 "The following will be reset or deleted. This cannot be undone.\n"
 "\n"
@@ -4246,7 +4251,7 @@ msgid ""
 msgstr ""
 
 #. Translators: Shown after the clean-up when some items could not be removed. {items} is the list, one per line.
-#: addon\globalPlugins\freeAudio\resetDialog.py:358
+#: addon\globalPlugins\freeAudio\resetDialog.py:372
 msgid ""
 "Done, except for the following, which could not be removed (a file may be in "
 "use):\n"
@@ -4255,12 +4260,12 @@ msgid ""
 msgstr ""
 
 #. Translators: Shown after the clean-up finished without problems.
-#: addon\globalPlugins\freeAudio\resetDialog.py:365
+#: addon\globalPlugins\freeAudio\resetDialog.py:379
 msgid "Done."
 msgstr ""
 
 #. Translators: Added to the clean-up result when settings were reset.
-#: addon\globalPlugins\freeAudio\resetDialog.py:370
+#: addon\globalPlugins\freeAudio\resetDialog.py:384
 msgid ""
 "Settings were reset. Changes made on the freeAudio settings page before this "
 "will not be saved. Restarting NVDA is recommended so every setting takes "

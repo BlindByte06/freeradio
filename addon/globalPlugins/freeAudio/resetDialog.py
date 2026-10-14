@@ -123,6 +123,15 @@ def _build_items():
 			],
 		),
 		(
+			"bookmarks",
+			# Translators: Check box in the clean-up dialog; deletes all bookmarks of audio books, podcast episodes and jukebox tracks, including their voice notes.
+			_("Bookmarks (including their text and voice notes)"),
+			[
+				_cfg_path("freeAudio_bookmarks.json"),
+				_cfg_path("freeAudio_bookmark_audio"),
+			],
+		),
+		(
 			"timers",
 			# Translators: Check box in the clean-up dialog; deletes sleep timers and alarms.
 			_("Sleep timers and alarms"),
@@ -194,7 +203,7 @@ def perform_reset(keys, plugin):
 
 	for key in (
 		"favorites", "catalog", "podcasts", "audiobooks", "getem_login",
-		"jukebox", "positions", "timers", "schedules",
+		"jukebox", "positions", "bookmarks", "timers", "schedules",
 	):
 		if key not in keys:
 			continue
@@ -210,6 +219,11 @@ def perform_reset(keys, plugin):
 					player._podcast_positions.clear()
 				with player._jukebox_folder_positions_lock:
 					player._jukebox_folder_positions.clear()
+			elif key == "bookmarks":
+				from . import bookmarks
+				bookmarks.get_manager().clear_all()
+				if plugin is not None:
+					plugin._player.clear_loop()
 			elif key == "timers" and plugin is not None:
 				manager = plugin._timer_manager
 				for entry in manager.get_timers():
