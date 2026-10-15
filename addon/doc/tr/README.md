@@ -81,6 +81,8 @@ Bu kısayolların bazıları Windows'un kendi kullandığı kısayollarla çakı
 | `Ctrl+Win+W` | Kayıt klasörünü aç | Kaydedilen dosyaların bulunduğu klasörü Dosya Gezgini'nde açar. |
 | `Ctrl+Win+J` | Zaman kaydırma geri sarma / podcast, sesli kitap ve müzik kutusu'nda geri atlama | Canlı radyoda: 15 saniye geri sarar. İlk basış zaman kaydırma moduna girer; her ek basış freeAudio ayarlarında belirlenen tampon sınırına kadar 15 saniye daha geri gider. Zaman kaydırma tamponunun Ayarlar'dan etkinleştirilmesi gerekir. Podcast, sesli kitap veya müzik kutusu parçasında ise bu tuş dosya içinde atlama yapar ve basış şekline göre ölçeklenir: **basılı tutmak** öncekiyle aynı şekilde tekrar başına 5 saniye geri gider; **tek bir dokunuş** 12 saniye geri sarar; hızlıca **iki dokunuş** 1 dakika geri sarar; **üç veya daha fazla dokunuş** 5 dakika geri sarar. Bir dokunuş dizisinde yalnızca bir atlama gerçekleşir ve bu, ulaşılan dokunuş sayısına göre boyutlandırılır — dokunuşlar toplanmaz. Zaman kaydırma ayarından bağımsız çalışır. |
 | `Ctrl+Win+K` | Zaman kaydırma ileri sarma / podcast, sesli kitap ve müzik kutusu'nda ileri atlama | Canlı radyoda: zaman kaydırma modundayken 15 saniye ileri sarar. Canlı yayın kenarına ulaşıldığında oynatma otomatik olarak canlıya döner ve yeniden geri sarılana kadar bu komut işlevsiz kalır. Podcast, sesli kitap veya müzik kutusu parçasında ise bu tuş yukarıdaki `Ctrl+Win+J` ile aynı dokunuş/basılı-tutma ölçeklemesini kullanarak dosya içinde ileri atlar (basılı tutma = tekrar başına 5 saniye; 1 dokunuş = 12 saniye; 2 dokunuş = 1 dakika; 3+ dokunuş = 5 dakika). Zaman kaydırma ayarından bağımsız çalışır. |
+| `Ctrl+Win+Alt+J` | Hassas geri sarma (1 saniye) | Küçük düzeltmeler için tam olarak 1 saniye geri sarar. Bir podcast, sesli kitap veya müzik kutusu parçasında dosyada 1 saniye geri gider; canlı radyoda zaman kaydırma tamponunda 1 saniye geri gider (zaman kaydırma tamponu etkin olmalıdır ve ilk basış `Ctrl+Win+J` gibi zaman kaydırma kipine geçirir). Bkz. [Hassas Sarma (1 Saniye)](#hassas-sarma-1-saniye). |
+| `Ctrl+Win+Alt+K` | Hassas ileri sarma (1 saniye) | Tam olarak 1 saniye ileri gider. Bir podcast, sesli kitap veya müzik kutusu parçasında dosyada 1 saniye ileri gider; canlı radyoda zaman kaydırma sırasında 1 saniye ileri gider. Bkz. [Hassas Sarma (1 Saniye)](#hassas-sarma-1-saniye). |
 | `Ctrl+Win+T` | Zaman kaydırma tamponunu aç/kapat | Zaman kaydırma tamponunu anında etkinleştirir veya devre dışı bırakır; Ayarlar'daki onay kutusunu yansıtır. Devre dışı bırakıldığında zaman kaydırma modundaysa hemen canlıya döner ve arka plan yakalamayı durdurur. Podcast, sesli kitap veya müzik kutusu oynatmasında etkisi yoktur. |
 | *(atanmamış)* | Çıkış aygıtı seç | Kullanılabilir ana çıkış aygıtlarının bir listesini isteğe bağlı olarak açar. Liste yalnızca BASS birden fazla fiziksel çıkış aygıtı algıladığında gösterilir. NVDA Menüsü → Tercihler → Girdi Hareketleri → freeAudio bölümünden bir tuş kombinasyonu atanabilir. |
 | *(atanmamış)* | Bildirimleri sessize al / aç | Bildirim sessize alma ayarını anlık olarak değiştirir. NVDA Menüsü → Tercihler → Girdi Hareketleri → freeAudio bölümünden bir tuş kombinasyonu atanabilir. |
@@ -148,12 +150,14 @@ Aşağıdaki tuşlar yalnızca İstasyon Tarayıcısı penceresi etkinken çalı
 
 | Kısayol | İşlev | Açıklama |
 |---|---|---|
-| `→` | Sonraki öğe / İleri atla | Bir istasyon listesinde (Tüm İstasyonlar / Favoriler) bir sonraki istasyona geçer ve hemen çalar; liste sonunda başa döner. Podcastler, Sesli Kitaplar veya Müzik Kutusu öğe listelerinde, bir şey yüklenmiş ve çalıyorken bunun yerine ileri atlar — genel `Ctrl+Win+K` komutuyla aynıdır (yukarıdaki Kademeli atlama bölümüne bakın). Özellikle Podcastler bölüm listesinde, henüz hiçbir şey yüklenmemişse bir sonraki bölüme geçip çalmaya geri döner. |
-| `←` | Önceki öğe / Geri atla | Bir istasyon listesinde bir önceki istasyona geçer ve çalar; başındayken sona atlar. Podcastler, Sesli Kitaplar veya Müzik Kutusu öğe listelerinde, bir şey yüklenmiş ve çalıyorken bunun yerine geri atlar — genel `Ctrl+Win+J` komutuyla aynıdır. Podcastler bölüm listesinde, henüz hiçbir şey yüklenmemişse bir önceki bölüme geçip çalmaya geri döner. |
-| `Shift+→` | Perdeyi yükselt | Podcastler, Sesli Kitaplar veya Müzik Kutusu öğe listelerinde: çalmakta olan içeriğin perdesini bir yarım ton yükseltir; genel `Shift+Win+K` komutuyla aynıdır. |
-| `Shift+←` | Perdeyi düşür | Podcastler, Sesli Kitaplar veya Müzik Kutusu öğe listelerinde: çalmakta olan içeriğin perdesini bir yarım ton düşürür; genel `Shift+Win+J` komutuyla aynıdır. |
-| `Page Up` | Oynatma hızını artır | Podcastler, Sesli Kitaplar veya Müzik Kutusu öğe listelerinde: oynatma hızını artırır; genel `Ctrl+Win+Shift+K` komutuyla aynıdır. |
-| `Page Down` | Oynatma hızını azalt | Podcastler, Sesli Kitaplar veya Müzik Kutusu öğe listelerinde: oynatma hızını azaltır; genel `Ctrl+Win+Shift+J` komutuyla aynıdır. |
+| `→` | Sonraki öğe / İleri atla | Bir istasyon listesinde (Tüm İstasyonlar / Favoriler) bir sonraki istasyona geçer ve hemen çalar; liste sonunda başa döner. Podcastler, Sesli Kitaplar veya Müzik Kutusu öğe listelerinde, bir şey yüklenmiş ve çalıyorken bunun yerine ileri atlar — genel `Ctrl+Win+K` komutuyla aynıdır (yukarıdaki Kademeli atlama bölümüne bakın). Özellikle Podcastler bölüm listesinde, henüz hiçbir şey yüklenmemişse bir sonraki bölüme geçip çalmaya geri döner. Bu, bu listelerin altındaki yer imi listelerinde de geçerlidir (bkz. [Yer İmleri](#yer-i̇mleri)). |
+| `←` | Önceki öğe / Geri atla | Bir istasyon listesinde bir önceki istasyona geçer ve çalar; başındayken sona atlar. Podcastler, Sesli Kitaplar veya Müzik Kutusu öğe listelerinde, bir şey yüklenmiş ve çalıyorken bunun yerine geri atlar — genel `Ctrl+Win+J` komutuyla aynıdır. Podcastler bölüm listesinde, henüz hiçbir şey yüklenmemişse bir önceki bölüme geçip çalmaya geri döner. Bu, bu listelerin altındaki yer imi listelerinde de geçerlidir (bkz. [Yer İmleri](#yer-i̇mleri)). |
+| `Shift+→` | Perdeyi yükselt | Podcastler, Sesli Kitaplar veya Müzik Kutusu öğe listelerinde: çalmakta olan içeriğin perdesini bir yarım ton yükseltir; genel `Shift+Win+K` komutuyla aynıdır. Bu, bu listelerin altındaki yer imi listelerinde de geçerlidir (bkz. [Yer İmleri](#yer-i̇mleri)). |
+| `Shift+←` | Perdeyi düşür | Podcastler, Sesli Kitaplar veya Müzik Kutusu öğe listelerinde: çalmakta olan içeriğin perdesini bir yarım ton düşürür; genel `Shift+Win+J` komutuyla aynıdır. Bu, bu listelerin altındaki yer imi listelerinde de geçerlidir (bkz. [Yer İmleri](#yer-i̇mleri)). |
+| `Page Up` | Oynatma hızını artır | Podcastler, Sesli Kitaplar veya Müzik Kutusu öğe listelerinde: oynatma hızını artırır; genel `Ctrl+Win+Shift+K` komutuyla aynıdır. Bu, bu listelerin altındaki yer imi listelerinde de geçerlidir (bkz. [Yer İmleri](#yer-i̇mleri)). |
+| `Page Down` | Oynatma hızını azalt | Podcastler, Sesli Kitaplar veya Müzik Kutusu öğe listelerinde: oynatma hızını azaltır; genel `Ctrl+Win+Shift+J` komutuyla aynıdır. Bu, bu listelerin altındaki yer imi listelerinde de geçerlidir (bkz. [Yer İmleri](#yer-i̇mleri)). |
+| `Alt+→` | Hassas ileri sarma (1 saniye) | İstasyon Tarayıcısı'nın herhangi bir sekmesinde, bir şey yüklüyken: genel `Ctrl+Win+Alt+K` komutu gibi tam olarak 1 saniye ileri sarar. Bkz. [Hassas Sarma (1 Saniye)](#hassas-sarma-1-saniye). |
+| `Alt+←` | Hassas geri sarma (1 saniye) | İstasyon Tarayıcısı'nın herhangi bir sekmesinde, bir şey yüklüyken: genel `Ctrl+Win+Alt+J` komutu gibi tam olarak 1 saniye geri sarar. |
 | `Ctrl+→` | Sonraki bölüm / kitap / parça | Podcastler sekmesinde: bir sonraki bölüme geçer ve çalar. Sesli Kitaplar sekmesinde (kitaplık listesi odaklanmışken): bir sonraki kitaba geçer. Müzik Kutusu sekmesinde (ana liste ya da parça listesi odaklanmışken): seçili müzik kutusu öğesindeki bir sonraki parçaya geçer ve çalar. |
 | `Ctrl+←` | Önceki bölüm / kitap / parça | Podcastler sekmesinde: bir önceki bölüme geçer ve çalar. Sesli Kitaplar sekmesinde: bir önceki kitaba geçer. Müzik Kutusu sekmesinde: seçili müzik kutusu öğesindeki bir önceki parçaya geçer ve çalar. |
 | `Enter` | Çal / Ekle | Bir istasyon veya bölüm listesinde: seçili öğeyi hemen çalmaya başlar. Müzik Kutusu sekmesinin arama sonuçlarında: seçili dosyayı müzik kutusu'na ekler. Müzik Kutusu sekmesinin öğe veya parça listesinde: odaklanan öğeyi doğrudan çalar. |
@@ -390,6 +394,7 @@ Etkinleştirildiğinde freeAudio, normal oynatmadan bağımsız olarak, şu anda
 
 - **`Ctrl+Win+J`** — 15 saniye geri sar. İlk basış sizi canlı oynatmadan canlı kenarının 15 saniye gerisinde zaman kaydırma oynatmasına geçirir; her ek basış tampon sınırına kadar 15 saniye daha geri gider.
 - **`Ctrl+Win+K`** — Zaman kaydırma modundayken 15 saniye ileri sarar. Canlı yayın kenarına ulaşıldığında oynatma otomatik olarak canlı akışa döner ve NVDA "Canlıya dön" duyurusunu yapar — normal dinlemeye dönmek için fazladan bir şey yapmanız gerekmez.
+- **`Ctrl+Win+Alt+J`** / **`Ctrl+Win+Alt+K`** — Aynı geri ve ileri sarma, ancak ince ayarlar için 15 saniye yerine 1 saniyelik adımlarla. Bkz. [Hassas Sarma (1 Saniye)](#hassas-sarma-1-saniye).
 - **`Ctrl+Win+T`** — Özelliği tamamen açar veya kapatır. Zaman kaydırma modundayken kapatıldığında hemen canlıya döner ve geçerli istasyon için arka plan yakalamayı durdurur.
 
 Arka plan yakalama zaman kaydırma sırasında çalışmaya devam eder; canlı kenar birkaç dakika öncesini dinlerken bile ilerlemeye devam eder — tıpkı gerçek bir DVR gibi.
@@ -533,6 +538,18 @@ Podcast bölümleri, **BASS arka ucu** kullanılarak çalınır (radyo akışlar
 - **Üç veya daha fazla dokunuş** **5 dakika** atlar; aynı dokunuş dizisindeki ek dokunuşlar bunu daha da artırmaz.
 
 Bir dokunuş, başka bir dokunuşun daha gelip gelmeyeceğini beklemek için gerçek atlamayı yapmadan önce kısa bir süre tutulur — bir dokunuş dizisinde yalnızca bir atlama gerçekleşir ve bu, ulaşılan son dokunuş sayısına göre boyutlandırılır; her dokunuşun miktarı toplanmaz. Bir atlamadan sonra NVDA, sadece "X saniye ileri/geri" demek yerine bölümdeki güncel geçen/kalan süreyi bildirir.
+
+### Hassas Sarma (1 Saniye)
+
+Küçük düzeltmeler için — örneğin az önce kaçırdığınız bir sözcüğü yeniden dinlemek gibi — freeAudio'da, tuşa nasıl bastığınıza bakılmaksızın her zaman tam olarak **1 saniye** ilerleyen ayrı bir komut çifti vardır:
+
+- **`Ctrl+Win+Alt+J`** — Windows'un her yerinden 1 saniye geri.
+- **`Ctrl+Win+Alt+K`** — Windows'un her yerinden 1 saniye ileri.
+- **`Alt+←`** / **`Alt+→`** — aynı iki komut, İstasyon Tarayıcısı'nın içinde, herhangi bir sekmede.
+
+Bir podcast bölümünde, sesli kitap bölümünde veya müzik kutusu parçasında bunlar normal sarma komutları gibi çalışır, yalnızca adım 1 saniyedir: NVDA ortaya çıkan geçen/kalan konumu duyurur; sesli kitap veya müzik kutusu klasöründe bölüm ve parça sınırları `Ctrl+Win+J` / `Ctrl+Win+K` için anlatıldığı gibi davranır (sonun ötesine ileri sarma sonraki bölüme veya parçaya geçer; başın ötesine geri sarma önce 0:00'da durur ve yalnızca 10 saniye içindeki ikinci bir geri sarma önceki bölüme veya parçaya döner).
+
+Canlı bir radyo istasyonunda zaman kaydırma tamponunda 1 saniye ilerlerler. `Ctrl+Win+J` gibi, tamponun ayarlarda etkin olması gerekir ve ilk geri sarma canlı oynatmadan zaman kaydırmalı oynatmaya geçirir. Canlı kenara yaklaşık 2 saniye içinde biten bir ileri sarma canlıya döner ve "Canlıya dön" duyurusunu yapar.
 
 **Oynatma hızı:** Podcast bölümlerinin, sesli kitapların ve müzik kutusu parçalarının oynatma hızını `Ctrl+Win+Shift+K` (hızlandır) ve `Ctrl+Win+Shift+J` (yavaşlat) ile ayarlayabilirsiniz. Hız, perde korunarak 0.1x artışlarla 0.5x ile 2.0x arasında değişir.
 
@@ -714,7 +731,7 @@ Her iki komuta da varsayılan olarak atanmış bir tuş yoktur. NVDA Menüsü �
 Müzik Kutusu'ndan çalınan her parça, tam yerel-medya davranışına sahiptir:
 
 - **Devam etme:** freeAudio her parçadaki konumunuzu hatırlar; duraklattığınızda ve çalma sırasında düzenli aralıklarla kaydeder ve aynı parçayı yeniden çaldığınızda oradan devam eder — NVDA'yı yeniden başlatsanız bile.
-- **Kademeli atlama:** `Ctrl+Win+J` / `Ctrl+Win+K`, parça içinde podcast ve sesli kitaplardakiyle aynı dokunuş/basılı-tutma ölçeklemesiyle atlar — basılı tutma tekrar başına 5 saniye, bir dokunuş 12 saniye, iki dokunuş 1 dakika, üç veya daha fazla dokunuş 5 dakika.
+- **Kademeli atlama:** `Ctrl+Win+J` / `Ctrl+Win+K`, parça içinde podcast ve sesli kitaplardakiyle aynı dokunuş/basılı-tutma ölçeklemesiyle atlar — basılı tutma tekrar başına 5 saniye, bir dokunuş 12 saniye, iki dokunuş 1 dakika, üç veya daha fazla dokunuş 5 dakika. `Ctrl+Win+Alt+J` / `Ctrl+Win+Alt+K` tam olarak 1 saniye sarar — bkz. [Hassas Sarma (1 Saniye)](#hassas-sarma-1-saniye).
 - **Oynatma hızı:** `Ctrl+Win+Shift+J` / `Ctrl+Win+Shift+K`, hızı 0.5x ile 2.0x arasında 0.1x adımlarla, perde korunarak ayarlar.
 - **Transpose:** `Shift+Win+J` / `Shift+Win+K`, hızı değiştirmeden perdeyi kaydırır — bkz. [Transpose (Perde Kaydırma)](#transpose-perde-kaydırma).
 - **Ses profili:** Bir parçanın ses seviyesi, efektleri, EQ'u ve hızı, uygun ayarlar yapılıyken parça çalınarak genel olarak kaydedilebilir — Müzik Kutusu şu anda parça başına profil menüsü sunmaz; geçerli genel ayarlar uygulanır.
@@ -785,6 +802,8 @@ Podcastler, Sesli Kitaplar ve Müzik Kutusu sekmelerinin her birinde, ait olduğ
 - **Müzik Kutusu** — Parçalar listesinin hemen altında; seçili parçanın yer imlerini gösterir.
 
 Her satır yer iminin adını ve konumunu gösterir. Yer iminin metin notu ya da ses notu varsa **[metin]** veya **[ses notu]** işareti, `.` ile işaretlediğinizde ise **(işaretli)** eklenir. Liste, üstündeki seçimi izler ve pencere açıkken `Ctrl+Win+F12` ile yer imi eklediğinizde de yenilenir.
+
+Bir yer imi listesine odaklanıldığında, üstündeki sekmenin oynatma tuşları orada da çalışır: `←` / `→` sarar, `Shift+←` / `Shift+→` perdeyi değiştirir, `Page Up` / `Page Down` oynatma hızını değiştirir, `Ctrl+←` / `Ctrl+→` önceki veya sonraki bölüme, kitaba ya da parçaya geçer ve `Alt+←` / `Alt+→` 1 saniye sarar.
 
 | Tuş | İşlem |
 |---|---|

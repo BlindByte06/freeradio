@@ -81,6 +81,8 @@ Některé z těchto zkratek se překrývají se zkratkami, které používá sá
 | `Ctrl+Win+W` | Otevřít složku s nahrávkami | Otevře složku s nahranými soubory v Průzkumníku souborů. |
 | `Ctrl+Win+J` | Časový posun zpět / posun vzad v podcastu, audioknize a jukeboxu | Pro živé rádio: přetočí o 15 sekund zpět. První stisknutí vstoupí do režimu časového posunu; každé další stisknutí posune o dalších 15 sekund zpět, až do limitu vyrovnávací paměti nastaveného v nastavení FreeRadia. Vyžaduje povolení vyrovnávací paměti časového posunu v Nastavení. Pro epizodu podcastu, audioknihu nebo skladbu jukeboxu tento klíč posouvá v rámci souboru, a škáluje se podle způsobu stisku: **podržení** posouvá o 5 sekund za opakování; **jedno záměrné stisknutí** posune o 12 sekund zpět; **dvě stisknutí** rychle za sebou posunou o 1 minutu; **tři a více stisknutí** posune o 5 minut. Na jednu sekvenci stisknutí proběhne pouze jedno posunutí, velikostně odpovídající počtu stisknutí - stisknutí se nesčítají. Funguje bez ohledu na nastavení časového posunu. |
 | `Ctrl+Win+K` | Časový posun vpřed / posun vpřed v podcastu, audioknize a jukeboxu | Pro živé rádio: posune o 15 sekund vpřed v režimu časového posunu. Po dosažení živého vysílání se přehrávání automaticky vrátí na přímý přenos a tento příkaz nebude mít žádný efekt, dokud znovu nepřetočíte zpět. Pro epizodu podcastu, audioknihu nebo skladbu jukeboxu tento klíč posouvá vpřed v rámci souboru se stejným škálováním stisknutí/podržení jako `Ctrl+Win+J` výše (podržení = 5 sekund za opakování; 1 stisknutí = 12 sekund; 2 stisknutí = 1 minuta; 3+ stisknutí = 5 minut). Funguje bez ohledu na nastavení časového posunu. |
+| `Ctrl+Win+Alt+J` | Jemné přetočení zpět (1 sekunda) | Přetočí zpět přesně o 1 sekundu, pro drobné korekce. U podcastu, audioknihy nebo skladby v jukeboxu se posune o 1 sekundu zpět v souboru; u živého rádia se posune o 1 sekundu zpět ve vyrovnávací paměti časového posunu (vyrovnávací paměť časového posunu musí být zapnutá a první stisknutí vstoupí do režimu časového posunu jako `Ctrl+Win+J`). Viz [Jemné přetáčení (1 sekunda)](#jemné-přetáčení-1-sekunda). |
+| `Ctrl+Win+Alt+K` | Jemné přetočení vpřed (1 sekunda) | Přetočí vpřed přesně o 1 sekundu. U podcastu, audioknihy nebo skladby v jukeboxu se posune o 1 sekundu vpřed v souboru; u živého rádia se posune o 1 sekundu vpřed v režimu časového posunu. Viz [Jemné přetáčení (1 sekunda)](#jemné-přetáčení-1-sekunda). |
 | `Ctrl+Win+T` | Přepnout vyrovnávací paměť časového posunu | Okamžitě zapne nebo vypne vyrovnávací paměť časového posunu, v souladu se zaškrtávacím políčkem v Nastavení. Vypnutí okamžitě vrátí zpět na živé vysílání a zastaví zachytávání na pozadí. Nemá vliv na přehrávání podcastů, audioknih nebo jukeboxu. |
 | *(nepřiřazeno)* | Vybrat výstupní zařízení | Otevře na vyžádání seznam dostupných hlavních výstupních zařízení. Seznam se zobrazí pouze v případě, že BASS rozpozná více než jedno fyzické výstupní zařízení. Přiřazení kombinace kláves pomocí NVDA Menu → Předvolby → Vstupní gesta → freeAudio. |
 | *(nepřiřazeno)* | Přepnout oznámení o ztlumení | Přepíná nastavení oznámení o ztlumení za chodu. Přiřazení kombinace kláves pomocí NVDA Menu → Předvolby → Vstupní gesta → freeAudio. |
@@ -148,12 +150,14 @@ Následující klávesy fungují pouze při aktivním okně Průzkumník stanic.
 
 | Zkratka | Funkce | Popis |
 |---|---|---|
-| `→` | Další položka / Posun vpřed | V seznamu stanic (Všechny stanice / Oblíbené) přejde na další stanici a okamžitě ji přehraje; na konci seznamu se vrátí na začátek. V seznamech položek Podcasty, Audioknihy nebo Jukebox při načteném a přehrávaném obsahu místo toho posouvá vpřed — stejně jako globální příkaz `Ctrl+Win+K` (viz Odstupňované posouvání výše). Konkrétně v seznamu epizod Podcastů, pokud ještě není nic načteno, přejde na další epizodu a přehraje ji. |
-| `←` | Předchozí položka / Posun zpět | V seznamu stanic přejde na předchozí stanici a přehraje ji; na začátku přeskočí na konec. V seznamech položek Podcasty, Audioknihy nebo Jukebox při načteném a přehrávaném obsahu místo toho posouvá zpět — stejně jako globální příkaz `Ctrl+Win+J`. V seznamu epizod Podcastů, pokud ještě není nic načteno, přejde na předchozí epizodu a přehraje ji. |
-| `Shift+→` | Transponovat nahoru | V seznamech položek Podcasty, Audioknihy nebo Jukebox: zvýší výšku tónu aktuálního přehrávání o půltón, stejně jako globální příkaz `Shift+Win+K`. |
-| `Shift+←` | Transponovat dolů | V seznamech položek Podcasty, Audioknihy nebo Jukebox: sníží výšku tónu aktuálního přehrávání o půltón, stejně jako globální příkaz `Shift+Win+J`. |
-| `Page Up` | Zvýšit rychlost přehrávání | V seznamech položek Podcasty, Audioknihy nebo Jukebox: zvýší rychlost přehrávání, stejně jako globální příkaz `Ctrl+Win+Shift+K`. |
-| `Page Down` | Snížit rychlost přehrávání | V seznamech položek Podcasty, Audioknihy nebo Jukebox: sníží rychlost přehrávání, stejně jako globální příkaz `Ctrl+Win+Shift+J`. |
+| `→` | Další položka / Posun vpřed | V seznamu stanic (Všechny stanice / Oblíbené) přejde na další stanici a okamžitě ji přehraje; na konci seznamu se vrátí na začátek. V seznamech položek Podcasty, Audioknihy nebo Jukebox při načteném a přehrávaném obsahu místo toho posouvá vpřed — stejně jako globální příkaz `Ctrl+Win+K` (viz Odstupňované posouvání výše). Konkrétně v seznamu epizod Podcastů, pokud ještě není nic načteno, přejde na další epizodu a přehraje ji. Totéž platí pro seznamy záložek pod těmito seznamy (viz [Záložky](#záložky)). |
+| `←` | Předchozí položka / Posun zpět | V seznamu stanic přejde na předchozí stanici a přehraje ji; na začátku přeskočí na konec. V seznamech položek Podcasty, Audioknihy nebo Jukebox při načteném a přehrávaném obsahu místo toho posouvá zpět — stejně jako globální příkaz `Ctrl+Win+J`. V seznamu epizod Podcastů, pokud ještě není nic načteno, přejde na předchozí epizodu a přehraje ji. Totéž platí pro seznamy záložek pod těmito seznamy (viz [Záložky](#záložky)). |
+| `Shift+→` | Transponovat nahoru | V seznamech položek Podcasty, Audioknihy nebo Jukebox: zvýší výšku tónu aktuálního přehrávání o půltón, stejně jako globální příkaz `Shift+Win+K`. Totéž platí pro seznamy záložek pod těmito seznamy (viz [Záložky](#záložky)). |
+| `Shift+←` | Transponovat dolů | V seznamech položek Podcasty, Audioknihy nebo Jukebox: sníží výšku tónu aktuálního přehrávání o půltón, stejně jako globální příkaz `Shift+Win+J`. Totéž platí pro seznamy záložek pod těmito seznamy (viz [Záložky](#záložky)). |
+| `Page Up` | Zvýšit rychlost přehrávání | V seznamech položek Podcasty, Audioknihy nebo Jukebox: zvýší rychlost přehrávání, stejně jako globální příkaz `Ctrl+Win+Shift+K`. Totéž platí pro seznamy záložek pod těmito seznamy (viz [Záložky](#záložky)). |
+| `Page Down` | Snížit rychlost přehrávání | V seznamech položek Podcasty, Audioknihy nebo Jukebox: sníží rychlost přehrávání, stejně jako globální příkaz `Ctrl+Win+Shift+J`. Totéž platí pro seznamy záložek pod těmito seznamy (viz [Záložky](#záložky)). |
+| `Alt+→` | Jemné přetočení vpřed (1 sekunda) | Na libovolné kartě Prohlížeče stanic, je-li něco načteno: přetočí vpřed přesně o 1 sekundu, stejně jako globální příkaz `Ctrl+Win+Alt+K`. Viz [Jemné přetáčení (1 sekunda)](#jemné-přetáčení-1-sekunda). |
+| `Alt+←` | Jemné přetočení zpět (1 sekunda) | Na libovolné kartě Prohlížeče stanic, je-li něco načteno: přetočí zpět přesně o 1 sekundu, stejně jako globální příkaz `Ctrl+Win+Alt+J`. |
 | `Ctrl+→` | Další epizoda / kniha / skladba | Na kartě Podcasty: přejde na další epizodu a přehraje ji. Na kartě Audioknihy (zaměřen seznam knihovny): přejde na další knihu. Na kartě Jukebox (zaměřen seznam položek nebo skladeb): přejde na další skladbu ve vybrané položce jukeboxu a přehraje ji. |
 | `Ctrl+←` | Předchozí epizoda / kniha / skladba | Na kartě Podcasty: přejde na předchozí epizodu a přehraje ji. Na kartě Audioknihy: přejde na předchozí knihu. Na kartě Jukebox: přejde na předchozí skladbu ve vybrané položce jukeboxu a přehraje ji. |
 | `Enter` | Přehrát / Přidat | V seznamu stanic nebo epizod: začne okamžitě přehrávat vybranou položku. Ve výsledcích vyhledávání na kartě Jukebox: přidá vybraný soubor do jukeboxu. V seznamu položek nebo skladeb na kartě Jukebox: přehraje zaměřenou položku přímo. |
@@ -390,6 +394,7 @@ Po zapnutí freeAudio nepřetržitě zachytává aktuálně přehrávanou stanic
 
 - **`Ctrl+Win+J`** — Přetočit o 15 sekund zpět. První stisk přepne z živého přehrávání do přehrávání s časovým posunem, přičemž začíná 15 sekund za živou hranou. Každý další stisk posune o dalších 15 sekund zpět, až do limitu vyrovnávací paměti.
 - **`Ctrl+Win+K`** — Přetočit o 15 sekund dopředu v režimu časového posunu. Po dosažení živé hrany se přehrávání automaticky přepne zpět na živý stream a NVDA oznámí „Zpět na živé vysílání".
+- **`Ctrl+Win+Alt+J`** / **`Ctrl+Win+Alt+K`** — Stejné přetáčení zpět a vpřed, ale v krocích po 1 sekundě místo 15, pro jemné úpravy. Viz [Jemné přetáčení (1 sekunda)](#jemné-přetáčení-1-sekunda).
 - **`Ctrl+Win+T`** — Celou funkci zapne nebo vypne. Vypnutí v režimu časového posunu okamžitě vrátí na živé vysílání a zastaví zachytávání na pozadí pro aktuální stanici.
 
 Zachytávání na pozadí běží celou dobu, kdy je aktivní časový posun, takže živá hrana pokračuje dopředu, i když posloucháte něco z několik minut staré záznamu — přesně jako skutečný DVR.
@@ -533,6 +538,18 @@ Epizody podcastů se přehrávají pomocí **backendu BASS** (stejný engine, kt
 - **Tři a více stisknutí** posune o **5 minut**; další stisknutí ve stejné sérii už dál neeskalují.
 
 Záměrné stisknutí se krátce podrží, než se posun skutečně provede, pro případ, že přijde další stisknutí - k posunu dojde pouze jednou za sérii stisknutí, o velikosti odpovídající celkovému počtu stisknutí, nikoli součtu jednotlivých hodnot. Po posunu NVDA oznámí výslednou uplynulou/zbývající pozici v epizodě, nikoli jen „X sekund vpřed/vzad".
+
+### Jemné přetáčení (1 sekunda)
+
+Pro drobné korekce — například když chcete znovu přehrát slovo, které vám právě uniklo — má freeAudio zvláštní dvojici příkazů, které se vždy posunou přesně o **1 sekundu**, bez ohledu na to, jak je stisknete:
+
+- **`Ctrl+Win+Alt+J`** — 1 sekunda zpět, odkudkoli ve Windows.
+- **`Ctrl+Win+Alt+K`** — 1 sekunda vpřed, odkudkoli ve Windows.
+- **`Alt+←`** / **`Alt+→`** — tytéž dva příkazy uvnitř Prohlížeče stanic, na libovolné kartě.
+
+U epizody podcastu, části audioknihy nebo skladby v jukeboxu fungují přesně jako běžné příkazy pro přetáčení, jen s krokem 1 sekundu: NVDA oznámí výslednou uplynulou/zbývající pozici a u audioknihy nebo složky jukeboxu se hranice částí a skladeb chovají tak, jak je popsáno u `Ctrl+Win+J` / `Ctrl+Win+K` (přetočení vpřed za konec přejde na další část nebo skladbu; přetočení zpět před začátek se nejprve zastaví na 0:00 a teprve druhé přetočení zpět do 10 sekund se vrátí na předchozí část nebo skladbu).
+
+U živé rádiové stanice se posunou o 1 sekundu ve vyrovnávací paměti časového posunu. Stejně jako u `Ctrl+Win+J` musí být vyrovnávací paměť zapnutá v nastavení a první přetočení zpět přepne z živého přehrávání do přehrávání s časovým posunem. Přetočení vpřed, které skončí zhruba do 2 sekund od živé hrany, se vrátí na živé vysílání a oznámí „Zpět na živé vysílání“.
 
 **Rychlost přehrávání:** Rychlost přehrávání epizod podcastů, audioknih a skladeb jukeboxu můžete upravit pomocí `Ctrl+Win+Shift+K` (rychleji) a `Ctrl+Win+Shift+J` (pomaleji). Rychlost se mění v krocích po 0,1× v rozsahu od 0,5× do 2,0×, se zachováním výšky tónu.
 
@@ -714,7 +731,7 @@ Ani jeden z příkazů nemá ve výchozím stavu přiřazenou klávesu. Přiřa�
 Každá skladba přehraná z jukeboxu dostane plné zacházení místního média:
 
 - **Pokračování:** freeAudio si pamatuje vaši pozici v každé skladbě, ukládá ji při pozastavení a pravidelně během přehrávání, a při dalším přehrání z ní pokračuje — dokonce i po restartu NVDA.
-- **Odstupňované posouvání:** `Ctrl+Win+J` / `Ctrl+Win+K` posouvají v rámci skladby se stejným škálováním stisknutí/podržení jako podcasty a audioknihy — podržení na 5 sekund za opakování, jedno stisknutí na 12 sekund, dvě stisknutí na 1 minutu, tři nebo více stisknutí na 5 minut.
+- **Odstupňované posouvání:** `Ctrl+Win+J` / `Ctrl+Win+K` posouvají v rámci skladby se stejným škálováním stisknutí/podržení jako podcasty a audioknihy — podržení na 5 sekund za opakování, jedno stisknutí na 12 sekund, dvě stisknutí na 1 minutu, tři nebo více stisknutí na 5 minut. `Ctrl+Win+Alt+J` / `Ctrl+Win+Alt+K` přetáčejí přesně o 1 sekundu — viz [Jemné přetáčení (1 sekunda)](#jemné-přetáčení-1-sekunda).
 - **Rychlost přehrávání:** `Ctrl+Win+Shift+J` / `Ctrl+Win+Shift+K` upravují rychlost v krocích po 0,1× od 0,5× do 2,0×, se zachováním výšky tónu.
 - **Transpozice:** `Shift+Win+J` / `Shift+Win+K` mění výšku tónu bez změny rychlosti — viz [Transpozice (posun výšky tónu)](#transpozice-posun-výšky-tónu).
 - **Zvukový profil:** Hlasitost, efekty, ekvalizér a rychlost skladby lze uložit globálně přehráním skladby s příslušně nastavenými hodnotami — Jukebox v současnosti neposkytuje nabídku profilu pro jednotlivé skladby, takže platí aktuální globální nastavení.
@@ -785,6 +802,8 @@ Každá z karet Podcasty, Audioknihy a Jukebox má seznam **Záložky** hned ved
 - **Jukebox** — přímo pod seznamem skladeb; zobrazuje záložky vybrané skladby.
 
 Každý řádek ukazuje název a pozici záložky. Má-li záložka textovou nebo hlasovou poznámku, přidá se značka **[text]** nebo **[hlasová poznámka]**, a když ji označíte klávesou `.`, přidá se **(označeno)**. Seznam sleduje výběr nad ním a obnoví se i tehdy, když při otevřeném okně přidáte záložku pomocí `Ctrl+Win+F12`.
+
+Má-li fokus seznam záložek, fungují v něm i klávesy přehrávání karty nad ním: `←` / `→` přetáčejí, `Shift+←` / `Shift+→` transponují, `Page Up` / `Page Down` mění rychlost přehrávání, `Ctrl+←` / `Ctrl+→` přepínají na předchozí nebo další epizodu, knihu či skladbu a `Alt+←` / `Alt+→` přetáčejí o 1 sekundu.
 
 | Klávesa | Akce |
 |---|---|
