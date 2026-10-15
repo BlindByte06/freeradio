@@ -95,13 +95,7 @@ class BookmarkMixin:
 				return
 			key = self._player.bookmark_key(station)
 			self._player.pause()
-			if bookmark.text:
-				self._speak_blocking(bookmark.text)
-			if bookmark.audio and os.path.isfile(bookmark.audio):
-				try:
-					winsound.PlaySound(bookmark.audio, winsound.SND_FILENAME)
-				except Exception:
-					log.warning("freeAudio: could not play bookmark voice note", exc_info=True)
+			self._deliver_bookmark_notes(bookmark)
 			# Continue where playback was left - unless the user has
 			# meanwhile stopped it or moved on to something else.
 			if (
@@ -113,6 +107,38 @@ class BookmarkMixin:
 		finally:
 			if has_note:
 				self._player.bookmark_hold_release()
+
+	def _deliver_bookmark_notes(self, bookmark):
+		"""Speak the bookmark's text note, then play its voice note; returns
+		when both are finished. Must run on a worker thread (blocks)."""
+		if bookmark.text:
+			self._speak_blocking(bookmark.text)
+		if bookmark.audio and os.path.isfile(bookmark.audio):
+			try:
+				winsound.PlaySound(bookmark.audio, winsound.SND_FILENAME)
+			except Exception:
+				log.warning("freeAudio: could not play bookmark voice note", exc_info=True)
+
+	def play_bookmark_notes_then(self, bookmark, callback):
+		"""Used by "Play from Bookmark": first let the bookmark's notes (if
+		any) be spoken/played - pausing whatever is playing meanwhile - and
+		then call *callback* on the main thread to start playback from the
+		bookmark's position."""
+		if not bookmark.has_note():
+			callback()
+			return
+
+		def _run():
+			try:
+				if self._player.has_media() and self._player.is_playing():
+					self._player.pause()
+				self._deliver_bookmark_notes(bookmark)
+			except Exception:
+				log.warning("freeAudio: could not deliver bookmark notes", exc_info=True)
+			finally:
+				wx.CallAfter(callback)
+
+		threading.Thread(target=_run, daemon=True, name="freeAudio-bookmark-notes").start()
 
 	@staticmethod
 	def _speak_blocking(text):

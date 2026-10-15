@@ -6708,7 +6708,12 @@ class RadioDialog(wx.Dialog):
 			if not url or not mgr.has_bookmarks(url):
 				continue
 			title = (ch.get("title") or "").strip()
-			items.append((url, (title + " \u2014 ") if (multi and title) else "", i))
+			# Only the part (chapter) is shown, after the bookmark name -
+			# the book itself is already obvious from the selected book.
+			book_title = (getattr(book, "title", "") or getattr(book, "name", "") or "").strip()
+			if book_title and title.lower().startswith(book_title.lower()):
+				title = title[len(book_title):].lstrip(" \u2014-:,.\u2013").strip() or title
+			items.append((url, title if (multi and title) else "", i))
 		return items
 
 	def _start_bookmark_chapter(self, entry):

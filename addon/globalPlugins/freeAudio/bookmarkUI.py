@@ -149,8 +149,10 @@ class BookmarkList:
 		from . import _format_duration
 		mgr = bookmarks.get_manager()
 		bm = entry.bookmark
-		text = "%s%s — %s" % (
-			entry.prefix, mgr.display_name(entry.key, bm), _format_duration(bm.position))
+		text = "%s — %s" % (mgr.display_name(entry.key, bm), _format_duration(bm.position))
+		if entry.prefix:
+			# Part (chapter) the bookmark belongs to, shown after the bookmark itself.
+			text += " — " + entry.prefix
 		if bm.text:
 			# Translators: Marker appended to a bookmark's list row when it has a text note.
 			text += " " + _("[text]")
@@ -270,6 +272,14 @@ class BookmarkList:
 	def play_from(self, entry=None):
 		entry = entry or self.selected()
 		if not entry:
+			return
+		# Speak the bookmark's text / play its voice note first, if it has any.
+		plugin = getattr(self._dialog, "_plugin", None)
+		if plugin is not None and entry.bookmark.has_note():
+			plugin.play_bookmark_notes_then(
+				entry.bookmark,
+				lambda: self._seek_or_start(entry, entry.bookmark.position),
+			)
 			return
 		self._seek_or_start(entry, entry.bookmark.position)
 
