@@ -3929,6 +3929,31 @@ class RadioDialog(wx.Dialog):
 			self._plugin.script_timeshiftForward(None)
 		return True
 
+	def _seek_fine_like_global(self, direction):
+		"""Alt+Left/Alt+Right: 1 second seek, same as the global
+		Ctrl+Win+Alt+J/K commands. Returns True if handled."""
+		if self._plugin is None or not self._player.has_media():
+			return False
+		if direction < 0:
+			self._plugin.script_timeshiftRewindFine(None)
+		else:
+			self._plugin.script_timeshiftForwardFine(None)
+		return True
+
+	def _tab_listboxes(self, *lists_and_attrs):
+		"""Return a tuple of the given controls plus the listbox of the
+		bookmark list attributes named (as strings) in the arguments."""
+		out = []
+		for item in lists_and_attrs:
+			if isinstance(item, str):
+				bl = getattr(self, item, None)
+				lb = getattr(bl, "listbox", None)
+				if lb is not None:
+					out.append(lb)
+			else:
+				out.append(item)
+		return tuple(out)
+
 	def _transpose_like_global(self, direction):
 		"""Make a Shift+Left/Right press on the same Podcasts/Audio Books/
 		Jukebox item lists do exactly what the global Shift+Win+J/
@@ -3994,6 +4019,12 @@ class RadioDialog(wx.Dialog):
 		# generic '.' / Enter / Applications-key branches below never see them.
 		bm_list = self._focused_bookmark_list(focused)
 		if bm_list is not None and bm_list.handle_key(event):
+			return
+
+		# Alt+Left / Alt+Right: fine (1 second) seek, anywhere in the dialog.
+		if (event.AltDown() and not event.ControlDown() and not event.ShiftDown()
+				and key in (wx.WXK_LEFT, wx.WXK_RIGHT)
+				and self._seek_fine_like_global(-1 if key == wx.WXK_LEFT else 1)):
 			return
 
 		# F12 adds a bookmark at the current playback position (the global
@@ -4397,7 +4428,7 @@ class RadioDialog(wx.Dialog):
 			if key == wx.WXK_F4:
 				self._play_next_episode()
 				return
-			if focused in (self._episode_list, self._podcast_list, self._podcast_results):
+			if focused in self._tab_listboxes(self._episode_list, self._podcast_list, self._podcast_results, "_episode_bookmarks"):
 				if key == wx.WXK_LEFT and event.ControlDown():
 					self._play_prev_episode()
 					return
@@ -4453,7 +4484,7 @@ class RadioDialog(wx.Dialog):
 			if key == wx.WXK_F4:
 				self._play_next_getem_book()
 				return
-			if focused == self._getem_library_ctrl:
+			if focused in self._tab_listboxes(self._getem_library_ctrl, "_getem_bookmarks"):
 				if key == wx.WXK_LEFT and event.ControlDown():
 					self._play_prev_getem_book()
 					return
@@ -4501,7 +4532,7 @@ class RadioDialog(wx.Dialog):
 			if key == wx.WXK_F4:
 				self._play_next_jukebox_track()
 				return
-			if focused in (self._jukebox_tracks_list, self._jukebox_list):
+			if focused in self._tab_listboxes(self._jukebox_tracks_list, self._jukebox_list, "_jukebox_bookmarks"):
 				if key == wx.WXK_LEFT and event.ControlDown():
 					self._play_prev_jukebox_track()
 					return

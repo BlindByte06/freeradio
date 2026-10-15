@@ -448,6 +448,8 @@ class GlobalPlugin(BookmarkMixin, ObligatoMixin, MiscTogglesMixin, TrackInfoMixi
 		"kb:control+windows+leftArrow": "prevStation",
 		"kb:control+windows+j": "timeshiftRewind",
 		"kb:control+windows+k": "timeshiftForward",
+		"kb:control+windows+alt+j": "timeshiftRewindFine",
+		"kb:control+windows+alt+k": "timeshiftForwardFine",
 		"kb:control+windows+t": "toggleTimeshift",
 		"kb:control+windows+upArrow": "volumeUp",
 		"kb:control+windows+downArrow": "volumeDown",

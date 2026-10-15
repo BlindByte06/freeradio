@@ -68,6 +68,9 @@ _SEEK_TAP_WINDOW_MS = int(_SEEK_TAP_WINDOW_S * 1000)
 # is tuned for.
 _BOUNDARY_JUMP_WINDOW_S = 10.0  # seconds
 
+# Step of the fine seek commands (Ctrl+Win+Alt+J/K, Alt+Left/Right in the dialog).
+_FINE_SEEK_AMOUNT = 1  # seconds
+
 
 class TimeshiftMixin:
 	"""Rewind/fast-forward the time-shift buffer (or seek within a podcast
@@ -306,29 +309,18 @@ class TimeshiftMixin:
 
 		setattr(self, state_attr + "_tap_timer", wx.CallLater(_SEEK_TAP_WINDOW_MS, _commit))
 
-	@script(
-		# Translators: Name of an NVDA command (Ctrl+Win+J); rewinds the live time-shift buffer, or seeks backward within a podcast/audiobook file if one is playing.
-		description=_("Time-shift: rewind 15 seconds (enters time-shift mode if not already active)"),
-		category=_("freeAudio"),
-		gesture="kb:control+windows+j",
-	)
-	def script_timeshiftRewind(self, gesture):
-		# Podcast/sesli kitap oynatılıyorsa dosya içinde geri sar - bkz.
-		# _handle_podcast_seek()'in tap/hold ayrımı.
-		station = self._player.get_current_station()
-		if _is_seekable_media(station):
-			self._handle_podcast_seek(-1)
-			return
-
+	def _live_rewind(self, seconds, gesture):
+		"""Rewind the live time-shift buffer by *seconds*."""
 		if not config.conf["freeAudio"].get("timeshift_enabled", False):
 			# Translators: Spoken when Ctrl+Win+J (rewind) is pressed while the time-shift feature itself is turned off in settings.
 			_notify(_("Time-shift buffer is disabled. Enable it in freeAudio settings."))
 			return
 		if not self._player.has_media():
-			gesture.send()
+			if gesture is not None:
+				gesture.send()
 			return
 
-		ok, position, buffered, reason = self._player.rewind_timeshift(15)
+		ok, position, buffered, reason = self._player.rewind_timeshift(seconds)
 		if not ok:
 			_TIMESHIFT_REASON_MESSAGES = {
 				# Translators: One of the reasons a rewind/forward can fail, mapped from rewind_timeshift()'s return reason to a spoken message (continues for the next six lines: feature disabled, wrong backend, HLS unsupported, not enough buffer yet, buffer file not ready, engine error).
@@ -346,6 +338,47 @@ class TimeshiftMixin:
 		# Translators: Spoken after a successful rewind, reporting how far behind live the buffer now is; %.0f is the number of seconds.
 		_notify(_("Rewound to %.0f seconds behind live") % (buffered - position))
 
+	def _live_forward(self, seconds):
+		"""Fast-forward the live time-shift buffer by *seconds*."""
+		if not config.conf["freeAudio"].get("timeshift_enabled", False):
+			# Translators: Same message as the rewind command, spoken here when Ctrl+Win+K (forward) is pressed with time-shift turned off.
+			_notify(_("Time-shift buffer is disabled. Enable it in freeAudio settings."))
+			return
+		if not self._player.is_timeshifted():
+			# Translators: Spoken when fast-forward is pressed but playback is already at the live edge (not time-shifted).
+			_notify(_("Already listening live"))
+			return
+
+		ok, position, at_live_edge = self._player.forward_timeshift(seconds)
+		if not ok:
+			# Translators: Generic fallback spoken if the fast-forward operation fails.
+			_notify(_("Could not fast-forward"))
+			return
+		if at_live_edge:
+			# Translators: Spoken when a fast-forward catches all the way up to the live edge.
+			_notify(_("Back to live"))
+		else:
+			buffered = self._player.get_timeshift_buffered_seconds()
+			# Translators: Spoken after a fast-forward that has not yet caught up to live; %.0f is how many seconds behind live remain.
+			_notify(_("Fast-forwarded, still %.0f seconds behind live") %
+				(buffered - position))
+
+	@script(
+		# Translators: Name of an NVDA command (Ctrl+Win+J); rewinds the live time-shift buffer, or seeks backward within a podcast/audiobook file if one is playing.
+		description=_("Time-shift: rewind 15 seconds (enters time-shift mode if not already active)"),
+		category=_("freeAudio"),
+		gesture="kb:control+windows+j",
+	)
+	def script_timeshiftRewind(self, gesture):
+		# Podcast/sesli kitap oynatılıyorsa dosya içinde geri sar - bkz.
+		# _handle_podcast_seek()'in tap/hold ayrımı.
+		station = self._player.get_current_station()
+		if _is_seekable_media(station):
+			self._handle_podcast_seek(-1)
+			return
+
+		self._live_rewind(15, gesture)
+
 	@script(
 		# Translators: Name of an NVDA command (Ctrl+Win+K); fast-forwards the live time-shift buffer (snapping to live once caught up), or seeks forward within a podcast/audiobook file if one is playing.
 		description=_("Time-shift: fast-forward 15 seconds, or return to live if already caught up"),
@@ -360,28 +393,31 @@ class TimeshiftMixin:
 			self._handle_podcast_seek(1)
 			return
 
-		if not config.conf["freeAudio"].get("timeshift_enabled", False):
-			# Translators: Same message as the rewind command, spoken here when Ctrl+Win+K (forward) is pressed with time-shift turned off.
-			_notify(_("Time-shift buffer is disabled. Enable it in freeAudio settings."))
-			return
-		if not self._player.is_timeshifted():
-			# Translators: Spoken when fast-forward is pressed but playback is already at the live edge (not time-shifted).
-			_notify(_("Already listening live"))
-			return
+		self._live_forward(15)
 
-		ok, position, at_live_edge = self._player.forward_timeshift(15)
-		if not ok:
-			# Translators: Generic fallback spoken if the fast-forward operation fails.
-			_notify(_("Could not fast-forward"))
+	@script(
+		# Translators: Name of an NVDA command (Ctrl+Win+Alt+J); fine rewind by 1 second.
+		description=_("Fine rewind: 1 second (time-shift buffer, podcast, audiobook or jukebox)"),
+		category=_("freeAudio"),
+		gesture="kb:control+windows+alt+j",
+	)
+	def script_timeshiftRewindFine(self, gesture):
+		if _is_seekable_media(self._player.get_current_station()):
+			self._seek_and_announce(-_FINE_SEEK_AMOUNT)
 			return
-		if at_live_edge:
-			# Translators: Spoken when a fast-forward catches all the way up to the live edge.
-			_notify(_("Back to live"))
-		else:
-			buffered = self._player.get_timeshift_buffered_seconds()
-			# Translators: Spoken after a fast-forward that has not yet caught up to live; %.0f is how many seconds behind live remain.
-			_notify(_("Fast-forwarded, still %.0f seconds behind live") %
-				(buffered - position))
+		self._live_rewind(_FINE_SEEK_AMOUNT, gesture)
+
+	@script(
+		# Translators: Name of an NVDA command (Ctrl+Win+Alt+K); fine fast-forward by 1 second.
+		description=_("Fine forward: 1 second (time-shift buffer, podcast, audiobook or jukebox)"),
+		category=_("freeAudio"),
+		gesture="kb:control+windows+alt+k",
+	)
+	def script_timeshiftForwardFine(self, gesture):
+		if _is_seekable_media(self._player.get_current_station()):
+			self._seek_and_announce(_FINE_SEEK_AMOUNT)
+			return
+		self._live_forward(_FINE_SEEK_AMOUNT)
 
 	@script(
 		# Translators: Name of an NVDA command (Ctrl+Win+T); toggles the time-shift buffer feature on/off.
