@@ -22,7 +22,7 @@
  - Windows 10 or later
  - Internet connection
  
-@@ -72,10 +73,11 @@
+@@ -72,13 +73,16 @@
  | `Ctrl+Win+Shift+J` | Decrease playback speed | Decreases the playback speed of a podcast episode, audio book, or jukebox track by 0.1x. |
  | `Shift+Win+K` | Transpose up | Raises the pitch of a podcast episode, audio book, or jukebox track in 1/8 whole-tone (0.25 semitone) steps, without changing its speed. Range: −12.00 to +12.00 semitones. See [Transpose (Pitch Shift)](#transpose-pitch-shift). |
  | `Shift+Win+J` | Transpose down | Lowers the pitch by 1/8 whole-tone steps, without changing speed. |
@@ -36,7 +36,12 @@
  | `Ctrl+Win+W` | Open recordings folder | Opens the folder containing recorded files in File Explorer. |
  | `Ctrl+Win+J` | Time-shift rewind / podcast, audio book & jukebox seek back | For live radio: rewinds 15 seconds. The first press enters time-shift mode; each further press moves 15 seconds further back, up to the buffer limit set in the freeAudio settings. Requires the time-shift buffer to be enabled in Settings. For a podcast, audio book, or jukebox track, this key seeks within the file instead, and scales with how you press it: **holding it down** keeps stepping back 5 seconds per repeat, exactly as before; a **single deliberate tap** seeks back 12 seconds; **two taps** in quick succession seek back 1 minute; **three or more taps** seek back 5 minutes. Only one seek happens per tap sequence, sized for however many taps were made — taps don't add up. Works regardless of the time-shift setting. |
  | `Ctrl+Win+K` | Time-shift fast-forward / podcast, audio book & jukebox seek forward | For live radio: moves forward 15 seconds while time-shifted. Once the live edge is reached, playback automatically returns to live and this becomes a no-op until you rewind again. For a podcast, audio book, or jukebox track, this key seeks forward within the file using the same tap/hold scaling as `Ctrl+Win+J` above (hold = 5 seconds per repeat; 1 tap = 12 seconds; 2 taps = 1 minute; 3+ taps = 5 minutes). Works regardless of the time-shift setting. |
-@@ -90,7 +92,7 @@
++| `Ctrl+Win+Alt+J` | Fine rewind (1 second) | Rewinds by exactly 1 second, for small corrections. On a podcast, audio book or jukebox track it seeks 1 second back in the file; on live radio it moves 1 second back in the time-shift buffer (the time-shift buffer must be enabled, and the first press enters time-shift mode like `Ctrl+Win+J`). See [Fine Seeking (1 Second)](#fine-seeking-1-second). |
++| `Ctrl+Win+Alt+K` | Fine forward (1 second) | Moves forward by exactly 1 second. On a podcast, audio book or jukebox track it seeks 1 second forward in the file; on live radio it moves 1 second forward while time-shifted. See [Fine Seeking (1 Second)](#fine-seeking-1-second). |
+ | `Ctrl+Win+T` | Toggle time-shift buffer | Enables or disables the time-shift buffer on the fly, mirroring the Settings checkbox. Disabling immediately returns to live playback if time-shifted and stops the background capture. No effect on podcast, audio book or jukebox playbacks. |
+ | *(unassigned)* | Select output device | Opens an on-demand list of the available main output devices. The list is shown only when BASS detects more than one physical output device. Assign a key combination via NVDA Menu → Preferences → Input Gestures → freeAudio. |
+ | *(unassigned)* | Toggle mute notifications | Toggles the Mute Notifications setting on the fly. Assign a key combination via NVDA Menu → Preferences → Input Gestures → freeAudio. |
+@@ -90,7 +94,7 @@
  
  freeAudio also adds a **freeAudio** submenu to the NVDA Tools menu. From there you can directly open the Station Browser and freeAudio Settings.
  
@@ -45,7 +50,7 @@
  
  When the All Stations tab opens, the top 1,000 most-voted stations are automatically loaded from Radio Browser. Selecting a country from the dropdown updates the list to show that country's stations. Typing in the search field instantly performs a full search across the entire Radio Browser database simultaneously by name, country and genre.
  
-@@ -129,7 +131,7 @@
+@@ -129,7 +133,7 @@
  | Shortcut | Function | Description |
  |---|---|---|
  | `F1` | Help guide | Opens the add-on's help file in the default browser. The guide for the active NVDA language is searched first; if not found, the default guide is opened. |
@@ -54,7 +59,7 @@
  | `F3` | Previous item | On All Stations or Favourites tabs: moves to the previous station and starts playing immediately. On Podcasts tab: moves to the previous episode in the episode list and plays it. On Audio Books tab: moves to the previous book and starts playing it. On Jukebox tab: moves to the previous track in the selected jukebox item and plays it. |
  | `F4` | Next item | On All Stations or Favourites tabs: moves to the next station and starts playing immediately. On Podcasts tab: moves to the next episode and plays it. On Audio Books tab: moves to the next book and starts playing it. On Jukebox tab: moves to the next track in the selected jukebox item and plays it. |
  | `Shift+F3` | Previous feed / part / item | On Podcasts tab: moves up one feed in the subscriptions list. On Audio Books tab: moves to the previous part of the currently playing book. On Jukebox tab: moves up one jukebox entry (file or folder) in the main list. |
-@@ -140,15 +142,16 @@
+@@ -140,17 +144,20 @@
  | `F8` | Stop | Fully stops the current station and resets the player. |
  | `F9` | Rename | Opens rename dialog for the focused station in the Favourites tab. |
  | `F11` | Select output device | Opens the main output-device picker when BASS detects more than one physical output device. The current device is preselected; Enter applies and saves the choice. |
@@ -65,16 +70,23 @@
  | Shortcut | Function | Description |
  |---|---|---|
 -| `→` | Next item / Seek forward | On a station list (All Stations / Favourites), moves to the next station and plays it immediately, wrapping to the beginning at the end of the list. On the Podcasts, Audio Books or Jukebox item lists, while something is loaded and playing, seeks forward instead — the same as the global `Ctrl+Win+K` command (see Tiered Seeking above). On the Podcasts episode list specifically, if nothing is loaded yet, it falls back to moving to the next episode and playing it. |
-+| `→` | Next item / Seek forward | On a station list (All Stations / Favourites), moves to the next station and plays it immediately, wrapping to the beginning at the end of the list. On the Podcasts, Audio Books or Jukebox item lists, while something is loaded and playing, seeks forward instead — the same as the global `Ctrl+Win+K` command (see [Podcast Playback Details](#podcast-playback-details) for how tapping and holding change the step). On the Podcasts episode list specifically, if nothing is loaded yet, it falls back to moving to the next episode and playing it. |
- | `←` | Previous item / Seek backward | On a station list, moves to the previous station and plays it, jumping to the end when at the beginning. On the Podcasts, Audio Books or Jukebox item lists, while something is loaded and playing, seeks backward instead — the same as the global `Ctrl+Win+J` command. On the Podcasts episode list, if nothing is loaded yet, it falls back to moving to the previous episode and playing it. |
+-| `←` | Previous item / Seek backward | On a station list, moves to the previous station and plays it, jumping to the end when at the beginning. On the Podcasts, Audio Books or Jukebox item lists, while something is loaded and playing, seeks backward instead — the same as the global `Ctrl+Win+J` command. On the Podcasts episode list, if nothing is loaded yet, it falls back to moving to the previous episode and playing it. |
 -| `Shift+→` | Transpose up | On the Podcasts, Audio Books or Jukebox item lists: raises the pitch of the current playback by a semitone, the same as the global `Shift+Win+K` command. |
 -| `Shift+←` | Transpose down | On the Podcasts, Audio Books or Jukebox item lists: lowers the pitch of the current playback by a semitone, the same as the global `Shift+Win+J` command. |
-+| `Shift+→` | Transpose up | On the Podcasts, Audio Books or Jukebox item lists: raises the pitch of the current playback by one step (0.25 semitone), the same as the global `Shift+Win+K` command. |
-+| `Shift+←` | Transpose down | On the Podcasts, Audio Books or Jukebox item lists: lowers the pitch of the current playback by one step (0.25 semitone), the same as the global `Shift+Win+J` command. |
- | `Page Up` | Playback speed up | On the Podcasts, Audio Books or Jukebox item lists: increases playback speed, the same as the global `Ctrl+Win+Shift+K` command. |
- | `Page Down` | Playback speed down | On the Podcasts, Audio Books or Jukebox item lists: decreases playback speed, the same as the global `Ctrl+Win+Shift+J` command. |
+-| `Page Up` | Playback speed up | On the Podcasts, Audio Books or Jukebox item lists: increases playback speed, the same as the global `Ctrl+Win+Shift+K` command. |
+-| `Page Down` | Playback speed down | On the Podcasts, Audio Books or Jukebox item lists: decreases playback speed, the same as the global `Ctrl+Win+Shift+J` command. |
++| `→` | Next item / Seek forward | On a station list (All Stations / Favourites), moves to the next station and plays it immediately, wrapping to the beginning at the end of the list. On the Podcasts, Audio Books or Jukebox item lists (and the bookmark list below each), while something is loaded and playing, seeks forward instead — the same as the global `Ctrl+Win+K` command (see [Podcast Playback Details](#podcast-playback-details) for how tapping and holding change the step). On the Podcasts episode list specifically, if nothing is loaded yet, it falls back to moving to the next episode and playing it. |
++| `←` | Previous item / Seek backward | On a station list, moves to the previous station and plays it, jumping to the end when at the beginning. On the Podcasts, Audio Books or Jukebox item lists (and the bookmark list below each), while something is loaded and playing, seeks backward instead — the same as the global `Ctrl+Win+J` command. On the Podcasts episode list, if nothing is loaded yet, it falls back to moving to the previous episode and playing it. |
++| `Shift+→` | Transpose up | On the Podcasts, Audio Books or Jukebox item lists and their bookmark lists: raises the pitch of the current playback by one step (0.25 semitone), the same as the global `Shift+Win+K` command. |
++| `Shift+←` | Transpose down | On the Podcasts, Audio Books or Jukebox item lists and their bookmark lists: lowers the pitch of the current playback by one step (0.25 semitone), the same as the global `Shift+Win+J` command. |
++| `Page Up` | Playback speed up | On the Podcasts, Audio Books or Jukebox item lists and their bookmark lists: increases playback speed, the same as the global `Ctrl+Win+Shift+K` command. |
++| `Page Down` | Playback speed down | On the Podcasts, Audio Books or Jukebox item lists and their bookmark lists: decreases playback speed, the same as the global `Ctrl+Win+Shift+J` command. |
++| `Alt+→` | Fine seek forward (1 second) | In any tab of the Station Browser, while something is loaded: seeks forward by exactly 1 second, the same as the global `Ctrl+Win+Alt+K` command. See [Fine Seeking (1 Second)](#fine-seeking-1-second). |
++| `Alt+←` | Fine seek backward (1 second) | In any tab of the Station Browser, while something is loaded: seeks backward by exactly 1 second, the same as the global `Ctrl+Win+Alt+J` command. |
  | `Ctrl+→` | Next episode / book / track | On Podcasts tab: moves to the next episode and plays it. On Audio Books tab (library list focused): moves to the next book. On Jukebox tab (either the entries list or the tracks list focused): moves to the next track in the selected jukebox item and plays it. |
-@@ -214,11 +217,13 @@
+ | `Ctrl+←` | Previous episode / book / track | On Podcasts tab: moves to the previous episode and plays it. On Audio Books tab: moves to the previous book. On Jukebox tab: moves to the previous track in the selected jukebox item and plays it. |
+ | `Enter` | Play / Add | On a station or episode list: starts playing the selected item immediately. On the Jukebox tab's search results: adds the selected file to the jukebox. On the Jukebox tab's entries or tracks list: plays the focused item directly. |
+@@ -214,11 +221,13 @@
  - Press **`.`** (period) on a highlighted item to mark or unmark it. NVDA announces the change, and a marked item's row is labelled "(marked)" so its status stays clear while you keep arrowing through the list.
  - Press **`Shift+Home`** to mark or unmark every item from the current one up to the first item in the list, or **`Shift+End`** to do the same down to the last item. Whether the range is marked or unmarked is decided by the current item's own state, so the whole range always moves the same way in one action. Focus moves to the far end of the range afterwards, and NVDA announces how many items changed.
  - Press **`Delete`** to remove every marked item at once. If nothing is marked, `Delete` still removes just the currently selected item, as before.
@@ -89,7 +101,7 @@
  ### Exporting and Importing Favourites
  
  The Favourites tab includes two buttons for backing up and restoring your station list:
-@@ -282,9 +287,11 @@
+@@ -282,9 +291,11 @@
  
  ## Music Recognition
  
@@ -103,7 +115,7 @@
  
  **Audio feedback:** Two rising beeps sound when recognition starts, and two falling beeps when it ends. A short beep plays every 2 seconds while the process is running.
  
-@@ -324,7 +331,7 @@
+@@ -324,7 +335,7 @@
  
  ## Recording
  
@@ -112,7 +124,7 @@
  
  The **Recording output format** setting controls how completed recordings are saved:
  
-@@ -334,7 +341,16 @@
+@@ -334,7 +345,16 @@
  
  **Instant recording:** While a station is playing, press `Ctrl+Win+E` once. Press again to stop. Playback continues uninterrupted throughout.
  
@@ -130,7 +142,7 @@
  
  **Scheduled recording:** Open the Recording tab in the browser. Select a station from your favourites, enter the start time in HH:MM format and the duration in minutes, select one or more active days, then choose a recurrence mode and a recording mode:
  
-@@ -358,20 +374,19 @@
+@@ -358,23 +378,23 @@
  
  NVDA announces when a recording starts and when it finishes. If NVDA is restarted while a scheduled recording is active, the recording resumes automatically on startup.
  
@@ -155,7 +167,11 @@
  
  - **`Ctrl+Win+J`** — Rewind 15 seconds. The first press switches you from live playback into time-shifted playback, starting 15 seconds behind the live edge. Each further press moves another 15 seconds further back, up to the buffer limit.
  - **`Ctrl+Win+K`** — Fast-forward 15 seconds while time-shifted. Once you reach the live edge, playback automatically switches back to the live stream and NVDA announces "Back to live" — you don't need to do anything extra to resume normal listening.
-@@ -397,7 +412,7 @@
++- **`Ctrl+Win+Alt+J`** / **`Ctrl+Win+Alt+K`** — The same rewind and fast-forward, but in steps of 1 second instead of 15, for fine adjustments. See [Fine Seeking (1 Second)](#fine-seeking-1-second).
+ - **`Ctrl+Win+T`** — Turns the whole feature on or off. Turning it off while time-shifted immediately returns you to live playback and stops the background capture for the current station.
+ 
+ Background capture keeps running the entire time you're time-shifted, so the live edge keeps moving forward even while you're listening to something a few minutes old — exactly like a real DVR.
+@@ -397,7 +417,7 @@
  ### Requirements and Limitations
  
  - **Requires the BASS backend**, which freeAudio always uses for playback (see [Playback](#playback)).
@@ -164,7 +180,7 @@
  - The buffer is per-station: switching stations, stopping playback, or restarting NVDA clears it and starts fresh.
  - Time-shifted playback uses its own local buffer file and does not produce a saved recording — if you want to keep the audio permanently, use Instant Recording (`Ctrl+Win+E`) as well.
  
-@@ -425,7 +440,7 @@
+@@ -425,7 +445,7 @@
  
  1. **Search and add** — top section for discovering new podcasts, including a preview list that shows the episodes of whichever search result is currently selected.
  2. **Subscriptions** — list of your subscribed feeds.
@@ -173,7 +189,7 @@
  
  ### Adding a Podcast Feed
  
-@@ -442,17 +457,17 @@
+@@ -442,17 +462,17 @@
  - In the **Search** field, type a keyword (podcast title, topic, or host name) and press Enter.
  - freeAudio searches the iTunes podcast directory and displays matching podcasts in the **Search results** list.
  - Selecting a result fetches that feed in the background and lists its episodes in the **Episodes in selected result** list right below, so you can preview what the show actually contains before deciding to subscribe — see [Previewing Episodes Before Subscribing](#previewing-episodes-before-subscribing) below.
@@ -195,7 +211,7 @@
  - While an episode is being previewed, the same context menu shows **Stop Preview** in place of **Preview** — choose it, or press `Enter` again on that episode, to stop.
  - Previewing does not subscribe you to anything; it's purely for listening before you decide. The preview list itself is temporary — it's replaced as soon as you select a different search result, and it does not persist anywhere the way your actual subscriptions do.
  
-@@ -460,11 +475,11 @@
+@@ -460,11 +480,11 @@
  
  Once you have added some feeds, they appear in the **Subscriptions** list. Each entry shows the feed title and the number of episodes available.
  
@@ -209,7 +225,7 @@
  
  - **Refresh Feed** — fetch new episodes now.
  - **Save Audio Profile for This Podcast** / **Clear Audio Profile** — see [Podcast Audio Profile](#podcast-audio-profile).
-@@ -491,7 +506,7 @@
+@@ -491,7 +511,7 @@
  
  **Resuming playback:** freeAudio saves your position in each podcast episode automatically — immediately whenever you pause or the episode finishes, and every 15 seconds in the background while you keep listening, so a crash or unexpected restart won't lose much progress. If you stop or pause playback and come back later, the episode resumes from the saved position. If you play the episode to the very end (within the last 3 seconds), it is marked as "Listened" and will not resume — it starts from the beginning next time, and the "Listened" prefix appears in the list.
  
@@ -218,7 +234,7 @@
  
  - **Play Episode** — start playback.
  - **Download Episode** — download the episode file to your recordings folder.
-@@ -508,11 +523,11 @@
+@@ -508,17 +528,29 @@
  
  ### Podcast Playback Details
  
@@ -232,7 +248,25 @@
  - **One deliberate tap** seeks **12 seconds**.
  - **Two taps** in quick succession seek **1 minute**.
  - **Three or more taps** seek **5 minutes**; further taps in the same burst don't escalate any further.
-@@ -527,7 +542,7 @@
+ 
+ A deliberate tap is held for a brief moment before it actually seeks, in case another tap is still coming — only one seek happens per tap sequence, sized for however many taps were ultimately made, not the sum of each tap's amount. After a seek, NVDA announces the resulting elapsed/remaining position in the episode rather than just "X seconds forward/back".
+ 
++### Fine Seeking (1 Second)
++
++For small corrections, such as replaying a word you just missed, freeAudio has a separate pair of commands that always move by exactly **1 second**, regardless of how you press them:
++
++- **`Ctrl+Win+Alt+J`** — 1 second back, from anywhere in Windows.
++- **`Ctrl+Win+Alt+K`** — 1 second forward, from anywhere in Windows.
++- **`Alt+←`** / **`Alt+→`** — the same two commands inside the Station Browser, on any tab.
++
++On a podcast episode, audio book part or jukebox track they work exactly like the normal seek commands, only with a 1-second step: NVDA announces the resulting elapsed/remaining position, and on an audio book or jukebox folder the part and track boundaries behave as described for `Ctrl+Win+J` / `Ctrl+Win+K` (a forward seek past the end moves on to the next part or track; a rewind past the start first parks at 0:00 and only a second rewind within 10 seconds goes back to the previous part or track).
++
++On a live radio station they move by 1 second in the time-shift buffer. As with `Ctrl+Win+J`, the buffer must be enabled in the settings, and the first rewind switches from live playback into time-shifted playback. A fast-forward that ends up within about 2 seconds of the live edge returns to live and announces "Back to live".
++
+ **Playback speed:** You can adjust the playback speed of podcast episodes, audio books, and jukebox tracks using `Ctrl+Win+Shift+K` (faster) and `Ctrl+Win+Shift+J` (slower). The speed changes in 0.1x increments, ranging from 0.5x to 2.0x, with pitch preserved.
+ 
+ **Transpose (pitch shift):** Independent of playback speed, you can shift the pitch of a podcast episode, audio book, or jukebox track up or down with `Shift+Win+K` / `Shift+Win+J` — see [Transpose (Pitch Shift)](#transpose-pitch-shift).
+@@ -527,7 +559,7 @@
  
  ### Podcast Audio Profile
  
@@ -241,7 +275,7 @@
  
  A dialog with 15 options lets you choose exactly what to save:
  
-@@ -574,7 +589,7 @@
+@@ -574,7 +606,7 @@
  Open the station browser with `Ctrl+Win+R` and switch to the **Audio Books** tab using `Ctrl+Tab` or `Alt+7`. The tab has three main areas:
  
  1. **Search** — a text field to search all enabled catalogues at once, with a results list that appears once a search is run.
@@ -250,7 +284,7 @@
  3. **Details** — a read-only box showing the source, title, author, narrator, publisher, format, number of parts, description and catalogue URL of whichever book is selected, in either list.
  
  ### Signing In
-@@ -597,7 +612,7 @@
+@@ -597,7 +629,7 @@
  
  Selecting a result shows its details — author, narrator, publisher, format and part count — in the details box below.
  
@@ -259,7 +293,7 @@
  
  **Adding to your library:** Select a result and press `Enter`, or use its context menu and choose **Add to Library**, to add it. freeAudio tells you if the book is already there.
  
-@@ -609,7 +624,7 @@
+@@ -609,7 +641,7 @@
  - Use `F3` / `F4` on the Audio Books tab to move to the previous / next **book** in your library and start playing it. `Ctrl+←` / `Ctrl+→` do the same while the library list is focused.
  - Use `Shift+F3` / `Shift+F4` to move between **parts** of the currently playing book instead — the reverse of the Podcasts tab, where F3/F4 move between episodes and Shift+F3/F4 move between feeds. This is because a book is a single library entry even when it has several parts, so the finer-grained "part" navigation sits on the Shift-modified keys here.
  
@@ -268,7 +302,7 @@
  
  - **Play Media** — start playing, same as `Enter`.
  - **Download Book** — download every part of the book; see [Downloading Audio Books](#downloading-audio-books) below.
-@@ -631,7 +646,7 @@
+@@ -631,7 +663,7 @@
  
  ### Audio Book Audio Profile
  
@@ -277,7 +311,7 @@
  
  **Clear Audio Profile** removes the saved profile from the book; it is only enabled when the book currently has a saved profile.
  
-@@ -653,17 +668,17 @@
+@@ -653,17 +685,17 @@
  
  1. **Search on devices** — a text field that searches every locally attached, ready drive for audio files whose filename contains the typed text. Press `Enter` to start the search.
  2. **Search results** — a list that appears once a search has been run, showing the matching files. Hidden until then, so the tab stays uncluttered when there's nothing to search.
@@ -299,7 +333,16 @@
  - Starting a new search cancels any search still running, so a slow search on a large drive never delays a fresh one.
  
  ### Building Your Jukebox
-@@ -723,7 +738,7 @@
+@@ -699,7 +731,7 @@
+ Every track played from the Jukebox gets the full local-media treatment:
+ 
+ - **Resume:** freeAudio remembers your position in each track, saves it on pause and periodically while playing, and resumes from that point when you play it again — even across an NVDA restart.
+-- **Tiered seeking:** `Ctrl+Win+J` / `Ctrl+Win+K` seek within the track using the same tap/hold scaling as podcasts and audio books — hold for 5 seconds per repeat, one tap for 12 seconds, two taps for 1 minute, three or more taps for 5 minutes.
++- **Tiered seeking:** `Ctrl+Win+J` / `Ctrl+Win+K` seek within the track using the same tap/hold scaling as podcasts and audio books — hold for 5 seconds per repeat, one tap for 12 seconds, two taps for 1 minute, three or more taps for 5 minutes. `Ctrl+Win+Alt+J` / `Ctrl+Win+Alt+K` seek exactly 1 second — see [Fine Seeking (1 Second)](#fine-seeking-1-second).
+ - **Playback speed:** `Ctrl+Win+Shift+J` / `Ctrl+Win+Shift+K` adjust speed in 0.1x steps from 0.5x to 2.0x, with pitch preserved.
+ - **Transpose:** `Shift+Win+J` / `Shift+Win+K` shift pitch without changing speed — see [Transpose (Pitch Shift)](#transpose-pitch-shift).
+ - **Audio profile:** A track's volume, effects, EQ and speed can be saved globally by playing a track while the appropriate settings are set — the Jukebox does not currently expose a per-track profile menu, so the current global settings apply.
+@@ -723,7 +755,7 @@
  
  ### Exporting and Importing the Jukebox Library
  
@@ -308,7 +351,7 @@
  
  **Export Jukebox…** — saves your entire Jukebox list to a file. A save dialog lets you choose between two formats:
  
-@@ -749,6 +764,65 @@
+@@ -749,6 +781,67 @@
  
  The shortcut plays the entry immediately — for a file entry, the file itself; for a folder entry, its first track. If the entry is later removed from your Jukebox, its entry disappears from the category and any shortcut assigned to it is automatically cleared by NVDA. When a new entry is added, it appears in the category straight away — the Input Gestures dialog does not need to be reopened.
  
@@ -333,6 +376,8 @@
 +- **Jukebox** — directly below the Tracks list, showing the bookmarks of the selected track.
 +
 +Each row shows the bookmark's name and position. A **[text]** or **[voice note]** marker is added when the bookmark has a text note or a voice note, and **(marked)** when you have marked it with `.`. The list follows the selection above it and is also refreshed when you add a bookmark with `Ctrl+Win+F12` while the window is open.
++
++While a bookmark list has focus, the playback keys of the tab above it also work there: `←` / `→` seek, `Shift+←` / `Shift+→` transpose, `Page Up` / `Page Down` change the playback speed, `Ctrl+←` / `Ctrl+→` switch to the previous or next episode, book or track, and `Alt+←` / `Alt+→` seek by 1 second.
 +
 +| Key | Action |
 +|---|---|
@@ -374,7 +419,7 @@
  ## Transpose (Pitch Shift)
  
  Transpose shifts the **pitch** of what's playing up or down without changing its **speed** — the opposite of the "chipmunk effect" you'd get from simply speeding a track up. It's useful for matching the natural range of a particular narrator, transposing music to a friendlier key, or just adjusting a recording to sit more comfortably on your ears.
-@@ -770,7 +844,7 @@
+@@ -770,7 +863,7 @@
  
  ## Liked Songs Tab
  
@@ -383,7 +428,7 @@
  
  A **Filter** field above the list lets you narrow the displayed tracks in real time. Type any part of a song title or artist name and the list updates instantly on every keystroke. NVDA announces the number of matching results after each change. Press the `Down` arrow from the filter field to move focus directly into the list.
  
-@@ -802,32 +876,60 @@
+@@ -802,32 +895,60 @@
  
  | Option | Description |
  |---|---|
@@ -450,7 +495,7 @@
  
  ## Mute Notifications
  
-@@ -836,8 +938,9 @@
+@@ -836,8 +957,9 @@
  - Station name when a new station starts playing
  - Playback state changes: play, pause, stop
  - Obligato mode: started / stopped
@@ -461,7 +506,7 @@
  
  The following announcements are intentionally **not** affected: error messages, favourites feedback (added / already in list), music recognition results, and update notifications.
  
-@@ -853,12 +956,14 @@
+@@ -853,12 +975,14 @@
  
  ## Playback
  
@@ -477,7 +522,7 @@
  ## Update Check
  
  freeAudio automatically checks for new versions via GitHub.
-@@ -872,14 +977,14 @@
+@@ -872,14 +996,14 @@
  - If a directly downloadable `.nvda-addon` file is available on the GitHub release, a **Download and Install** button is shown. Once confirmed, the file is downloaded in the background, NVDA announces when the download starts, and NVDA's own installation screen opens automatically.
  - If no direct download link is available, an **Open Page** button is shown and the GitHub release page opens in the default browser.
  

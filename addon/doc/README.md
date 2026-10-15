@@ -81,6 +81,8 @@ Some of these shortcuts overlap with ones Windows itself uses. If you'd rather k
 | `Ctrl+Win+W` | Open recordings folder | Opens the folder containing recorded files in File Explorer. |
 | `Ctrl+Win+J` | Time-shift rewind / podcast, audio book & jukebox seek back | For live radio: rewinds 15 seconds. The first press enters time-shift mode; each further press moves 15 seconds further back, up to the buffer limit set in the freeAudio settings. Requires the time-shift buffer to be enabled in Settings. For a podcast, audio book, or jukebox track, this key seeks within the file instead, and scales with how you press it: **holding it down** keeps stepping back 5 seconds per repeat, exactly as before; a **single deliberate tap** seeks back 12 seconds; **two taps** in quick succession seek back 1 minute; **three or more taps** seek back 5 minutes. Only one seek happens per tap sequence, sized for however many taps were made — taps don't add up. Works regardless of the time-shift setting. |
 | `Ctrl+Win+K` | Time-shift fast-forward / podcast, audio book & jukebox seek forward | For live radio: moves forward 15 seconds while time-shifted. Once the live edge is reached, playback automatically returns to live and this becomes a no-op until you rewind again. For a podcast, audio book, or jukebox track, this key seeks forward within the file using the same tap/hold scaling as `Ctrl+Win+J` above (hold = 5 seconds per repeat; 1 tap = 12 seconds; 2 taps = 1 minute; 3+ taps = 5 minutes). Works regardless of the time-shift setting. |
+| `Ctrl+Win+Alt+J` | Fine rewind (1 second) | Rewinds by exactly 1 second, for small corrections. On a podcast, audio book or jukebox track it seeks 1 second back in the file; on live radio it moves 1 second back in the time-shift buffer (the time-shift buffer must be enabled, and the first press enters time-shift mode like `Ctrl+Win+J`). See [Fine Seeking (1 Second)](#fine-seeking-1-second). |
+| `Ctrl+Win+Alt+K` | Fine forward (1 second) | Moves forward by exactly 1 second. On a podcast, audio book or jukebox track it seeks 1 second forward in the file; on live radio it moves 1 second forward while time-shifted. See [Fine Seeking (1 Second)](#fine-seeking-1-second). |
 | `Ctrl+Win+T` | Toggle time-shift buffer | Enables or disables the time-shift buffer on the fly, mirroring the Settings checkbox. Disabling immediately returns to live playback if time-shifted and stops the background capture. No effect on podcast, audio book or jukebox playbacks. |
 | *(unassigned)* | Select output device | Opens an on-demand list of the available main output devices. The list is shown only when BASS detects more than one physical output device. Assign a key combination via NVDA Menu → Preferences → Input Gestures → freeAudio. |
 | *(unassigned)* | Toggle mute notifications | Toggles the Mute Notifications setting on the fly. Assign a key combination via NVDA Menu → Preferences → Input Gestures → freeAudio. |
@@ -148,12 +150,14 @@ The following keys work only while the Station Browser window is active.
 
 | Shortcut | Function | Description |
 |---|---|---|
-| `→` | Next item / Seek forward | On a station list (All Stations / Favourites), moves to the next station and plays it immediately, wrapping to the beginning at the end of the list. On the Podcasts, Audio Books or Jukebox item lists, while something is loaded and playing, seeks forward instead — the same as the global `Ctrl+Win+K` command (see [Podcast Playback Details](#podcast-playback-details) for how tapping and holding change the step). On the Podcasts episode list specifically, if nothing is loaded yet, it falls back to moving to the next episode and playing it. |
-| `←` | Previous item / Seek backward | On a station list, moves to the previous station and plays it, jumping to the end when at the beginning. On the Podcasts, Audio Books or Jukebox item lists, while something is loaded and playing, seeks backward instead — the same as the global `Ctrl+Win+J` command. On the Podcasts episode list, if nothing is loaded yet, it falls back to moving to the previous episode and playing it. |
-| `Shift+→` | Transpose up | On the Podcasts, Audio Books or Jukebox item lists: raises the pitch of the current playback by one step (0.25 semitone), the same as the global `Shift+Win+K` command. |
-| `Shift+←` | Transpose down | On the Podcasts, Audio Books or Jukebox item lists: lowers the pitch of the current playback by one step (0.25 semitone), the same as the global `Shift+Win+J` command. |
-| `Page Up` | Playback speed up | On the Podcasts, Audio Books or Jukebox item lists: increases playback speed, the same as the global `Ctrl+Win+Shift+K` command. |
-| `Page Down` | Playback speed down | On the Podcasts, Audio Books or Jukebox item lists: decreases playback speed, the same as the global `Ctrl+Win+Shift+J` command. |
+| `→` | Next item / Seek forward | On a station list (All Stations / Favourites), moves to the next station and plays it immediately, wrapping to the beginning at the end of the list. On the Podcasts, Audio Books or Jukebox item lists (and the bookmark list below each), while something is loaded and playing, seeks forward instead — the same as the global `Ctrl+Win+K` command (see [Podcast Playback Details](#podcast-playback-details) for how tapping and holding change the step). On the Podcasts episode list specifically, if nothing is loaded yet, it falls back to moving to the next episode and playing it. |
+| `←` | Previous item / Seek backward | On a station list, moves to the previous station and plays it, jumping to the end when at the beginning. On the Podcasts, Audio Books or Jukebox item lists (and the bookmark list below each), while something is loaded and playing, seeks backward instead — the same as the global `Ctrl+Win+J` command. On the Podcasts episode list, if nothing is loaded yet, it falls back to moving to the previous episode and playing it. |
+| `Shift+→` | Transpose up | On the Podcasts, Audio Books or Jukebox item lists and their bookmark lists: raises the pitch of the current playback by one step (0.25 semitone), the same as the global `Shift+Win+K` command. |
+| `Shift+←` | Transpose down | On the Podcasts, Audio Books or Jukebox item lists and their bookmark lists: lowers the pitch of the current playback by one step (0.25 semitone), the same as the global `Shift+Win+J` command. |
+| `Page Up` | Playback speed up | On the Podcasts, Audio Books or Jukebox item lists and their bookmark lists: increases playback speed, the same as the global `Ctrl+Win+Shift+K` command. |
+| `Page Down` | Playback speed down | On the Podcasts, Audio Books or Jukebox item lists and their bookmark lists: decreases playback speed, the same as the global `Ctrl+Win+Shift+J` command. |
+| `Alt+→` | Fine seek forward (1 second) | In any tab of the Station Browser, while something is loaded: seeks forward by exactly 1 second, the same as the global `Ctrl+Win+Alt+K` command. See [Fine Seeking (1 Second)](#fine-seeking-1-second). |
+| `Alt+←` | Fine seek backward (1 second) | In any tab of the Station Browser, while something is loaded: seeks backward by exactly 1 second, the same as the global `Ctrl+Win+Alt+J` command. |
 | `Ctrl+→` | Next episode / book / track | On Podcasts tab: moves to the next episode and plays it. On Audio Books tab (library list focused): moves to the next book. On Jukebox tab (either the entries list or the tracks list focused): moves to the next track in the selected jukebox item and plays it. |
 | `Ctrl+←` | Previous episode / book / track | On Podcasts tab: moves to the previous episode and plays it. On Audio Books tab: moves to the previous book. On Jukebox tab: moves to the previous track in the selected jukebox item and plays it. |
 | `Enter` | Play / Add | On a station or episode list: starts playing the selected item immediately. On the Jukebox tab's search results: adds the selected file to the jukebox. On the Jukebox tab's entries or tracks list: plays the focused item directly. |
@@ -390,6 +394,7 @@ Once enabled, freeAudio continuously captures the currently playing station into
 
 - **`Ctrl+Win+J`** — Rewind 15 seconds. The first press switches you from live playback into time-shifted playback, starting 15 seconds behind the live edge. Each further press moves another 15 seconds further back, up to the buffer limit.
 - **`Ctrl+Win+K`** — Fast-forward 15 seconds while time-shifted. Once you reach the live edge, playback automatically switches back to the live stream and NVDA announces "Back to live" — you don't need to do anything extra to resume normal listening.
+- **`Ctrl+Win+Alt+J`** / **`Ctrl+Win+Alt+K`** — The same rewind and fast-forward, but in steps of 1 second instead of 15, for fine adjustments. See [Fine Seeking (1 Second)](#fine-seeking-1-second).
 - **`Ctrl+Win+T`** — Turns the whole feature on or off. Turning it off while time-shifted immediately returns you to live playback and stops the background capture for the current station.
 
 Background capture keeps running the entire time you're time-shifted, so the live edge keeps moving forward even while you're listening to something a few minutes old — exactly like a real DVR.
@@ -533,6 +538,18 @@ Podcast episodes are played using the **BASS backend** (the same engine used for
 - **Three or more taps** seek **5 minutes**; further taps in the same burst don't escalate any further.
 
 A deliberate tap is held for a brief moment before it actually seeks, in case another tap is still coming — only one seek happens per tap sequence, sized for however many taps were ultimately made, not the sum of each tap's amount. After a seek, NVDA announces the resulting elapsed/remaining position in the episode rather than just "X seconds forward/back".
+
+### Fine Seeking (1 Second)
+
+For small corrections, such as replaying a word you just missed, freeAudio has a separate pair of commands that always move by exactly **1 second**, regardless of how you press them:
+
+- **`Ctrl+Win+Alt+J`** — 1 second back, from anywhere in Windows.
+- **`Ctrl+Win+Alt+K`** — 1 second forward, from anywhere in Windows.
+- **`Alt+←`** / **`Alt+→`** — the same two commands inside the Station Browser, on any tab.
+
+On a podcast episode, audio book part or jukebox track they work exactly like the normal seek commands, only with a 1-second step: NVDA announces the resulting elapsed/remaining position, and on an audio book or jukebox folder the part and track boundaries behave as described for `Ctrl+Win+J` / `Ctrl+Win+K` (a forward seek past the end moves on to the next part or track; a rewind past the start first parks at 0:00 and only a second rewind within 10 seconds goes back to the previous part or track).
+
+On a live radio station they move by 1 second in the time-shift buffer. As with `Ctrl+Win+J`, the buffer must be enabled in the settings, and the first rewind switches from live playback into time-shifted playback. A fast-forward that ends up within about 2 seconds of the live edge returns to live and announces "Back to live".
 
 **Playback speed:** You can adjust the playback speed of podcast episodes, audio books, and jukebox tracks using `Ctrl+Win+Shift+K` (faster) and `Ctrl+Win+Shift+J` (slower). The speed changes in 0.1x increments, ranging from 0.5x to 2.0x, with pitch preserved.
 
@@ -714,7 +731,7 @@ Neither command has a default key assigned. Assign one from NVDA Menu → Prefer
 Every track played from the Jukebox gets the full local-media treatment:
 
 - **Resume:** freeAudio remembers your position in each track, saves it on pause and periodically while playing, and resumes from that point when you play it again — even across an NVDA restart.
-- **Tiered seeking:** `Ctrl+Win+J` / `Ctrl+Win+K` seek within the track using the same tap/hold scaling as podcasts and audio books — hold for 5 seconds per repeat, one tap for 12 seconds, two taps for 1 minute, three or more taps for 5 minutes.
+- **Tiered seeking:** `Ctrl+Win+J` / `Ctrl+Win+K` seek within the track using the same tap/hold scaling as podcasts and audio books — hold for 5 seconds per repeat, one tap for 12 seconds, two taps for 1 minute, three or more taps for 5 minutes. `Ctrl+Win+Alt+J` / `Ctrl+Win+Alt+K` seek exactly 1 second — see [Fine Seeking (1 Second)](#fine-seeking-1-second).
 - **Playback speed:** `Ctrl+Win+Shift+J` / `Ctrl+Win+Shift+K` adjust speed in 0.1x steps from 0.5x to 2.0x, with pitch preserved.
 - **Transpose:** `Shift+Win+J` / `Shift+Win+K` shift pitch without changing speed — see [Transpose (Pitch Shift)](#transpose-pitch-shift).
 - **Audio profile:** A track's volume, effects, EQ and speed can be saved globally by playing a track while the appropriate settings are set — the Jukebox does not currently expose a per-track profile menu, so the current global settings apply.
@@ -785,6 +802,8 @@ Each of the Podcasts, Audio Books and Jukebox tabs has a **Bookmarks** list righ
 - **Jukebox** — directly below the Tracks list, showing the bookmarks of the selected track.
 
 Each row shows the bookmark's name and position. A **[text]** or **[voice note]** marker is added when the bookmark has a text note or a voice note, and **(marked)** when you have marked it with `.`. The list follows the selection above it and is also refreshed when you add a bookmark with `Ctrl+Win+F12` while the window is open.
+
+While a bookmark list has focus, the playback keys of the tab above it also work there: `←` / `→` seek, `Shift+←` / `Shift+→` transpose, `Page Up` / `Page Down` change the playback speed, `Ctrl+←` / `Ctrl+→` switch to the previous or next episode, book or track, and `Alt+←` / `Alt+→` seek by 1 second.
 
 | Key | Action |
 |---|---|
