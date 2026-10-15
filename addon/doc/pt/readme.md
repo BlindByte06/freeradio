@@ -8,7 +8,8 @@ freeAudio é um complemento completo de rádio pela Internet, podcasts, audioliv
 - **Podcasts** — Subscreva qualquer feed RSS/Atom, ou pesquise no diretório de podcasts da Apple e pré-visualize episódios antes de subscrever. A posição de reprodução é guardada automaticamente e retoma onde ficou — veja [Podcasts](#podcasts).
 - **Audiolivros** — Pesquise e transmita ou descarregue livros de três fontes: [GETEM](https://getem.boun.edu.tr/), a biblioteca digital da Universidade de Boğaziçi para pessoas com deficiência visual, [LibriVox](https://librivox.org/), o projeto de audiolivros de domínio público lidos por voluntários, e a Coleção de Audiolivros Abertos do Project Gutenberg — os dois últimos não requerem conta — com retoma automática em obras de várias partes — veja [Audiolivros (GETEM, LibriVox e Project Gutenberg)](#audiolivros-getem-librivox-e-project-gutenberg).
 - **Jukebox local** — Pesquise ficheiros de áudio armazenados em qualquer unidade ligada pelo nome do ficheiro, ou construa uma biblioteca pessoal de ficheiros e pastas, e reproduza-os com as mesmas ferramentas de retoma, procura, velocidade e transposição que os podcasts e audiolivros usam — veja [Jukebox local](#jukebox-local).
-- **Gravação** — Grave o que está a tocar instantaneamente, capture automaticamente uma única música quando começa e termina, ou agende gravações únicas ou recorrentes — tudo sem interromper a reprodução — veja [Gravação](#gravação).
+- **Marcadores** — Coloque um marcador na posição atual de qualquer parte de um audiolivro, episódio de podcast ou faixa do jukebox e volte a ela quando quiser. Um marcador pode ter uma nota de texto ou uma nota de voz gravada, reproduzida quando a reprodução chega a esse ponto, e a secção entre dois marcadores pode ser repetida — veja [Marcadores](#marcadores).
+- **Gravação** — Grave de imediato o que está a tocar, grave uma única música do princípio ao fim, grave todas as músicas de uma estação, cada uma no seu próprio ficheiro, até parar, ou agende gravações únicas e recorrentes — tudo sem interromper a reprodução — veja [Gravação](#gravação).
 - **Time-Shift (recuar na rádio em direto)** — Pause e recue numa estação em direto como um DVR, e depois volte ao direto sempre que quiser — veja [Time-Shift (Recuar na Rádio em Direto)](#time-shift-recuar-na-rádio-em-direto).
 - **Reconhecimento musical e músicas gostadas** — Identifique faixas sem metadados usando reconhecimento baseado em Shazam, guarde músicas gostadas num ficheiro de texto e consulte as suas letras — veja [Reconhecimento Musical](#reconhecimento-musical) e [Músicas Gostadas](#músicas-gostadas).
 - **Perfis e efeitos de áudio** — Guarde definições separadas de volume, efeitos, equalizador e velocidade de reprodução por estação, por podcast, por audiolivro ou por faixa de jukebox, e aplique efeitos em tempo real (Chorus, Reverb, reforços de equalizador e mais) através do motor BASS — veja [Perfil de Áudio da Estação](#perfil-de-áudio-da-estação).
@@ -74,10 +75,11 @@ Alguns destes atalhos sobrepõem-se a atalhos que o próprio Windows usa. Se pre
 | `Ctrl+Win+Shift+J` | Diminuir velocidade de reprodução | Diminui a velocidade de reprodução em 0,1×. |
 | `Shift+Win+K` | Transpor para cima | Aumenta o tom de um episódio de podcast, audiolivro ou faixa de jukebox em passos de 1/8 de tom inteiro (0,25 semitons), sem alterar a velocidade. Intervalo: −12,00 a +12,00 semitons. Veja [Transposição (Alteração de Tom)](#transposição-alteração-de-tom). |
 | `Shift+Win+J` | Transpor para baixo | Diminui o tom em passos de 1/8 de tom inteiro, sem alterar a velocidade. |
-| `Ctrl+Win+I` | Informação da estação | Anuncia o nome da estação, episódio de podcast, audiolivro ou faixa de jukebox em reprodução. Premir duas vezes mostra detalhes como país, género e bitrate numa caixa de diálogo. Premir três vezes copia as informações da faixa atual (metadados ICY) para a área de transferência, se disponíveis; se não existirem metadados, inicia o reconhecimento musical Shazam. Premir quatro vezes força o reconhecimento musical em caso de metadados ICY incorretos. |
+| `Ctrl+Win+F12` | Adicionar marcador | Adiciona um marcador na posição de reprodução atual de uma parte de audiolivro, episódio de podcast ou faixa do jukebox. Não está disponível para estações de rádio em direto. Veja [Marcadores](#marcadores). |
+| `Ctrl+Win+I` | Informação da estação | Anuncia o nome da estação, episódio de podcast, audiolivro ou faixa de jukebox em reprodução. Premir duas vezes mostra detalhes como país, género e bitrate numa caixa de diálogo. Premir três vezes copia as informações da faixa atual (metadados ICY) para a área de transferência, se disponíveis; se não existirem metadados, inicia o reconhecimento musical Shazam. Premir quatro vezes força o reconhecimento musical em caso de metadados ICY incorretos. Enquanto uma gravação está em curso, o seu nome também é anunciado; durante a gravação de todas as músicas, é a música que está a ser gravada nesse momento. |
 | `Ctrl+Win+M` | Espelho de áudio | Espelha o fluxo ou média atual para um dispositivo de saída de áudio adicional em simultâneo. Prima novamente para parar o espelhamento. |
 | `Ctrl+Win+Shift+M` | Modo Obligato (música de fundo) | Reproduz em ciclo uma estação favorita escolhida discretamente em segundo plano, no seu próprio dispositivo de saída e volume, independentemente do que estiver a tocar no leitor principal. A primeira pressão abre uma caixa de diálogo para escolher a estação, o dispositivo de saída e o volume relativo. Prima novamente para o parar. |
-| `Ctrl+Win+E` | Gravação instantânea | Prima uma vez para iniciar a gravação da estação atual; prima novamente para parar. Prima **duas vezes** para iniciar uma **gravação de canção** — o ficheiro recebe o nome da faixa atual e a gravação para automaticamente quando a faixa muda. Prima duas vezes novamente enquanto uma gravação de canção está ativa para terminá-la antecipadamente. A reprodução continua sem interrupção em todos os modos de gravação. Disponível apenas em estações que difundem metadados ICY. |
+| `Ctrl+Win+E` | Gravação (instantânea / música / todas as músicas) | Prima uma vez para começar a gravar a estação atual; prima novamente para parar. Prima **duas vezes** para gravar **a música atual**: o ficheiro recebe o nome da faixa e a gravação pára sozinha quando a faixa muda. Prima **três vezes** para gravar **todas as músicas** até parar: cada música é guardada no seu próprio ficheiro. Para parar uma gravação de música ou de todas as músicas, prima duas vezes. A reprodução continua sem interrupções em todos os modos de gravação. A gravação de música e de todas as músicas só funciona em estações que enviam os títulos das faixas (metadados ICY) dentro do fluxo; a gravação de todas as músicas não funciona em estações HLS (`.m3u8`). Veja [Gravação](#gravação). |
 | `Ctrl+Win+W` | Abrir pasta de gravações | Abre a pasta com os ficheiros gravados no Explorador de Ficheiros. |
 | `Ctrl+Win+J` | Time-shift recuar / avançar em podcast, audiolivro e jukebox | Para rádio em direto: recua 15 segundos. A primeira pressão entra no modo time-shift; cada pressão adicional retrocede mais 15 segundos, até ao limite do buffer definido nas definições do freeAudio. Requer que o buffer de time-shift esteja ativado nas Definições. Para um episódio de podcast, audiolivro ou faixa de jukebox, esta tecla procura dentro do ficheiro, e escala com a forma como a prime: **manter premida** avança ou recua 5 segundos por repetição; **um toque deliberado** recua 12 segundos; **dois toques** em rápida sucessão recuam 1 minuto; **três ou mais toques** recuam 5 minutos. Apenas ocorre uma procura por sequência de toques, dimensionada pelo número de toques — os toques não se somam. Funciona independentemente da definição de time-shift. |
 | `Ctrl+Win+K` | Time-shift avançar / procurar à frente em podcast, audiolivro e jukebox | Para rádio em direto: avança 15 segundos enquanto em time-shift. Ao atingir a margem do direto, a reprodução regressa automaticamente ao direto e este comando não tem efeito até retroceder novamente. Para um episódio de podcast, audiolivro ou faixa de jukebox, esta tecla procura à frente dentro do ficheiro usando a mesma escala de toque/manter premido que `Ctrl+Win+J` acima (manter = 5 segundos por repetição; 1 toque = 12 segundos; 2 toques = 1 minuto; 3+ toques = 5 minutos). Funciona independentemente da definição de time-shift. |
@@ -92,7 +94,7 @@ Os atalhos seguinte/anterior apenas navegam na lista de favoritos; não funciona
 
 O freeAudio adiciona também um submenu **freeAudio** ao menu Ferramentas do NVDA, a partir do qual pode abrir diretamente o Navegador de Estações e as Definições do freeAudio.
 
-A janela aberta com `Ctrl+Win+R` contém oito separadores: Todas as Estações, Favoritos, Gravação, Temporizador, Músicas Gostadas, Podcasts, Audiolivros e Jukebox. Pode navegar entre separadores com `Ctrl+Tab` ou usando `Alt+1` a `Alt+8`.
+A janela aberta com `Ctrl+Win+R` contém oito separadores: Todas as Estações, Favoritos, Gravação, Temporizador, Músicas Gostadas, Podcasts, Audiolivros e Jukebox. Pode navegar entre separadores com `Ctrl+Tab` ou usando `Alt+1` a `Alt+8`. Os separadores Podcasts, Audiolivros e Jukebox podem ser desativados com a definição **Módulos** (veja [Definições](#definições)); os separadores desativados não são apresentados.
 
 Quando o separador Todas as Estações abre, as 1.000 estações mais votadas são carregadas automaticamente a partir do Radio Browser. Selecionar um país na lista pendente atualiza a lista para mostrar as estações desse país. Escrever no campo de pesquisa executa automaticamente uma pesquisa completa na base de dados Radio Browser em simultâneo por nome, país e género.
 
@@ -131,7 +133,7 @@ As teclas seguintes funcionam apenas quando a janela do Navegador de Estações 
 | Atalho | Função | Descrição |
 |---|---|---|
 | `F1` | Guia de ajuda | Abre o ficheiro de ajuda do complemento no browser predefinido. É pesquisado primeiro o guia para o idioma do NVDA ativo; se não for encontrado, abre o guia predefinido. |
-| `F2` | Informação da estação | Anuncia o nome da estação em reprodução. Premir duas vezes mostra detalhes como país, género e bitrate numa caixa de diálogo. Premir três vezes copia as informações da faixa atual (metadados ICY) para a área de transferência, se disponíveis; se não existirem metadados, inicia o reconhecimento musical Shazam. Premir quatro vezes força o reconhecimento musical em caso de metadados ICY incorretos. |
+| `F2` | Informação da estação | Anuncia o nome da estação em reprodução. Premir duas vezes mostra detalhes como país, género e bitrate numa caixa de diálogo. Premir três vezes copia as informações da faixa atual (metadados ICY) para a área de transferência, se disponíveis; se não existirem metadados, inicia o reconhecimento musical Shazam. Premir quatro vezes força o reconhecimento musical em caso de metadados ICY incorretos. Enquanto uma gravação está em curso, o seu nome também é anunciado. |
 | `F3` | Item anterior | No separador Todas as Estações ou Favoritos: recua para a estação anterior e inicia a reprodução imediatamente. No separador Podcasts: recua para o episódio anterior e reproduz-o. No separador Audiolivros: recua para o livro anterior e começa a reproduzi-lo. No separador Jukebox: recua para a faixa anterior no item de jukebox selecionado e reproduz-a. |
 | `F4` | Próximo item | No separador Todas as Estações ou Favoritos: avança para a próxima estação e inicia a reprodução imediatamente. No separador Podcasts: avança para o próximo episódio e reproduz-o. No separador Audiolivros: avança para o próximo livro e começa a reproduzi-lo. No separador Jukebox: avança para a próxima faixa no item de jukebox selecionado e reproduz-a. |
 | `Shift+F3` | Feed / parte / item anterior | No separador Podcasts: sobe um feed na lista de subscrições. No separador Audiolivros: recua para a parte anterior do livro em reprodução. No separador Jukebox: sobe uma entrada de jukebox (ficheiro ou pasta) na lista principal. |
@@ -142,6 +144,7 @@ As teclas seguintes funcionam apenas quando a janela do Navegador de Estações 
 | `F8` | Parar | Para completamente a estação atual e reinicia o leitor. |
 | `F9` | Renomear | Abre a caixa de diálogo de renomeação para a estação em foco no separador Favoritos. |
 | `F11` | Selecionar dispositivo de saída | Abre o seletor principal de dispositivo de saída quando o BASS deteta mais do que um dispositivo de saída físico. O dispositivo atual é pré-selecionado; Enter aplica e guarda a escolha. |
+| `F12` | Adicionar marcador | Adiciona um marcador na posição de reprodução atual de uma parte de audiolivro, episódio de podcast ou faixa do jukebox — o equivalente dentro da janela de `Ctrl+Win+F12`. Veja [Marcadores](#marcadores). |
 
 ### Atalhos de Lista e Navegação
 
@@ -221,15 +224,19 @@ Favoritos, Músicas Gostadas, a biblioteca de Audiolivros e a lista do Jukebox s
 
 As marcas são por lista e são limpas assim que remove os itens (ou os desmarca individualmente); não são guardadas entre sessões.
 
+As listas de marcadores dos separadores Podcasts, Audiolivros e Jukebox usam a mesma marcação com `.`, e os marcadores marcados são aqueles sobre os quais atuam os comandos **Eliminar selecionados** e **Repetir entre os marcadores marcados** — veja [Marcadores](#marcadores).
+
 ### Exportar e Importar Favoritos
 
 O separador Favoritos inclui dois botões para fazer cópias de segurança e restaurar a sua lista de estações:
 
 **Exportar Favoritos…** — guarda toda a sua lista de favoritos num ficheiro. Uma caixa de diálogo permite-lhe escolher entre dois formatos:
+
 - **JSON** (`.json`) — uma cópia de segurança completa que preserva nomes de estações, URLs de transmissão e todos os metadados. Recomendado para restaurar a sua lista mais tarde ou movê-la para outro computador.
 - **Lista de reprodução M3U** (`.m3u`) — um formato de lista de reprodução padrão compatível com a maioria dos leitores de multimédia e aplicações de rádio. Note que o M3U não armazena todos os metadados das estações, pelo que restaurar a partir de M3U pode resultar em menos detalhes do que uma cópia de segurança JSON.
 
 **Importar Favoritos…** — carrega estações de um ficheiro JSON ou M3U previamente exportado. Após selecionar o ficheiro, é perguntado como adicionar as estações:
+
 - **Sim (Intercalar)** — adiciona as estações importadas à sua lista existente sem remover os favoritos atuais. Estações duplicadas não são adicionadas duas vezes.
 - **Não (Substituir)** — limpa completamente a sua lista de favoritos atual e substitui-a pelo conteúdo do ficheiro importado.
 - **Cancelar** — regressa ao navegador sem efetuar quaisquer alterações.
@@ -284,7 +291,9 @@ Ambos os botões estão localizados abaixo da lista de favoritos e só estão at
 
 Premir `Ctrl+Win+I` três vezes ativa o reconhecimento musical baseado em Shazam para a transmissão em reprodução. O reconhecimento só inicia quando não existem metadados ICY disponíveis; se existirem metadados, estes são copiados para a área de transferência.
 
-O reconhecimento funciona da seguinte forma: uma curta amostra de áudio é capturada da transmissão usando ffmpeg, o algoritmo de identificação Shazam é aplicado e o resultado é enviado para os servidores Shazam. Se o reconhecimento for bem-sucedido, o título da faixa, artista, álbum e ano de lançamento são anunciados pelo NVDA e copiados automaticamente para a área de transferência. Se a opção **Guardar músicas gostadas em ficheiro de texto** estiver ativa, o resultado do reconhecimento é também adicionado ao ficheiro `likedSongs.txt`.
+O reconhecimento funciona assim: com o ffmpeg, é capturada do fluxo uma pequena amostra de áudio (o ffmpeg apresenta-se como um leitor de multimédia, pelo que as estações que recusam programas desconhecidos continuam a responder), é aplicado o algoritmo de impressões digitais do Shazam e o resultado é enviado para os servidores do Shazam. Se o reconhecimento tiver êxito, o título da música, o artista, o álbum e o ano de lançamento são anunciados pelo NVDA e copiados automaticamente para a área de transferência. Se a opção **Guardar músicas gostadas em ficheiro de texto** estiver ativa, o resultado do reconhecimento é também acrescentado ao ficheiro `likedSongs.txt`.
+
+Se o ffmpeg não conseguir ler o fluxo diretamente — por exemplo, porque a estação recusa a sua ligação, ou porque o endereço do fluxo termina em `.nsv` (comum em servidores SHOUTcast), o que leva o ffmpeg a detetar mal o formato de áudio — o freeAudio grava ele próprio uma pequena amostra do fluxo e faz o ffmpeg descodificar esse ficheiro. Isto acontece automaticamente; não há nenhuma definição para o efeito.
 
 **Feedback sonoro:** Dois sinais sonoros ascendentes indicam o início do reconhecimento e dois descendentes indicam o fim. Um sinal sonoro curto soa a cada 2 segundos enquanto o processo está em execução.
 
@@ -299,6 +308,7 @@ O atalho `Ctrl+Win+M` duplica a transmissão atual para um segundo dispositivo d
 Na primeira pressão, aparece uma caixa de diálogo de seleção com os dispositivos de saída disponíveis. Depois de escolher um dispositivo, o espelhamento inicia e a reprodução principal continua sem interrupção. Prima o atalho novamente para parar o espelhamento.
 
 **Casos de utilização:**
+
 - **Colunas + auscultadores** — Permita que um convidado acompanhe a mesma transmissão nos auscultadores enquanto ouve pelas colunas do computador.
 - **Configuração de gravação** — Direcione a saída principal para colunas e a segunda saída para um gravador externo ou interface de áudio para captura externa.
 - **Multi-divisão** — Reproduza através de um altifalante Bluetooth e do altifalante integrado em simultâneo; não é necessário software adicional para levar o áudio para outra divisão.
@@ -326,13 +336,23 @@ Prima `Ctrl+Win+Shift+M` novamente a qualquer momento para parar o modo Obligato
 As gravações são guardadas por predefinição em `Documents\freeAudio Recordings\`. O nome do ficheiro inclui o nome da estação (ou o título da canção, em modo de gravação de canção) e a hora de início da gravação. A pasta de gravações pode ser alterada em qualquer altura em Menu NVDA → Preferências → Definições → freeAudio → **Pasta de gravações**.
 
 A definição **Formato de saída da gravação** controla como as gravações concluídas são guardadas:
+
 - **Formato original do fluxo** escreve o fluxo exatamente como recebido. Uma emissão HLS pode, portanto, produzir um ficheiro `.ts`.
 - **Apenas áudio, codec original** remove a camada de vídeo/contentor sem recodificar o áudio. Por exemplo, o áudio AAC de uma gravação HLS `.ts` é normalmente guardado como `.m4a`, preservando a qualidade da emissão.
 - **MP3** converte o áudio após a gravação usando o débito binário selecionado. A conversão usa o `ffmpeg.exe` incluído no freeAudio e é executada em segundo plano para que o NVDA permaneça responsivo. Se a conversão falhar, a gravação original é mantida.
 
 **Gravação instantânea:** Enquanto uma estação está a reproduzir, prima `Ctrl+Win+E` uma vez. Prima novamente para parar. A reprodução continua sem interrupção.
 
-**Gravação de canção:** Prima `Ctrl+Win+E` **duas vezes** rapidamente enquanto uma estação que difunde metadados ICY está a reproduzir. A gravação inicia imediatamente e recebe o nome do título da faixa atual. Quando a faixa muda, a gravação para automaticamente e o NVDA anuncia o nome do ficheiro guardado. Se pretender terminar a gravação antes de a faixa terminar, prima `Ctrl+Win+E` duas vezes novamente. Se a estação atual não difundir metadados ICY, a gravação de canção não está disponível e o NVDA irá informá-lo.
+**Gravação de música (música atual):** Prima `Ctrl+Win+E` **duas vezes** rapidamente enquanto toca uma estação que emite metadados ICY. A gravação começa pouco depois da segunda pressão — o freeAudio espera um instante, caso vá premir uma terceira vez — e é nomeada com o título da música atual. Quando a estação anunciar a música seguinte, a gravação pára nesse ponto e o NVDA anuncia o nome do ficheiro guardado. Para terminar mais cedo, prima novamente `Ctrl+Win+E` duas vezes. Se a estação atual não emitir metadados ICY, a gravação de música não está disponível e o NVDA avisa-o.
+
+**Gravação de todas as músicas:** Prima `Ctrl+Win+E` **três vezes** rapidamente para gravar todas as músicas que a estação tocar, até parar. O freeAudio mantém uma única ligação aberta e inicia um novo ficheiro em cada mudança de faixa, pelo que nada se perde entre as músicas. Cada música é guardada como um ficheiro separado, com o nome do título e da hora em que começou. Quando a gravação começa, o NVDA anuncia que está a gravar todas as músicas e diz o título atual. Para parar, prima `Ctrl+Win+E` duas vezes; o NVDA anuncia quantas músicas foram guardadas.
+
+Alguns pormenores sobre a gravação de todas as músicas:
+
+- A primeira música (gravada desde o momento em que premiu as teclas) e a última (cortada quando pára) estão incompletas, por isso os nomes dos seus ficheiros incluem **(partial)** — por exemplo, `Artist - Title (partial) - 2026-10-09 10-15.mp3`.
+- Segmentos com menos de 15 segundos — jingles, separadores publicitários ou um título que alterna entre dois valores — são descartados em vez de guardados.
+- É necessário que a estação envie os títulos das faixas dentro do próprio fluxo de áudio (metadados ICY). As estações HLS (`.m3u8`) e os servidores que não enviam títulos desta forma não podem ser divididos em músicas; o NVDA informa-o e nada é gravado.
+- Durante a gravação, `Ctrl+Win+I` anuncia a música que está a ser gravada nesse momento, e não aquela com que a gravação começou.
 
 **Gravação agendada:** Abra o separador Gravação no navegador. Selecione uma estação dos seus favoritos, introduza a hora de início no formato HH:MM e a duração em minutos, selecione um ou mais dias ativos e, em seguida, escolha o modo de repetição e o modo de gravação:
 
@@ -341,12 +361,14 @@ Um campo **Filtro** acima da lista de estações permite-lhe restringir a lista 
 **Dias ativos:** Marque um ou mais dias da semana. No modo de gravação única, é criada uma entrada separada para cada dia selecionado, colocada na próxima ocorrência desse dia. No modo recorrente, a gravação repete-se apenas nos dias marcados. Se não forem selecionados dias, a gravação não está restrita a dias específicos.
 
 **Recorrência:**
+
 - **Gravar uma vez** — cria uma gravação única para cada dia selecionado. Cada entrada é colocada na próxima ocorrência desse dia; se a hora de hoje já tiver passado, a entrada é automaticamente transferida para a semana seguinte.
 - **Repetir semanalmente** — repete-se todas as semanas nos dias ativos selecionados até ser removida da lista de agendamento.
 
 **Guardar gravação em:** Para cada gravação agendada, pode escolher guardar na pasta de gravações predefinida ou numa pasta personalizada. Use o botão **Procurar...** para selecionar uma pasta interativamente. Se a pasta escolhida ficar indisponível, a gravação reverte para a pasta predefinida e é notificado.
 
 **Modo de gravação:**
+
 - **Gravar enquanto ouve** — reproduz e grava em simultâneo através do backend BASS.
 - **Apenas gravar** — grava silenciosamente em segundo plano sem qualquer saída de áudio; o motor de gravação liga-se diretamente à transmissão.
 
@@ -354,7 +376,7 @@ Assim que um agendamento é adicionado, aparece na lista abaixo. Use o botão **
 
 O NVDA anuncia quando uma gravação inicia e quando termina. Se o NVDA for reiniciado enquanto uma gravação agendada estiver ativa, a gravação é retomada automaticamente no arranque.
 
-Tal como o reconhecimento musical, a gravação instantânea e a gravação de faixa reutilizam a ligação de transmissão em segundo plano já existente do freeAudio quando disponível, em vez de abrir uma nova, para que a gravação capture o que está realmente a ser emitido mesmo em estações que de outra forma reproduziriam um anúncio novo numa ligação recente. Isto não se aplica às gravações agendadas em modo **Apenas Gravar**, uma vez que nenhuma estação já está a reproduzir no momento em que estas começam.
+**Como se ligam as gravações:** As gravações instantâneas, de música e de todas as músicas abrem a sua própria ligação à estação, em vez de copiarem o que está a ouvir; por isso, uma gravação instantânea ou de todas as músicas continua se colocar a reprodução em pausa ou mudar para outra estação — prossegue com a estação em que começou. Parar a reprodução com `Ctrl+Win+S` durante uma gravação pede primeiro confirmação, porque isso também termina a gravação. O preço da ligação separada é que uma estação que passa um breve anúncio a cada nova ligação pode colocar esse anúncio no início do ficheiro.
 
 ## Time-Shift (Recuar na Rádio em Direto)
 
@@ -362,11 +384,11 @@ O time-shift permite recuar na estação que está a ouvir, como um DVR ou uma c
 
 Esta funcionalidade está **desativada por defeito**. Ative-a em Menu NVDA → Preferências → Definições → freeAudio → **Ativar buffer de time-shift (recuar na rádio em direto)**, ou ative-a instantaneamente a qualquer momento com `Ctrl+Win+T`.
 
-> **Nota:** o freeAudio mantém agora uma pequena captura em segundo plano da estação em reprodução em execução permanente — não apenas quando esta definição está ativada — porque tanto o Reconhecimento Musical como a Gravação dependem dela para o comportamento de evitar anúncios descrito nessas secções. Quando esta definição está **desativada**, essa captura em segundo plano mantém-se limitada a cerca dos últimos 45 segundos e `Ctrl+Win+J`/`Ctrl+Win+K` permanecem indisponíveis — apenas o tamanho do buffer muda, não se está ou não em execução. Ativar a definição amplia a mesma captura para o buffer completo de recuo descrito abaixo.
+> **Nota:** o freeAudio mantém sempre uma pequena captura em segundo plano da estação que está a tocar — não apenas quando esta definição está ativa — porque o [Reconhecimento Musical](#reconhecimento-musical) depende dela para evitar anúncios, como descrito nessa secção. Quando esta definição está **desativada**, a captura em segundo plano limita-se a cerca dos últimos 45 segundos e `Ctrl+Win+J`/`Ctrl+Win+K` continuam indisponíveis — o que muda é apenas o tamanho do buffer, não se está a funcionar. Ativar a definição alarga essa mesma captura até ao buffer de retrocesso completo descrito abaixo.
 
 ### Como funciona
 
-Após ativação, o freeAudio captura continuamente a estação em reprodução para um buffer local rotativo em segundo plano. O buffer contém aproximadamente os **últimos 10 minutos** de áudio; o áudio mais antigo é automaticamente descartado à frente à medida que o novo chega, de modo que o buffer representa sempre o "passado recente" relativamente à margem do direto. O tempo do buffer é determinado nas definições.
+Quando ativado, o freeAudio captura continuamente a estação que está a tocar para um buffer local circular em segundo plano, independentemente da reprodução normal. O buffer guarda o áudio mais recente até ao comprimento definido em **Duração do buffer de time-shift**; o áudio mais antigo é descartado automaticamente do início à medida que chega áudio novo, pelo que o buffer representa sempre o «passado recente» em relação ao limite da emissão em direto.
 
 - **`Ctrl+Win+J`** — Recuar 15 segundos. A primeira pressão passa da reprodução em direto para a reprodução com time-shift, começando 15 segundos atrás da margem do direto. Cada pressão adicional recua mais 15 segundos, até ao limite do buffer.
 - **`Ctrl+Win+K`** — Avançar 15 segundos em modo time-shift. Ao atingir a margem do direto, a reprodução regressa automaticamente ao stream em direto e o NVDA anuncia «Voltar ao direto».
@@ -392,7 +414,7 @@ No caso raro de a playlist de uma estação não poder ser lida de todo (por exe
 ### Requisitos e limitações
 
 - **Requer o backend BASS**, que o freeAudio usa sempre para reprodução (ver [Reprodução](#reprodução)).
-- O tempo do buffer é determinado nas definições.
+- O comprimento do buffer é determinado pela definição **Duração do buffer de time-shift** — veja [Definições](#definições).
 - O buffer é por estação: mudar de estação, parar a reprodução ou reiniciar o NVDA limpa-o e começa de novo.
 - A reprodução com time-shift usa o seu próprio ficheiro de buffer local e não produz uma gravação guardada — se quiser conservar o áudio permanentemente, use também a Gravação instantânea (`Ctrl+Win+E`).
 
@@ -420,18 +442,20 @@ Abra o navegador de estações com `Ctrl+Win+R` e mude para o separador **Podcas
 
 1. **Pesquisar e adicionar** — secção superior para descobrir novos podcasts, incluindo uma lista de pré-visualização que mostra os episódios do resultado de pesquisa atualmente selecionado.
 2. **Subscrições** — lista dos seus feeds subscritos.
-3. **Episódios** — lista de episódios do feed selecionado, com controlos de reprodução.
+3. **Episódios** — lista de episódios do feed selecionado, com controlos de reprodução. Uma lista **Marcadores** mesmo por baixo mostra os marcadores do episódio selecionado — veja [Marcadores](#marcadores).
 
 ### Adicionar um Feed de Podcast
 
 Pode adicionar um feed de podcast de duas formas:
 
 **Por URL:**
+
 - No campo **Pesquisar**, cole o URL completo do feed RSS ou Atom (por exemplo, `https://example.com/feed.xml`).
 - Prima Enter.
 - O freeAudio obtém o feed, valida-o e adiciona-o às suas subscrições. Se o feed for válido, ouvirá uma confirmação com o título do feed. Se falhar, uma mensagem de erro explica o motivo.
 
 **Por pesquisa:**
+
 - No campo **Pesquisar**, escreva uma palavra-chave (título do podcast, tema ou nome do apresentador) e prima Enter.
 - O freeAudio pesquisa no diretório de podcasts da iTunes e apresenta os podcasts correspondentes na lista **Resultados da pesquisa**.
 - Selecionar um resultado obtém esse feed em segundo plano e lista os seus episódios na lista **Episódios do resultado selecionado** logo abaixo, para que possa pré-visualizar o que o programa realmente contém antes de decidir subscrever.
@@ -458,6 +482,7 @@ Depois de adicionar alguns feeds, estes aparecem na lista **Subscrições**. Cad
 - **Remover um feed** — selecione-o e prima `Delete` ou use o menu de contexto para o remover das suas subscrições. Ser-lhe-á pedida confirmação antes da remoção.
 
 **Menu de contexto para feeds:** Clique com o botão direito num feed, ou selecione-o e prima a tecla Aplicações / `Shift+F10`, para abrir um menu com:
+
 - **Atualizar Feed** — obtém novos episódios agora.
 - **Guardar Perfil de Áudio para Este Podcast** / **Limpar Perfil de Áudio** — veja [Perfil de Áudio do Podcast](#perfil-de-áudio-do-podcast).
 - **Remover Feed** — elimina a subscrição.
@@ -466,6 +491,7 @@ Depois de adicionar alguns feeds, estes aparecem na lista **Subscrições**. Cad
 ### Navegar e Reproduzir Episódios
 
 Selecione um feed na lista de subscrições; os seus episódios aparecem na lista **Episódios** abaixo. Cada episódio mostra:
+
 - O seu número de episódio (1 = o episódio mais antigo no feed, contando até ao mais recente).
 - A sua data de publicação (se disponível).
 - O seu título.
@@ -473,6 +499,7 @@ Selecione um feed na lista de subscrições; os seus episódios aparecem na list
 - Um sufixo de duração, seja a duração total (se nunca reproduzido) ou o progresso decorrido/total (se reproduzido parcialmente).
 
 **Reprodução:**
+
 - Selecione um episódio e prima `Enter` ou `Espaço` para começar a reproduzi-lo. Se um episódio foi reproduzido parcialmente antes, retoma de onde ficou.
 - A linha *não* é atualizada durante a reprodução do episódio — isto é intencional, para que o NVDA não reanuncie repetidamente a linha enquanto está nela. A sua marca "Ouvido" e duração são atualizadas imediatamente no momento em que pausa o episódio ou este termina de reproduzir, pelo que a apresentação é sempre exata precisamente quando importa; simplesmente não avança segundo a segundo durante a reprodução.
 - Use `F3` / `F4` no separador Podcasts para se mover para o episódio anterior / seguinte e reproduzi-lo imediatamente. Também pode usar `←` / `→` enquanto a lista de episódios está em foco, ou `Ctrl+←` / `Ctrl+→` em qualquer parte do separador Podcasts — ambos funcionam de forma idêntica.
@@ -482,6 +509,7 @@ Selecione um feed na lista de subscrições; os seus episódios aparecem na list
 **Retomar a reprodução:** O freeAudio guarda a sua posição em cada episódio de podcast automaticamente — imediatamente sempre que pausa ou o episódio termina, e a cada 15 segundos em segundo plano enquanto continua a ouvir, para que uma falha ou reinício inesperado não perca muito progresso. Se parar ou pausar a reprodução e voltar mais tarde, o episódio retoma a partir da posição guardada. Se reproduzir o episódio até ao fim (dentro dos últimos 3 segundos), é marcado como "Ouvido" e não retomará — começa do início da próxima vez, e o prefixo "Ouvido" aparece na lista.
 
 **Menu de contexto para episódios:** Clique com o botão direito num episódio, ou selecione-o e prima a tecla Aplicações / `Shift+F10`, para abrir um menu com:
+
 - **Reproduzir Episódio** — inicia a reprodução.
 - **Descarregar Episódio** — descarrega o ficheiro do episódio para a sua pasta de gravações.
 - **Guardar Perfil de Áudio para Este Podcast** / **Limpar Perfil de Áudio** — os mesmos comandos do menu de contexto do próprio feed, incluídos aqui por conveniência para não ter de voltar à lista de Subscrições. Continuam a guardar um perfil para todo o podcast, não um separado para este episódio — veja [Perfil de Áudio do Podcast](#perfil-de-áudio-do-podcast).
@@ -519,6 +547,7 @@ Um toque deliberado é retido por um breve momento antes de realmente navegar, p
 Clique com o botão direito num podcast na lista Subscrições, ou clique com o botão direito em qualquer um dos seus episódios, e escolha **Guardar Perfil de Áudio para Este Podcast** para guardar o volume, efeitos, ganhos de equalizador e/ou velocidade de reprodução atuais como um perfil associado a esse podcast. Sempre que qualquer episódio desse podcast toca, as definições guardadas são aplicadas automaticamente, substituindo as predefinições globais. Como o comando está disponível tanto no menu de contexto do feed como no do episódio, pode aceder-lhe sem ter de voltar à lista de Subscrições — de qualquer forma, guarda sempre um perfil para todo o podcast, não um separado por episódio.
 
 Uma caixa de diálogo com 15 opções permite-lhe escolher exatamente o que guardar:
+
 - **Apenas volume**
 - **Apenas efeitos**
 - **Volume e efeitos**
@@ -562,7 +591,7 @@ Qualquer uma das fontes pode ser desativada individualmente em **NVDA Menu → P
 Abra o navegador de estações com `Ctrl+Win+R` e mude para o separador **Audiolivros** com `Ctrl+Tab` ou `Alt+7`. O separador tem três áreas principais:
 
 1. **Pesquisar** — um campo de texto para pesquisar todos os catálogos ativados de uma vez, com uma lista de resultados que aparece assim que uma pesquisa é executada.
-2. **Biblioteca** — a lista de livros que adicionou de qualquer uma das fontes, onde os reproduz, descarrega e gere.
+2. **Biblioteca** — a lista de livros que adicionou de qualquer uma das fontes, onde os reproduz, descarrega e gere. Uma lista **Marcadores** mesmo por baixo mostra os marcadores do livro selecionado — veja [Marcadores](#marcadores).
 3. **Detalhes** — uma caixa só de leitura que mostra a fonte, título, autor, narrador, editora, formato, número de partes, descrição e URL do catálogo do livro selecionado, em qualquer uma das listas.
 
 ### Iniciar Sessão
@@ -598,6 +627,7 @@ Os livros que adicionou aparecem na lista **Biblioteca**, mostrando título, aut
 - Use `Shift+F3` / `Shift+F4` para se mover entre **partes** do livro atualmente a tocar — o inverso do separador Podcasts, onde F3/F4 se movem entre episódios e Shift+F3/F4 entre feeds. Isto porque um livro é uma única entrada da biblioteca mesmo quando tem várias partes, pelo que a navegação mais detalhada "por parte" fica aqui nas teclas modificadas com Shift.
 
 **Menu de contexto para entradas da biblioteca:** Clique com o botão direito num livro, ou selecione-o e prima a tecla Aplicações / `Shift+F10`, para abrir um menu com:
+
 - **Reproduzir Média** — inicia a reprodução, o mesmo que `Enter`.
 - **Descarregar Livro** — descarrega todas as partes do livro; veja [Descarregar Audiolivros](#descarregar-audiolivros) abaixo.
 - **Copiar o URL** — copia o URL da página do catálogo do livro para a área de transferência (a página do catálogo GETEM para um livro do GETEM, ou a página de detalhes do archive.org para um livro do LibriVox ou Project Gutenberg).
@@ -640,13 +670,13 @@ Abra o navegador de estações com `Ctrl+Win+R` e mude para o separador **Jukebo
 
 1. **Pesquisar no disco** — um campo de texto que pesquisa em todas as unidades locais ligadas e prontas por ficheiros de áudio cujo nome contenha o texto introduzido. Prima `Enter` para iniciar a pesquisa.
 2. **Resultados da pesquisa** — uma lista que aparece assim que uma pesquisa é executada, mostrando os ficheiros correspondentes. Oculta até então, para que o separador permaneça arrumado quando não há nada a pesquisar.
-3. **Jukebox e Faixas** — a lista persistente de itens que adicionou, seguida da lista de faixas na entrada selecionada (para uma entrada de ficheiro, apenas esse ficheiro; para uma entrada de pasta, todos os ficheiros de áudio encontrados dentro dela).
+3. **Jukebox e Faixas** — a lista persistente de itens que adicionou, seguida da lista de faixas na entrada selecionada (para uma entrada de ficheiro, apenas esse ficheiro; para uma entrada de pasta, todos os ficheiros de áudio encontrados dentro dela). Uma lista **Marcadores** vem a seguir à lista de Faixas e mostra os marcadores da faixa selecionada — veja [Marcadores](#marcadores).
 
-Os botões **Adicionar Ficheiro…**, **Adicionar Pasta…**, **Remover**, **Exportar Jukebox…** e **Importar Jukebox…** encontram-se abaixo da lista de Faixas.
+Os botões **Adicionar Ficheiro…**, **Adicionar Pasta…**, **Remover**, **Exportar Jukebox…** e **Importar Jukebox…** encontram-se na parte inferior do separador.
 
 ### Pesquisar Ficheiros no Disco
 
-Escreva qualquer parte de um nome de ficheiro no campo **Pesquisar no disco** e prima `Enter`. O freeAudio percorre todas as unidades locais ligadas — discos fixos, unidades USB, cartões de memória, unidades de rede mapeadas — à procura de ficheiros de áudio (`.mp3`, `.wav`, `.ogg`, `.flac`, `.m4a`, `.m4b`, `.aac`, `.wma`, `.opus`, e vários outros) cujo nome contenha o texto de pesquisa. A pesquisa é executada em segundo plano, para que o NVDA permaneça responsivo.
+Escreva qualquer parte de um nome de ficheiro no campo **Pesquisar no disco** e prima `Enter`. O freeAudio percorre todas as unidades locais ligadas — discos fixos, unidades USB, cartões de memória — à procura de ficheiros de áudio (`.mp3`, `.wav`, `.ogg`, `.flac`, `.m4a`, `.m4b`, `.aac`, `.wma`, `.opus`, e vários outros) cujo nome contenha o texto de pesquisa. A pesquisa é executada em segundo plano, para que o NVDA permaneça responsivo. As unidades de rede são ignoradas por predefinição, porque pesquisar uma partilha de rede pode transformar uma pesquisa de um segundo numa de vários minutos, ou bloqueá-la se a partilha estiver inacessível. Para as incluir, ative nas definições a opção **Incluir unidades de rede ao pesquisar no Jukebox**.
 
 - **Espaço** num resultado de pesquisa pré-visualiza-o — inicia a reprodução através do leitor normal. Prima **Espaço** novamente no mesmo ficheiro para parar a pré-visualização.
 - **Enter** num resultado de pesquisa adiciona-o ao seu jukebox.
@@ -710,13 +740,15 @@ Com uma entrada selecionada na lista do Jukebox, prima `vírgula` para entrar no
 
 ### Exportar e Importar a Biblioteca do Jukebox
 
-O separador Jukebox inclui dois botões para fazer cópias de segurança e restaurar a sua biblioteca, abaixo da lista de Faixas:
+O separador Jukebox inclui dois botões para fazer cópias de segurança e restaurar a sua biblioteca, na parte inferior do separador:
 
 **Exportar Jukebox…** — guarda toda a sua lista do Jukebox num ficheiro. Uma caixa de diálogo permite-lhe escolher entre dois formatos:
+
 - **JSON** (`.json`) — uma cópia de segurança completa que preserva o caminho, o nome personalizado, o grupo e o perfil de áudio guardado de cada entrada. Recomendado para restaurar a sua biblioteca mais tarde ou movê-la para outro computador.
 - **Lista de reprodução M3U** (`.m3u`) — um formato mais leve compatível com a maioria dos leitores de multimédia, que lista o caminho de cada entrada com o respetivo nome personalizado (se existir) numa linha `#EXTINF` anterior. Os grupos e os perfis de áudio não são incluídos no M3U, pelo que restaurar a partir de M3U perde esse detalhe.
 
 **Importar Jukebox…** — carrega entradas de um ficheiro JSON ou M3U previamente exportado. Após selecionar o ficheiro, é perguntado como adicionar as entradas:
+
 - **Sim (Intercalar)** — adiciona as entradas importadas à sua biblioteca existente sem remover nenhuma entrada atual. As entradas cujo caminho coincide com uma já existente na sua biblioteca não são adicionadas duas vezes.
 - **Não (Substituir)** — limpa completamente a sua lista atual do Jukebox e substitui-a pelo conteúdo do ficheiro importado.
 - **Cancelar** — regressa ao navegador sem efetuar quaisquer alterações.
@@ -733,6 +765,66 @@ Para atribuir um atalho:
 4. Prima a combinação de teclas pretendida e confirme.
 
 O atalho reproduz a entrada imediatamente — no caso de uma entrada de ficheiro, o próprio ficheiro; no caso de uma entrada de pasta, a sua primeira faixa. Se a entrada for posteriormente removida do Jukebox, a sua entrada desaparece da categoria e qualquer atalho atribuído é automaticamente removido pelo NVDA. Quando uma nova entrada é adicionada, aparece na categoria de imediato — não é necessário reabrir a caixa de diálogo Definir Comandos.
+
+## Marcadores
+
+Os marcadores permitem assinalar um ponto numa **parte de audiolivro**, num **episódio de podcast** ou numa **faixa do jukebox** e voltar a ele mais tarde. Não estão disponíveis para estações de rádio em direto, que não têm posições fixas a que voltar.
+
+### Adicionar um marcador
+
+- Prima **`Ctrl+Win+F12`** em qualquer ponto do Windows, ou **`F12`** quando o Navegador de Estações está ativo, para adicionar um marcador na posição de reprodução atual.
+- O NVDA anuncia o nome e a posição do marcador, por exemplo «Marcador adicionado: Marcador 2, 12:30».
+- Se nada estiver a tocar, ou se estiver a tocar uma estação de rádio em direto, o freeAudio informa-o e nenhum marcador é adicionado.
+
+O nome predefinido de um marcador é a sua **posição ordinal** entre os marcadores do item, do mais antigo para o mais recente: «Marcador 1», «Marcador 2» e assim por diante. Como o número acompanha a posição no item, adicionar um marcador mais cedo renumera os posteriores que ainda têm o nome predefinido. Os marcadores a que deu outro nome mantêm o seu nome.
+
+### A lista de marcadores
+
+Cada um dos separadores Podcasts, Audiolivros e Jukebox tem uma lista **Marcadores** mesmo junto ao item a que pertence:
+
+- **Podcasts** — diretamente por baixo da lista de Episódios, com os marcadores do episódio selecionado.
+- **Audiolivros** — diretamente por baixo da lista da Biblioteca, com os marcadores de todas as partes do livro selecionado. Quando um livro tem várias partes, cada linha começa com o título da parte.
+- **Jukebox** — diretamente por baixo da lista de Faixas, com os marcadores da faixa selecionada.
+
+Cada linha mostra o nome e a posição do marcador. É acrescentada a indicação **[texto]** ou **[nota de voz]** quando o marcador tem uma nota de texto ou de voz, e **(marcado)** quando o marcou com `.`. A lista acompanha a seleção acima e é também atualizada quando adiciona um marcador com `Ctrl+Win+F12` com a janela aberta.
+
+| Tecla | Ação |
+|---|---|
+| `.` | Marca ou desmarca o marcador com o foco. Veja [Marcar e Remover Vários Itens](#marcar-e-remover-vários-itens). |
+| `Enter` | Reproduz a partir do marcador com o foco. |
+| `Space` | Põe em pausa se algo estiver a tocar; caso contrário, reproduz a partir do marcador com o foco. |
+| `Delete` | Elimina todos os marcadores marcados, ou o que tem o foco se nenhum estiver marcado. Aparece primeiro uma caixa de diálogo de confirmação. |
+| tecla Aplicações / `Shift+F10` | Abre o menu de contexto do marcador. |
+
+### Menu de contexto do marcador
+
+- **Reproduzir a partir do marcador** — se o item já estiver carregado, a reprodução salta para o marcador; caso contrário, o item começa a tocar a partir dessa posição.
+- **Mudar o nome…** — dá ao marcador um nome próprio. Deixe o campo vazio para voltar ao nome predefinido.
+- **Eliminar selecionados** — elimina os marcadores marcados, ou o que tem o foco se nenhum estiver marcado.
+- **Adicionar ou editar texto…** — abre um campo de várias linhas para uma nota de texto. Deixe-o vazio para remover o texto.
+- **Adicionar nota de voz…** — abre uma caixa de diálogo que começa a gravar a partir do microfone predefinido assim que aparece. Prima **Parar e guardar** para anexar a gravação ao marcador, ou **Cancelar** para a descartar. Adicionar uma nova nota de voz substitui a anterior.
+- **Limpar notas** — remove a nota de texto e a nota de voz do marcador com o foco. Ativo apenas quando o marcador tem uma nota.
+- **Repetir entre os marcadores marcados** — veja abaixo. Ativo quando pelo menos dois marcadores estão marcados.
+- **Parar repetição** — desativa o modo de repetição. Ativo enquanto uma repetição estiver ativa.
+
+### O que acontece quando a reprodução chega a um marcador
+
+Durante a reprodução normal, quando a posição chega a um marcador, o freeAudio emite **dois sinais sonoros rápidos**. Se o marcador não tiver nota, a reprodução simplesmente continua.
+
+Se o marcador tiver uma nota de texto e/ou de voz, a reprodução é **colocada em pausa**, o texto é lido pelo sintetizador atual do NVDA e a nota de voz é reproduzida, após o que a reprodução **retoma onde ficou**. Se parar a reprodução ou iniciar outra coisa enquanto a nota estiver a ser reproduzida, a reprodução não é retomada.
+
+Os marcadores são detetados durante a reprodução normal. Avançar ou retroceder por cima de um marcador não o aciona.
+
+### Repetir a secção entre marcadores
+
+Marque com `.` dois ou mais marcadores **do mesmo item** e escolha **Repetir entre os marcadores marcados**. A reprodução salta para o marcador marcado mais antigo e repete em ciclo entre o mais antigo e o mais recente dos marcados, e o NVDA anuncia as duas posições. É útil para repassar uma passagem difícil de perceber, uma frase de aprendizagem de línguas ou uma peça musical que está a praticar. Escolha **Parar repetição** para voltar à reprodução normal. A repetição não é guardada entre sessões e, se outro item começar a tocar, o intervalo de repetição é ignorado e abandonado ao fim de cerca de 20 segundos.
+
+### Armazenamento dos dados dos marcadores
+
+Os marcadores são guardados em `freeAudio_bookmarks.json` na pasta de configuração do utilizador do NVDA, e as notas de voz como ficheiros `.wav` na pasta `freeAudio_bookmark_audio` junto a ela. Ambos podem ser copiados como cópia de segurança ou transferidos para outro computador. Eliminar um marcador elimina também o ficheiro da sua nota de voz. Todos os marcadores e notas de voz podem ser removidos de uma só vez com o item **Marcadores** da caixa de diálogo de limpeza — veja [Limpeza: repor definições e apagar dados guardados](#limpeza-repor-definições-e-apagar-dados-guardados).
+
+Cada marcador pertence à chave de retoma do próprio item — o URL do episódio, o URL estável de catálogo da parte do audiolivro ou o caminho do ficheiro da faixa do jukebox. Um ficheiro do jukebox movido ou renomeado fora do freeAudio é, por isso, tratado como um item diferente e não mostra os seus marcadores antigos.
+
 
 ## Transposição (Alteração de Tom)
 
@@ -791,28 +883,56 @@ As seguintes opções podem ser configuradas em Menu NVDA → Preferências → 
 | Voz SAPI5 | Quando **Voz de mudança de faixa** está definida para SAPI5, seleciona qual voz SAPI5 instalada é usada para anunciar mudanças de faixa. A lista é preenchida em segundo plano a partir das vozes instaladas no sistema. |
 | Dispositivo de saída de áudio | Define o dispositivo de saída de áudio para reprodução de rádio. A lista inclui todos os dispositivos compatíveis com BASS no sistema, mais uma opção "Predefinição do sistema". As alterações são aplicadas imediatamente ao guardar; se o dispositivo selecionado for desligado, o complemento reverte automaticamente para a predefinição do sistema e anuncia a alteração. |
 | Modo de atualização de dispositivos de áudio | Controla como o freeAudio atualiza os números dos dispositivos de saída BASS. O modo **Fiável** (predefinição) sonda dispositivos em tempo real e rastreia alterações Bluetooth/USB com mais precisão, mas pode tornar as alterações de dispositivo ligeiramente mais lentas. O modo **Rápido** usa a lista de dispositivos BASS atual e é mais rápido, mas os números dos dispositivos podem ficar desatualizados até o BASS ou o NVDA serem reiniciados. |
-| Volume | Define o volume inicial do complemento (0–200). As alterações feitas durante a reprodução com `Ctrl+Win+↑` / `Ctrl+Win+↓` também são refletidas aqui. |
+| Volume | Define o volume inicial do suplemento (0–100). Durante a reprodução, `Ctrl+Win+↑` pode aumentar o volume até 200, mas o volume inicial guardado aqui está limitado a 100. |
 | Efeitos de áudio | Define quais efeitos (Chorus, Compressor, Distortion, Echo, Flanger, Gargle, Reverb e os três reforços de EQ) estão ativos quando o NVDA inicia ou uma estação começa a reproduzir. Vários efeitos podem ser selecionados ao mesmo tempo, correspondendo à lista de Efeitos no Navegador de Estações. |
 | Ganho EQ (graves / agudos / vocal) | Define o nível de ganho em dB para cada banda EQ (−15 a +15). Estes valores aplicam-se quando o efeito EQ correspondente está ativo e são guardados globalmente. Substituições por estação podem ser armazenadas usando o botão **Guardar Perfil de Áudio** no separador Favoritos. |
 | Transição entre estações | Controla o comportamento de transição ao mudar entre **estações de rádio em direto**. **Corte imediato** (predefinição) para a estação anterior imediatamente antes de a nova começar. **Transição curta (1 segundo)** e **Transição normal (2 segundos)** iniciam a nova estação sem pausa, desvanecendo gradualmente a anterior em segundo plano assim que o novo fluxo é confirmado. **Efeito sonoro de sintonização de estação** para a estação anterior imediatamente e reproduz um efeito sonoro de sintonização antes de a nova começar. Não tem efeito nem impacto no desempenho quando definido como Corte imediato. Não se aplica a podcasts, audiolivros ou faixas de jukebox — retomar esses reproduz sempre o seu próprio efeito sonoro breve de cassete, independentemente desta definição; veja [Detalhes de Reprodução de Podcasts](#detalhes-de-reprodução-de-podcasts). |
 | Retomar última estação ao iniciar o NVDA | Quando ativado, a última estação reproduzida reinicia automaticamente sempre que o NVDA inicia. |
 | Anunciar automaticamente mudanças de faixa (metadados ICY) | Quando ativado, o NVDA lê automaticamente o novo nome da faixa sempre que muda numa estação que difunde metadados ICY. A primeira faixa também é anunciada imediatamente ao mudar para uma nova estação. Desativado por predefinição. |
 | Silenciar notificações | Quando ativado, o NVDA deixa de anunciar mudanças de estação, alterações do estado de reprodução (reproduzir, pausar, parar) e eventos de gravação (iniciada, parada, concluída). Mensagens de erro, feedback de favoritos, resultados do reconhecimento musical e notificações de atualização não são afetados. Pode também ser alternado em tempo real através de um gesto de entrada não atribuído. Desativado por predefinição. |
-| Mensagens braille | Quando ativado, o freeAudio também envia as suas notificações diretamente para o visor braille. Isto é útil para títulos de faixas, mudanças de estação, estado de reprodução e alterações de volume. Desativado por predefinição. |
-| Ativar buffer de time-shift (recuar na rádio em direto) | Ativa ou desativa os controlos de recuo (`Ctrl+Win+J`/`Ctrl+Win+K`) e amplia a captura em segundo plano de ~45 segundos até ao tempo determinado nas definições. Uma pequena captura em segundo plano da estação em reprodução está sempre em execução, mesmo quando esta definição está desativada — ver a nota na secção **Time-Shift** abaixo. Também pode ser alternada instantaneamente com `Ctrl+Win+T`. Desativada por defeito — consulte a secção **Time-Shift** abaixo para todos os detalhes. |
+| Mostrar mensagens do freeAudio na linha braille | Quando ativado, o freeAudio também envia as suas notificações diretamente para o visor braille. Isto é útil para títulos de faixas, mudanças de estação, estado de reprodução e alterações de volume. Desativado por predefinição. |
+| Ativar buffer de time-shift (recuar na rádio em direto) | Ativa ou desativa os controlos de retrocesso (`Ctrl+Win+J`/`Ctrl+Win+K`) e alarga a captura em segundo plano de cerca de 45 segundos até ao valor de **Duração do buffer de time-shift**. Uma pequena captura em segundo plano da estação que está a tocar corre sempre, mesmo com esta opção desativada — veja a nota na secção **Time-Shift (Recuar na Rádio em Direto)** acima. Também pode ser alternada instantaneamente com `Ctrl+Win+T`. Desativado por predefinição — veja a secção **Time-Shift (Recuar na Rádio em Direto)** acima para todos os pormenores. Não afeta podcasts nem audiolivros. |
+| Duração do buffer de time-shift | Define o comprimento máximo do buffer de recuo. As opções variam de 10 minutos até 5 horas. Buffers mais longos consomem mais espaço temporário em disco. |
 | Guardar músicas gostadas em ficheiro de texto | Quando ativado, as informações de faixa copiadas para a área de transferência ao premir `Ctrl+Win+I` três vezes são também adicionadas a `Documents\freeAudio Recordings\likedSongs.txt`. Se não existirem metadados ICY, o resultado do reconhecimento Shazam é guardado no mesmo ficheiro. Desativado por predefinição. |
 | Quando Ctrl+Win+P é premido sem reprodução ativa | Determina o que acontece quando este atalho é premido e nada está a reproduzir: iniciar a última estação ou abrir a lista de favoritos. |
-| Duração do buffer de time-shift | Define o comprimento máximo do buffer de recuo. As opções variam de 10 minutos até 5 horas. Buffers mais longos consomem mais espaço temporário em disco. |
 | Quando Ctrl+Win+P é premido duas vezes | Seleciona o que acontece quando o atalho é premido duas vezes rapidamente: não fazer nada, abrir a lista de favoritos, abrir o separador de gravação ou abrir o separador do temporizador. Quando "não fazer nada" está selecionado, a primeira pressão responde instantaneamente sem atraso. |
 | Quando Ctrl+Win+P é premido três vezes | Seleciona o que acontece quando o atalho é premido três vezes rapidamente: não fazer nada, abrir a lista de favoritos, abrir o separador de pesquisa, abrir o separador de gravação ou abrir o separador do temporizador. |
-| Verificar atualizações automaticamente | Quando ativado, é efetuada uma verificação de atualizações em segundo plano sempre que o NVDA inicia; é emitida uma notificação se for encontrada uma nova versão. Quando desativado, as verificações automáticas são interrompidas mas as verificações manuais continuam disponíveis. |
+| Verificar atualizações automaticamente ao iniciar | Quando ativado, é efetuada uma verificação de atualizações em segundo plano sempre que o NVDA inicia; é emitida uma notificação se for encontrada uma nova versão. Quando desativado, as verificações automáticas são interrompidas mas as verificações manuais continuam disponíveis. |
+| Verificar atualizações agora | Um botão que verifica imediatamente se existe uma nova versão, mesmo que as verificações automáticas estejam desativadas. Enquanto a verificação decorre, o botão indica «A verificar...». |
 | Caminho do ffmpeg.exe | Caminho para o ffmpeg.exe utilizado no reconhecimento musical. Se deixado em branco, é utilizado automaticamente um ffmpeg.exe na pasta do complemento. |
 | Pasta de gravações | Define a pasta onde os ficheiros gravados são guardados. Se deixado em branco, é utilizada a localização predefinida `Documents\freeAudio Recordings\`. Um botão Procurar permite selecionar a pasta de forma interativa. As alterações têm efeito imediatamente após guardar. |
+| Módulos | Uma lista de caixas de verificação com as partes opcionais do freeAudio: **Podcasts**, **Audiolivros** e **Jukebox**. As três estão ativas por predefinição. Desmarcar uma remove o seu separador do Navegador de Estações e os seus comandos da caixa de diálogo Definir comandos do NVDA, sem apagar nada do que lá guardou (subscrições, biblioteca, lista do Jukebox); voltar a marcá-la repõe tudo. As alterações aplicam-se na próxima vez que o Navegador de Estações for aberto. |
+| Incluir unidades de rede ao pesquisar no Jukebox | Quando ativado, **Pesquisar no disco** do Jukebox também pesquisa unidades de rede. Desativado por predefinição, porque pesquisar uma partilha de rede pode demorar vários minutos ou bloquear se a partilha estiver inacessível. |
 | Fontes de audiolivros | Uma lista de verificação que seleciona quais fontes de audiolivros (**GETEM**, **LibriVox**, **Project Gutenberg**) são pesquisadas e mostradas no separador Audiolivros. As três estão ativadas por predefinição. Desmarcar uma fonte oculta os seus livros dos resultados de pesquisa fundidos e da lista da biblioteca sem eliminar nada que já tenha adicionado dela — veja [Audiolivros (GETEM, LibriVox e Project Gutenberg)](#audiolivros-getem-librivox-e-project-gutenberg). |
 | Nome de utilizador GETEM / Palavra-passe GETEM | As suas credenciais de adesão aos audiolivros [GETEM](https://getem.boun.edu.tr/), necessárias para transmitir ou descarregar o áudio de um livro — veja [Iniciar Sessão](#iniciar-sessão). Armazenadas encriptadas em disco através da Windows Data Protection API, associadas à sua conta de utilizador do Windows; nunca armazenadas como texto simples. Deixar ambos os campos vazios e guardar remove quaisquer credenciais armazenadas. O LibriVox e o Project Gutenberg não requerem conta e não têm campo equivalente. |
 | Formato de saída da gravação | Mantém o fluxo original, extrai o áudio sem alterar o seu codec, ou converte gravações concluídas para MP3. A predefinição é o formato original do fluxo. |
 | Débito binário de gravação MP3 | Define o débito binário usado quando o formato de saída da gravação é MP3. A predefinição é 128 kb/s. |
 | Desativar verificação de conectividade à Internet antes de reproduzir | Recomendado para utilizadores que experimentam um atraso antes de uma estação começar a reproduzir. Também útil quando o DNS está bloqueado. |
+| Limpeza: repor definições e apagar dados guardados... | Um botão que abre uma caixa de diálogo para repor as definições do freeAudio e apagar os dados que ele guardou — veja [Limpeza: repor definições e apagar dados guardados](#limpeza-repor-definições-e-apagar-dados-guardados). |
+
+### Limpeza: repor definições e apagar dados guardados
+
+O botão **Limpeza: repor definições e apagar dados guardados...** na parte inferior da página de definições do freeAudio abre a caixa de diálogo **Repor definições / apagar dados guardados**. Lista, como caixas de verificação, tudo o que o freeAudio guarda na pasta de configuração do NVDA. **Por predefinição, nenhuma está marcada.** Cada item mostra o espaço que ocupa, ou «nada guardado»:
+
+- **Definições** — repostas para os valores predefinidos. A pasta de gravações e a opção **Guardar músicas gostadas em ficheiro de texto** são mantidas.
+- **Estações favoritas**
+- **Cache da lista de estações** — descarregada novamente quando necessário.
+- **Subscrições de podcasts**
+- **Bibliotecas de audiolivros** — GETEM, LibriVox e Project Gutenberg.
+- **Início de sessão GETEM guardado** — o nome de utilizador e a palavra-passe guardados.
+- **Lista do Jukebox** — os seus ficheiros de música não são apagados.
+- **Posições de retoma guardadas** — podcasts, audiolivros e pastas do Jukebox.
+- **Marcadores** — todos os marcadores, incluindo as notas de texto e de voz.
+- **Temporizadores de adormecer e alarmes**
+- **Planos de gravação agendados** — as gravações em si não são apagadas.
+
+**Selecionar tudo** marca todos os itens. **Repor / apagar selecionados** executa a sua escolha; se nada estiver marcado, o freeAudio diz «Nada está selecionado.» **Cancelar** (ou `Escape`) fecha a caixa de diálogo sem fazer nada.
+
+Antes de alterar seja o que for, o freeAudio lista os itens marcados, avisa que isto não pode ser desfeito e pede confirmação; a resposta predefinida é **Não**. Depois, uma mensagem diz «Concluído.» ou lista os itens que não puderam ser removidos — normalmente porque um ficheiro está em uso. Se o Navegador de Estações estiver aberto quando os dados guardados forem apagados, é fechado e reconstruído a partir dos dados restantes da próxima vez que o abrir.
+
+As gravações, a pasta de gravações e o ficheiro de texto das músicas gostadas **nunca** são tocados, e repor as definições não faz o freeAudio voltar a importar dados do suplemento FreeRadio anterior.
+
+Depois de repor as definições, os valores que ainda aparecem na página de definições não são guardados ao premir OK, pelo que não podem desfazer a reposição. Recomenda-se reiniciar o NVDA para que todas as definições tenham efeito.
 
 ## Silenciamento de Notificações
 
@@ -821,8 +941,9 @@ Quando a opção **Silenciar notificações** está ativada nas Definições, o 
 - Nome da estação quando uma nova estação começa a reproduzir
 - Alterações do estado de reprodução: reproduzir, pausar, parar
 - Modo Obligato: iniciado / parado
-- Eventos de gravação: iniciada, parada, concluída (gravações instantâneas, de canção e agendadas)
+- Eventos de gravação: iniciada, parada, concluída (gravações instantâneas, de música, de todas as músicas e agendadas)
 - Anúncios de mudança de faixa, mesmo quando **Anunciar automaticamente mudanças de faixa** também está ativo
+- O aviso de que uma estação está a ser reproduzida num modo de compatibilidade especial (veja [Reprodução](#reprodução))
 
 Os seguintes anúncios **não** são afetados intencionalmente: mensagens de erro, feedback de favoritos (adicionado / já na lista), resultados do reconhecimento musical e notificações de atualização.
 
@@ -838,11 +959,13 @@ Esta funcionalidade está desativada por predefinição e pode ser ativada em Me
 
 ## Reprodução
 
-O freeAudio usa o **BASS** como o seu único backend de reprodução para tudo — rádio pela Internet, podcasts, audiolivros e faixas de jukebox. Não é necessária instalação separada; está incluído no complemento. O suporte para VLC, PotPlayer e Windows Media Player como backends de recurso foi removido; o BASS é sempre usado.
+O freeAudio usa o **BASS** como o seu único backend de reprodução para tudo — rádio pela Internet, podcasts, audiolivros e faixas de jukebox. Não é necessária instalação separada; está incluído no complemento. O freeAudio não utiliza o VLC, o PotPlayer nem o Windows Media Player.
 
 O BASS envia o áudio diretamente para a pilha de áudio do Windows e aparece no misturador de volume do Windows como uma fonte de áudio independente com o nome "pythonw.exe", separada do NVDA. Isto significa que o áudio do freeAudio circula num canal completamente separado do sintetizador de voz do NVDA: o rádio não é interrompido, não se mistura nem é afetado pelas definições de áudio do NVDA enquanto este fala. O utilizador pode ajustar o volume do rádio independentemente do NVDA no Misturador de Volume do Windows. Suporta HTTP, HTTPS e a maioria dos formatos de transmissão incorporados.
 
 Episódios de podcast, capítulos de audiolivros e faixas de jukebox são reproduzidos através do BASS porque este pode abrir o fluxo como um ficheiro pesquisável (mesmo durante o descarregamento), permitindo um rastreio preciso da posição, recuo/avanço escalonado, velocidade de reprodução, transposição de tom e retoma. O espelho de áudio, o time-shift e a procura/retoma de podcasts/audiolivros/jukebox dependem todos do BASS e estão sempre disponíveis.
+
+**Estações HLS que precisam do modo de compatibilidade:** algumas estações HLS (`.m3u8`) empacotam o áudio de uma forma que o BASS não consegue ler com fluidez — volta sempre a abrir o fluxo, o que soa a falhas constantes. Para estas (atualmente as transmissões de rádio da ABC Australia), o freeAudio reempacota automaticamente o mesmo áudio, sem o recodificar, num formato convencional, através de um pequeno servidor que corre apenas no seu computador, e reproduz esse em vez do original. Não é preciso configurar nada. Quando reproduz uma destas estações pela primeira vez depois de o NVDA arrancar, o NVDA diz «Esta estação usa um modo de reprodução especial para evitar falhas.» Este anúncio respeita a definição **Silenciar notificações**.
 
 ## Verificação de Atualizações
 
@@ -857,7 +980,7 @@ O freeAudio verifica automaticamente a existência de novas versões através do
 - Se estiver disponível um ficheiro `.nvda-addon` diretamente descarregável na versão do GitHub, é apresentado o botão **Descarregar e Instalar**. Após confirmação, o ficheiro é descarregado em segundo plano, o NVDA anuncia quando o descarregamento inicia e o ecrã de instalação do NVDA abre automaticamente.
 - Se não estiver disponível uma ligação de descarregamento direto, é apresentado o botão **Abrir Página** e a página da versão do GitHub abre no browser predefinido.
 
-**Para desativar as verificações automáticas:** Desative a opção **Verificar atualizações automaticamente** em Menu NVDA → Preferências → Definições → freeAudio.
+**Para desativar as verificações automáticas:** Desative a opção **Verificar atualizações automaticamente ao iniciar** em Menu NVDA → Preferências → Definições → freeAudio.
 
 ## Agradecimentos e Créditos
 

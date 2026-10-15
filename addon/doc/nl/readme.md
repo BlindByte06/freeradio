@@ -171,10 +171,12 @@ Om een station uit de favorietenlijst te verwijderen, selecteer je het en druk j
 Het tabblad Favorieten bevat twee knoppen voor het maken van een back-up en het herstellen van je stationlijst:
 
 **Favorieten exporteren…** — slaat je volledige favorietenlijst op naar een bestand. Een dialoogvenster laat je kiezen tussen twee formaten:
+
 - **JSON** (`.json`) — een volledige back-up die stationnamen, stream-URL's en alle metadata behoudt. Aanbevolen voor het later herstellen van je lijst of het verplaatsen naar een andere computer.
 - **M3U-afspeellijst** (`.m3u`) — een standaard afspeellijstformaat dat compatibel is met de meeste mediaspelers en radio-apps. Merk op dat M3U niet alle station-metadata opslaat, dus herstellen vanuit M3U kan resulteren in minder details dan een JSON-back-up.
 
 **Favorieten importeren…** — laadt stations uit een eerder geëxporteerd JSON- of M3U-bestand. Na het selecteren van het bestand wordt gevraagd hoe de stations moeten worden toegevoegd:
+
 - **Ja (Samenvoegen)** — voegt de geïmporteerde stations toe aan je bestaande lijst zonder huidige favorieten te verwijderen. Dubbele stations worden niet twee keer toegevoegd.
 - **Nee (Vervangen)** — wist je huidige favorietenlijst volledig en vervangt deze door de inhoud van het geïmporteerde bestand.
 - **Annuleren** — keert terug naar de stationsverkenner zonder wijzigingen aan te brengen.
@@ -236,6 +238,7 @@ De `Ctrl+Win+M` sneltoets dupliceert de momenteel spelende stream naar een tweed
 Bij de eerste keer drukken verschijnt een selectiedialoogvenster met de beschikbare uitvoerapparaten. Zodra een apparaat is gekozen, begint het dupliceren en gaat het hoofdafspelen ononderbroken door. Nogmaals op de sneltoets drukken stopt het dupliceren.
 
 **Gebruiksscenario's:**
+
 - **Luidsprekers + hoofdtelefoon** — Laat een gast dezelfde uitzending volgen op een hoofdtelefoon terwijl jij via de computerluidsprekers luistert.
 - **Opname-setup** — Routeer de hoofduitvoer naar luidsprekers en de tweede uitvoer naar een externe recorder of audio-interface voor externe vastlegging.
 - **Multi-room** — Speel tegelijkertijd af via een Bluetooth-luidspreker en de ingebouwde luidspreker; geen extra software nodig om audio naar een andere kamer te brengen.
@@ -254,10 +257,12 @@ Opnames worden standaard opgeslagen in `Documents\freeAudio Recordings\`. De bes
 **Actieve dagen:** Vink een of meer dagen van de week aan. In de modus "eenmalige opname" wordt voor elke geselecteerde dag een apart item gemaakt, elk geplaatst op de eerstvolgende komende gelegenheid van die dag. In de herhalingsmodus herhaalt de opname zich alleen op de aangevinkte dagen. Als er geen dagen zijn aangevinkt, is de opname niet beperkt tot specifieke dagen.
 
 **Herhaling:**
+
 - **Eenmalig opnemen** — neemt eenmaal op op elke geselecteerde dag. Elk item wordt geplaatst op de eerstvolgende komende gelegenheid van die dag; als de geselecteerde tijd vandaag al is verstreken, verplaatst het item zich automatisch naar dezelfde dag volgende week.
 - **Wekelijks herhalen** — herhaalt elke week op de geselecteerde actieve dagen totdat het uit de planningslijst wordt verwijderd.
 
 **Opnamemodus:**
+
 - **Opnemen tijdens luisteren** — speelt af en neemt tegelijkertijd op. Een afspeel-backend wordt gestart volgens de prioriteitsvolgorde BASS → VLC → PotPlayer → Windows Media Player.
 - **Alleen opnemen** — neemt stil op de achtergrond op zonder audio-uitvoer; de opname-engine maakt direct verbinding met de stream.
 

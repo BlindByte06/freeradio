@@ -229,10 +229,12 @@ The bookmark lists on the Podcasts, Audio Books and Jukebox tabs use the same `.
 The Favourites tab includes two buttons for backing up and restoring your station list:
 
 **Export Favourites…** — saves your entire favourites list to a file. A save dialog lets you choose between two formats:
+
 - **JSON** (`.json`) — a complete backup that preserves station names, stream URLs, and all metadata. Recommended for restoring your list later or moving it to another computer.
 - **M3U playlist** (`.m3u`) — a standard playlist format compatible with most media players and radio apps. Note that M3U does not store all station metadata, so restoring from M3U may result in less detail than a JSON backup.
 
 **Import Favourites…** — loads stations from a previously exported JSON or M3U file. After selecting the file, you are asked how to add the stations:
+
 - **Yes (Merge)** — adds the imported stations to your existing list without removing any current favourites. Duplicate stations are not added twice.
 - **No (Replace)** — clears your current favourites list entirely and replaces it with the contents of the imported file.
 - **Cancel** — returns to the browser without making any changes.
@@ -304,6 +306,7 @@ The `Ctrl+Win+M` shortcut mirrors the currently playing stream to a second audio
 On first press, a selection dialog listing the available output devices appears. Once a device is chosen, mirroring begins and main playback continues uninterrupted. Pressing the shortcut again stops mirroring.
 
 **Use cases:**
+
 - **Speakers + headphones** — Let a guest follow the same broadcast on headphones while you listen through the computer speakers.
 - **Recording setup** — Route the main output to speakers and the second output to an external recorder or audio interface for external capture.
 - **Multi-room** — Play through a Bluetooth speaker and the built-in speaker simultaneously; no extra software needed to carry audio to another room.
@@ -331,6 +334,7 @@ Press `Ctrl+Win+Shift+M` again at any time to stop Obligato mode.
 Recordings are saved to `Documents\freeAudio Recordings\` by default. The filename includes the station name (or the song title, in the song recording modes) and the time the recording started. The recordings folder can be changed at any time from NVDA Menu → Preferences → Settings → freeAudio → **Recordings folder**.
 
 The **Recording output format** setting controls how completed recordings are saved:
+
 - **Original stream format** writes the stream exactly as received. An HLS broadcast may therefore produce a `.ts` file.
 - **Audio only, original codec** removes the video/container layer without re-encoding the audio. For example, AAC audio from an HLS `.ts` recording is normally saved as `.m4a`, preserving broadcast quality.
 - **MP3** converts the audio after recording using the selected bitrate. Conversion uses the `ffmpeg.exe` bundled with freeAudio and runs in the background so NVDA stays responsive. If conversion fails, the original recording is retained.
@@ -355,12 +359,14 @@ A **Filter** field above the station list lets you narrow the favourites list in
 **Active days:** Check one or more days of the week. In single-recording mode, a separate entry is created for each selected day, each placed on the next upcoming occurrence of that day. In recurring mode, the recording repeats only on the checked days. If no days are checked, the recording is not restricted to specific days.
 
 **Recurrence:**
+
 - **Record once** — records a single time on each selected day. Each entry is placed on the next upcoming occurrence of that day; if the selected time has already passed today, the entry moves to the same day next week automatically.
 - **Repeat weekly** — repeats every week on the selected active days until removed from the schedule list.
 
 **Save recording to:** For each scheduled recording, you can choose to save to the default recordings folder or a custom folder. Use the **Browse...** button to select a folder interactively. If the chosen folder becomes unavailable, the recording falls back to the default folder and you are notified.
 
 **Recording mode:**
+
 - **Record while listening** — plays and records simultaneously through the BASS backend.
 - **Record only** — records silently in the background without any audio output; the recording engine connects directly to the stream.
 
@@ -441,11 +447,13 @@ Open the station browser with `Ctrl+Win+R` and switch to the **Podcasts** tab us
 You can add a podcast feed in two ways:
 
 **By URL:**
+
 - In the **Search** field, paste the full RSS or Atom feed URL (e.g. `https://example.com/feed.xml`).
 - Press Enter.
 - freeAudio fetches the feed, validates it, and adds it to your subscriptions. If the feed is valid, you will hear a confirmation with the feed title. If it fails, an error message explains why.
 
 **By searching:**
+
 - In the **Search** field, type a keyword (podcast title, topic, or host name) and press Enter.
 - freeAudio searches the iTunes podcast directory and displays matching podcasts in the **Search results** list.
 - Selecting a result fetches that feed in the background and lists its episodes in the **Episodes in selected result** list right below, so you can preview what the show actually contains before deciding to subscribe — see [Previewing Episodes Before Subscribing](#previewing-episodes-before-subscribing) below.
@@ -472,6 +480,7 @@ Once you have added some feeds, they appear in the **Subscriptions** list. Each 
 - **Remove a feed** — select it and press `Delete` or use the context menu to remove it from your subscriptions. You will be asked for confirmation before removal.
 
 **Context menu for feeds:** Right-click a feed, or select it and press the Applications key / `Shift+F10`, to open a menu with:
+
 - **Refresh Feed** — fetch new episodes now.
 - **Save Audio Profile for This Podcast** / **Clear Audio Profile** — see [Podcast Audio Profile](#podcast-audio-profile).
 - **Remove Feed** — delete the subscription.
@@ -480,6 +489,7 @@ Once you have added some feeds, they appear in the **Subscriptions** list. Each 
 ### Browsing and Playing Episodes
 
 Select a feed in the subscriptions list; its episodes appear in the **Episodes** list below. Each episode shows:
+
 - Its episode number (1 = the oldest episode in the feed, counting up to the newest).
 - Its publication date (if available).
 - Its title.
@@ -487,6 +497,7 @@ Select a feed in the subscriptions list; its episodes appear in the **Episodes**
 - A duration suffix, either total duration (if never played) or elapsed/total progress (if partially played).
 
 **Playback:**
+
 - Select an episode and press `Enter` or `Space` to start playing it. If an episode was partially played before, it resumes from where you left off.
 - The row does *not* update while the episode is playing — this is intentional, so NVDA doesn't repeatedly re-announce the row while you're sitting on it. Its "Listened" flag and duration are refreshed immediately the moment you pause the episode or it finishes playing, so the display is always accurate right when it matters; it simply doesn't tick up second by second during playback.
 - Use `F3` / `F4` on the Podcasts tab to move to the previous / next episode and play it immediately. You can also use `←` / `→` while the episode list is focused, or `Ctrl+←` / `Ctrl+→` anywhere on the Podcasts tab — both work identically.
@@ -496,6 +507,7 @@ Select a feed in the subscriptions list; its episodes appear in the **Episodes**
 **Resuming playback:** freeAudio saves your position in each podcast episode automatically — immediately whenever you pause or the episode finishes, and every 15 seconds in the background while you keep listening, so a crash or unexpected restart won't lose much progress. If you stop or pause playback and come back later, the episode resumes from the saved position. If you play the episode to the very end (within the last 3 seconds), it is marked as "Listened" and will not resume — it starts from the beginning next time, and the "Listened" prefix appears in the list.
 
 **Context menu for episodes:** Right-click an episode, or select it and press the Applications key / `Shift+F10`, to open a menu with:
+
 - **Play Episode** — start playback.
 - **Download Episode** — download the episode file to your recordings folder.
 - **Save Audio Profile for This Podcast** / **Clear Audio Profile** — same commands as the feed's own context menu, included here for convenience so you don't have to switch back to the Subscriptions list. They still save one profile for the whole podcast, not a separate one for this episode — see [Podcast Audio Profile](#podcast-audio-profile).
@@ -533,6 +545,7 @@ A deliberate tap is held for a brief moment before it actually seeks, in case an
 Right-click a podcast in the Subscriptions list, or right-click any of its episodes, and choose **Save Audio Profile for This Podcast** to save the current volume, effects, EQ gains and/or playback speed as a profile tied to that podcast. Whenever any episode of that podcast plays, the saved settings are applied automatically, overriding the global defaults. Because the command is available from both the feed context menu and the episode context menu, you can reach it without switching back to the Subscriptions list — either way, it always saves one profile for the whole podcast, not a separate one per episode.
 
 A dialog with 15 options lets you choose exactly what to save:
+
 - **Volume only**
 - **Effects only**
 - **Volume and effects**
@@ -612,6 +625,7 @@ Books you've added appear in the **Library** list, showing title, author and for
 - Use `Shift+F3` / `Shift+F4` to move between **parts** of the currently playing book instead — the reverse of the Podcasts tab, where F3/F4 move between episodes and Shift+F3/F4 move between feeds. This is because a book is a single library entry even when it has several parts, so the finer-grained "part" navigation sits on the Shift-modified keys here.
 
 **Context menu for library entries:** Right-click a book, or select it and press the Applications key / `Shift+F10`, to open a menu with:
+
 - **Play Media** — start playing, same as `Enter`.
 - **Download Book** — download every part of the book; see [Downloading Audio Books](#downloading-audio-books) below.
 - **Copy the URL** — copy the book's catalogue page URL to the clipboard (the GETEM catalogue page for a GETEM book, or the archive.org details page for a LibriVox or Project Gutenberg book).
@@ -727,10 +741,12 @@ With an entry selected in the Jukebox list, press `comma` to enter move mode —
 The Jukebox tab includes two buttons for backing up and restoring your library, at the bottom of the tab:
 
 **Export Jukebox…** — saves your entire Jukebox list to a file. A save dialog lets you choose between two formats:
+
 - **JSON** (`.json`) — a complete backup that preserves every entry's path, custom name, group, and saved audio profile. Recommended for restoring your library later or moving it to another computer.
 - **M3U playlist** (`.m3u`) — a lighter format compatible with most media players, listing each entry's path with its custom name (if any) in a preceding `#EXTINF` line. Groups and audio profiles are not included in M3U, so restoring from M3U loses that detail.
 
 **Import Jukebox…** — loads entries from a previously exported JSON or M3U file. After selecting the file, you are asked how to add the entries:
+
 - **Yes (Merge)** — adds the imported entries to your existing library without removing any current entries. Entries whose path matches one already in your library are not added twice.
 - **No (Replace)** — clears your current Jukebox list entirely and replaces it with the contents of the imported file.
 - **Cancel** — returns to the browser without making any changes.

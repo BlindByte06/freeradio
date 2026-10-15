@@ -224,10 +224,12 @@ Markierungen gelten jeweils für eine Liste und verschwinden, sobald die Einträ
 Die Registerkarte „Favoriten“ enthält zwei Schaltflächen zum Sichern und Wiederherstellen der Senderliste:
 
 **Favoriten exportieren…** — sichert die gesamte Favoritenliste in eine Datei. Im Speichern-Dialog stehen zwei Formate zur Wahl:
+
 - **JSON** (`.json`) — eine vollständige Sicherung mit Sendernamen, Stream-Adressen und allen Metadaten. Empfohlen, um die Liste später wiederherzustellen oder auf einen anderen Rechner zu übertragen.
 - **M3U-Wiedergabeliste** (`.m3u`) — ein gängiges Wiedergabelistenformat, das die meisten Medienplayer und Radio-Apps verstehen. M3U speichert allerdings nicht alle Metadaten, eine Wiederherstellung daraus fällt also weniger vollständig aus als aus einer JSON-Sicherung.
 
 **Favoriten importieren…** — lädt Sender aus einer zuvor exportierten JSON- oder M3U-Datei. Nach der Dateiauswahl folgt die Frage, wie die Sender aufgenommen werden sollen:
+
 - **Ja (Zusammenführen)** — ergänzt die vorhandene Liste um die importierten Sender, ohne bestehende Favoriten zu entfernen. Doppelte Sender werden nicht zweimal aufgenommen.
 - **Nein (Ersetzen)** — leert die bisherige Favoritenliste vollständig und ersetzt sie durch den Inhalt der Datei.
 - **Abbrechen** — kehrt ohne Änderungen zum Browser zurück.
@@ -297,6 +299,7 @@ Der Tastenbefehl `Strg+Windows+M` gibt den laufenden Stream zusätzlich auf eine
 Beim ersten Druck erscheint ein Auswahldialog mit den verfügbaren Ausgabegeräten. Nach der Wahl beginnt die Spiegelung, die Hauptwiedergabe läuft ununterbrochen weiter. Ein erneuter Druck beendet die Spiegelung.
 
 **Typische Einsatzfälle:**
+
 - **Lautsprecher + Kopfhörer** — Ein Gast hört dieselbe Sendung über Kopfhörer mit, während der Ton weiterhin auch aus den Computerlautsprechern kommt.
 - **Aufnahmeaufbau** — Die Hauptausgabe geht auf die Lautsprecher, die zweite auf einen externen Rekorder oder ein Audiointerface zur separaten Aufzeichnung.
 - **Mehrere Räume** — Gleichzeitige Ausgabe über einen Bluetooth-Lautsprecher und den eingebauten Lautsprecher; zusätzliche Software, um den Ton in einen anderen Raum zu bringen, ist nicht nötig.
@@ -324,6 +327,7 @@ Ein erneutes `Strg+Windows+Umschalt+M` beendet den Obligato-Modus jederzeit.
 Aufnahmen landen standardmäßig in `Dokumente\freeAudio Recordings\`. Der Dateiname enthält den Sendernamen (bei einer Titelaufnahme den Titel) und die Startzeit der Aufnahme. Der Aufnahmeordner lässt sich jederzeit unter NVDA-Menü → Optionen → Einstellungen → freeAudio → **Aufnahmeordner** ändern.
 
 Die Einstellung **Ausgabeformat der Aufnahme** bestimmt, wie fertige Aufnahmen gespeichert werden:
+
 - **Originalformat des Streams** schreibt den Stream genau so, wie er ankommt. Eine HLS-Übertragung ergibt damit unter Umständen eine `.ts`-Datei.
 - **Nur Audio, Original-Codec** entfernt die Video- bzw. Containerschicht, ohne das Audio neu zu codieren. AAC-Audio aus einer HLS-`.ts`-Aufnahme landet so in der Regel als `.m4a` — in Sendequalität.
 - **MP3** wandelt das Audio nach der Aufnahme mit der gewählten Bitrate um. Dafür dient die mit freeAudio gelieferte `ffmpeg.exe`; die Umwandlung läuft im Hintergrund, damit NVDA reaktionsfähig bleibt. Schlägt sie fehl, bleibt die Originalaufnahme erhalten.
@@ -339,12 +343,14 @@ Ein **Filter**-Feld über der Senderliste engt die Favoritenliste in Echtzeit ei
 **Aktive Tage:** Einen oder mehrere Wochentage anhaken. Bei einmaliger Aufnahme entsteht für jeden gewählten Tag ein eigener Eintrag, jeweils zum nächsten Vorkommen dieses Tages. Bei wiederkehrender Aufnahme wiederholt sie sich nur an den angehakten Tagen. Ohne angehakte Tage ist die Aufnahme an keinen bestimmten Tag gebunden.
 
 **Wiederholung:**
+
 - **Nur einmal** — nimmt an jedem gewählten Tag ein einziges Mal auf. Jeder Eintrag liegt auf dem nächsten Vorkommen dieses Tages; ist die gewählte Zeit heute schon vorbei, rückt der Eintrag automatisch auf denselben Tag der nächsten Woche.
 - **Wöchentlich wiederholen** — wiederholt sich jede Woche an den gewählten aktiven Tagen, bis der Eintrag aus der Liste entfernt wird.
 
 **Aufnahme speichern unter:** Für jede geplante Aufnahme lässt sich der Standard-Aufnahmeordner oder ein eigener Ordner festlegen. Die Schaltfläche **Durchsuchen...** öffnet die Ordnerauswahl. Ist der gewählte Ordner später nicht verfügbar, weicht die Aufnahme auf den Standardordner aus, und es erscheint ein Hinweis.
 
 **Aufnahmeart:**
+
 - **Aufnehmen und mithören** — spielt und nimmt gleichzeitig über das BASS-Backend auf.
 - **Nur aufnehmen** — nimmt still im Hintergrund auf, ganz ohne Tonausgabe; die Aufnahme-Engine verbindet sich direkt mit dem Stream.
 
@@ -426,11 +432,13 @@ Den Senderbrowser mit `Strg+Windows+R` öffnen und mit `Strg+Tabulator` oder `Al
 Dafür gibt es zwei Wege:
 
 **Über die Adresse:**
+
 - Im Feld **Suche** die vollständige RSS- oder Atom-Feed-Adresse einfügen (z. B. `https://example.com/feed.xml`).
 - Die Eingabetaste drücken.
 - freeAudio holt den Feed, prüft ihn und nimmt ihn in die Abos auf. Ist der Feed in Ordnung, folgt eine Bestätigung mit dem Feed-Titel. Schlägt es fehl, erklärt eine Fehlermeldung den Grund.
 
 **Über die Suche:**
+
 - Im Feld **Suche** ein Stichwort eintragen (Podcast-Titel, Thema oder Name der moderierenden Person) und die Eingabetaste drücken.
 - freeAudio durchsucht das iTunes-Podcast-Verzeichnis und zeigt passende Podcasts in der Liste **Suchergebnisse**.
 - Die Wahl eines Treffers holt den zugehörigen Feed im Hintergrund und listet dessen Folgen gleich darunter in der Liste **Folgen im ausgewählten Ergebnis** — so lässt sich der Inhalt einer Sendung schon vor dem Abonnieren beurteilen; siehe [Folgen vor dem Abonnieren anhören](#previewing-episodes-before-subscribing) weiter unten.
@@ -457,6 +465,7 @@ Aufgenommene Feeds erscheinen in der Liste **Abos**. Jeder Eintrag zeigt den Fee
 - **Einen Feed entfernen** — ihn auswählen und `Entf` drücken oder das Kontextmenü verwenden. Vor dem Entfernen folgt eine Rückfrage.
 
 **Kontextmenü für Feeds:** Ein Rechtsklick auf einen Feed — oder die Kontextmenütaste bzw. `Umschalt+F10` bei ausgewähltem Feed — öffnet ein Menü mit:
+
 - **Feed aktualisieren** — neue Folgen sofort holen.
 - **Audioprofil für diesen Podcast speichern** / **Audioprofil löschen** — siehe [Audioprofil für einen Podcast](#podcast-audio-profile).
 - **Feed entfernen** — das Abo löschen.
@@ -465,6 +474,7 @@ Aufgenommene Feeds erscheinen in der Liste **Abos**. Jeder Eintrag zeigt den Fee
 ### Folgen durchsehen und abspielen
 
 Einen Feed in der Aboliste auswählen; seine Folgen erscheinen darunter in der Liste **Folgen**. Jede Folge zeigt:
+
 - ihre Folgennummer (1 = älteste Folge im Feed, aufwärts bis zur neuesten),
 - ihr Veröffentlichungsdatum (sofern vorhanden),
 - ihren Titel,
@@ -472,6 +482,7 @@ Einen Feed in der Aboliste auswählen; seine Folgen erscheinen darunter in der L
 - und am Ende eine Zeitangabe: entweder die Gesamtdauer (bei noch nie gehörten Folgen) oder der Fortschritt aus verstrichener und Gesamtzeit (bei teilweise gehörten).
 
 **Wiedergabe:**
+
 - Eine Folge auswählen und mit `Eingabetaste` oder `Leertaste` starten. Wurde sie zuvor teilweise gehört, geht es an der zuletzt gehörten Stelle weiter.
 - Die Zeile wird während der Wiedergabe *nicht* aktualisiert — das ist Absicht, damit NVDA sie nicht ständig neu vorliest, solange der Fokus darauf ruht. Vermerk „Gehört“ und Zeitangabe werden in dem Moment aufgefrischt, in dem die Folge angehalten wird oder zu Ende läuft; die Anzeige stimmt also genau dann, wenn es darauf ankommt — sie zählt bloß während der Wiedergabe nicht Sekunde für Sekunde mit.
 - `F3` / `F4` auf der Registerkarte „Podcasts“ wechseln zur vorherigen bzw. nächsten Folge und spielen sie sofort ab. Dasselbe leisten `←` / `→` bei Fokus auf der Folgenliste sowie `Strg+←` / `Strg+→` überall auf der Registerkarte.
@@ -481,6 +492,7 @@ Einen Feed in der Aboliste auswählen; seine Folgen erscheinen darunter in der L
 **Fortsetzen:** freeAudio merkt sich die Position in jeder Podcast-Folge automatisch — sofort beim Anhalten oder am Ende der Folge und darüber hinaus alle 15 Sekunden im Hintergrund, damit ein Absturz oder unerwarteter Neustart möglichst wenig Fortschritt kostet. Nach einem Stopp oder einer Pause setzt die Folge später an der gespeicherten Stelle wieder ein. Läuft sie bis ganz ans Ende (bis in die letzten 3 Sekunden), gilt sie als „Gehört“ und wird nicht fortgesetzt — beim nächsten Mal beginnt sie von vorn, und der Vermerk „Gehört“ erscheint in der Liste.
 
 **Kontextmenü für Folgen:** Ein Rechtsklick auf eine Folge — oder die Kontextmenütaste bzw. `Umschalt+F10` bei ausgewählter Folge — öffnet ein Menü mit:
+
 - **Folge wiedergeben** — die Wiedergabe starten.
 - **Folge herunterladen** — die Datei in den Aufnahmeordner laden.
 - **Audioprofil für diesen Podcast speichern** / **Audioprofil löschen** — dieselben Befehle wie im Kontextmenü des Feeds, hier der Bequemlichkeit halber, damit kein Rückweg zur Aboliste nötig ist. Gespeichert wird nach wie vor ein Profil für den gesamten Podcast, nicht eines für diese eine Folge — siehe [Audioprofil für einen Podcast](#podcast-audio-profile).
@@ -518,6 +530,7 @@ Ein bewusster Tastendruck wartet einen kurzen Moment ab, bevor er tatsächlich s
 Ein Rechtsklick auf einen Podcast in der Aboliste oder auf eine seiner Folgen und die Wahl von **Audioprofil für diesen Podcast speichern** sichert die aktuelle Lautstärke, die Effekte, die EQ-Verstärkungen und/oder das Wiedergabetempo als Profil für diesen Podcast. Bei jeder Folge dieses Podcasts greifen die gespeicherten Werte dann automatisch und setzen die globalen Vorgaben außer Kraft. Da der Befehl sowohl im Kontextmenü des Feeds als auch in dem der Folge steht, ist kein Rückweg zur Aboliste nötig — in beiden Fällen entsteht ein Profil für den gesamten Podcast, nicht eines je Folge.
 
 Ein Dialog mit 15 Optionen bestimmt, was genau gespeichert wird:
+
 - **Nur Lautstärke**
 - **Nur Effekte**
 - **Lautstärke und Effekte**
@@ -597,6 +610,7 @@ Aufgenommene Bücher erscheinen in der Liste **Bibliothek**, mit Titel, Autor un
 - `Umschalt+F3` / `Umschalt+F4` wechseln stattdessen zwischen den **Teilen** des laufenden Buchs — umgekehrt zur Registerkarte „Podcasts“, wo F3/F4 zwischen Folgen und Umschalt+F3/F4 zwischen Feeds wechseln. Grund dafür: Ein Buch ist auch mit mehreren Teilen ein einziger Bibliothekseintrag, deshalb liegt hier die feinere Navigation über Teile auf den Tasten mit Umschalt.
 
 **Kontextmenü für Bibliothekseinträge:** Ein Rechtsklick auf ein Buch — oder die Kontextmenütaste bzw. `Umschalt+F10` bei ausgewähltem Buch — öffnet ein Menü mit:
+
 - **Medium wiedergeben** — die Wiedergabe starten, wie mit der `Eingabetaste`.
 - **Buch herunterladen** — sämtliche Teile des Buchs laden; siehe [Hörbücher herunterladen](#downloading-audio-books) weiter unten.
 - **Adresse kopieren** — die Adresse der Katalogseite in die Zwischenablage übernehmen (die GETEM-Katalogseite bei einem GETEM-Buch, die archive.org-Detailseite bei einem Buch von LibriVox oder Project Gutenberg).
@@ -712,10 +726,12 @@ Bei ausgewähltem Eintrag in der Jukebox-Liste mit `Komma` den Verschiebemodus s
 Die Registerkarte „Jukebox“ enthält unterhalb der Titelliste zwei Schaltflächen zum Sichern und Wiederherstellen der Bibliothek:
 
 **Jukebox exportieren…** — sichert die gesamte Jukebox-Liste in eine Datei. Im Speichern-Dialog stehen zwei Formate zur Wahl:
+
 - **JSON** (`.json`) — eine vollständige Sicherung mit Pfad, eigenem Namen, Gruppe und gespeichertem Audioprofil jedes Eintrags. Empfohlen, um die Bibliothek später wiederherzustellen oder auf einen anderen Rechner zu übertragen.
 - **M3U-Wiedergabeliste** (`.m3u`) — ein schlankeres Format, das die meisten Medienplayer verstehen; es führt den Pfad jedes Eintrags auf, mit dem eigenen Namen (falls vorhanden) in einer vorangestellten Zeile `#EXTINF`. Gruppen und Audioprofile enthält M3U nicht, eine Wiederherstellung daraus verliert diese Angaben also.
 
 **Jukebox importieren…** — lädt Einträge aus einer zuvor exportierten JSON- oder M3U-Datei. Nach der Dateiauswahl folgt die Frage, wie die Einträge aufgenommen werden sollen:
+
 - **Ja (Zusammenführen)** — ergänzt die vorhandene Bibliothek um die importierten Einträge, ohne bestehende zu entfernen. Einträge, deren Pfad schon in der Bibliothek steht, werden nicht doppelt aufgenommen.
 - **Nein (Ersetzen)** — leert die bisherige Jukebox-Liste vollständig und ersetzt sie durch den Inhalt der Datei.
 - **Abbrechen** — kehrt ohne Änderungen zum Browser zurück.

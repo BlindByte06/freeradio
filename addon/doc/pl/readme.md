@@ -8,7 +8,8 @@ freeAudio to pełnowartościowy dodatek do czytnika ekranu NVDA, łączący radi
 - **Podcasty** — subskrybuj dowolny kanał RSS/Atom albo przeszukuj katalog podcastów Apple i odsłuchuj odcinki przed subskrypcją. Pozycja odtwarzania jest zapisywana automatycznie i wznawiana w miejscu, w którym skończyłeś — zobacz [Podcasty](#podcasty).
 - **Audiobooki** — wyszukuj i odtwarzaj lub pobieraj książki z trzech źródeł: [GETEM](https://getem.boun.edu.tr/), biblioteki cyfrowej Uniwersytetu Boğaziçi dla osób z dysfunkcją wzroku, [LibriVox](https://librivox.org/), wolontariackiego projektu audiobooków z domeny publicznej, oraz Open Audiobook Collection Projektu Gutenberg — dwa ostatnie nie wymagają konta — z automatycznym wznawianiem w dziełach wieloczęściowych — zobacz [Audiobooki (GETEM, LibriVox i Project Gutenberg)](#audiobooki-getem-librivox-i-project-gutenberg).
 - **Lokalny Jukebox** — wyszukuj pliki audio zapisane na dowolnym podłączonym dysku według nazwy pliku albo zbuduj osobistą bibliotekę plików i folderów i odtwarzaj je z tymi samymi narzędziami wznawiania, przewijania, prędkości i wysokości dźwięku, których używają podcasty i audiobooki — zobacz [Lokalny Jukebox](#lokalny-jukebox).
-- **Nagrywanie** — nagrywaj to, co gra, natychmiast, przechwytuj pojedynczy utwór automatycznie od jego początku do końca albo planuj nagrania jednorazowe i cykliczne — bez przerywania odtwarzania — zobacz [Nagrywanie](#nagrywanie).
+- **Zakładki** — Wstaw zakładkę w bieżącym miejscu dowolnej części audiobooka, odcinka podcastu lub utworu z jukeboksa, a później wróć do niej w każdej chwili. Zakładka może zawierać notatkę tekstową lub nagraną notatkę głosową, odtwarzaną, gdy odtwarzanie dojdzie do tego miejsca; można też powtarzać fragment między dwiema zakładkami — zob. [Zakładki](#zakładki).
+- **Nagrywanie** — Nagrywaj to, co gra, natychmiast, nagraj pojedynczy utwór od początku do końca, nagrywaj każdy utwór ze stacji do osobnego pliku, dopóki nie zatrzymasz nagrywania, albo zaplanuj nagrania jednorazowe i cykliczne — a wszystko to bez przerywania odtwarzania — zob. [Nagrywanie](#nagrywanie).
 - **Time-shift (cofanie radia na żywo)** — wstrzymuj i cofaj stację na żywo jak w DVR, a następnie wracaj do transmisji na żywo, kiedy chcesz — zobacz [Time-shift (cofanie radia na żywo)](#time-shift-cofanie-radia-na-żywo).
 - **Rozpoznawanie muzyki i polubione utwory** — rozpoznawaj utwory bez metadanych za pomocą rozpoznawania opartego na Shazam, zapisuj polubione utwory do pliku tekstowego i wyszukuj ich teksty — zobacz [Rozpoznawanie muzyki](#rozpoznawanie-muzyki) i [Polubione utwory](#polubione-utwory).
 - **Profile audio i efekty** — zapisuj osobne ustawienia głośności, efektów, EQ i prędkości odtwarzania dla każdej stacji, podcastu, audiobooka lub utworu z jukeboksa oraz stosuj efekty w czasie rzeczywistym (Chorus, Pogłos, wzmocnienia EQ i inne) przez backend BASS — zobacz [Profil audio stacji](#profil-audio-stacji).
@@ -72,10 +73,11 @@ Niektóre z tych skrótów pokrywają się ze skrótami używanymi przez sam sys
 | `Ctrl+Win+Shift+J` | Zmniejsz prędkość odtwarzania | Zmniejsza prędkość odtwarzania odcinka podcastu, audiobooka lub utworu z jukeboksa o 0,1x. |
 | `Shift+Win+K` | Transpozycja w górę | Podwyższa wysokość dźwięku odcinka podcastu, audiobooka lub utworu z jukeboksa co 1/8 całego tonu (0,25 półtonu), bez zmiany prędkości. Zakres: od −12,00 do +12,00 półtonów. Zobacz [Transpozycja (zmiana wysokości dźwięku)](#transpozycja-zmiana-wysokości-dźwięku). |
 | `Shift+Win+J` | Transpozycja w dół | Obniża wysokość dźwięku co 1/8 całego tonu, bez zmiany prędkości. |
-| `Ctrl+Win+I` | Informacje o stacji | Odczytuje nazwę aktualnie odtwarzanej stacji, odcinka podcastu, audiobooka lub utworu z jukeboksa. Naciśnij dwa razy, aby pokazać szczegóły, takie jak kraj, gatunek i przepływność, w oknie dialogowym. Naciśnij trzy razy, aby skopiować informacje o aktualnym utworze, czyli metadane ICY, do schowka, jeśli są dostępne; jeśli metadanych nie ma, rozpoczyna rozpoznawanie muzyki przez Shazam. Naciśnij cztery razy, aby wymusić rozpoznawanie muzyki, gdy metadane ICY są błędne. |
+| `Ctrl+Win+F12` | Dodaj zakładkę | Dodaje zakładkę w bieżącej pozycji odtwarzania części audiobooka, odcinka podcastu lub utworu z jukeboksa. Niedostępne dla stacji radiowych na żywo. Zob. [Zakładki](#zakładki). |
+| `Ctrl+Win+I` | Informacje o stacji | Odczytuje nazwę aktualnie odtwarzanej stacji, odcinka podcastu, audiobooka lub utworu z jukeboksa. Naciśnij dwa razy, aby pokazać szczegóły, takie jak kraj, gatunek i przepływność, w oknie dialogowym. Naciśnij trzy razy, aby skopiować informacje o aktualnym utworze, czyli metadane ICY, do schowka, jeśli są dostępne; jeśli metadanych nie ma, rozpoczyna rozpoznawanie muzyki przez Shazam. Naciśnij cztery razy, aby wymusić rozpoznawanie muzyki, gdy metadane ICY są błędne. Gdy trwa nagrywanie, ogłaszana jest także jego nazwa; podczas nagrywania każdego utworu jest to utwór nagrywany w tej chwili. |
 | `Ctrl+Win+M` | Kopia dźwięku | Kopiuje bieżący strumień lub media równolegle na dodatkowe urządzenie wyjściowe audio. Ponowne naciśnięcie zatrzymuje kopiowanie. |
 | `Ctrl+Win+Shift+M` | Tryb Obligato (muzyka w tle) | Odtwarza w pętli wybraną ulubioną stację cicho w tle, na własnym urządzeniu wyjściowym i z własną głośnością, niezależnie od tego, co gra jako główne media. Pierwsze naciśnięcie otwiera okno wyboru stacji, urządzenia wyjściowego i względnej głośności. Naciśnij ponownie, aby je zatrzymać. |
-| `Ctrl+Win+E` | Nagrywanie natychmiastowe | Naciśnij raz, aby rozpocząć nagrywanie bieżącej stacji; naciśnij ponownie, aby zatrzymać. Naciśnij **dwa razy**, aby rozpocząć **nagrywanie utworu** — plik otrzyma nazwę bieżącego utworu, a nagrywanie zatrzyma się automatycznie po zmianie utworu. Dwukrotne naciśnięcie podczas aktywnego nagrywania utworu zatrzyma je wcześniej. Odtwarzanie trwa bez przerwy we wszystkich trybach nagrywania. Funkcja jest dostępna tylko dla stacji nadających metadane ICY. |
+| `Ctrl+Win+E` | Nagrywanie (natychmiastowe / utwór / każdy utwór) | Naciśnij raz, aby rozpocząć nagrywanie bieżącej stacji; naciśnij ponownie, aby zatrzymać. Naciśnij **dwa razy**, aby nagrać **bieżący utwór**: plik otrzymuje nazwę utworu, a nagrywanie zatrzymuje się samo, gdy utwór się zmieni. Naciśnij **trzy razy**, aby nagrywać **każdy utwór**, dopóki nie zatrzymasz nagrywania: każdy utwór trafia do osobnego pliku. Aby zatrzymać nagrywanie utworu lub każdego utworu, naciśnij dwa razy. Odtwarzanie trwa nieprzerwanie we wszystkich trybach nagrywania. Nagrywanie utworu i każdego utworu działa tylko na stacjach, które wysyłają tytuły utworów (metadane ICY) w strumieniu; nagrywanie każdego utworu nie działa na stacjach HLS (`.m3u8`). Zob. [Nagrywanie](#nagrywanie). |
 | `Ctrl+Win+W` | Otwórz folder nagrań | Otwiera w Eksploratorze plików folder z nagraniami. |
 | `Ctrl+Win+J` | Cofnięcie time-shift / przewijanie wstecz w podcaście, audiobooku i jukeboksie | W radiu na żywo: cofa o 15 sekund. Pierwsze naciśnięcie wchodzi w tryb time-shift; każde kolejne cofa o kolejne 15 sekund, do limitu bufora ustawionego w ustawieniach freeAudio. Wymaga włączonego bufora time-shift w Ustawieniach. W podcaście, audiobooku lub utworze z jukeboksa ten klawisz przewija w obrębie pliku, a długość skoku zależy od sposobu naciśnięcia: **przytrzymanie** przewija wstecz o 5 sekund przy każdym powtórzeniu, tak jak dotychczas; **pojedyncze świadome naciśnięcie** cofa o 12 sekund; **dwa szybkie naciśnięcia** cofają o 1 minutę; **trzy lub więcej naciśnięć** cofa o 5 minut. Dla całej serii naciśnięć wykonywane jest tylko jedno przewinięcie, o długości odpowiadającej liczbie naciśnięć — naciśnięcia nie sumują się. Działa niezależnie od ustawienia time-shift. |
 | `Ctrl+Win+K` | Przewijanie do przodu time-shift / przewijanie do przodu w podcaście, audiobooku i jukeboksie | W radiu na żywo: przewija o 15 sekund do przodu w trybie time-shift. Po osiągnięciu krawędzi na żywo odtwarzanie automatycznie wraca do live i polecenie nie działa, dopóki ponownie nie cofniesz. W podcaście, audiobooku lub utworze z jukeboksa ten klawisz przewija do przodu w obrębie pliku, z tym samym skalowaniem naciśnięć i przytrzymania co `Ctrl+Win+J` powyżej (przytrzymanie = 5 sekund na powtórzenie; 1 naciśnięcie = 12 sekund; 2 naciśnięcia = 1 minuta; 3 i więcej = 5 minut). Działa niezależnie od ustawienia time-shift. |
@@ -90,7 +92,7 @@ Skróty następnej i poprzedniej stacji poruszają się tylko po liście ulubion
 
 freeAudio dodaje też podmenu **freeAudio** do menu Narzędzia NVDA. Można z niego bezpośrednio otworzyć przeglądarkę stacji i ustawienia freeAudio.
 
-Okno otwierane skrótem `Ctrl+Win+R` zawiera osiem kart: Wszystkie stacje, Ulubione, Nagrywanie, Timer, Polubione utwory, Podcasty, Audiobooki i Jukebox. Między kartami można przełączać się skrótem `Ctrl+Tab` albo skrótami od `Alt+1` do `Alt+8`.
+Okno otwierane skrótem `Ctrl+Win+R` zawiera osiem kart: Wszystkie stacje, Ulubione, Nagrywanie, Timer, Polubione utwory, Podcasty, Audiobooki i Jukebox. Między kartami można przełączać się skrótem `Ctrl+Tab` albo skrótami od `Alt+1` do `Alt+8`. Karty Podcasty, Audiobooki i Jukebox można wyłączyć ustawieniem **Moduły** (zob. [Ustawienia](#ustawienia)); wyłączone karty nie są wyświetlane.
 
 Po otwarciu karty Wszystkie stacje automatycznie ładowanych jest 1000 najczęściej głosowanych stacji z Radio Browser. Wybranie kraju z listy rozwijanej aktualizuje listę i pokazuje stacje z tego kraju. Pisanie w polu wyszukiwania natychmiast uruchamia pełne wyszukiwanie w całej bazie Radio Browser, jednocześnie po nazwie, kraju i gatunku.
 
@@ -129,7 +131,7 @@ Poniższe klawisze działają tylko wtedy, gdy aktywne jest okno Przeglądarka s
 | Skrót | Funkcja | Opis |
 |---|---|---|
 | `F1` | Pomoc | Otwiera plik pomocy dodatku w domyślnej przeglądarce. Najpierw szukana jest pomoc w aktywnym języku NVDA; jeśli jej nie ma, otwierana jest wersja domyślna. |
-| `F2` | Co jest odtwarzane | Odczytuje aktualnie odtwarzaną stację i nazwę utworu. Dwukrotne naciśnięcie pokazuje szczegóły, takie jak kraj, gatunek i przepływność, w oknie dialogowym. Trzykrotne naciśnięcie kopiuje informacje o utworze, czyli metadane ICY, do schowka, jeśli są dostępne; jeśli ich nie ma, uruchamia rozpoznawanie muzyki przez Shazam. Czterokrotne naciśnięcie wymusza rozpoznawanie muzyki przy błędnych metadanych ICY. |
+| `F2` | Co jest odtwarzane | Odczytuje aktualnie odtwarzaną stację i nazwę utworu. Dwukrotne naciśnięcie pokazuje szczegóły, takie jak kraj, gatunek i przepływność, w oknie dialogowym. Trzykrotne naciśnięcie kopiuje informacje o utworze, czyli metadane ICY, do schowka, jeśli są dostępne; jeśli ich nie ma, uruchamia rozpoznawanie muzyki przez Shazam. Czterokrotne naciśnięcie wymusza rozpoznawanie muzyki przy błędnych metadanych ICY. Gdy trwa nagrywanie, ogłaszana jest także jego nazwa. |
 | `F3` | Poprzedni element | Na kartach Wszystkie stacje i Ulubione: przechodzi do poprzedniej stacji i natychmiast rozpoczyna odtwarzanie. Na karcie Podcasty: przechodzi do poprzedniego odcinka na liście odcinków i go odtwarza. Na karcie Audiobooki: przechodzi do poprzedniej książki i zaczyna ją odtwarzać. Na karcie Jukebox: przechodzi do poprzedniego utworu w zaznaczonym elemencie jukeboksa i go odtwarza. |
 | `F4` | Następny element | Na kartach Wszystkie stacje i Ulubione: przechodzi do następnej stacji i natychmiast rozpoczyna odtwarzanie. Na karcie Podcasty: przechodzi do następnego odcinka i go odtwarza. Na karcie Audiobooki: przechodzi do następnej książki i zaczyna ją odtwarzać. Na karcie Jukebox: przechodzi do następnego utworu w zaznaczonym elemencie jukeboksa i go odtwarza. |
 | `Shift+F3` | Poprzedni kanał / część / element | Na karcie Podcasty: przechodzi o jeden kanał w górę na liście subskrypcji. Na karcie Audiobooki: przechodzi do poprzedniej części aktualnie odtwarzanej książki. Na karcie Jukebox: przechodzi o jeden element jukeboksa (plik lub folder) w górę na liście głównej. |
@@ -140,6 +142,7 @@ Poniższe klawisze działają tylko wtedy, gdy aktywne jest okno Przeglądarka s
 | `F8` | Stop | Całkowicie zatrzymuje aktualną stację i resetuje odtwarzacz. |
 | `F9` | Zmień nazwę | Otwiera okno zmiany nazwy dla stacji z fokusem na karcie Ulubione. |
 | `F11` | Wybierz urządzenie wyjściowe | Otwiera okno wyboru głównego urządzenia wyjściowego, gdy BASS wykryje więcej niż jedno fizyczne urządzenie. Bieżące urządzenie jest wstępnie zaznaczone; Enter stosuje i zapisuje wybór. |
+| `F12` | Dodaj zakładkę | Dodaje zakładkę w bieżącej pozycji odtwarzania części audiobooka, odcinka podcastu lub utworu z jukeboksa — odpowiednik `Ctrl+Win+F12` w oknie przeglądarki. Zob. [Zakładki](#zakładki). |
 
 #### Skróty listy i nawigacji
 
@@ -219,15 +222,19 @@ Ulubione, Polubione utwory, biblioteka Audiobooków i lista Jukeboksa umożliwia
 
 Zaznaczenia są przypisane do danej listy i znikają po usunięciu elementów (lub po ich indywidualnym odznaczeniu); nie są zapisywane między sesjami.
 
+Listy zakładek na kartach Podcasty, Audiobooki i Jukebox używają tego samego zaznaczania klawiszem `.`, a zaznaczone zakładki są tymi, na których działają polecenia **Usuń zaznaczone** i **Powtarzaj między zaznaczonymi zakładkami** — zob. [Zakładki](#zakładki).
+
 ### Eksportowanie i importowanie ulubionych
 
 Karta Ulubione zawiera dwa przyciski do tworzenia kopii zapasowej listy stacji i jej przywracania:
 
 **Eksportuj ulubione…** — zapisuje całą listę ulubionych do pliku. Okno dialogowe zapisu umożliwia wybór jednego z dwóch formatów:
+
 - **JSON** (`.json`) — pełna kopia zapasowa zachowująca nazwy stacji, adresy URL strumieni i wszystkie metadane. Zalecany do późniejszego przywrócenia listy lub przeniesienia jej na inny komputer.
 - **Lista odtwarzania M3U** (`.m3u`) — standardowy format listy odtwarzania zgodny z większością odtwarzaczy multimedialnych i aplikacji radiowych. Należy pamiętać, że format M3U nie przechowuje wszystkich metadanych stacji, więc przywracanie z pliku M3U może skutkować mniejszą ilością szczegółów niż kopia zapasowa JSON.
 
 **Importuj ulubione…** — ładuje stacje z wcześniej wyeksportowanego pliku JSON lub M3U. Po wybraniu pliku pojawi się pytanie o sposób dodania stacji:
+
 - **Tak (Scal)** — dodaje importowane stacje do istniejącej listy bez usuwania bieżących ulubionych. Zduplikowane stacje nie są dodawane dwukrotnie.
 - **Nie (Zastąp)** — całkowicie usuwa bieżącą listę ulubionych i zastępuje ją zawartością importowanego pliku.
 - **Anuluj** — powraca do przeglądarki bez wprowadzania żadnych zmian.
@@ -282,7 +289,9 @@ Oba przyciski znajdują się pod listą ulubionych i są aktywne tylko po zaznac
 
 Trzykrotne naciśnięcie `Ctrl+Win+I` uruchamia rozpoznawanie muzyki przez Shazam dla aktualnie odtwarzanego strumienia. Rozpoznawanie zaczyna się tylko wtedy, gdy nie są dostępne metadane ICY, czyli informacje o utworze nadawane przez stację; jeśli metadane są dostępne, zostaną zamiast tego skopiowane do schowka.
 
-Rozpoznawanie działa tak: krótka próbka audio jest przechwytywana ze strumienia przy użyciu ffmpeg, stosowany jest algorytm odcisku audio Shazama, a wynik wysyłany jest na serwery Shazama. Jeśli rozpoznawanie się powiedzie, NVDA odczyta tytuł utworu, wykonawcę, album i rok wydania oraz automatycznie skopiuje je do schowka. Jeśli opcja **Zapisuj polubione utwory do pliku tekstowego** jest włączona, wynik zostanie też dopisany do `likedSongs.txt`.
+Rozpoznawanie działa następująco: za pomocą ffmpeg ze strumienia pobierana jest krótka próbka dźwięku (ffmpeg przedstawia się tak jak odtwarzacz multimedialny, więc stacje odmawiające obsługi nieznanych programów nadal odpowiadają), stosowany jest algorytm odcisków palców Shazam, a wynik jest wysyłany na serwery Shazam. Jeśli rozpoznanie się powiedzie, tytuł utworu, wykonawca, album i rok wydania są ogłaszane przez NVDA i automatycznie kopiowane do schowka. Jeśli włączona jest opcja **Zapisuj polubione utwory do pliku tekstowego**, wynik rozpoznawania jest także dopisywany do pliku `likedSongs.txt`.
+
+Jeśli ffmpeg nie może odczytać strumienia bezpośrednio — na przykład dlatego, że stacja odrzuca jego połączenie, albo dlatego, że adres strumienia kończy się na `.nsv` (typowe dla serwerów SHOUTcast), co powoduje błędne rozpoznanie formatu dźwięku przez ffmpeg — freeAudio sam nagrywa krótką próbkę ze strumienia i każe ffmpeg zdekodować ten plik. Dzieje się to automatycznie; nie ma na to żadnego ustawienia.
 
 **Informacja dźwiękowa:** dwa rosnące sygnały oznaczają start rozpoznawania, a dwa opadające sygnały jego koniec. Krótki sygnał jest odtwarzany co 2 sekundy, gdy proces trwa.
 
@@ -297,6 +306,7 @@ Skrót `Ctrl+Win+M` kopiuje aktualnie odtwarzany strumień na drugie urządzenie
 Po pierwszym naciśnięciu pojawia się okno wyboru z listą dostępnych urządzeń wyjściowych. Po wybraniu urządzenia rozpoczyna się kopiowanie, a główne odtwarzanie trwa bez przerwy. Ponowne naciśnięcie skrótu zatrzymuje kopiowanie.
 
 **Przykłady użycia:**
+
 - **Głośniki + słuchawki** — pozwól drugiej osobie słuchać tej samej audycji w słuchawkach, podczas gdy Ty słuchasz przez głośniki komputera.
 - **Konfiguracja nagrywania** — skieruj główne wyjście na głośniki, a drugie na zewnętrzny rejestrator albo interfejs audio w celu zewnętrznego nagrywania.
 - **Kilka pomieszczeń** — odtwarzaj równocześnie przez głośnik Bluetooth i wbudowany głośnik; bez dodatkowego oprogramowania, aby przenieść dźwięk do innego pomieszczenia.
@@ -324,13 +334,23 @@ Naciśnij `Ctrl+Win+Shift+M` ponownie w dowolnym momencie, aby zatrzymać tryb O
 Nagrania są domyślnie zapisywane w `Documents\freeAudio Recordings\`. Nazwa pliku zawiera nazwę stacji albo tytuł utworu w trybie nagrywania utworu oraz czas rozpoczęcia nagrywania. Folder nagrań można w dowolnej chwili zmienić w menu NVDA → Preferencje → Ustawienia → freeAudio → **Folder nagrań**.
 
 Ustawienie **Format zapisu nagrań** określa sposób zapisywania zakończonych nagrań:
+
 - **Oryginalny format strumienia** zapisuje transmisję dokładnie tak, jak została odebrana. Dlatego transmisja HLS może utworzyć plik `.ts`.
 - **Tylko dźwięk, oryginalny kodek** usuwa warstwę obrazu lub kontenera bez ponownego kodowania dźwięku. Na przykład dźwięk AAC z nagrania HLS w pliku `.ts` jest zwykle zapisywany jako `.m4a`, z zachowaniem jakości transmisji.
 - **MP3** po zakończeniu nagrania konwertuje dźwięk z wybraną przepływnością. Konwersja korzysta z pliku `ffmpeg.exe` dołączonego do freeAudio i działa w tle, aby NVDA pozostawał responsywny. Jeśli konwersja się nie powiedzie, zachowany zostanie plik oryginalny.
 
 **Nagrywanie natychmiastowe:** podczas odtwarzania stacji naciśnij `Ctrl+Win+E` raz. Naciśnij ponownie, aby zatrzymać. Odtwarzanie trwa bez przerwy.
 
-**Nagrywanie utworu:** naciśnij `Ctrl+Win+E` **dwa razy** szybko, gdy gra stacja nadająca metadane ICY. Nagrywanie rozpoczyna się natychmiast i otrzymuje nazwę bieżącego tytułu. Po zmianie utworu nagrywanie zatrzymuje się automatycznie, a NVDA ogłasza zapisaną nazwę pliku. Jeśli chcesz zakończyć wcześniej, zanim utwór się skończy, naciśnij `Ctrl+Win+E` dwa razy ponownie. Jeśli bieżąca stacja nie nadaje metadanych ICY, nagrywanie utworu jest niedostępne i NVDA o tym poinformuje.
+**Nagrywanie utworu (bieżący utwór):** Naciśnij szybko `Ctrl+Win+E` **dwa razy**, gdy gra stacja nadająca metadane ICY. Nagrywanie rozpoczyna się chwilę po drugim naciśnięciu — freeAudio czeka krótko na wypadek trzeciego naciśnięcia — a plik otrzymuje nazwę bieżącego tytułu utworu. Gdy stacja zapowie następny utwór, nagrywanie w tym miejscu się kończy, a NVDA ogłasza nazwę zapisanego pliku. Aby zakończyć wcześniej, ponownie naciśnij `Ctrl+Win+E` dwa razy. Jeśli bieżąca stacja nie nadaje metadanych ICY, nagrywanie utworu jest niedostępne, a NVDA poinformuje cię o tym.
+
+**Nagrywanie każdego utworu:** Naciśnij szybko `Ctrl+Win+E` **trzy razy**, aby nagrywać każdy utwór, który gra stacja, dopóki nie zatrzymasz nagrywania. freeAudio utrzymuje jedno połączenie i rozpoczyna nowy plik przy każdej zmianie utworu, więc nic nie ginie między utworami. Każdy utwór jest zapisywany jako osobny plik, nazwany od tytułu i czasu rozpoczęcia. Gdy nagrywanie się zaczyna, NVDA ogłasza, że nagrywany jest każdy utwór, i podaje bieżący tytuł. Aby zatrzymać, naciśnij `Ctrl+Win+E` dwa razy; NVDA ogłosi, ile utworów zapisano.
+
+Kilka szczegółów o nagrywaniu każdego utworu:
+
+- Pierwszy utwór (nagrywany od chwili naciśnięcia klawiszy) i ostatni (urwany w chwili zatrzymania) są niekompletne, dlatego ich nazwy plików zawierają **(partial)** — na przykład `Artist - Title (partial) - 2026-10-09 10-15.mp3`.
+- Fragmenty krótsze niż 15 sekund — dżingle, zapowiedzi reklam lub tytuł migający między dwiema wartościami — są odrzucane zamiast zapisywane.
+- Wymaga to, by stacja wysyłała tytuły utworów wewnątrz samego strumienia audio (metadane ICY). Stacji HLS (`.m3u8`) ani serwerów, które nie wysyłają tytułów w ten sposób, nie da się podzielić na utwory; NVDA poinformuje o tym i nic nie zostanie nagrane.
+- Gdy nagrywanie trwa, `Ctrl+Win+I` ogłasza utwór nagrywany w tej chwili, a nie ten, od którego nagrywanie się zaczęło.
 
 **Nagrywanie zaplanowane:** otwórz kartę Nagrywanie w przeglądarce. Wybierz stację z ulubionych, wpisz godzinę rozpoczęcia w formacie GG:MM i czas trwania w minutach, wybierz jeden lub więcej aktywnych dni, a następnie ustaw tryb powtarzania i tryb nagrywania:
 
@@ -339,12 +359,14 @@ Pole **Filtr** nad listą stacji pozwala zawężać listę ulubionych w czasie r
 **Aktywne dni:** zaznacz jeden lub więcej dni tygodnia. W trybie jednorazowym dla każdego wybranego dnia tworzona jest osobna pozycja, ustawiona na najbliższe wystąpienie tego dnia. W trybie cyklicznym nagrywanie powtarza się tylko w zaznaczonych dniach. Jeśli nie zaznaczono żadnych dni, nagrywanie nie jest ograniczone do konkretnych dni.
 
 **Tryb powtarzania:**
+
 - **Nagraj raz** — nagrywa jednorazowo w każdym wybranym dniu. Każda pozycja jest ustawiona na najbliższe wystąpienie tego dnia; jeśli dzisiejsza godzina już minęła, pozycja jest automatycznie przenoszona na ten sam dzień następnego tygodnia.
 - **Powtarzaj co tydzień** — powtarza się co tydzień w wybranych aktywnych dniach, dopóki nie zostanie usunięte z listy harmonogramu.
 
 **Zapisz nagranie w:** dla każdego zaplanowanego nagrania możesz wybrać zapis w domyślnym folderze nagrań albo we własnym folderze. Przycisk **Przeglądaj...** pozwala wybrać folder interaktywnie. Jeśli wybrany folder stanie się niedostępny, nagranie zostanie zapisane w folderze domyślnym, a Ty zostaniesz o tym powiadomiony.
 
 **Tryb nagrywania:**
+
 - **Nagrywaj podczas słuchania** — odtwarza i nagrywa jednocześnie przez backend BASS.
 - **Tylko nagrywaj** — nagrywa cicho w tle bez wyjścia audio; silnik nagrywania łączy się bezpośrednio ze strumieniem.
 
@@ -352,7 +374,7 @@ Po dodaniu harmonogramu pojawia się on na liście poniżej. Przycisk **Usuń za
 
 NVDA ogłasza rozpoczęcie i zakończenie nagrywania. Jeśli NVDA zostanie uruchomiony ponownie podczas aktywnego zaplanowanego nagrywania, nagrywanie zostanie automatycznie wznowione po uruchomieniu.
 
-Podobnie jak rozpoznawanie muzyki, nagrywanie natychmiastowe i nagrywanie utworu ponownie wykorzystują istniejące połączenie freeAudio ze strumieniem w tle, gdy jest dostępne, zamiast otwierać nowe, dzięki czemu nagranie rejestruje to, co faktycznie jest nadawane, nawet na stacjach, które w przeciwnym razie wysłałyby świeżą reklamę do nowego połączenia. Nie dotyczy to zaplanowanych nagrań w trybie **Tylko nagrywaj**, ponieważ w chwili ich rozpoczęcia żadna stacja jeszcze nie gra.
+**Jak łączą się nagrania:** Nagrania natychmiastowe, utworów i każdego utworu otwierają własne połączenie ze stacją zamiast kopiować to, czego słuchasz, więc nagranie natychmiastowe lub każdego utworu trwa dalej, gdy wstrzymasz odtwarzanie lub przełączysz się na inną stację — kontynuuje ze stacją, od której się zaczęło. Zatrzymanie odtwarzania przez `Ctrl+Win+S` podczas nagrywania najpierw prosi o potwierdzenie, ponieważ kończy to również nagrywanie. Ceną osobnego połączenia jest to, że stacja serwująca krótką reklamę każdemu nowemu połączeniu może umieścić tę reklamę na początku pliku.
 
 ## Time-shift (cofanie radia na żywo)
 
@@ -360,11 +382,11 @@ Time-shift pozwala cofnąć aktualnie słuchaną stację jak DVR lub kaseta magn
 
 Ta funkcja jest **domyślnie wyłączona**. Włącz ją w menu NVDA → Preferencje → Ustawienia → freeAudio → **Włącz bufor time-shift (cofanie radia na żywo)** lub przełącz natychmiast w dowolnym momencie za pomocą `Ctrl+Win+T`.
 
-> **Uwaga:** freeAudio utrzymuje teraz niewielkie przechwytywanie aktualnie odtwarzanej stacji w tle przez cały czas — nie tylko wtedy, gdy to ustawienie jest włączone — ponieważ zarówno [Rozpoznawanie muzyki](#rozpoznawanie-muzyki), jak i [Nagrywanie](#nagrywanie) polegają na nim w kwestii opisanego w tych sekcjach unikania reklam. Gdy to ustawienie jest **wyłączone**, przechwytywanie w tle jest ograniczone do mniej więcej ostatnich 45 sekund, a `Ctrl+Win+J`/`Ctrl+Win+K` pozostają niedostępne — zmienia się tylko rozmiar bufora, a nie to, czy działa. Włączenie tego ustawienia powiększa to samo przechwytywanie do pełnego bufora cofania opisanego niżej.
+> **Uwaga:** freeAudio przez cały czas utrzymuje niewielkie przechwytywanie w tle aktualnie odtwarzanej stacji — nie tylko wtedy, gdy to ustawienie jest włączone — ponieważ [Rozpoznawanie muzyki](#rozpoznawanie-muzyki) polega na nim, aby unikać reklam, jak opisano w tej sekcji. Gdy to ustawienie jest **wyłączone**, przechwytywanie w tle obejmuje około ostatnich 45 sekund, a `Ctrl+Win+J`/`Ctrl+Win+K` pozostają niedostępne — zmienia się tylko rozmiar bufora, a nie to, czy działa. Włączenie ustawienia powiększa to samo przechwytywanie do pełnego bufora cofania opisanego poniżej.
 
 ### Jak to działa
 
-Po włączeniu freeAudio ciągle przechwytuje aktualnie odtwarzaną stację do lokalnego, obracającego się bufora w tle, niezależnie od normalnego odtwarzania. Bufor przechowuje mniej więcej **ostatnie minuty** audio; starsze audio jest automatycznie usuwane z przodu wraz z napływaniem nowego, dzięki czemu bufor zawsze reprezentuje „niedawną przeszłość” względem krawędzi na żywo.
+Po włączeniu freeAudio ciągle przechwytuje aktualnie odtwarzaną stację do lokalnego, obrotowego bufora w tle, niezależnie od zwykłego odtwarzania. Bufor przechowuje najnowszy dźwięk, do długości ustawionej w opcji **Czas trwania bufora time-shift**; starszy dźwięk jest automatycznie usuwany z początku w miarę nadchodzenia nowego, więc bufor zawsze przedstawia „niedaleką przeszłość” względem krawędzi transmisji na żywo.
 Czas bufora określa się w ustawieniach.
 
 - **`Ctrl+Win+J`** — cofnij o 15 sekund. Pierwsze naciśnięcie przełącza z odtwarzania na żywo na odtwarzanie z time-shiftem, zaczynając 15 sekund za krawędzią na żywo. Każde kolejne naciśnięcie cofa o kolejne 15 sekund, do limitu bufora.
@@ -391,7 +413,7 @@ W rzadkim przypadku, gdy playlista stacji nie może zostać w ogóle odczytana (
 ### Wymagania i ograniczenia
 
 - **Wymaga backendu BASS**, którego freeAudio zawsze używa do odtwarzania (zobacz [Odtwarzanie](#odtwarzanie)).
-- Czas bufora określa się w ustawieniach.
+- Długość bufora jest ustawiana w opcji **Czas trwania bufora time-shift** — zob. [Ustawienia](#ustawienia).
 - Bufor jest przypisany do stacji: zmiana stacji, zatrzymanie odtwarzania lub restart NVDA czyści go i zaczyna od nowa.
 - Odtwarzanie z time-shiftem używa własnego lokalnego pliku bufora i nie tworzy zapisanego nagrania — jeśli chcesz trwale zachować audio, użyj również Nagrywania natychmiastowego (`Ctrl+Win+E`).
 
@@ -419,18 +441,20 @@ Otwórz przeglądarkę stacji skrótem `Ctrl+Win+R` i przełącz się na kartę 
 
 1. **Wyszukiwanie i dodawanie** — górna część do odkrywania nowych podcastów, wraz z listą podglądu pokazującą odcinki aktualnie zaznaczonego wyniku wyszukiwania.
 2. **Subskrypcje** — lista subskrybowanych kanałów.
-3. **Odcinki** — lista odcinków zaznaczonego kanału, z kontrolkami odtwarzania.
+3. **Odcinki** — lista odcinków zaznaczonego kanału, z kontrolkami odtwarzania. Lista **Zakładki** tuż pod nią pokazuje zakładki zaznaczonego odcinka — zob. [Zakładki](#zakładki).
 
 ### Dodawanie kanału podcastu
 
 Kanał podcastu można dodać na dwa sposoby:
 
 **Przez adres URL:**
+
 - W polu **Szukaj** wklej pełny adres URL kanału RSS lub Atom (np. `https://example.com/feed.xml`).
 - Naciśnij Enter.
 - freeAudio pobiera kanał, sprawdza go i dodaje do Twoich subskrypcji. Jeśli kanał jest poprawny, usłyszysz potwierdzenie z tytułem kanału. Jeśli się nie powiedzie, komunikat o błędzie wyjaśni dlaczego.
 
 **Przez wyszukiwanie:**
+
 - W polu **Szukaj** wpisz słowo kluczowe (tytuł podcastu, temat lub nazwę prowadzącego) i naciśnij Enter.
 - freeAudio przeszukuje katalog podcastów iTunes i wyświetla pasujące podcasty na liście **Wyniki wyszukiwania**.
 - Zaznaczenie wyniku pobiera ten kanał w tle i wyświetla jego odcinki na liście **Odcinki w zaznaczonym wyniku** tuż poniżej, dzięki czemu możesz zobaczyć, co faktycznie zawiera audycja, zanim zdecydujesz się na subskrypcję — zobacz [Podgląd odcinków przed subskrypcją](#podgląd-odcinków-przed-subskrypcją) poniżej.
@@ -457,6 +481,7 @@ Po dodaniu kilku kanałów pojawiają się one na liście **Subskrypcje**. Każd
 - **Usuń kanał** — zaznacz go i naciśnij `Delete` albo użyj menu kontekstowego, aby usunąć go z subskrypcji. Przed usunięciem zostaniesz poproszony o potwierdzenie.
 
 **Menu kontekstowe kanałów:** kliknij prawym przyciskiem myszy kanał albo zaznacz go i naciśnij klawisz Menu kontekstowe / `Shift+F10`, aby otworzyć menu z pozycjami:
+
 - **Odśwież kanał** — pobierz nowe odcinki teraz.
 - **Zapisz profil audio dla tego podcastu** / **Wyczyść profil audio** — zobacz [Profil audio podcastu](#profil-audio-podcastu).
 - **Usuń kanał** — usuń subskrypcję.
@@ -465,6 +490,7 @@ Po dodaniu kilku kanałów pojawiają się one na liście **Subskrypcje**. Każd
 ### Przeglądanie i odtwarzanie odcinków
 
 Zaznacz kanał na liście subskrypcji; jego odcinki pojawią się na liście **Odcinki** poniżej. Każdy odcinek pokazuje:
+
 - Numer odcinka (1 = najstarszy odcinek w kanale, numeracja rośnie do najnowszego).
 - Datę publikacji (jeśli jest dostępna).
 - Tytuł.
@@ -472,6 +498,7 @@ Zaznacz kanał na liście subskrypcji; jego odcinki pojawią się na liście **O
 - Przyrostek z czasem trwania: całkowity czas (jeśli nigdy nie odtwarzano) albo postęp upłynęło/łącznie (jeśli odtworzono częściowo).
 
 **Odtwarzanie:**
+
 - Zaznacz odcinek i naciśnij `Enter` lub `Space`, aby go odtworzyć. Jeśli odcinek był wcześniej częściowo odtwarzany, wznawia od miejsca, w którym skończyłeś.
 - Wiersz *nie* aktualizuje się podczas odtwarzania odcinka — jest to celowe, aby NVDA nie odczytywał wielokrotnie wiersza, na którym się znajdujesz. Jego flaga „Przesłuchany” i czas trwania są odświeżane natychmiast po wstrzymaniu odcinka albo gdy się skończy, więc wyświetlane dane są zawsze dokładne dokładnie wtedy, gdy mają znaczenie; po prostu nie odliczają sekund podczas odtwarzania.
 - Użyj `F3` / `F4` na karcie Podcasty, aby przejść do poprzedniego / następnego odcinka i natychmiast go odtworzyć. Możesz też użyć `←` / `→`, gdy fokus jest na liście odcinków, albo `Ctrl+←` / `Ctrl+→` w dowolnym miejscu karty Podcasty — oba sposoby działają identycznie.
@@ -481,6 +508,7 @@ Zaznacz kanał na liście subskrypcji; jego odcinki pojawią się na liście **O
 **Wznawianie odtwarzania:** freeAudio zapisuje Twoją pozycję w każdym odcinku podcastu automatycznie — natychmiast po wstrzymaniu lub zakończeniu odcinka oraz co 15 sekund w tle, gdy dalej słuchasz, więc awaria lub nieoczekiwany restart nie spowoduje utraty dużej części postępu. Jeśli zatrzymasz lub wstrzymasz odtwarzanie i wrócisz później, odcinek wznowi się od zapisanej pozycji. Jeśli odtworzysz odcinek do samego końca (w ostatnich 3 sekundach), zostanie oznaczony jako „Przesłuchany” i nie będzie wznawiany — następnym razem zacznie się od początku, a na liście pojawi się przedrostek „Przesłuchany”.
 
 **Menu kontekstowe odcinków:** kliknij prawym przyciskiem myszy odcinek albo zaznacz go i naciśnij klawisz Menu kontekstowe / `Shift+F10`, aby otworzyć menu z pozycjami:
+
 - **Odtwórz odcinek** — rozpocznij odtwarzanie.
 - **Pobierz odcinek** — pobierz plik odcinka do folderu nagrań.
 - **Zapisz profil audio dla tego podcastu** / **Wyczyść profil audio** — te same polecenia co w menu kontekstowym kanału, umieszczone tu dla wygody, aby nie trzeba było wracać do listy subskrypcji. Nadal zapisują jeden profil dla całego podcastu, a nie osobny dla tego odcinka — zobacz [Profil audio podcastu](#profil-audio-podcastu).
@@ -518,6 +546,7 @@ Odcinki podcastów są odtwarzane przez **backend BASS** (ten sam silnik, który
 Kliknij prawym przyciskiem myszy podcast na liście Subskrypcje albo dowolny z jego odcinków i wybierz **Zapisz profil audio dla tego podcastu**, aby zapisać bieżącą głośność, efekty, wzmocnienia EQ i/lub prędkość odtwarzania jako profil przypisany do tego podcastu. Za każdym razem, gdy odtwarzany jest dowolny odcinek tego podcastu, zapisane ustawienia są stosowane automatycznie, zastępując ustawienia globalne. Ponieważ polecenie jest dostępne zarówno w menu kontekstowym kanału, jak i odcinka, możesz je wywołać bez wracania do listy subskrypcji — w obu przypadkach zapisuje ono jeden profil dla całego podcastu, a nie osobny dla każdego odcinka.
 
 Okno z 15 opcjami pozwala wybrać dokładnie, co zapisać:
+
 - **Tylko głośność**
 - **Tylko efekty**
 - **Głośność i efekty**
@@ -561,7 +590,7 @@ Każde źródło można osobno wyłączyć w menu **NVDA → Preferencje → Ust
 Otwórz przeglądarkę stacji skrótem `Ctrl+Win+R` i przełącz się na kartę **Audiobooki** za pomocą `Ctrl+Tab` lub `Alt+7`. Karta ma trzy główne obszary:
 
 1. **Szukaj** — pole tekstowe do przeszukiwania wszystkich włączonych katalogów naraz, z listą wyników, która pojawia się po uruchomieniu wyszukiwania.
-2. **Biblioteka** — lista książek dodanych z dowolnego źródła, na której je odtwarzasz, pobierasz i nimi zarządzasz.
+2. **Biblioteka** — lista książek dodanych z dowolnego źródła, na której je odtwarzasz, pobierasz i nimi zarządzasz. Lista **Zakładki** tuż pod nią pokazuje zakładki zaznaczonej książki — zob. [Zakładki](#zakładki).
 3. **Szczegóły** — pole tylko do odczytu pokazujące źródło, tytuł, autora, lektora, wydawcę, format, liczbę części, opis i adres URL katalogu zaznaczonej książki, na obu listach.
 
 ### Logowanie
@@ -597,6 +626,7 @@ Dodane książki pojawiają się na liście **Biblioteka**, z tytułem, autorem 
 - Użyj `Shift+F3` / `Shift+F4`, aby zamiast tego przechodzić między **częściami** aktualnie odtwarzanej książki — odwrotnie niż na karcie Podcasty, gdzie F3/F4 przechodzą między odcinkami, a Shift+F3/F4 między kanałami. Dzieje się tak, ponieważ książka jest jedną pozycją biblioteki nawet wtedy, gdy ma kilka części, więc dokładniejsza nawigacja po „częściach” znajduje się tu na klawiszach z Shiftem.
 
 **Menu kontekstowe pozycji biblioteki:** kliknij prawym przyciskiem myszy książkę albo zaznacz ją i naciśnij klawisz Menu kontekstowe / `Shift+F10`, aby otworzyć menu z pozycjami:
+
 - **Odtwórz media** — rozpocznij odtwarzanie, tak samo jak `Enter`.
 - **Pobierz książkę** — pobierz wszystkie części książki; zobacz [Pobieranie audiobooków](#pobieranie-audiobooków) poniżej.
 - **Kopiuj adres URL** — skopiuj adres URL strony katalogowej książki do schowka (stronę katalogu GETEM dla książki z GETEM albo stronę szczegółów archive.org dla książki z LibriVox lub Project Gutenberg).
@@ -639,13 +669,13 @@ Otwórz przeglądarkę stacji skrótem `Ctrl+Win+R` i przełącz się na kartę 
 
 1. **Szukaj na urządzeniach** — pole tekstowe, które przeszukuje każdy lokalnie podłączony, gotowy dysk w poszukiwaniu plików audio, których nazwa zawiera wpisany tekst. Naciśnij `Enter`, aby rozpocząć wyszukiwanie.
 2. **Wyniki wyszukiwania** — lista pojawiająca się po uruchomieniu wyszukiwania, pokazująca pasujące pliki. Do tego czasu jest ukryta, aby karta pozostawała przejrzysta, gdy nie ma czego szukać.
-3. **Jukebox i Utwory** — trwała lista dodanych elementów, a za nią lista utworów w zaznaczonej pozycji (dla pliku — tylko ten jeden plik; dla folderu — każdy plik audio znaleziony w jego wnętrzu).
+3. **Jukebox i Utwory** — trwała lista dodanych elementów, a za nią lista utworów w zaznaczonej pozycji (dla pliku — tylko ten jeden plik; dla folderu — każdy plik audio znaleziony w jego wnętrzu). Za listą utworów następuje lista **Zakładki**, pokazująca zakładki zaznaczonego utworu — zob. [Zakładki](#zakładki).
 
-Przyciski **Dodaj plik…**, **Dodaj folder…**, **Usuń**, **Eksportuj Jukebox…** i **Importuj Jukebox…** znajdują się pod listą Utwory.
+Przyciski **Dodaj plik…**, **Dodaj folder…**, **Usuń**, **Eksportuj Jukebox…** i **Importuj Jukebox…** znajdują się u dołu karty.
 
 ### Wyszukiwanie plików na urządzeniach
 
-Wpisz dowolną część nazwy pliku w polu **Szukaj na urządzeniach** i naciśnij `Enter`. freeAudio przeszukuje każdy lokalnie podłączony dysk — dyski stałe, dyski USB, karty pamięci, zmapowane dyski sieciowe — w poszukiwaniu plików audio (`.mp3`, `.wav`, `.ogg`, `.flac`, `.m4a`, `.m4b`, `.aac`, `.wma`, `.opus` i kilku innych), których nazwa zawiera szukany tekst. Wyszukiwanie działa w tle, więc NVDA pozostaje responsywny.
+Wpisz dowolną część nazwy pliku w polu **Szukaj na urządzeniach** i naciśnij `Enter`. freeAudio przeszukuje każdy lokalnie podłączony dysk — dyski stałe, dyski USB, karty pamięci — w poszukiwaniu plików audio (`.mp3`, `.wav`, `.ogg`, `.flac`, `.m4a`, `.m4b`, `.aac`, `.wma`, `.opus` i kilku innych), których nazwa zawiera szukany tekst. Wyszukiwanie działa w tle, więc NVDA pozostaje responsywny. Dyski sieciowe są domyślnie pomijane, ponieważ przeszukiwanie udziału sieciowego może zamienić jednosekundowe wyszukiwanie w trwające minuty albo zawiesić je, jeśli udział jest nieosiągalny. Aby je uwzględnić, włącz w ustawieniach opcję **Uwzględniaj dyski sieciowe podczas wyszukiwania w jukeboksie**.
 
 - **Space** na wyniku wyszukiwania uruchamia podgląd — rozpoczyna odtwarzanie w normalnym odtwarzaczu. Naciśnij **Space** ponownie na tym samym pliku, aby zatrzymać podgląd.
 - **Enter** na wyniku wyszukiwania dodaje go do jukeboksa.
@@ -709,13 +739,15 @@ Po zaznaczeniu pozycji na liście Jukebox naciśnij `przecinek`, aby wejść w t
 
 ### Eksportowanie i importowanie biblioteki Jukeboksa
 
-Karta Jukebox zawiera dwa przyciski do tworzenia kopii zapasowej i przywracania biblioteki, pod listą Utwory:
+Karta Jukebox zawiera dwa przyciski do tworzenia kopii zapasowej i przywracania biblioteki, u dołu karty:
 
 **Eksportuj Jukebox…** — zapisuje całą listę Jukebox do pliku. Okno dialogowe zapisu umożliwia wybór jednego z dwóch formatów:
+
 - **JSON** (`.json`) — pełna kopia zapasowa zachowująca ścieżkę każdej pozycji, własną nazwę, grupę i zapisany profil audio. Zalecany do późniejszego przywrócenia biblioteki lub przeniesienia jej na inny komputer.
 - **Lista odtwarzania M3U** (`.m3u`) — lżejszy format zgodny z większością odtwarzaczy multimedialnych, zawierający ścieżkę każdej pozycji wraz z jej własną nazwą (jeśli istnieje) w poprzedzającym wierszu `#EXTINF`. Grupy i profile audio nie są zawarte w M3U, więc przywracanie z M3U powoduje utratę tych szczegółów.
 
 **Importuj Jukebox…** — ładuje pozycje z wcześniej wyeksportowanego pliku JSON lub M3U. Po wybraniu pliku pojawi się pytanie o sposób dodania pozycji:
+
 - **Tak (Scal)** — dodaje importowane pozycje do istniejącej biblioteki bez usuwania bieżących pozycji. Pozycje, których ścieżka odpowiada już istniejącej w bibliotece, nie są dodawane dwukrotnie.
 - **Nie (Zastąp)** — całkowicie usuwa bieżącą listę Jukebox i zastępuje ją zawartością importowanego pliku.
 - **Anuluj** — powraca do przeglądarki bez wprowadzania żadnych zmian.
@@ -732,6 +764,66 @@ Aby przypisać skrót:
 4. Naciśnij żądaną kombinację klawiszy i potwierdź.
 
 Skrót odtwarza pozycję natychmiast — dla pliku sam plik, dla folderu jego pierwszy utwór. Jeśli pozycja zostanie później usunięta z Jukeboksa, jej wpis zniknie z kategorii, a przypisany skrót zostanie automatycznie wyczyszczony przez NVDA. Po dodaniu nowej pozycji pojawia się ona w kategorii od razu — nie trzeba ponownie otwierać okna Zdarzeń wejścia.
+
+## Zakładki
+
+Zakładki pozwalają oznaczyć miejsce w **części audiobooka**, **odcinku podcastu** lub **utworze z jukeboksa** i wrócić do niego później. Nie są dostępne dla stacji radiowych na żywo, które nie mają stałych pozycji, do których można wrócić.
+
+### Dodawanie zakładki
+
+- Naciśnij **`Ctrl+Win+F12`** z dowolnego miejsca w systemie Windows albo **`F12`**, gdy aktywna jest Przeglądarka stacji, aby dodać zakładkę w bieżącej pozycji odtwarzania.
+- NVDA ogłasza nazwę i pozycję zakładki, na przykład „Dodano zakładkę: Zakładka 2, 12:30”.
+- Jeśli nic nie gra albo gra stacja radiowa na żywo, freeAudio mówi o tym i zakładka nie jest dodawana.
+
+Domyślną nazwą zakładki jest jej **numer porządkowy** wśród zakładek danego elementu, od najwcześniejszej: „Zakładka 1”, „Zakładka 2” i tak dalej. Ponieważ numer wynika z pozycji w elemencie, dodanie wcześniejszej zakładki zmienia numerację późniejszych, które mają jeszcze nazwę domyślną. Zakładki, którym zmieniono nazwę, zachowują własną nazwę.
+
+### Lista zakładek
+
+Każda z kart Podcasty, Audiobooki i Jukebox ma listę **Zakładki** tuż obok elementu, do którego należy:
+
+- **Podcasty** — bezpośrednio pod listą Odcinki; pokazuje zakładki zaznaczonego odcinka.
+- **Audiobooki** — bezpośrednio pod listą Biblioteka; pokazuje zakładki wszystkich części zaznaczonej książki. Gdy książka ma kilka części, każdy wiersz zaczyna się od tytułu części.
+- **Jukebox** — bezpośrednio pod listą Utwory; pokazuje zakładki zaznaczonego utworu.
+
+Każdy wiersz pokazuje nazwę i pozycję zakładki. Gdy zakładka ma notatkę tekstową lub głosową, dodawany jest znacznik **[tekst]** lub **[notatka głosowa]**, a gdy zaznaczysz ją klawiszem `.`, dodawane jest **(zaznaczony)**. Lista podąża za zaznaczeniem powyżej i odświeża się także wtedy, gdy dodasz zakładkę za pomocą `Ctrl+Win+F12` przy otwartym oknie.
+
+| Klawisz | Działanie |
+|---|---|
+| `.` | Zaznacza lub odznacza zakładkę z fokusem. Zob. [Zaznaczanie i usuwanie wielu elementów](#zaznaczanie-i-usuwanie-wielu-elementów). |
+| `Enter` | Odtwarza od zakładki z fokusem. |
+| `Space` | Wstrzymuje, jeśli coś gra; w przeciwnym razie odtwarza od zakładki z fokusem. |
+| `Delete` | Usuwa wszystkie zaznaczone zakładki albo tę z fokusem, jeśli żadna nie jest zaznaczona. Najpierw pojawia się okno potwierdzenia. |
+| klawisz Menu kontekstowe / `Shift+F10` | Otwiera menu kontekstowe zakładki. |
+
+### Menu kontekstowe zakładki
+
+- **Odtwarzaj od zakładki** — jeśli element jest już wczytany, odtwarzanie przeskakuje do zakładki; w przeciwnym razie element zaczyna grać od tej pozycji.
+- **Zmień nazwę…** — nadaje zakładce własną nazwę. Pozostaw pole puste, aby wrócić do nazwy domyślnej.
+- **Usuń zaznaczone** — usuwa zaznaczone zakładki albo tę z fokusem, jeśli żadna nie jest zaznaczona.
+- **Dodaj lub edytuj tekst…** — otwiera wielowierszowe pole na notatkę tekstową. Pozostaw je puste, aby usunąć tekst.
+- **Dodaj notatkę głosową…** — otwiera okno, które rozpoczyna nagrywanie z domyślnego mikrofonu, gdy tylko się pojawi. Naciśnij **Zatrzymaj i zapisz**, aby dołączyć nagranie do zakładki, albo **Anuluj**, aby je odrzucić. Dodanie nowej notatki głosowej zastępuje poprzednią.
+- **Wyczyść notatki** — usuwa zarówno notatkę tekstową, jak i głosową zakładki z fokusem. Dostępne tylko wtedy, gdy zakładka ma notatkę.
+- **Powtarzaj między zaznaczonymi zakładkami** — zob. poniżej. Dostępne, gdy zaznaczone są co najmniej dwie zakładki.
+- **Zatrzymaj powtarzanie** — wyłącza tryb powtarzania. Dostępne, gdy powtarzanie jest aktywne.
+
+### Co się dzieje, gdy odtwarzanie dojdzie do zakładki
+
+Podczas zwykłego odtwarzania, gdy pozycja dojdzie do zakładki, freeAudio odtwarza **dwa szybkie sygnały dźwiękowe**. Jeśli zakładka nie ma notatki, odtwarzanie po prostu trwa dalej.
+
+Jeśli zakładka ma notatkę tekstową i/lub głosową, odtwarzanie zostaje **wstrzymane**, tekst jest czytany przez bieżący syntezator NVDA, odtwarzana jest notatka głosowa, a następnie odtwarzanie **wznawia się od miejsca, w którym przerwano**. Jeśli w trakcie notatki zatrzymasz odtwarzanie albo uruchomisz coś innego, odtwarzanie nie jest wznawiane.
+
+Zakładki są wykrywane podczas zwykłego odtwarzania. Przewinięcie lub przeskoczenie przez zakładkę jej nie uruchamia.
+
+### Powtarzanie fragmentu między zakładkami
+
+Zaznacz klawiszem `.` dwie lub więcej zakładek **tego samego elementu**, a następnie wybierz **Powtarzaj między zaznaczonymi zakładkami**. Odtwarzanie przeskakuje do najwcześniejszej zaznaczonej zakładki i zapętla się między najwcześniejszą a najpóźniejszą zaznaczoną zakładką, a NVDA ogłasza obie pozycje. Przydaje się to do powtórzenia trudnego fragmentu, frazy w nauce języka lub utworu, który ćwiczysz. Wybierz **Zatrzymaj powtarzanie**, aby wrócić do zwykłego odtwarzania. Powtarzanie nie jest zapisywane między sesjami, a jeśli zacznie grać inny element, zakres powtarzania jest ignorowany i po około 20 sekundach porzucany.
+
+### Przechowywanie danych zakładek
+
+Zakładki są przechowywane w pliku `freeAudio_bookmarks.json` w folderze konfiguracji użytkownika NVDA, a notatki głosowe jako pliki `.wav` w folderze `freeAudio_bookmark_audio` obok niego. Obie rzeczy można zarchiwizować lub przenieść na inny komputer. Usunięcie zakładki usuwa także plik jej notatki głosowej. Wszystkie zakładki i notatki głosowe można usunąć naraz pozycją **Zakładki** w oknie czyszczenia — zob. [Czyszczenie: resetowanie ustawień i usuwanie zapisanych danych](#czyszczenie-resetowanie-ustawień-i-usuwanie-zapisanych-danych).
+
+Każda zakładka należy do własnego klucza wznawiania elementu — adresu URL odcinka, stałego adresu katalogowego części audiobooka albo ścieżki pliku utworu z jukeboksa. Plik jukeboksa przeniesiony lub przemianowany poza freeAudio jest więc traktowany jako inny element i nie pokazuje dawnych zakładek.
+
 
 ## Transpozycja (zmiana wysokości dźwięku)
 
@@ -790,28 +882,56 @@ Poniższe opcje można skonfigurować w menu NVDA → Preferencje → Ustawienia
 | Głos SAPI5 | Gdy **Głos ogłaszania zmian utworów** jest ustawiony na SAPI5, wybiera, który zainstalowany głos SAPI5 jest używany do ogłaszania zmian utworów. Lista jest wypełniana w tle na podstawie głosów zainstalowanych w systemie. |
 | Urządzenie wyjściowe audio | Ustawia urządzenie wyjściowe audio dla odtwarzania radia. Lista zawiera wszystkie urządzenia zgodne z BASS w systemie oraz opcję „Domyślne systemowe”. Zmiany są stosowane natychmiast po zapisaniu; jeśli wybrane urządzenie zostanie odłączone, dodatek automatycznie wróci do domyślnego urządzenia systemowego i ogłosi zmianę. |
 | Tryb odświeżania urządzeń audio | Kontroluje sposób odświeżania numerów urządzeń wyjściowych BASS. Tryb **Niezawodny** (domyślny) sprawdza urządzenia na żywo i dokładniej śledzi zmiany Bluetooth/USB, ale może lekko spowolnić zmianę urządzenia. Tryb **Szybki** używa bieżącej listy urządzeń BASS i działa szybciej, ale numery urządzeń mogą pozostać nieaktualne do restartu BASS albo NVDA. |
-| Głośność | Ustawia początkową głośność dodatku (0–200). Zmiany wykonane podczas odtwarzania skrótami `Ctrl+Win+↑` / `Ctrl+Win+↓` są również odzwierciedlane tutaj. |
+| Głośność | Ustawia początkową głośność dodatku (0–100). Podczas odtwarzania `Ctrl+Win+↑` może zwiększyć głośność do 200, ale zapisana tu głośność początkowa jest ograniczona do 100. |
 | Efekty audio | Ustawia, które efekty (Chorus, Kompresor, Przesterowanie, Echo, Flanger, Gargle, Pogłos i trzy wzmocnienia EQ) są aktywne przy starcie NVDA albo rozpoczęciu odtwarzania stacji. Można zaznaczyć wiele efektów naraz, tak jak na liście Efekty w Przeglądarce stacji. |
 | Wzmocnienie EQ (bas / soprany / wokal) | Ustawia poziom wzmocnienia w dB dla każdego pasma EQ (−15 do +15). Wartości obowiązują, gdy odpowiedni efekt EQ jest aktywny, i są zapisywane globalnie. Nadpisania dla pojedynczej stacji można zapisać przyciskiem **Zapisz profil audio** na karcie Ulubione. |
 | Sposób przełączania stacji | Kontroluje zachowanie podczas przełączania między **stacjami radiowymi na żywo**. **Natychmiastowe przełączenie** (domyślne) od razu zatrzymuje poprzednią stację przed uruchomieniem nowej. **Krótkie płynne przejście (1 sekunda)** i **Normalne płynne przejście (2 sekundy)** uruchamiają nową stację bez przerwy, a potem stopniowo wyciszają poprzednią w tle, gdy nowy strumień zostanie potwierdzony jako aktywny. **Dźwiękowy efekt strojenia stacji** natychmiast zatrzymuje poprzednią stację i odtwarza dźwięk strojenia radia przed uruchomieniem nowej. Przy ustawieniu Natychmiastowe przełączenie nie ma wpływu na wydajność. Nie dotyczy podcastów, audiobooków ani utworów z jukeboksa — ich wznawianie zawsze odtwarza własny krótki dźwięk kasety, niezależnie od tego ustawienia; zobacz [Szczegóły odtwarzania podcastów](#szczegóły-odtwarzania-podcastów). |
 | Wznów ostatnią stację przy starcie NVDA | Gdy włączone, ostatnio odtwarzana stacja jest automatycznie uruchamiana przy każdym starcie NVDA. |
 | Automatycznie ogłaszaj zmiany utworów (metadane ICY) | Gdy włączone, NVDA automatycznie odczytuje nową nazwę utworu za każdym razem, gdy zmieni się na stacji nadającej metadane ICY. Pierwszy utwór jest ogłaszany również natychmiast po przełączeniu na nową stację. Domyślnie wyłączone. |
 | Wycisz powiadomienia | Gdy włączone, NVDA nie ogłasza zmian stacji, zmian stanu odtwarzania (odtwórz, pauza, stop) ani zdarzeń nagrywania (rozpoczęte, zatrzymane, zakończone). Komunikaty błędów, informacje o ulubionych, wyniki rozpoznawania muzyki i powiadomienia aktualizacji nie są wyciszane. Można też przełączać w locie przez nieprzypisane zdarzenie wejścia. Domyślnie wyłączone. |
-| Komunikaty brajlowskie | Gdy włączone, freeAudio wysyła swoje powiadomienia także bezpośrednio na linijkę brajlowską. Przydaje się to przy tytułach utworów, zmianach stacji, stanie odtwarzania i zmianach głośności. Domyślnie wyłączone. |
-| Włącz bufor time-shift (cofanie radia na żywo) | Włącza lub wyłącza sterowanie cofaniem (`Ctrl+Win+J`/`Ctrl+Win+K`) i powiększa przechwytywanie w tle z ~45 sekund do czasu określonego w ustawieniach. Niewielkie przechwytywanie w tle aktualnie odtwarzanej stacji działa zawsze, nawet gdy ta opcja jest wyłączona — zobacz uwagę w sekcji **Time-shift (cofanie radia na żywo)** poniżej. Można też natychmiast przełączyć za pomocą `Ctrl+Win+T`. Domyślnie wyłączone — pełne szczegóły znajdziesz w sekcji **Time-shift (cofanie radia na żywo)** poniżej. |
+| Pokazuj komunikaty freeAudio na monitorze brajlowskim | Gdy włączone, freeAudio wysyła swoje powiadomienia także bezpośrednio na linijkę brajlowską. Przydaje się to przy tytułach utworów, zmianach stacji, stanie odtwarzania i zmianach głośności. Domyślnie wyłączone. |
+| Włącz bufor time-shift (cofanie radia na żywo) | Włącza lub wyłącza sterowanie cofaniem (`Ctrl+Win+J`/`Ctrl+Win+K`) i powiększa przechwytywanie w tle z ok. 45 sekund do wartości **Czas trwania bufora time-shift**. Niewielkie przechwytywanie w tle aktualnie odtwarzanej stacji działa zawsze, nawet gdy ta opcja jest wyłączona — zob. uwagę w sekcji **Time-shift (cofanie radia na żywo)** powyżej. Można też przełączać ją natychmiast za pomocą `Ctrl+Win+T`. Domyślnie wyłączone — pełne szczegóły w sekcji **Time-shift (cofanie radia na żywo)** powyżej. Nie ma wpływu na podcasty ani audiobooki. |
+| Czas trwania bufora time-shift | Ustawia maksymalną długość bufora cofania. Dostępne opcje sięgają od 10 minut do 5 godzin. Dłuższe bufory zajmują więcej tymczasowego miejsca na dysku. |
 | Zapisuj polubione utwory do pliku tekstowego | Gdy włączone, informacje o utworze skopiowane do schowka trzykrotnym naciśnięciem `Ctrl+Win+I` są też dopisywane do `Documents\freeAudio Recordings\likedSongs.txt`. Jeśli metadane ICY nie są dostępne, do tego samego pliku zapisany zostaje wynik rozpoznawania przez Shazam. Domyślnie wyłączone. |
 | Gdy Ctrl+Win+P zostanie naciśnięty bez aktywnego odtwarzania | Określa, co stanie się po naciśnięciu skrótu, gdy nic nie gra: uruchomienie ostatniej stacji albo otwarcie listy ulubionych. |
-| Czas trwania bufora time-shift | Ustawia maksymalną długość bufora cofania. Dostępne opcje sięgają od 10 minut do 5 godzin. Dłuższe bufory zajmują więcej tymczasowego miejsca na dysku. |
 | Gdy Ctrl+Win+P zostanie naciśnięty dwa razy | Wybiera akcję po dwukrotnym szybkim naciśnięciu skrótu: nic nie rób, otwórz listę ulubionych, otwórz kartę nagrywania albo otwórz kartę timera. Gdy wybrane jest „nic nie rób”, pierwsze naciśnięcie reaguje natychmiast, bez opóźnienia. |
 | Gdy Ctrl+Win+P zostanie naciśnięty trzy razy | Wybiera akcję po trzykrotnym szybkim naciśnięciu skrótu: nic nie rób, otwórz listę ulubionych, otwórz wyszukiwanie stacji, otwórz kartę nagrywania albo otwórz kartę timera. |
-| Sprawdzaj aktualizacje automatycznie | Gdy włączone, przy każdym starcie NVDA działa w tle sprawdzanie aktualizacji; jeśli zostanie znaleziona nowa wersja, pojawi się powiadomienie. Gdy wyłączone, automatyczne sprawdzanie jest zatrzymane, ale ręczne nadal działa. |
+| Automatycznie sprawdzaj aktualizacje przy uruchomieniu | Gdy włączone, przy każdym starcie NVDA działa w tle sprawdzanie aktualizacji; jeśli zostanie znaleziona nowa wersja, pojawi się powiadomienie. Gdy wyłączone, automatyczne sprawdzanie jest zatrzymane, ale ręczne nadal działa. |
+| Sprawdź aktualizacje teraz | Przycisk, który natychmiast sprawdza, czy jest nowa wersja, nawet gdy automatyczne sprawdzanie jest wyłączone. Podczas sprawdzania przycisk ma etykietę „Sprawdzanie...”. |
 | Ścieżka do ffmpeg.exe | Ścieżka do `ffmpeg.exe` używanego do rozpoznawania muzyki. Jeśli pozostanie pusta, automatycznie użyty zostanie `ffmpeg.exe` z folderu dodatku. |
 | Folder nagrań | Ustawia folder, w którym zapisywane są nagrania. Jeśli pozostanie pusty, używana jest domyślna lokalizacja `Documents\freeAudio Recordings\`. Przycisk Przeglądaj pozwala wybrać folder interaktywnie. Zmiany działają natychmiast po zapisaniu. |
+| Moduły | Lista z polami wyboru opcjonalnych części freeAudio: **Podcasty**, **Audiobooki** i **Jukebox**. Wszystkie trzy są domyślnie włączone. Odznaczenie jednej usuwa jej kartę z Przeglądarki stacji, a jej polecenia z okna Gesty wejściowe NVDA, bez usuwania czegokolwiek, co tam zapisano (subskrypcje, biblioteka, lista Jukeboksa); ponowne zaznaczenie przywraca wszystko. Zmiany zaczynają obowiązywać przy następnym otwarciu Przeglądarki stacji. |
+| Uwzględniaj dyski sieciowe podczas wyszukiwania w jukeboksie | Gdy włączone, funkcja **Szukaj na urządzeniach** Jukeboksa przeszukuje także dyski sieciowe. Domyślnie wyłączone, ponieważ przeszukiwanie udziału sieciowego może trwać minuty lub się zawiesić, jeśli udział jest nieosiągalny. |
 | Źródła audiobooków | Lista wyboru określająca, które źródła audiobooków (**GETEM**, **LibriVox**, **Project Gutenberg**) są przeszukiwane i pokazywane na karcie Audiobooki. Wszystkie trzy są domyślnie włączone. Odznaczenie źródła ukrywa jego książki na połączonej liście wyników i w bibliotece, bez usuwania czegokolwiek, co już z niego dodałeś — zobacz [Audiobooki (GETEM, LibriVox i Project Gutenberg)](#audiobooki-getem-librivox-i-project-gutenberg). |
 | Nazwa użytkownika GETEM / Hasło GETEM | Dane logowania członkowskiego do audiobooków [GETEM](https://getem.boun.edu.tr/), potrzebne do strumieniowania lub pobierania dźwięku książki — zobacz [Logowanie](#logowanie). Przechowywane na dysku w postaci zaszyfrowanej przez Windows Data Protection API, powiązanej z Twoim kontem użytkownika systemu Windows; nigdy nie są zapisywane jako zwykły tekst. Pozostawienie obu pól pustych i zapisanie usuwa wszystkie zapisane dane logowania. LibriVox i Project Gutenberg nie wymagają konta i nie mają odpowiedniego pola. |
 | Format zapisu nagrań | Zachowuje oryginalny strumień, wyodrębnia sam dźwięk bez zmiany kodeka albo konwertuje zakończone nagrania do MP3. Domyślnie zachowywany jest oryginalny format strumienia. |
 | Przepływność nagrań MP3 | Ustawia przepływność używaną, gdy wybrany jest format MP3. Domyślna wartość to 128 kb/s. |
 | Wyłącz sprawdzanie połączenia internetowego przed odtwarzaniem | Zalecane dla użytkowników, u których występuje opóźnienie przed rozpoczęciem odtwarzania stacji. Przydatne również, gdy DNS jest blokowany. |
+| Czyszczenie: zresetuj ustawienia i usuń zapisane dane... | Przycisk otwierający okno do resetowania ustawień freeAudio i usuwania zapisanych przez nie danych — zob. [Czyszczenie: resetowanie ustawień i usuwanie zapisanych danych](#czyszczenie-resetowanie-ustawień-i-usuwanie-zapisanych-danych). |
+
+### Czyszczenie: resetowanie ustawień i usuwanie zapisanych danych
+
+Przycisk **Czyszczenie: zresetuj ustawienia i usuń zapisane dane...** na dole strony ustawień freeAudio otwiera okno **Resetowanie ustawień / usuwanie zapisanych danych**. Wyświetla ono jako pola wyboru wszystko, co freeAudio przechowuje w folderze konfiguracji NVDA. **Domyślnie nic nie jest zaznaczone.** Każda pozycja pokazuje, ile miejsca zajmuje, albo „nic nie zapisano”:
+
+- **Ustawienia** — przywracane do wartości domyślnych. Folder nagrań i opcja **Zapisuj polubione utwory do pliku tekstowego** są zachowywane.
+- **Ulubione stacje**
+- **Pamięć podręczna listy stacji** — pobierana ponownie w razie potrzeby.
+- **Subskrypcje podcastów**
+- **Biblioteki audiobooków** — GETEM, LibriVox i Project Gutenberg.
+- **Zapisane logowanie do GETEM** — zapisana nazwa użytkownika i hasło.
+- **Lista Jukeboksa** — twoje pliki muzyczne nie są usuwane.
+- **Zapisane pozycje wznowienia** — podcasty, audiobooki i foldery Jukeboksa.
+- **Zakładki** — każda zakładka, wraz z notatką tekstową i głosową.
+- **Minutniki usypiające i alarmy**
+- **Zaplanowane nagrania** — same nagrania nie są usuwane.
+
+**Zaznacz wszystko** zaznacza każdą pozycję. **Resetuj / usuń zaznaczone** wykonuje twój wybór; jeśli nic nie jest zaznaczone, freeAudio mówi „Nic nie wybrano.” **Anuluj** (lub `Escape`) zamyka okno bez żadnych zmian.
+
+Zanim cokolwiek zostanie zmienione, freeAudio wypisuje zaznaczone pozycje, ostrzega, że nie można tego cofnąć, i prosi o potwierdzenie; domyślną odpowiedzią jest **Nie**. Potem komunikat mówi „Gotowe.” albo wymienia pozycje, których nie udało się usunąć — zwykle dlatego, że plik jest używany. Jeśli Przeglądarka stacji jest otwarta w chwili usuwania zapisanych danych, zostaje zamknięta i przy następnym otwarciu jest odbudowywana z pozostałych danych.
+
+Nagrania, folder nagrań i plik tekstowy z polubionymi utworami **nigdy** nie są ruszane, a reset ustawień nie powoduje ponownego importu danych z wcześniejszego dodatku FreeRadio.
+
+Po resecie ustawień wartości nadal widoczne na stronie ustawień nie są zapisywane po naciśnięciu OK, więc nie mogą cofnąć resetu. Zaleca się ponowne uruchomienie NVDA, aby wszystkie ustawienia zaczęły obowiązywać.
 
 ## Wyciszanie powiadomień
 
@@ -820,8 +940,9 @@ Gdy w ustawieniach włączone jest **Wycisz powiadomienia**, NVDA wycisza nastę
 - nazwa stacji po rozpoczęciu odtwarzania nowej stacji;
 - zmiany stanu odtwarzania: odtwórz, pauza, stop;
 - tryb Obligato: uruchomiony / zatrzymany;
-- zdarzenia nagrywania: rozpoczęte, zatrzymane, zakończone (nagrania natychmiastowe, utworów i zaplanowane);
+- Zdarzenia nagrywania: rozpoczęcie, zatrzymanie, zakończenie (nagrania natychmiastowe, utworów, każdego utworu i zaplanowane)
 - komunikaty o zmianie utworu ICY, nawet gdy włączone jest też **Automatycznie ogłaszaj zmiany utworów**.
+- Komunikat, że stacja jest odtwarzana w specjalnym trybie zgodności (zob. [Odtwarzanie](#odtwarzanie))
 
 Celowo **nie** są wyciszane: komunikaty błędów, informacje o ulubionych (dodano / już na liście), wyniki rozpoznawania muzyki i powiadomienia aktualizacji.
 
@@ -837,11 +958,13 @@ Funkcja jest domyślnie wyłączona i można ją przełączyć w menu NVDA → P
 
 ## Odtwarzanie
 
-freeAudio używa **BASS** jako jedynego backendu odtwarzania dla wszystkiego — radia internetowego, podcastów, audiobooków i utworów z jukeboksa. Nie jest wymagana osobna instalacja; BASS jest dołączony do dodatku. Obsługa VLC, PotPlayera i Windows Media Playera jako zapasowych backendów została usunięta; zawsze używany jest BASS.
+freeAudio używa **BASS** jako jedynego backendu odtwarzania dla wszystkiego — radia internetowego, podcastów, audiobooków i utworów z jukeboksa. Nie jest wymagana osobna instalacja; BASS jest dołączony do dodatku. freeAudio nie używa VLC, PotPlayera ani Windows Media Playera.
 
 BASS wysyła dźwięk bezpośrednio do stosu audio Windows i pojawia się w mikserze głośności Windows jako niezależne źródło audio o nazwie „pythonw.exe”, oddzielone od NVDA. Oznacza to, że dźwięk freeAudio płynie całkowicie osobnym kanałem niż mowa NVDA: radio nie zanika, nie miesza się i nie jest zależne od ustawień audio NVDA, gdy NVDA mówi. Użytkownik może regulować głośność radia niezależnie od NVDA w mikserze głośności Windows. Obsługuje HTTP, HTTPS i większość osadzonych formatów strumieni.
 
 Odcinki podcastów, rozdziały audiobooków i utwory z jukeboksa są odtwarzane przez BASS, ponieważ może on otworzyć strumień jako przewijalny plik (nawet podczas pobierania), co umożliwia precyzyjne śledzenie pozycji, stopniowane cofanie/przewijanie do przodu, prędkość odtwarzania, transpozycję wysokości dźwięku i wznawianie. Kopia dźwięku, time-shift oraz przewijanie i wznawianie podcastów/audiobooków/jukeboksa zależą od BASS i są zawsze dostępne.
+
+**Stacje HLS wymagające trybu zgodności:** kilka stacji HLS (`.m3u8`) pakuje dźwięk w sposób, którego BASS nie potrafi płynnie odczytać — stale ponownie otwiera strumień, co brzmi jak ciągłe zacinanie. Dla takich stacji (obecnie strumienie radiowe ABC Australia) freeAudio automatycznie pakuje ten sam dźwięk, bez ponownego kodowania, w konwencjonalny układ, używając małego serwera działającego wyłącznie na twoim komputerze, i odtwarza go zamiast oryginału. Nic nie trzeba konfigurować. Gdy po uruchomieniu NVDA po raz pierwszy odtwarzasz taką stację, NVDA ogłasza: „Ta stacja używa specjalnego trybu odtwarzania, aby zapobiec zacinaniu.” To ogłoszenie podlega ustawieniu **Wycisz powiadomienia**.
 
 ## Sprawdzanie aktualizacji
 
@@ -856,7 +979,7 @@ freeAudio automatycznie sprawdza nowe wersje przez GitHuba.
 - Jeśli w wydaniu GitHuba jest dostępny bezpośrednio pobieralny plik `.nvda-addon`, pojawia się przycisk **Pobierz i zainstaluj**. Po potwierdzeniu plik jest pobierany w tle, NVDA ogłasza rozpoczęcie pobierania, a następnie automatycznie otwiera własny ekran instalacji NVDA.
 - Jeśli nie ma bezpośredniego linku pobierania, pojawia się przycisk **Otwórz stronę**, który otwiera stronę wydania GitHuba w domyślnej przeglądarce.
 
-**Aby wyłączyć automatyczne sprawdzanie:** wyłącz opcję **Sprawdzaj aktualizacje automatycznie** w menu NVDA → Preferencje → Ustawienia → freeAudio.
+**Aby wyłączyć automatyczne sprawdzanie:** wyłącz opcję **Automatycznie sprawdzaj aktualizacje przy uruchomieniu** w menu NVDA → Preferencje → Ustawienia → freeAudio.
 
 ## Podziękowania i autorzy
 
