@@ -24,7 +24,7 @@ addon_info = AddonInfo(
 	# Brief changelog for this version
 	# Translators: what's new content for the add-on version
 	addon_changelog=_("""
-## Changelog for 2026.25.1
+## Changelog for 2026.25.2
 
 ### New
 - **Bookmarks.** You can bookmark the current position of an audio book part, podcast episode or jukebox track, and jump back to it later.
